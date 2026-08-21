@@ -15,10 +15,10 @@ epochs. An improvement greater than `1e-4` writes a new best checkpoint and
 resets patience to `0/5`.
 
 The syntax stage completed at epoch 25 after five consecutive non-improving
-epochs; epoch 20 remains selected with score `0.80719741`. Relation epoch 1
-established the first relation checkpoint with selection score `0.75660000`
-(`macro=0.7750`, `minimum-family=0.6854`, `UAS=0.8717`, `LAS=0.7477`) and
-patience `0/5`. Its full resume state and checkpoint are durably archived.
+epochs; epoch 20 remains selected with score `0.80719741`. Relation epoch 2
+reached a new-best selection score `0.76966063` (`macro=0.7883`,
+`minimum-family=0.7017`, `UAS=0.8764`, `LAS=0.7555`) with patience `0/5`.
+Its full resume state and checkpoint are durably archived.
 The public-safe machine-readable progress record is
 [TurkTokenizer_v6_0_R2_E50_Live_Status.json](project_state/TurkTokenizer_v6_0_R2_E50_Live_Status.json).
 `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST splits
