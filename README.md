@@ -14,10 +14,11 @@ early stopping remains bounded at five consecutive non-improving completed
 epochs. An improvement greater than `1e-4` writes a new best checkpoint and
 resets patience to `0/5`.
 
-Syntax epoch 24 completed with selection score `0.80564291`
-(`UAS=0.8740`, `LAS=0.7522`, `UPOS=0.9214`). It did not exceed the epoch-20
-best score `0.80719741`, so that checkpoint remains selected and patience is
-`4/5`.
+The syntax stage completed at epoch 25 after five consecutive non-improving
+epochs. Epoch 20 remains selected with score `0.80719741` (`UAS=0.8747`,
+`LAS=0.7548`, `UPOS=0.9190`); the final syntax state and completion marker are
+durably archived. The relation stage is now running from epoch 1 with patience
+`0/5`.
 The public-safe machine-readable progress record is
 [TurkTokenizer_v6_0_R2_E50_Live_Status.json](project_state/TurkTokenizer_v6_0_R2_E50_Live_Status.json).
 `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST splits
