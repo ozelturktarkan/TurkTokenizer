@@ -1,0 +1,90 @@
+{
+  "name": "TurkTokenizer v5.11-v4.2 R1 Precommit v1",
+  "date": "2026-08-21",
+  "status": "PRECOMMITTED_NOT_RUN",
+  "variant": "R1_A1_null_augmented_direct_arcs",
+  "base_variant": "A1_contextual_posterior_only",
+  "hypothesis": "A length-normalized NULL-versus-head categorical decision will improve source-token calibration, especially OBJECT, without changing conditional head capacity or CASE_GOVERNOR.",
+  "baseline": {
+    "macro_relation_f1": 0.8107563337851816,
+    "minimum_family": "OBJECT",
+    "minimum_family_f1": 0.7174066243833686,
+    "UAS": 0.8785155899002606,
+    "LAS": 0.7599065504537694,
+    "families": {
+      "POSS_HEAD": 0.8189910979228486,
+      "OBJECT": 0.7174066243833686,
+      "PARTICIPLE_HEAD": 0.8374384236453202,
+      "CASE_GOVERNOR": 0.8691891891891892
+    },
+    "OBJECT_source_f1": 0.7287500000000001,
+    "OBJECT_head_top1_given_gold_source": 0.9313658201784488
+  },
+  "single_delta": {
+    "applies_to": [
+      "POSS_HEAD",
+      "OBJECT",
+      "PARTICIPLE_HEAD"
+    ],
+    "unchanged_family": "CASE_GOVERNOR",
+    "old_decision": "independent source sigmoid multiplied by conditional head softmax",
+    "new_decision": "length-normalized categorical softmax over NULL plus valid heads",
+    "null_logit_input": "concatenated A1 relation_encoded and graph token states",
+    "head_logits": "unchanged A1 fused biaffine expert logits",
+    "length_normalization": "subtract log(valid_head_count) from every non-null head logit",
+    "source_probability": "1 - P(NULL)",
+    "conditional_head_probability": "softmax over unchanged non-null head logits",
+    "loss": "balanced focal joint soft cross-entropy with locked source gamma, positive share, uncertainty weights, and hard-negative penalty"
+  },
+  "explicitly_unchanged": [
+    "A1 contextual morphology posterior and partial-marginal supervision",
+    "top-20 original morphology lattice",
+    "no ordered-realization encoder",
+    "no A3 coverage-repair lattice",
+    "8-layer relative-position Transformer dimensions",
+    "syntax, graph, morphology, dependency, and specialized experts",
+    "CASE_GOVERNOR decoder and losses",
+    "TRAIN/CALIB split and surface-group isolation",
+    "balanced corpus sampler and seed 51104",
+    "optimizer, learning rates, schedules, patience, and hard-negative mining",
+    "threshold grid and CALIB-only checkpoint selection"
+  ],
+  "screen": {
+    "seed": 51104,
+    "macro_gain_min_or": 0.01,
+    "minimum_family_gain_min_or": 0.015,
+    "family_regression_allowed": false,
+    "maximum_UAS_regression": 0.005,
+    "maximum_LAS_regression": 0.005,
+    "absolute_gates": {
+      "macro_relation_f1": 0.9,
+      "minimum_family_f1": 0.87,
+      "UAS": 0.88,
+      "LAS": 0.8
+    },
+    "survivor_action": "Run seeds 51104, 51105, and 51106 with paired surface-group bootstrap intervals.",
+    "drop_action": "Close R1 before INTERNAL_VAL and perform error decomposition; do not tune on CALIB after the screen."
+  },
+  "smoke_requirements": {
+    "finite_losses_and_gradients": true,
+    "joint_probability_sum_max_error": "<=1e-6",
+    "source_probability_identity_max_error": "<=1e-6",
+    "invalid_heads_receive_zero_probability": true,
+    "CASE_GOVERNOR_numerically_unchanged_at_same_parameters": true,
+    "internal_val_loaded": false,
+    "external_holdouts_loaded": false
+  },
+  "state_conservation": {
+    "internal_val_consumed": false,
+    "external_holdouts_consumed": false,
+    "official_test_splits_consumed": false
+  },
+  "evidence": [
+    "https://aclanthology.org/Q15-1026/",
+    "https://aclanthology.org/K18-2024/",
+    "https://arxiv.org/abs/1611.01734",
+    "https://aclanthology.org/P18-1179/",
+    "https://aclanthology.org/C18-1233/",
+    "https://aclanthology.org/2020.lrec-1.336/"
+  ]
+}
