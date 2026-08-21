@@ -1,18 +1,18 @@
 {
   "name": "TurkTokenizer v6.0 R2 E50 live status",
-  "updated_at": "2026-08-22T00:07:00+03:00",
+  "updated_at": "2026-08-22T00:14:00+03:00",
   "status": "RUNNING",
   "stage": "syntax",
-  "completed_epoch": 1,
-  "next_epoch": 2,
-  "best_epoch": 1,
-  "best_selection_score": 0.69774463,
+  "completed_epoch": 2,
+  "next_epoch": 3,
+  "best_epoch": 2,
+  "best_selection_score": 0.74419085,
   "patience": "0/5",
   "latest_metrics": {
-    "loss": 2.5200,
-    "UAS": 0.7695,
-    "LAS": 0.6339,
-    "UPOS": 0.8656
+    "loss": 1.5474,
+    "UAS": 0.8182,
+    "LAS": 0.6830,
+    "UPOS": 0.8894
   },
   "maximum_epochs": {
     "syntax": 50,
@@ -25,8 +25,11 @@
   "checkpoint_policy": "Every completed epoch writes model, optimizer, RNG, sampler and patience state to an atomic durable mirror; an improvement above best + 1e-4 resets patience to 0/5.",
   "library_backup": {
     "folder": "TurkTokenizer-v-6-0-R2-egitim-dosyalari",
+    "completed_epoch": 2,
+    "resumable_state_parts": 7,
+    "manifest_saved": true,
     "best_checkpoint_saved": true,
-    "resumable_state_sharding_in_progress": true
+    "library_versions_preserved": true
   },
   "data_policy": {
     "train_calib_only": true,
