@@ -1,0 +1,37 @@
+{
+  "name": "TurkTokenizer v5.11 v4.1 A3 Public Closure Summary",
+  "date": "2026-08-21",
+  "status": "DROP_AFTER_SCREEN",
+  "variant": "A3_candidate_coverage_repairs_only",
+  "coverage_gate": "PASS",
+  "architecture_smoke": "PASS",
+  "final_calib": {
+    "macro_relation_f1": 0.8040686232856971,
+    "minimum_family": "OBJECT",
+    "minimum_family_f1": 0.7053413512557483,
+    "UAS": 0.8778416749034055,
+    "LAS": 0.7568963968011502,
+    "UPOS": 0.9175577320513972,
+    "families": {
+      "POSS_HEAD": 0.8178137651821862,
+      "OBJECT": 0.7053413512557483,
+      "PARTICIPLE_HEAD": 0.8325266214908035,
+      "CASE_GOVERNOR": 0.8605927552140505
+    }
+  },
+  "screen": {
+    "macro_gain": 0.006839266891525697,
+    "minimum_family_gain": 0.0028589503665300553,
+    "CASE_GOVERNOR_delta": -0.00782829741752844,
+    "gain_pass": false,
+    "no_family_regression": false
+  },
+  "diagnosis": {
+    "OBJECT_source_f1": 0.6748166259168704,
+    "OBJECT_head_top1_given_gold_source": 0.9334248455730954,
+    "primary_bottleneck": "source_token_detection"
+  },
+  "internal_val_consumed": false,
+  "external_holdouts_consumed": false,
+  "final_decision": "Do not promote A3; investigate a precommitted source-first factorized relation ablation."
+}
