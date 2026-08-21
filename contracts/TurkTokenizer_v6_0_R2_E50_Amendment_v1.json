@@ -1,0 +1,54 @@
+{
+  "name": "TurkTokenizer v6.0 R2 E50 Epoch-Budget Amendment v1",
+  "date": "2026-08-21",
+  "status": "PRECOMMITTED_BEFORE_FRESH_E50_RUN",
+  "variant": "R2_A1_source_first_contextual_filter",
+  "reason": "The interrupted R2 trajectory showed late syntax recoveries; a common E50 ceiling allows later improvements while unchanged patience prevents an unbounded run.",
+  "supersedes_epoch_budgets_only": {
+    "previous": {
+      "syntax_epochs_max": 20,
+      "relation_epochs_max": 30,
+      "hardnegative_epochs_max": 10
+    },
+    "amended": {
+      "syntax_epochs_max": 50,
+      "relation_epochs_max": 50,
+      "hardnegative_epochs_max": 50
+    }
+  },
+  "patience_unchanged": {
+    "syntax": 5,
+    "relation": 5,
+    "hardnegative": 5,
+    "minimum_improvement": 0.0001,
+    "reset_rule": "selection_score > best + 1e-4 resets to 0/5",
+    "increment_rule": "otherwise increments exactly once after a completed epoch",
+    "stop_rule": "write resumable state, then stop at 5/5"
+  },
+  "fresh_restart": {
+    "seed": 51104,
+    "reuse_interrupted_R2_model_state": false,
+    "reuse_interrupted_R2_optimizer_state": false,
+    "reuse_A1_or_R1_state": false
+  },
+  "unchanged": [
+    "architecture",
+    "TRAIN/CALIB split",
+    "optimizer and learning rates",
+    "gradient clipping",
+    "selection scores",
+    "screening and absolute gates",
+    "checkpoint payload and atomic mirroring"
+  ],
+  "state_conservation": {
+    "internal_val_consumed": false,
+    "external_holdouts_consumed": false,
+    "official_test_splits_consumed": false
+  },
+  "source": {
+    "trainer": "src/TurkTokenizer_v6_0_R2_train.py",
+    "trainer_sha256": "9d9a4770eeb8bcc12e271dfd290d7ea8fd551397e623a12f14dac470f0c6ccb5",
+    "wrapper": "src/TurkTokenizer_v6_0_R2_train_RESUMABLE.py",
+    "wrapper_sha256": "fc75859318148ff6f1176333238a3d9e16e434930413bf024b9bbe9b9c22d611"
+  }
+}
