@@ -1,15 +1,15 @@
 {
   "status": "PASS_V6_0_R2_SMOKE",
   "variant": "R2_A1_source_first_contextual_filter",
-  "syntax_loss": 10.059226036071777,
-  "relation_loss": 10.058854103088379,
+  "syntax_loss": 12.915990829467773,
+  "relation_loss": 7.048561096191406,
   "parameters": 29741930,
   "config": {
     "seed": 51104,
     "batch_size": 24,
-    "syntax_epochs": 20,
-    "relation_epochs": 30,
-    "hardnegative_epochs": 10,
+    "syntax_epochs": 50,
+    "relation_epochs": 50,
+    "hardnegative_epochs": 50,
     "patience_syntax": 5,
     "patience_relation": 5,
     "patience_hardnegative": 5,
@@ -70,6 +70,7 @@
     "direct_source_logits_finite": true,
     "retained_expert_stacks_released": true,
     "patience_minimum_five_all_stages": true,
+    "epoch_ceiling_fifty_all_stages": true,
     "internal_val_loaded": false,
     "external_holdouts_loaded": false
   }
