@@ -2,32 +2,37 @@
 
 ## Reliable state
 
-- v3S is closed and rejected before `INTERNAL_VAL`.
-- Locked v4 and hard-negative recovery are closed and rejected before `INTERNAL_VAL`.
-- v4.1 A1 is retained as a finalist candidate, but it did not pass the absolute CALIB gates.
-- v4.1 A2 is dropped after its single-seed screen.
-- v4.1 A3 passed its TRAIN-only coverage and architecture smoke gates.
-- The earlier interrupted A3 run is superseded by a clean, resumable restart.
+- v3S and the locked v4 baseline are rejected before `INTERNAL_VAL`.
+- v4.1 A1 remains the strongest surviving base, but failed the absolute CALIB gates.
+- v4.1 A2 and A3 are closed as `DROP_AFTER_SCREEN`.
+- v4.2 R1 is precommitted and its architecture smoke gate is `PASS`.
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
 
-## A3 coverage evidence
+## Final A3 closure
 
-- Corrected joint lemma + mapped morphology recall at top 20: `0.9632123329812057` (gate: `>=0.95`).
-- Minimum relation-critical requirement candidate recall at top 20: `0.9573986804901037` (gate: `>=0.95`).
-- Gold/oracle-note violations: none.
-- Lattice surfaces: `46,519`; maximum candidates: `20`; empty lists: `0`.
-- Smoke architecture: 8 Transformer layers, 8 heads, hidden size 384, 28,848,978 parameters, finite gradients.
+The clean resumable A3 run completed all syntax, relation, hard-negative, calibration, audit, and screen stages. Its final CALIB result was:
 
-## Resumable A3 restart
+- macro relation F1: `0.8041`
+- minimum-family F1: `0.7053` (`OBJECT`)
+- `UAS=0.8778`, `LAS=0.7569`, `UPOS=0.9176`
+- family F1: `POSS_HEAD=0.8178`, `OBJECT=0.7053`, `PARTICIPLE_HEAD=0.8325`, `CASE_GOVERNOR=0.8606`
 
-The clean restart uses seed `51104`, the locked TRAIN/CALIB resources, epoch-level optimizer/RNG/sampler continuation state, and periodic off-workspace checkpoint synchronization. The sealed internal-validation resource remains unread.
+Relative to the locked v4 screen baseline, A3 gained only `+0.0068` macro and `+0.0029` minimum-family F1, while `CASE_GOVERNOR` regressed by `-0.0078`. It therefore failed the precommitted improvement and no-family-regression conditions and was dropped without opening `INTERNAL_VAL`.
 
-Syntax training completed all 12 planned epochs. The selected checkpoint is epoch 11 under the precommitted score `0.60·LAS + 0.30·UAS + 0.10·UPOS`:
+The factorized audit found `OBJECT` source-token F1 of `0.6748`, but head top-1 accuracy of `0.9334` when the source token was supplied. Candidate coverage was therefore not the main remaining bottleneck; source-presence calibration was.
 
-- `UAS=0.8675`
-- `LAS=0.7436`
-- `UPOS=0.9125`
-- selection score: approximately `0.79766`
+## v4.2 R1
 
-Relation training is now in progress. No final A3 CALIB audit, gate decision, frozen checkpoint, or screen result exists yet; partial scores must not be promoted as a final result.
+R1 starts from A1 and changes only the direct-relation decision for `POSS_HEAD`, `OBJECT`, and `PARTICIPLE_HEAD`: independent source/head probabilities are replaced by a length-normalized categorical distribution over `NULL` plus valid heads. `CASE_GOVERNOR`, A1 morphology, syntax, data, seed, optimizer, schedules, and quality gates remain unchanged.
+
+The R1 smoke test passed on seed `51104`:
+
+- 29,306,087 parameters; finite losses and gradients
+- joint-probability sum maximum error: `2.38e-7`
+- source-probability identity maximum error: `2.46e-7`
+- invalid-head probability: `0`
+- `CASE_GOVERNOR` numerical change: `0`
+- internal validation and external holdouts loaded: `false`
+
+Next: run the single fixed-seed resumable TRAIN/CALIB screen and apply the unchanged survival and absolute quality gates.
