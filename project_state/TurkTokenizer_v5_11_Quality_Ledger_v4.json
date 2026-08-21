@@ -1,7 +1,7 @@
 {
   "name": "TurkTokenizer v5.11 Quality Ledger v4",
   "updated_at": "2026-08-21",
-  "status": "V4_1_A3_DROPPED_V4_2_R1_PRECOMMITTED",
+  "status": "V4_1_A3_DROPPED_V4_2_R1_SMOKE_PASS",
   "quality_target": {
     "phase5_primary_minimum": 0.95,
     "preferred": 1.0,
@@ -49,15 +49,27 @@
     "dominant_diagnosis": "OBJECT source-token detection is weak while head top-1 given gold source is 0.9334."
   },
   "v4_2_R1": {
-    "status": "PRECOMMITTED_NOT_RUN",
+    "status": "SMOKE_PASS_SCREEN_NOT_RUN",
     "base": "v4_1_A1",
     "single_delta": "length-normalized NULL-plus-head categorical decoder for direct relation families",
-    "CASE_GOVERNOR_changed": false
+    "CASE_GOVERNOR_changed": false,
+    "smoke": {
+      "status": "PASS_V4_2_R1_SMOKE",
+      "parameters": 29306087,
+      "joint_probability_sum_max_error": 2.384185791015625e-07,
+      "source_probability_identity_max_error": 2.4586915969848633e-07,
+      "invalid_head_probability_max": 0.0,
+      "case_source_max_error": 0.0,
+      "case_head_max_error": 0.0,
+      "finite_gradients": true,
+      "internal_val_loaded": false,
+      "external_holdouts_loaded": false
+    }
   },
   "state_conservation": {
     "internal_val_consumed": false,
     "external_holdouts_consumed": false,
     "official_test_splits_consumed": false
   },
-  "next_action": "Implement R1 exactly as precommitted, pass smoke invariants, then run the single fixed-seed TRAIN/CALIB screen with durable epoch checkpoints."
+  "next_action": "Run the single fixed-seed R1 TRAIN/CALIB screen with durable epoch checkpoints and apply the unchanged survival and absolute gates."
 }
