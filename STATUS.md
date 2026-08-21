@@ -5,7 +5,7 @@
 - v3S and the locked v4 baseline are rejected before `INTERNAL_VAL`.
 - v4.1 A1 remains the strongest surviving base, but failed the absolute CALIB gates.
 - v4.1 A2 and A3 are closed as `DROP_AFTER_SCREEN`.
-- v4.2 R1 is precommitted and its architecture smoke gate is `PASS`.
+- v4.2 R1 passed smoke but is closed as `DROP_AFTER_SCREEN`.
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
 
@@ -35,14 +35,19 @@ The R1 smoke test passed on seed `51104`:
 - `CASE_GOVERNOR` numerical change: `0`
 - internal validation and external holdouts loaded: `false`
 
-## Live R1 screen
+## Final R1 closure
 
-The single fixed-seed resumable TRAIN/CALIB screen started at `2026-08-21 10:42:12 +03:00` on CPU. The first durable syntax state completed at `10:48:52`:
+The fixed-seed resumable TRAIN/CALIB screen completed cleanly. The selected checkpoint was hard-negative epoch 2:
 
-- syntax epoch 1 loss: `2.5271`
-- `UAS=0.7572`, `LAS=0.6216`, `UPOS=0.8627`
-- next recoverable boundary: syntax epoch 2
+- macro relation F1: `0.8078`
+- minimum-family F1: `0.7138` (`OBJECT`)
+- `UAS=0.8831`, `LAS=0.7643`, `UPOS=0.9205`
+- family F1: `POSS_HEAD=0.8123`, `OBJECT=0.7138`, `PARTICIPLE_HEAD=0.8232`, `CASE_GOVERNOR=0.8820`
 
-The raw epoch state is mirrored outside the scratch worktree and as hash-verified transfer shards in ChatGPT Library. These are preliminary training metrics, not a CALIB screen decision.
+Against A1, R1 changed macro by `-0.0029` and minimum-family F1 by `-0.0036`. Family changes were `POSS_HEAD=-0.0067`, `OBJECT=-0.0036`, `PARTICIPLE_HEAD=-0.0143`, and `CASE_GOVERNOR=+0.0128`. R1 therefore failed both the required gain and the no-family-regression condition. The absolute CALIB gate also failed on macro, minimum-family F1, and LAS; only UAS passed.
 
-Next: finish the R1 screen and apply the unchanged survival and absolute quality gates.
+The factorized audit found `OBJECT` source-token F1 `0.7259` and head top-1 accuracy `0.9327` given the gold source. A1 source-token F1 was `0.7288`, so NULL-plus-head normalization did not solve the targeted source-identification bottleneck.
+
+All final states, selected/frozen checkpoints, calibration, audits, gates, logs, and transfer-safe shards are mirrored outside the scratch worktree and in ChatGPT Library. `INTERNAL_VAL` and all external holdouts remain unopened.
+
+Next: freeze R1 as a negative result, retain A1 as the strongest surviving base, and precommit the next error-led ablation before training.
