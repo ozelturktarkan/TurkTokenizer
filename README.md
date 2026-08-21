@@ -6,6 +6,21 @@ This repository is a research snapshot, not a production release. Reported score
 
 ## Current state
 
+### Live v6.0 R2 E50 screen
+
+A fresh fixed-seed R2 source-first screen is running on TRAIN/CALIB only. The
+maximum epoch budget is `50` for syntax, relation, and hard-negative stages;
+early stopping remains bounded at five consecutive non-improving completed
+epochs. An improvement greater than `1e-4` writes a new best checkpoint and
+resets patience to `0/5`.
+
+Syntax epoch 1 completed with selection score `0.69774463`
+(`UAS=0.7695`, `LAS=0.6339`, `UPOS=0.8656`) and reset patience to `0/5`.
+The public-safe machine-readable progress record is
+[TurkTokenizer_v6_0_R2_E50_Live_Status.json](project_state/TurkTokenizer_v6_0_R2_E50_Live_Status.json).
+`INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST splits
+remain unopened.
+
 | Line | Decision | Macro F1 | Minimum-family F1 | UAS | LAS |
 |---|---:|---:|---:|---:|---:|
 | v3S BiLSTM | Rejected before `INTERNAL_VAL` | 0.7606 | 0.6291 | — | — |
