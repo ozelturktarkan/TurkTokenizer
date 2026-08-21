@@ -58,10 +58,12 @@ v4 = a1.v4
 @dataclass(frozen=True)
 class R2Config(a1.A1Config):
     # Patience is a lower bound of five for every stage.  Epoch budgets are
-    # extended so the five-epoch window remains meaningful near old maxima.
-    syntax_epochs: int = 20
-    relation_epochs: int = 30
-    hardnegative_epochs: int = 10
+    # extended to a common E50 ceiling. Early stopping still ends a stage after
+    # five consecutive non-improving completed epochs, so the larger ceiling
+    # creates room for late recovery without permitting an unbounded run.
+    syntax_epochs: int = 50
+    relation_epochs: int = 50
+    hardnegative_epochs: int = 50
     patience_syntax: int = 5
     patience_relation: int = 5
     patience_hardnegative: int = 5
@@ -91,6 +93,51 @@ v4.CALIB_GATE = BASE / "TurkTokenizer_v6_0_R2_CALIB_Gate.json"
 v4.TRAIN_LOG = BASE / "TurkTokenizer_v6_0_R2_train.log"
 R2_SCREEN_RESULT = BASE / "TurkTokenizer_v6_0_R2_Screen_Result.json"
 R2_SMOKE_REPORT = BASE / "TurkTokenizer_v6_0_R2_Smoke_Report.json"
+
+
+def load_train_calib_material():
+    """Load and verify only the inputs authorized for the R2 screen.
+
+    The locked v4 helper verifies every artifact listed in the data audit,
+    including the sealed INTERNAL_VAL bytes and the cross-split surface map.
+    R2 must not open either artifact, even for hashing, so its screen validates
+    only the five TRAIN/CALIB inputs it actually consumes.
+    """
+    audit = json.loads(v4.DATA_AUDIT_FILE.read_text(encoding="utf-8"))
+    if audit.get("status") != "PASS_DATA_READY_FOR_V4_SMOKE_TEST":
+        raise RuntimeError("v4 data audit is not PASS")
+    if audit.get("internal_val_metrics_consumed") or audit.get(
+        "internal_val_used_for_vocab_or_lattice"
+    ):
+        raise RuntimeError("internal validation conservation was violated")
+
+    authorized = {
+        "train": v4.TRAIN_FILE,
+        "calib": v4.CALIB_FILE,
+        "syntax_consensus": v4.SYNTAX_CONSENSUS_FILE,
+        "relation_consensus": v4.RELATION_CONSENSUS_FILE,
+        "morph_lattice": v4.LATTICE_FILE,
+    }
+    for name, path in authorized.items():
+        item = audit["outputs"][name]
+        if path.name != item["file"] or v4.sha256(path) != item["sha256"]:
+            raise RuntimeError(f"locked TRAIN/CALIB input changed: {name}")
+
+    train_rows = v4.load_pickle(v4.TRAIN_FILE)
+    calib_rows = v4.load_pickle(v4.CALIB_FILE)
+    lattice = v4.load_pickle(v4.LATTICE_FILE)
+    syntax_consensus = v4.load_pickle(v4.SYNTAX_CONSENSUS_FILE)
+    relation_consensus = v4.load_pickle(v4.RELATION_CONSENSUS_FILE)
+    resources = v4.Resources(train_rows, lattice)
+    return (
+        audit,
+        train_rows,
+        calib_rows,
+        lattice,
+        syntax_consensus,
+        relation_consensus,
+        resources,
+    )
 
 A1_BASELINE = {
     "macro_relation_f1": 0.8107563337851816,
@@ -403,7 +450,7 @@ def comparison_against(baseline, relation_metrics, syntax_metrics):
 
 def run_smoke():
     _, train_rows, _, lattice, syntax_consensus, relation_consensus, resources = (
-        v4.load_train_material()
+        load_train_calib_material()
     )
     device = torch.device("cpu")
     collate = a1.a1_collate_builder(resources, lattice)
@@ -441,6 +488,11 @@ def run_smoke():
         "patience_minimum_five_all_stages": min(
             CFG.patience_syntax, CFG.patience_relation, CFG.patience_hardnegative
         ) >= 5,
+        "epoch_ceiling_fifty_all_stages": (
+            CFG.syntax_epochs == 50
+            and CFG.relation_epochs == 50
+            and CFG.hardnegative_epochs == 50
+        ),
         "internal_val_loaded": False,
         "external_holdouts_loaded": False,
     }
@@ -472,7 +524,7 @@ def run_screen():
     if v4.INTERNAL_SENTINEL.exists():
         raise RuntimeError(f"internal validation sentinel already exists: {v4.INTERNAL_SENTINEL}")
     audit, train_rows, calib_rows, lattice, syntax_consensus, relation_consensus, resources = (
-        v4.load_train_material()
+        load_train_calib_material()
     )
     device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
     train_loader, train_eval_loader, calib_loader = v4.build_loaders(
