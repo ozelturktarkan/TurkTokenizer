@@ -1,0 +1,26 @@
+{
+  "name": "TurkTokenizer v6.0 R2 E50 live status",
+  "updated_at": "2026-08-22T00:00:00+03:00",
+  "status": "RUNNING",
+  "stage": "syntax",
+  "completed_epoch": 0,
+  "next_epoch": 1,
+  "best_epoch": null,
+  "best_selection_score": null,
+  "patience": "0/5",
+  "maximum_epochs": {
+    "syntax": 50,
+    "relation": 50,
+    "hardnegative": 50
+  },
+  "seed": 51104,
+  "device": "cpu",
+  "threads": 8,
+  "checkpoint_policy": "Every completed epoch writes model, optimizer, RNG, sampler and patience state to an atomic durable mirror.",
+  "data_policy": {
+    "train_calib_only": true,
+    "internal_val_consumed": false,
+    "external_holdouts_consumed": false,
+    "official_test_consumed": false
+  }
+}
