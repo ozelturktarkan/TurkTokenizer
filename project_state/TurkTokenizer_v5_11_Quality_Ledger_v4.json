@@ -1,0 +1,63 @@
+{
+  "name": "TurkTokenizer v5.11 Quality Ledger v4",
+  "updated_at": "2026-08-21",
+  "status": "V4_1_A3_DROPPED_V4_2_R1_PRECOMMITTED",
+  "quality_target": {
+    "phase5_primary_minimum": 0.95,
+    "preferred": 1.0,
+    "no_quality_gate_relaxation": true
+  },
+  "v3S": {
+    "decision": "REJECTED_BEFORE_INTERNAL_VAL",
+    "calib_macro_f1": 0.7606056293257831,
+    "calib_min_family_f1": 0.6290672451193059
+  },
+  "v4_locked_baseline": {
+    "decision": "REJECTED_BEFORE_INTERNAL_VAL",
+    "calib_macro_f1": 0.7972293563941714,
+    "calib_min_family_f1": 0.7024824008892182,
+    "calib_uas": 0.8751909425824422,
+    "calib_las": 0.755189145475784
+  },
+  "v4_1_A1": {
+    "decision": "KEEP_FOR_FINALIST_ABSOLUTE_GATES_FAILED",
+    "calib_macro_f1": 0.8107563337851816,
+    "calib_min_family_f1": 0.7174066243833686,
+    "calib_uas": 0.8785155899002606,
+    "calib_las": 0.7599065504537694
+  },
+  "v4_1_A2": {
+    "decision": "DROP_AFTER_SCREEN",
+    "calib_macro_f1": 0.8061106681658993,
+    "calib_min_family_f1": 0.6917712691771268,
+    "calib_uas": 0.8769431215742655,
+    "calib_las": 0.7601761164525115
+  },
+  "v4_1_A3": {
+    "coverage_gate": "PASS",
+    "smoke_gate": "PASS",
+    "decision": "DROP_AFTER_SCREEN",
+    "calib_macro_f1": 0.8040686232856971,
+    "calib_min_family_f1": 0.7053413512557483,
+    "calib_uas": 0.8778416749034055,
+    "calib_las": 0.7568963968011502,
+    "selected_stage": "hardnegative",
+    "selected_epoch": 1,
+    "screen_macro_gain": 0.006839266891525697,
+    "screen_min_family_gain": 0.0028589503665300553,
+    "CASE_GOVERNOR_delta": -0.00782829741752844,
+    "dominant_diagnosis": "OBJECT source-token detection is weak while head top-1 given gold source is 0.9334."
+  },
+  "v4_2_R1": {
+    "status": "PRECOMMITTED_NOT_RUN",
+    "base": "v4_1_A1",
+    "single_delta": "length-normalized NULL-plus-head categorical decoder for direct relation families",
+    "CASE_GOVERNOR_changed": false
+  },
+  "state_conservation": {
+    "internal_val_consumed": false,
+    "external_holdouts_consumed": false,
+    "official_test_splits_consumed": false
+  },
+  "next_action": "Implement R1 exactly as precommitted, pass smoke invariants, then run the single fixed-seed TRAIN/CALIB screen with durable epoch checkpoints."
+}
