@@ -1,0 +1,31 @@
+{
+  "name": "TurkTokenizer v5.11-v4 public architecture summary",
+  "status": "RESEARCH_SNAPSHOT",
+  "architecture": {
+    "backbone": "relative-position Transformer",
+    "layers": 8,
+    "hidden": 384,
+    "attention_heads": 8,
+    "feed_forward": 1536,
+    "morphology_candidates": 20,
+    "inputs": [
+      "raw surface token",
+      "Unicode character encoder",
+      "frozen morphology lattice",
+      "dependency structure"
+    ],
+    "specialized_relations": [
+      "POSS_HEAD",
+      "OBJECT",
+      "PARTICIPLE_HEAD",
+      "CASE_GOVERNOR"
+    ]
+  },
+  "selection_policy": {
+    "train": "gradient updates and TRAIN-only candidate diagnostics",
+    "calib": "checkpoint, threshold and architecture screening",
+    "internal_validation": "sealed; one-time access only after every absolute CALIB gate passes",
+    "external_holdouts": "sealed until the Phase-5 protocol permits access"
+  },
+  "publication_note": "Exact local artifact, checkpoint and sealed-resource hashes are retained outside the public repository."
+}

@@ -1,0 +1,54 @@
+{
+  "name": "TurkTokenizer v5.11-v4 public corpus provenance template",
+  "status": "TEMPLATE_REQUIRES_AUTHORIZED_LOCAL_BLOB_SHA_LOCK",
+  "files": {
+    "Kenet": {
+      "repo": "UniversalDependencies/UD_Turkish-Kenet",
+      "file": "tr_kenet-ud-train.conllu",
+      "blob_sha": "FILL_FROM_AUTHORIZED_LOCKED_MANIFEST",
+      "role": "V4_TRAINING_POOL"
+    },
+    "Tourism": {
+      "repo": "UniversalDependencies/UD_Turkish-Tourism",
+      "file": "tr_tourism-ud-train.conllu",
+      "blob_sha": "FILL_FROM_AUTHORIZED_LOCKED_MANIFEST",
+      "role": "V4_TRAINING_POOL"
+    },
+    "ATIS": {
+      "repo": "UniversalDependencies/UD_Turkish-Atis",
+      "file": "tr_atis-ud-train.conllu",
+      "blob_sha": "FILL_FROM_AUTHORIZED_LOCKED_MANIFEST",
+      "role": "V4_TRAINING_POOL"
+    },
+    "FrameNet": {
+      "repo": "UniversalDependencies/UD_Turkish-FrameNet",
+      "file": "tr_framenet-ud-train.conllu",
+      "blob_sha": "FILL_FROM_AUTHORIZED_LOCKED_MANIFEST",
+      "role": "V4_TRAINING_POOL"
+    },
+    "BOUN": {
+      "repo": "UniversalDependencies/UD_Turkish-BOUN",
+      "file": "tr_boun-ud-train.conllu",
+      "blob_sha": "FILL_FROM_AUTHORIZED_LOCKED_MANIFEST",
+      "role": "EXTERNAL_CORPUS_HOLDOUT_NO_V4_TRAINING"
+    },
+    "IMST": {
+      "repo": "UniversalDependencies/UD_Turkish-IMST",
+      "file": "tr_imst-ud-train.conllu",
+      "blob_sha": "FILL_FROM_AUTHORIZED_LOCKED_MANIFEST",
+      "role": "EXTERNAL_CORPUS_HOLDOUT_NO_V4_TRAINING"
+    },
+    "Penn": {
+      "repo": "UniversalDependencies/UD_Turkish-Penn",
+      "file": "tr_penn-ud-train.conllu",
+      "blob_sha": "FILL_FROM_AUTHORIZED_LOCKED_MANIFEST",
+      "role": "EXTERNAL_CORPUS_HOLDOUT_NO_V4_TRAINING"
+    }
+  },
+  "policy": {
+    "abort_on_sha_mismatch": true,
+    "only_training_pool_role_may_enter_gradient_updates": true,
+    "external_holdouts_remain_sealed": true,
+    "official_test_files_not_materialized": true
+  }
+}

@@ -1,0 +1,33 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+.pytest_cache/
+.mypy_cache/
+
+# Training data, derived datasets, and sealed evaluation resources
+*.conllu
+*.pkl
+*.pickle
+*.arrow
+*.parquet
+corpora_exact/
+data/raw/
+data/derived/
+*INTERNAL_VAL*
+*external_holdout*
+
+# Model outputs and live run state
+*.pt
+*.pth
+*.ckpt
+*_models/
+*_train.log
+*_RUN_STATE*
+*_HARDNEGATIVE_CACHE*
+
+# Local and platform files
+.DS_Store
+Thumbs.db
+*.tmp
+*.openai-download-*

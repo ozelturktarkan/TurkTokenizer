@@ -33,14 +33,14 @@ The long-term target is at least 95% on fresh, precommitted, multi-domain Phase-
 
 ## Repository layout
 
-- `src/`: frozen analyzer, runtime tokenizer, corpus verifier, locked v4 trainer, and v4.1 ablation drivers.
-- `contracts/`: architecture, provenance, conservation, and ablation precommits.
-- `audits/`: public-safe aggregate CALIB, smoke, screen, and build reports.
+- `src/`: frozen analyzer, runtime tokenizer, and a hash-free public corpus verifier.
+- `contracts/`: hash-free public architecture summary and corpus-provenance template.
+- `audits/`: public-safe aggregate summaries without sealed-resource metadata.
 - `docs/`: decision reports and completed A1/A2 training logs.
 - `project_state/`: current machine-readable ledger.
 - `data/`: acquisition and seal policy; no datasets are redistributed here.
 
-Some files are duplicated beside the training scripts because the sealed research drivers intentionally resolve locked dependencies relative to their own directory.
+Detailed split inventories, local corpus hashes, checkpoint hashes, sealed-resource metadata, serialized lattices, and model weights remain outside the public repository. Their authoritative copies are retained in the project Library. See [PUBLICATION_POLICY.md](PUBLICATION_POLICY.md).
 
 ## Reproduction outline
 
@@ -52,38 +52,17 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-Acquire the exact corpus blobs described in `contracts/TurkTokenizer_v5_11_v4_Corpus_Provenance_Precommit.json`, then verify only the training-pool role:
+Acquire the listed upstream corpus files from `contracts/Public_Corpus_Provenance_Template.json`. Copy that template to a local manifest and fill its `blob_sha` placeholders from the authorized locked manifest before verification; exact local lock values are intentionally not published.
 
 ```bash
-python src/TurkTokenizer_v5_11_v4_verify_corpora.py \
+python src/TurkTokenizer_public_verify_corpora.py \
   --directory data/corpora_exact \
-  --manifest src/TurkTokenizer_v5_11_v4_Corpus_Provenance_Precommit.json \
-  --runtime src/TurkTokenizer_v5_11_v4_RuntimeTokens.py \
+  --manifest path/to/local_locked_manifest.json \
   --roles V4_TRAINING_POOL \
-  --output src/TurkTokenizer_v5_11_v4_Corpus_Local_Audit.json
+  --output data/public_verification_result.json
 ```
 
-Build the locked split and training artifacts:
-
-```bash
-python src/TurkTokenizer_v5_11_v4_build_data.py \
-  --corpora data/corpora_exact \
-  --manifest src/TurkTokenizer_v5_11_v4_Corpus_Provenance_Precommit.json \
-  --audit src/TurkTokenizer_v5_11_v4_Corpus_Local_Audit.json \
-  --runtime src/TurkTokenizer_v5_11_v4_RuntimeTokens.py \
-  --morphology src/bases/TurkTokenizer_v5_5_4_FROZEN.py
-```
-
-The A3 candidate-space sequence is:
-
-```bash
-python src/TurkTokenizer_v5_11_v4_1_A3_build_coverage_lattice.py
-python src/TurkTokenizer_v5_11_v4_1_A3_coverage_audit.py
-python src/TurkTokenizer_v5_11_v4_1_A3_train.py --smoke
-python src/TurkTokenizer_v5_11_v4_1_A3_train.py --screen
-```
-
-The screen command is intentionally expensive. Before running it, verify hashes against the A3 precommit and arrange durable checkpoint/log storage. Do not add evaluation data to Git.
+The locked data builder, neural training drivers, detailed precommits, and checkpoint-resume state are retained in the project Library. They will be published only after being refactored into a hash-free release interface that cannot disclose local or sealed-resource metadata. The public repository already exposes the tokenization/analyzer core, architecture summary, aggregate results, and falsifiable quality policy.
 
 ## License and data
 

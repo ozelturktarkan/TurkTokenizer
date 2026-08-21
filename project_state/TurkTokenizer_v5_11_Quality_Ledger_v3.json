@@ -1,0 +1,59 @@
+{
+  "name": "TurkTokenizer v5.11 Quality Ledger v3",
+  "updated_at": "2026-08-21",
+  "status": "V4_1_A3_SCREEN_INTERRUPTED_RESTART_REQUIRED",
+  "quality_target": {
+    "phase5_primary_minimum": 0.95,
+    "preferred": 1.0,
+    "no_quality_gate_relaxation": true
+  },
+  "v3S": {
+    "decision": "REJECTED_BEFORE_INTERNAL_VAL",
+    "calib_macro_f1": 0.7606056293257831,
+    "calib_min_family_f1": 0.6290672451193059
+  },
+  "v4_locked_baseline": {
+    "decision": "REJECTED_BEFORE_INTERNAL_VAL",
+    "calib_macro_f1": 0.7972293563941714,
+    "calib_min_family_f1": 0.7024824008892182,
+    "calib_uas": 0.8751909425824422,
+    "calib_las": 0.755189145475784
+  },
+  "v4_1_A1": {
+    "decision": "KEEP_FOR_FINALIST_ABSOLUTE_GATES_FAILED",
+    "calib_macro_f1": 0.8107563337851816,
+    "calib_min_family_f1": 0.7174066243833686,
+    "calib_uas": 0.8785155899002606,
+    "calib_las": 0.7599065504537694
+  },
+  "v4_1_A2": {
+    "decision": "DROP_AFTER_SCREEN",
+    "calib_macro_f1": 0.8061106681658993,
+    "calib_min_family_f1": 0.6917712691771268,
+    "calib_uas": 0.8769431215742655,
+    "calib_las": 0.7601761164525115
+  },
+  "v4_1_A3": {
+    "coverage_gate": "PASS",
+    "joint_lemma_mapped_morph_recall_top20": 0.9632123329812057,
+    "minimum_relation_critical_requirement_candidate_recall_top20": 0.9573986804901037,
+    "smoke_gate": "PASS",
+    "neural_screen": "INCOMPLETE_INTERRUPTED_DURING_RELATION_E04",
+    "last_complete_relation_epoch": 3,
+    "last_complete_relation_metrics_provisional": {
+      "macro_f1": 0.7860,
+      "minimum_family": "OBJECT",
+      "minimum_family_f1": 0.7019,
+      "uas": 0.8705,
+      "las": 0.7434
+    },
+    "hardnegative_stage_started": false,
+    "final_decision": null
+  },
+  "state_conservation": {
+    "internal_val_consumed": false,
+    "external_holdouts_consumed": false,
+    "official_test_splits_consumed": false
+  },
+  "next_action": "Restart A3 from a clean fixed-seed run with durable epoch checkpoints; do not treat partial E03 metrics as a final screen."
+}

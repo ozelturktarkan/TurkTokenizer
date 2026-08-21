@@ -1,0 +1,33 @@
+{
+  "name": "TurkTokenizer v5.11-v4.1 A3 public coverage summary",
+  "status": "PASS_A3_COVERAGE_GATE",
+  "scope": {
+    "read_train": true,
+    "read_calib_rows": false,
+    "read_internal_val": false,
+    "read_external_holdouts": false,
+    "gold_candidate_injection": false
+  },
+  "gate": {
+    "joint_lemma_mapped_morph_recall_top20_morph_required_tokens": 0.9632123329812057,
+    "joint_minimum": 0.95,
+    "relation_critical_requirement_candidate_recall_top20_min": 0.9573986804901037,
+    "requirement_minimum": 0.95,
+    "forbidden_gold_or_oracle_notes": {}
+  },
+  "lattice_integrity": {
+    "surfaces": 46519,
+    "empty_surface_candidate_lists": 0,
+    "top_k": 20
+  },
+  "smoke": {
+    "status": "PASS_V4_1_A3_SMOKE",
+    "parameters": 28848978,
+    "transformer_layers": 8,
+    "transformer_heads": 8,
+    "hidden": 384,
+    "finite_gradients": true,
+    "model_architecture_changed_from_v4": false
+  },
+  "publication_note": "Corpus-derived missing-example lists and serialized lattice data are intentionally omitted. Exact artifact hashes remain recorded in the A3 precommit."
+}
