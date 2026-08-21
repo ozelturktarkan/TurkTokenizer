@@ -1,0 +1,41 @@
+{
+  "name": "TurkTokenizer v5.11-v4.2 R1 Public Closure Summary",
+  "date": "2026-08-21",
+  "status": "DROP_AFTER_SCREEN",
+  "variant": "R1_A1_null_augmented_direct_arcs",
+  "final_calib": {
+    "macro_relation_f1": 0.8078271460408145,
+    "minimum_family": "OBJECT",
+    "minimum_family_f1": 0.7137834036568215,
+    "UAS": 0.883053284212418,
+    "LAS": 0.7643094617665559,
+    "UPOS": 0.9205229580375596,
+    "families": {
+      "POSS_HEAD": 0.8123138033763654,
+      "OBJECT": 0.7137834036568215,
+      "PARTICIPLE_HEAD": 0.8231827111984283,
+      "CASE_GOVERNOR": 0.8820286659316428
+    }
+  },
+  "screen_against_A1": {
+    "macro_gain": -0.0029291877443671233,
+    "minimum_family_gain": -0.003623220726547083,
+    "family_deltas": {
+      "POSS_HEAD": -0.006677294546483248,
+      "OBJECT": -0.003623220726547083,
+      "PARTICIPLE_HEAD": -0.014255712446891833,
+      "CASE_GOVERNOR": 0.01283947674245356
+    },
+    "gain_pass": false,
+    "no_family_regression": false,
+    "syntax_pass": true
+  },
+  "diagnosis": {
+    "OBJECT_source_f1": 0.7258566978193146,
+    "OBJECT_head_top1_given_gold_source": 0.9327385037748799,
+    "conclusion": "NULL-plus-head normalization did not improve source-token identification over A1."
+  },
+  "internal_val_consumed": false,
+  "external_holdouts_consumed": false,
+  "final_decision": "Do not promote or tune R1; retain A1 as the strongest surviving base and precommit the next error-led experiment before training."
+}
