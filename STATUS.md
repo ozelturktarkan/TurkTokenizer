@@ -1,5 +1,23 @@
 # Project status — 2026-08-21
 
+## v6.0 R2 E50 restart amendment
+
+The first resumable R2 screen was interrupted while relation epoch 5 was
+computing. Its last complete relation checkpoint was epoch 4; the corresponding
+model/optimizer/RNG state did not survive outside the interrupted workspace, so
+it is not reused or reconstructed from metrics.
+
+A fresh fixed-seed R2 screen is therefore precommitted with a common maximum of
+50 epochs for syntax, relation, and hard-negative training. Early stopping is
+unchanged: an improvement greater than `1e-4` resets patience to `0/5`; every
+other completed epoch increments it once; the stage stops after writing state
+at `5/5`. The larger ceiling does not change data, architecture, optimizer,
+selection scores, gates, or the sealed-evaluation policy.
+
+The amendment is recorded in
+`contracts/TurkTokenizer_v6_0_R2_E50_Amendment_v1.json`. `INTERNAL_VAL`,
+external BOUN/IMST/Penn holdouts, and official TEST splits remain unopened.
+
 ## Reliable state
 
 - v3S and the locked v4 baseline are rejected before `INTERNAL_VAL`.
