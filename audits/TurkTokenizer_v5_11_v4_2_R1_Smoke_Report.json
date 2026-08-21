@@ -1,0 +1,24 @@
+{
+  "status": "PASS_V4_2_R1_SMOKE",
+  "variant": "R1_A1_null_augmented_direct_arcs",
+  "syntax_loss": 12.606109619140625,
+  "relation_loss": 8.392203330993652,
+  "parameters": 29306087,
+  "joint_probability_sum_max_error": 2.384185791015625e-07,
+  "source_probability_identity_max_error": 2.4586915969848633e-07,
+  "invalid_head_probability_max": 0.0,
+  "case_source_max_error": 0.0,
+  "case_head_max_error": 0.0,
+  "checks": {
+    "finite_losses": true,
+    "finite_gradients": true,
+    "joint_probability_sum_max_error_le_1e-6": true,
+    "source_probability_identity_max_error_le_1e-6": true,
+    "invalid_head_probability_le_1e-8": true,
+    "case_governor_numerically_unchanged": true,
+    "internal_val_loaded": false,
+    "external_holdouts_loaded": false
+  },
+  "ordered_realizations_used": false,
+  "coverage_repairs_used": false
+}
