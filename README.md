@@ -14,8 +14,10 @@ early stopping remains bounded at five consecutive non-improving completed
 epochs. An improvement greater than `1e-4` writes a new best checkpoint and
 resets patience to `0/5`.
 
-Syntax epoch 11 reached a new-best selection score `0.79933058`
-(`UAS=0.8667`, `LAS=0.7464`, `UPOS=0.9145`) and kept patience at `0/5`.
+Syntax epoch 12 completed with selection score `0.79644622`
+(`UAS=0.8670`, `LAS=0.7414`, `UPOS=0.9152`). It did not exceed the E11
+best (`0.79933058`), so the selected checkpoint remains E11 and patience is
+`1/5`.
 The public-safe machine-readable progress record is
 [TurkTokenizer_v6_0_R2_E50_Live_Status.json](project_state/TurkTokenizer_v6_0_R2_E50_Live_Status.json).
 `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST splits
