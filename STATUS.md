@@ -35,4 +35,14 @@ The R1 smoke test passed on seed `51104`:
 - `CASE_GOVERNOR` numerical change: `0`
 - internal validation and external holdouts loaded: `false`
 
-Next: run the single fixed-seed resumable TRAIN/CALIB screen and apply the unchanged survival and absolute quality gates.
+## Live R1 screen
+
+The single fixed-seed resumable TRAIN/CALIB screen started at `2026-08-21 10:42:12 +03:00` on CPU. The first durable syntax state completed at `10:48:52`:
+
+- syntax epoch 1 loss: `2.5271`
+- `UAS=0.7572`, `LAS=0.6216`, `UPOS=0.8627`
+- next recoverable boundary: syntax epoch 2
+
+The raw epoch state is mirrored outside the scratch worktree and as hash-verified transfer shards in ChatGPT Library. These are preliminary training metrics, not a CALIB screen decision.
+
+Next: finish the R1 screen and apply the unchanged survival and absolute quality gates.
