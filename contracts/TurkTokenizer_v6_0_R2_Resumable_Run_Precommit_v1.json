@@ -1,0 +1,51 @@
+{
+  "name": "TurkTokenizer v6.0 R2 Resumable Run Precommit v1",
+  "date": "2026-08-21",
+  "status": "READY_FOR_FRESH_RESUMABLE_RUN",
+  "source": {
+    "trainer": "src/TurkTokenizer_v6_0_R2_train.py",
+    "trainer_sha256": "44ad16e17b3fae5c37a1d2302ab138f0c55c3cab20dc222c7baf675f1c61b059",
+    "wrapper": "src/TurkTokenizer_v6_0_R2_train_RESUMABLE.py",
+    "wrapper_sha256": "fc75859318148ff6f1176333238a3d9e16e434930413bf024b9bbe9b9c22d611"
+  },
+  "state_saved_after_every_completed_epoch": [
+    "model",
+    "optimizer",
+    "Python RNG",
+    "Torch RNG",
+    "balanced sampler epoch",
+    "best selection score",
+    "patience counter",
+    "next epoch",
+    "immutable run fingerprint"
+  ],
+  "patience": {
+    "syntax": 5,
+    "relation": 5,
+    "hardnegative": 5,
+    "reset_rule": "improvement greater than 1e-4 resets to 0/5",
+    "increment_rule": "otherwise increments exactly once after the epoch",
+    "stop_rule": "stop after writing state at 5/5",
+    "log_format": "PATIENCE <stage> E<epoch> score=<score> improved=<true|false> patience=<n>/5"
+  },
+  "durability": {
+    "local_epoch_state": "v600_R2_resume_state",
+    "mirror_config": "TURKTOKENIZER_DURABLE_DIR",
+    "best_checkpoints_mirrored": true,
+    "epoch_states_mirrored": true,
+    "stage_done_markers_mirrored": true,
+    "hardnegative_cache_mirrored": true,
+    "atomic_temp_then_replace": true
+  },
+  "fresh_start_assertions": {
+    "reuse_A1_or_R1_optimizer_state": false,
+    "reuse_A1_or_R1_model_state": false,
+    "new_model_directory": "v600_R2_models",
+    "new_state_directory": "v600_R2_resume_state"
+  },
+  "state_conservation": {
+    "internal_val_consumed": false,
+    "external_holdouts_consumed": false,
+    "official_test_splits_consumed": false
+  }
+}

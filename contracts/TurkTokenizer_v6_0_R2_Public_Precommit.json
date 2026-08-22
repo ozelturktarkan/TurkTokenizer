@@ -1,0 +1,90 @@
+{
+  "name": "TurkTokenizer v6.0 R2 Public Precommit",
+  "date": "2026-08-21",
+  "status": "READY_FOR_R2_SCREEN_PRECOMMITTED_BEFORE_CALIB_RESULTS",
+  "variant": "R2_A1_source_first_contextual_filter",
+  "base_variant": "A1_contextual_posterior_only",
+  "fresh_start": true,
+  "hypothesis": "A separately supervised morphosyntax-aware source-token filter will improve the measured direct-family source bottleneck while preserving A1 conditional head capacity.",
+  "implementation": {
+    "script": "src/TurkTokenizer_v6_0_R2_train.py",
+    "parameter_count": 29741930,
+    "architecture_delta": [
+      "Direct-family source filter over relation context, graph context, contextual morphology, UPOS, UD features, and dependency-relation projections.",
+      "Learned gated residual from the independently supervised filter logit into the source logit.",
+      "Numerically safe masked morphology posterior and valid-head log-mean-exp evidence summary.",
+      "Source-only hard-negative penalty restricted to truly negative source targets.",
+      "Contextual morphology Top-1 and compatible-mass audit without changing the locked top-20 lattice."
+    ],
+    "explicitly_excluded": [
+      "R1 NULL-augmented direct-arc decoder",
+      "A2 ordered realization encoder",
+      "A3 coverage-repair lattice",
+      "gold candidate injection",
+      "CALIB-derived training supervision",
+      "unverified pronoun or suffix heuristics",
+      "optimizer LR, gradient clipping, or warmup changes",
+      "INTERNAL_VAL, external holdout, or official test access"
+    ]
+  },
+  "training": {
+    "seed": 51104,
+    "fresh_random_initialization": true,
+    "syntax_epochs_max": 20,
+    "relation_epochs_max": 30,
+    "hardnegative_epochs_max": 10,
+    "patience": {
+      "syntax": 5,
+      "relation": 5,
+      "hardnegative": 5
+    },
+    "patience_transition": "selection_score > best + 1e-4 => 0/5; otherwise +1/5; stop at 5/5",
+    "selection_score_syntax": "0.60*LAS + 0.30*UAS + 0.10*UPOS",
+    "selection_score_relation": "0.58*macro_f1 + 0.27*min_family_f1 + 0.08*UAS + 0.07*LAS",
+    "source_filter_loss_weight": 0.35,
+    "source_filter_family_weights": {
+      "POSS_HEAD": 1.15,
+      "OBJECT": 1.4,
+      "PARTICIPLE_HEAD": 1.15
+    },
+    "source_hardnegative_penalty": 0.25,
+    "object_source_hardnegative_multiplier": 1.5
+  },
+  "screen_keep_if": {
+    "macro_relation_f1_gain_against_A1_minimum": 0.01,
+    "family_regression_allowed": false,
+    "maximum_UAS_regression": 0.005,
+    "maximum_LAS_regression": 0.005
+  },
+  "absolute_gates": {
+    "legacy_not_relaxed": {
+      "macro_relation_f1": 0.9,
+      "minimum_family_f1": 0.87,
+      "UAS": 0.88,
+      "LAS": 0.8
+    },
+    "effective_v6_production": {
+      "macro_relation_f1": 0.9,
+      "minimum_family_f1": 0.87,
+      "UAS": 0.93,
+      "LAS": 0.85
+    },
+    "stretch_all_metrics": 0.95
+  },
+  "smoke": {
+    "status": "PASS_V6_0_R2_SMOKE",
+    "report": "audits/TurkTokenizer_v6_0_R2_Smoke_Report.json",
+    "finite_losses_and_gradients": true,
+    "all_invalid_posterior_exact_zero": true,
+    "internal_val_loaded": false,
+    "external_holdouts_loaded": false
+  },
+  "public_boundary": {
+    "corpus_hashes_published": false,
+    "private_split_counts_published": false,
+    "checkpoint_or_resume_state_published": false,
+    "internal_val_consumed": false,
+    "external_holdouts_consumed": false,
+    "official_test_splits_consumed": false
+  }
+}
