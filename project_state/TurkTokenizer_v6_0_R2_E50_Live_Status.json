@@ -1,16 +1,16 @@
 {
   "name": "TurkTokenizer v6.0 R2 E50 live status",
-  "updated_at": "2026-08-22T03:01:44+03:00",
+  "updated_at": "2026-08-22T03:09:39+03:00",
   "status": "RUNNING",
   "stage": "relation",
-  "completed_epoch": 4,
-  "next_epoch": 5,
-  "best_epoch": 4,
-  "best_selection_score": 0.77212351,
+  "completed_epoch": 5,
+  "next_epoch": 6,
+  "best_epoch": 5,
+  "best_selection_score": 0.77237235,
   "patience": "0/5",
   "latest_epoch_improved": true,
   "patience_transition": "0/5 -> 0/5",
-  "latest_metrics": {"stage": "relation", "epoch": 4, "selection_score": 0.77212351, "loss": 0.3411, "macro": 0.7946, "minimum_family": 0.6977, "POSS_HEAD": 0.789, "OBJECT": 0.698, "PARTICIPLE_HEAD": 0.819, "CASE_GOVERNOR": 0.872, "UAS": 0.8764, "LAS": 0.7538},
+  "latest_metrics": {"stage": "relation", "epoch": 5, "selection_score": 0.77237235, "loss": 0.3019, "macro": 0.7965, "minimum_family": 0.6945, "POSS_HEAD": 0.804, "OBJECT": 0.694, "PARTICIPLE_HEAD": 0.815, "CASE_GOVERNOR": 0.872, "UAS": 0.8747, "LAS": 0.7555},
   "completed_stages": {
     "syntax": {"final_epoch": 25, "best_epoch": 20, "best_selection_score": 0.80719741, "stop_patience": "5/5"}
   },
@@ -21,10 +21,10 @@
   "checkpoint_policy": "Every completed epoch writes model, optimizer, RNG, sampler and patience state to an atomic durable mirror; an improvement above best + 1e-4 resets patience to 0/5.",
   "library_backup": {
     "folder": "TurkTokenizer-v-6-0-R2-egitim-dosyalari",
-    "completed_epoch": 4,
+    "completed_epoch": 5,
     "resumable_state_parts": 8,
     "manifest_saved": true,
-    "best_checkpoint_epoch": 4,
+    "best_checkpoint_epoch": 5,
     "stage_done_marker_saved": true,
     "library_versions_preserved": true
   },
