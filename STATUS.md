@@ -15,7 +15,7 @@ R2-P9 restored the selected Syntax E20 boundary and migrated it safely onto the 
 
 Syntax, relation, and hard-negative ceilings are E50. Patience is 9 in every stage and resets to `0/9` on a qualifying improvement. A deterministic learning-rate reduction applies at the fourth consecutive non-improving epoch. Sealed evaluation remains unopened.
 
-Syntax E25 is the current selected checkpoint after the LR plateau step: `loss=0.3559`, `UAS=0.8810`, `LAS=0.7633`, `UPOS=0.9235`, selection score `0.81462845`. Patience reset from `4/9` to `0/9`; the next recoverable boundary is Syntax E26 at LR `0.00025`. The rolling state and selected checkpoint are independently archived in two private durable packages. This remains a TRAIN/CALIB screening result, not a sealed-test claim.
+Syntax E25 remains the selected checkpoint: `loss=0.3559`, `UAS=0.8810`, `LAS=0.7633`, `UPOS=0.9235`, selection score `0.81462845`. Training safely advanced through Syntax E29. The latest independently archived resume boundary is `completed_epoch=29`, `next_epoch=30`, patience `4/9`, and LR `0.000125`; E30 was interrupted before an epoch boundary and is intentionally discarded. The rolling state and selected E25 checkpoint are independently archived in two private durable packages. This remains a TRAIN/CALIB screening result, not a sealed-test claim.
 
 ## Final A3 closure
 
