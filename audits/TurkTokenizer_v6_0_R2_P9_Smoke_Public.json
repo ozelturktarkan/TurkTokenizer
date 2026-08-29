@@ -1,0 +1,32 @@
+{
+  "name": "TurkTokenizer v6.0 R2-P9 public smoke summary",
+  "status": "PASS_V6_0_R2_SMOKE",
+  "variant": "R2_P9_E20_conflict_aware_source_filter",
+  "parameters": 29741930,
+  "training_contract": {
+    "epoch_ceilings": {"syntax": 50, "relation": 50, "hardnegative": 50},
+    "patience": {"syntax": 9, "relation": 9, "hardnegative": 9},
+    "reset_on_improvement": true,
+    "minimum_improvement": 0.0001,
+    "lr_plateau_bad_epochs": 4,
+    "lr_plateau_factor": 0.5
+  },
+  "morphology_repair": {
+    "previous_exception_surfaces": 883,
+    "current_exception_surfaces": 0,
+    "candidate_rows_added": 3231
+  },
+  "checks": {
+    "finite_losses": true,
+    "finite_gradients": true,
+    "invalid_morph_masks_safe": true,
+    "valid_morph_posteriors_sum_to_one": true,
+    "sealed_evaluation_consumed": false
+  },
+  "publication_boundary": {
+    "corpora_included": false,
+    "serialized_lattice_included": false,
+    "checkpoint_or_optimizer_state_included": false,
+    "private_or_sealed_hashes_included": false
+  }
+}

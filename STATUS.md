@@ -1,4 +1,4 @@
-# Project status — 2026-08-21
+# Project status — 2026-08-29
 
 ## Reliable state
 
@@ -9,7 +9,7 @@
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
 
-## Final A3 closure
+## Live v6.0 R2-P9 repair line\n\nR2-P9 restored the selected Syntax E20 boundary and migrated it safely onto the repaired morphology lattice. The public smoke gate passed. The latest independently archived resume boundary is Syntax E21 with `next_epoch=22` and patience `1/9`; this is a preliminary TRAIN/CALIB state, not a final model claim.\n\nSyntax, relation, and hard-negative ceilings are E50. Patience is 9 in every stage and resets to `0/9` on a qualifying improvement. A deterministic learning-rate reduction applies at the fourth consecutive non-improving epoch. Sealed evaluation remains unopened.\n\n## Final A3 closure
 
 The clean resumable A3 run completed all syntax, relation, hard-negative, calibration, audit, and screen stages. Its final CALIB result was:
 
