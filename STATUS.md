@@ -11,7 +11,7 @@
 
 ## Live v6.0 R2-P9 repair line
 
-R2-P9 restored the selected Syntax E20 boundary and migrated it safely onto the repaired morphology lattice. The public smoke gate passed. The latest independently archived resume boundary is Syntax E21 with `next_epoch=22` and patience `1/9`; this is a preliminary TRAIN/CALIB state, not a final model claim.
+R2-P9 restored the selected Syntax E20 boundary and migrated it safely onto the repaired morphology lattice. The public smoke gate passed. The current selected and resume boundaries are recorded below; all figures are preliminary TRAIN/CALIB screening results, not final model claims.
 
 Syntax, relation, and hard-negative ceilings are E50. Patience is 9 in every stage and resets to `0/9` on a qualifying improvement. A deterministic learning-rate reduction applies at the fourth consecutive non-improving epoch. Sealed evaluation remains unopened.
 
