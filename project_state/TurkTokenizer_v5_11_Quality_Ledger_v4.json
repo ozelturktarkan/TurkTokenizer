@@ -1,7 +1,7 @@
 {
   "name": "TurkTokenizer v5.11 Quality Ledger v4",
   "updated_at": "2026-08-21",
-  "status": "V4_1_A3_DROPPED_V4_2_R1_SMOKE_PASS",
+  "status": "V4_2_R1_DROPPED_BEFORE_INTERNAL_VAL",
   "quality_target": {
     "phase5_primary_minimum": 0.95,
     "preferred": 1.0,
@@ -49,10 +49,19 @@
     "dominant_diagnosis": "OBJECT source-token detection is weak while head top-1 given gold source is 0.9334."
   },
   "v4_2_R1": {
-    "status": "SMOKE_PASS_SCREEN_NOT_RUN",
+    "status": "DROP_AFTER_SCREEN",
     "base": "v4_1_A1",
     "single_delta": "length-normalized NULL-plus-head categorical decoder for direct relation families",
     "CASE_GOVERNOR_changed": false,
+    "calib_macro_f1": 0.8078271460408145,
+    "calib_min_family_f1": 0.7137834036568215,
+    "calib_uas": 0.883053284212418,
+    "calib_las": 0.7643094617665559,
+    "selected_stage": "hardnegative",
+    "selected_epoch": 2,
+    "screen_macro_gain_vs_A1": -0.0029291877443671233,
+    "screen_min_family_gain_vs_A1": -0.003623220726547083,
+    "dominant_diagnosis": "NULL-plus-head normalization did not improve OBJECT source-token identification over A1.",
     "smoke": {
       "status": "PASS_V4_2_R1_SMOKE",
       "parameters": 29306087,
@@ -71,5 +80,5 @@
     "external_holdouts_consumed": false,
     "official_test_splits_consumed": false
   },
-  "next_action": "Run the single fixed-seed R1 TRAIN/CALIB screen with durable epoch checkpoints and apply the unchanged survival and absolute gates."
+  "next_action": "Freeze R1 as a negative result; retain A1 as the strongest surviving base and precommit an error-led next ablation without opening INTERNAL_VAL."
 }
