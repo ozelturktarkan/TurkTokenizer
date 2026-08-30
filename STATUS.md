@@ -1,6 +1,8 @@
 # Project status — 2026-08-29
 
+
 ## Reliable state
+
 
 - v3S and the locked v4 baseline are rejected before `INTERNAL_VAL`.
 - v4.1 A1 remains the strongest surviving base, but failed the absolute CALIB gates.
@@ -9,48 +11,46 @@
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
 
+
 ## Live v6.0 R2-P9 repair line
+
 
 R2-P9 restored the selected Syntax E20 boundary and migrated it safely onto the repaired morphology lattice. The public smoke gate passed. The current selected and resume boundaries are recorded below; all figures are preliminary TRAIN/CALIB screening results, not final model claims.
 
+
 The Syntax ceiling is now E70; Relation and Hard-Negative ceilings remain E50. Patience remains 9 in every stage and resets to `0/9` on a qualifying improvement. A deterministic learning-rate reduction applies at the fourth consecutive non-improving epoch. For Syntax, a three-epoch overfitting guard stops safely when selection score does not improve while training loss falls and CALIB syntax loss rises by at least 0.1% per epoch; on a stop, the highest-scoring checkpoint is frozen and independently archived twice. The explicit Relation overfitting guard is intentionally deferred until after E40; before that boundary, the nine-epoch patience and deterministic plateau-LR policy remain the active safeguards. LAS `0.80` and selection score `0.85` are tracking targets, not claims or reasons to open sealed evaluation. Sealed evaluation remains unopened.
 
-Syntax training closed safely at E42 after the overfitting guard fired at `3/3`. Syntax E38 remains frozen as the selected parent checkpoint: `loss=0.1365`, `UAS=0.8867`, `LAS=0.7670`, `UPOS=0.9252`, selection score `0.81872136`. Relation E17 remains the selected Relation checkpoint: `loss=0.1053`, macro F1 `0.7997`, minimum-family F1 `0.7032`, `POSS_HEAD=0.803`, `OBJECT=0.703`, `PARTICIPLE_HEAD=0.819`, `CASE_GOVERNOR=0.874`, `UAS=0.8834`, `LAS=0.7643`, and selection score `0.77786693`. Relation E19 subsequently completed with `loss=0.0900`, macro F1 `0.7972`, minimum-family F1 `0.7047`, `UAS=0.8825`, `LAS=0.7614`, and selection score `0.77656592`; it did not qualify as an improvement, so patience is `2/9` and LR remains `0.000125`. The independently archived Relation resume boundary is `completed_epoch=19`, `next_epoch=20`, with rolling state stored in two private durable packages and the E17 best preserved independently in both. INTERNAL_VAL, external holdouts, and official TEST remain unopened. These are TRAIN/CALIB screening results, not sealed-test claims.
+
+Syntax training closed safely at E42 after the overfitting guard fired at `3/3`. Syntax E38 remains frozen as the selected parent checkpoint: `loss=0.1365`, `UAS=0.8867`, `LAS=0.7670`, `UPOS=0.9252`, selection score `0.81872136`. Relation E20 is now the selected Relation checkpoint: `loss=0.0842`, macro F1 `0.7997`, minimum-family F1 `0.7081`, `POSS_HEAD=0.795`, `OBJECT=0.708`, `PARTICIPLE_HEAD=0.825`, `CASE_GOVERNOR=0.871`, `UAS=0.8840`, `LAS=0.7631`, and selection score `0.77914757`. It qualified as an improvement, so patience reset from `2/9` to `0/9` and LR remains `0.000125`. The independently archived Relation resume boundary is `completed_epoch=20`, `next_epoch=21`, with rolling state and the E20 best stored independently in two private durable packages. INTERNAL_VAL, external holdouts, and official TEST remain unopened. These are TRAIN/CALIB screening results, not sealed-test claims.
+
 
 ## Final A3 closure
 
+
 The clean resumable A3 run completed all syntax, relation, hard-negative, calibration, audit, and screen stages. Its final CALIB result was:
+
 
 - macro relation F1: `0.8041`
 - minimum-family F1: `0.7053` (`OBJECT`)
 - `UAS=0.8778`, `LAS=0.7569`, `UPOS=0.9176`
 - family F1: `POSS_HEAD=0.8178`, `OBJECT=0.7053`, `PARTICIPLE_HEAD=0.8325`, `CASE_GOVERNOR=0.8606`
 
+
 Relative to the locked v4 screen baseline, A3 gained only `+0.0068` macro and `+0.0029` minimum-family F1, while `CASE_GOVERNOR` regressed by `-0.0078`. It therefore failed the precommitted improvement and no-family-regression conditions and was dropped without opening `INTERNAL_VAL`.
+
 
 The factorized audit found `OBJECT` source-token F1 of `0.6748`, but head top-1 accuracy of `0.9334` when the source token was supplied. Candidate coverage was therefore not the main remaining bottleneck; source-presence calibration was.
 
+
 ## v4.2 R1
+
 
 R1 starts from A1 and changes only the direct-relation decision for `POSS_HEAD`, `OBJECT`, and `PARTICIPLE_HEAD`: independent source/head probabilities are replaced by a length-normalized categorical distribution over `NULL` plus valid heads. `CASE_GOVERNOR`, A1 morphology, syntax, data, seed, optimizer, schedules, and quality gates remain unchanged.
 
+
 The R1 smoke test passed on seed `51104`:
+
 
 - 29,306,087 parameters; finite losses and gradients
 - joint-probability sum maximum error: `2.38e-7`
 - source-probability identity maximum error: `2.46e-7`
-- invalid-head probability: `0`
-- `CASE_GOVERNOR` numerical change: `0`
-- internal validation and external holdouts loaded: `false`
-
-## Live R1 screen
-
-The single fixed-seed resumable TRAIN/CALIB screen started at `2026-08-21 10:42:12 +03:00` on CPU. The first durable syntax state completed at `10:48:52`:
-
-- syntax epoch 1 loss: `2.5271`
-- `UAS=0.7572`, `LAS=0.6216`, `UPOS=0.8627`
-- next recoverable boundary: syntax epoch 2
-
-The raw epoch state is mirrored outside the scratch worktree and as hash-verified transfer shards in ChatGPT Library. These are preliminary training metrics, not a CALIB screen decision.
-
-Next: finish the R1 screen and apply the unchanged survival and absolute quality gates.
