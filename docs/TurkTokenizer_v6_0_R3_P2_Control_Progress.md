@@ -36,9 +36,10 @@ precommitted R1 balanced joint-focal direct-family loss.
 | Hard-Negative E05 | Primary, local mirror, and persistent A/B packages verified |
 | Hard-Negative E06 | Primary, local mirror, and persistent A/B packages verified |
 | Hard-Negative E07 | Primary, local mirror, and persistent A/B packages verified |
+| Hard-Negative E08 | Primary, local mirror, and persistent A/B packages verified |
 
 The control Relation stage completed at E24. The latest resumable boundary is
-control Hard-Negative E07. The next authorized invocation is control Hard-Negative E08.
+control Hard-Negative E08. The next authorized invocation is control Hard-Negative E09.
 
 No control CALIB metric is published or inspected before the candidate arm also
 closes. The candidate arm has not started. INTERNAL_VAL, official TEST, and
