@@ -16,12 +16,15 @@ This repository is a research snapshot, not a production release. Reported score
 | v6.0 R2-P9 repair | Drop after screen | 0.8020 | 0.7121 | 0.8843 | 0.7654 |
 | v6.0 R2-P10 decoupled decision | Drop after screen | 0.8018 | 0.7141 | 0.8843 | 0.7654 |
 | v6.0 R3-P1 R1 null-arc decision | Drop after screen | 0.8051 | 0.7118 | 0.8831 | 0.7643 |
+| v6.0 R3-P2 paired ranking-loss ablation | Precommitted; not run | — | — | — | — |
 
 The v6.0 R2-P9 repair line restored the selected Syntax E20 boundary with a repaired morphology lattice, conflict-aware source supervision, a Syntax E70 ceiling, Relation/Hard-Negative E50 ceilings, and patience 9 for all three stages. Syntax closed at E42 with E38 selected, Relation closed at E37 with E28 selected, and Hard-Negative closed at H21 with H12 selected. The final TRAIN/CALIB screen yielded macro F1 `0.8020`, minimum-family F1 `0.7121`, `UAS=0.8843`, and `LAS=0.7654`; the precommitted decision is `DROP_AFTER_SCREEN`. Sealed evaluation remains unopened. See [the R2-P9 decision note](docs/TurkTokenizer_v6_0_R2_P9_Decision.md).
 
 A CALIB-only A1–R1–H21 error decomposition found that H21 improves OBJECT source discrimination and head ranking separately, but the product-coupled direct-edge score does not retain those gains. R2-P10 froze the model and changed only the direct-relation activation score. It improved OBJECT F1 by `+0.0020` over H21 but remained below A1 and slightly reduced macro F1, so the precommitted decision is `DROP_AFTER_SCREEN`. See [the R2-P10 decision](docs/TurkTokenizer_v6_0_R2_P10_Decision.md).
 
 R3-P1 returned to the frozen R1 null-arc checkpoint and changed only the direct-relation activation score. Source-only activation reduced OBJECT and macro F1 versus R1, so every promotion gate except the unchanged CASE_GOVERNOR policy failed. The precommitted decision is `DROP_AFTER_SCREEN`; post-hoc decision rescue is closed. See [the R3-P1 decision](docs/TurkTokenizer_v6_0_R3_P1_Decision.md).
+
+R3-P2 is precommitted as a paired TRAIN/CALIB loss ablation. The R1 decoder and inference rule stay fixed; only the direct-family training loss changes from joint focal likelihood to zero-margin hardest-competitor ranking. The matched arms remain blinded until both close, and sealed evaluation stays unopened. See [the R3-P2 precommit](docs/TurkTokenizer_v6_0_R3_P2_Precommit.md).
 
 A3 reached syntax epoch 12 and relation epoch 3 before the active workspace was interrupted while relation epoch 4 was computing. The last complete relation snapshot was provisional (`macro=0.7860`, `minimum/OBJECT=0.7019`, `UAS=0.8705`, `LAS=0.7434`) and is not a final A3 result. It must not be compared as if the screen or hard-negative stage had completed.
 
