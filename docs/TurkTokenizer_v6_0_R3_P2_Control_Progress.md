@@ -12,9 +12,10 @@ precommitted R1 balanced joint-focal direct-family loss.
 | Relation E05 | Primary, local mirror, and persistent A/B packages verified |
 | Relation E06 | Primary, local mirror, and persistent A/B packages verified |
 | Relation E07 | Primary, local mirror, and persistent A/B packages verified |
+| Relation E08 | Primary, local mirror, and persistent A/B packages verified |
 
-The latest resumable boundary is control Relation E07. The next authorized
-invocation is control Relation E08.
+The latest resumable boundary is control Relation E08. The next authorized
+invocation is control Relation E09.
 
 No control CALIB metric is published or inspected before the candidate arm also
 closes. The candidate arm has not started. INTERNAL_VAL, official TEST, and
