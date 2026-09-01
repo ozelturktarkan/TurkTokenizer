@@ -31,9 +31,10 @@ precommitted R1 balanced joint-focal direct-family loss.
 | Relation E24 | Primary, local mirror, persistent A/B packages, selected checkpoint, and completion marker verified |
 | Hard-Negative E01 | Primary, local mirror, and persistent A/B packages verified |
 | Hard-Negative E02 | Primary, local mirror, and persistent A/B packages verified |
+| Hard-Negative E03 | Primary, local mirror, and persistent A/B packages verified |
 
 The control Relation stage completed at E24. The latest resumable boundary is
-control Hard-Negative E02. The next authorized invocation is control Hard-Negative E03.
+control Hard-Negative E03. The next authorized invocation is control Hard-Negative E04.
 
 No control CALIB metric is published or inspected before the candidate arm also
 closes. The candidate arm has not started. INTERNAL_VAL, official TEST, and
