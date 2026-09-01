@@ -4,7 +4,7 @@ R2-P9 repairs the morphology lattice and resumes the fixed-seed TRAIN/CALIB scre
 
 ## Accepted changes
 
-- Syntax, relation, and hard-negative epoch ceilings are all 50.
+- The Syntax epoch ceiling is 70; Relation and Hard-Negative epoch ceilings are 50.
 - Patience is 9 in all three stages and resets to `0/9` after a qualifying improvement above `best + 0.0001`.
 - The learning rate is halved at the fourth consecutive non-improving epoch and remains in optimizer state.
 - Ambiguous source supervision uses conflict-aware focal balancing.
@@ -23,6 +23,14 @@ The proposed source-filter width increase was rejected because annotation confli
 - Invalid morphology masks: safe
 - Sealed evaluation consumed: false
 
-The latest independently archived resume boundary is Syntax E21, with the next epoch set to E22 and patience at `1/9`. Live TRAIN/CALIB metrics are preliminary and are not a final model-quality claim.
+## Final screen closure
+
+- Syntax stopped safely at E42 after the overfitting guard reached `3/3`; E38 remained selected with score `0.81872136`.
+- Relation stopped at E37 when patience reached `9/9`; E28 remained selected with score `0.78178072`.
+- Hard-Negative stopped at H21 when patience reached `9/9`; H12 remained selected with score `0.78176522`. H21 scored `0.78079397`.
+- The final CALIB screen produced macro F1 `0.80204292`, minimum-family F1 `0.71206775`, `UAS=0.88431126`, and `LAS=0.76538773`.
+- The precommitted decision is `DROP_AFTER_SCREEN`; `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+The H21 final state and completion marker are retained in two independent private durable packages. Live checkpoints, optimizer state, and private resource fingerprints are not published.
 
 Datasets, serialized lattices, checkpoints, optimizer state, private hashes, and sealed-split metadata remain outside the public repository.

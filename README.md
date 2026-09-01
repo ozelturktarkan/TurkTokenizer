@@ -13,8 +13,11 @@ This repository is a research snapshot, not a production release. Reported score
 | v4.1 A1 contextual posterior | Keep for finalist screening; absolute gates failed | 0.8108 | 0.7174 | 0.8785 | 0.7599 |
 | v4.1 A2 ordered realizations | Drop after screen | 0.8061 | 0.6918 | 0.8769 | 0.7602 |
 | v4.1 A3 coverage repair | Coverage gate passed; training incomplete | — | — | — | — |
+| v6.0 R2-P9 repair | Drop after screen | 0.8020 | 0.7121 | 0.8843 | 0.7654 |
 
-The v6.0 R2-P9 repair line resumes from the selected Syntax E20 boundary with a repaired morphology lattice, conflict-aware source supervision, E50 ceilings, and patience 9 for all three stages. Its public smoke gate passed; the live TRAIN/CALIB screen is not a final model decision. See [the R2-P9 decision note](docs/TurkTokenizer_v6_0_R2_P9_Decision.md).\n\nA3 reached syntax epoch 12 and relation epoch 3 before the active workspace was interrupted while relation epoch 4 was computing. The last complete relation snapshot was provisional (`macro=0.7860`, `minimum/OBJECT=0.7019`, `UAS=0.8705`, `LAS=0.7434`) and is not a final A3 result. It must not be compared as if the screen or hard-negative stage had completed.
+The v6.0 R2-P9 repair line restored the selected Syntax E20 boundary with a repaired morphology lattice, conflict-aware source supervision, a Syntax E70 ceiling, Relation/Hard-Negative E50 ceilings, and patience 9 for all three stages. Syntax closed at E42 with E38 selected, Relation closed at E37 with E28 selected, and Hard-Negative closed at H21 with H12 selected. The final TRAIN/CALIB screen yielded macro F1 `0.8020`, minimum-family F1 `0.7121`, `UAS=0.8843`, and `LAS=0.7654`; the precommitted decision is `DROP_AFTER_SCREEN`. Sealed evaluation remains unopened. See [the R2-P9 decision note](docs/TurkTokenizer_v6_0_R2_P9_Decision.md).
+
+A3 reached syntax epoch 12 and relation epoch 3 before the active workspace was interrupted while relation epoch 4 was computing. The last complete relation snapshot was provisional (`macro=0.7860`, `minimum/OBJECT=0.7019`, `UAS=0.8705`, `LAS=0.7434`) and is not a final A3 result. It must not be compared as if the screen or hard-negative stage had completed.
 
 The authoritative current state is [STATUS.md](STATUS.md) and [TurkTokenizer_v5_11_Quality_Ledger_v4.json](project_state/TurkTokenizer_v5_11_Quality_Ledger_v3.json).
 
