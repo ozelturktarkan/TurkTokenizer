@@ -4,8 +4,9 @@ R3-P2 remains a paired, single-variable TRAIN/CALIB ablation. This runtime
 addendum binds the existing loss precommit to an interruption-safe execution
 before either real arm starts.
 
-Both arms restore the same selected R1 Syntax E12 checkpoint and sampler
-boundary. They use seed 51104, Relation E50, Hard-Negative E50, patience 9,
+Both arms restore the same selected R1 Syntax E10 checkpoint and the same
+completed Syntax E12 sampler boundary. They use seed 51104, Relation E50,
+Hard-Negative E50, patience 9,
 the same optimizer and learning rates, and the same deterministic LR reduction
 at plateau 4/9. Every qualifying improvement resets patience to 0/9.
 
