@@ -19,3 +19,7 @@ Promotion requires all of the following on CALIB:
 - CASE_GOVERNOR policy remains unchanged.
 
 INTERNAL_VAL, TEST, and external holdouts remain unopened. Public artifacts contain aggregate metrics and protocol documentation only.
+
+## Closure
+
+The CALIB screen completed with macro F1 `0.801806`, minimum/OBJECT F1 `0.714084`, unchanged `UAS=0.884311`, and unchanged `LAS=0.765388`. OBJECT improved by `+0.002016` over H21 but stayed `-0.003323` below A1; macro F1 decreased by `-0.000236` versus H21. The precommitted decision is `DROP_AFTER_SCREEN`. See [the decision note](TurkTokenizer_v6_0_R2_P10_Decision.md).
