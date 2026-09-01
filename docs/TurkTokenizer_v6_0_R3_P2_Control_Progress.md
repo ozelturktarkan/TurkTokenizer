@@ -23,9 +23,10 @@ precommitted R1 balanced joint-focal direct-family loss.
 | Relation E16 | Primary, local mirror, and persistent A/B packages verified |
 | Relation E17 | Primary, local mirror, and persistent A/B packages verified |
 | Relation E18 | Primary, local mirror, and persistent A/B packages verified |
+| Relation E19 | Primary, local mirror, and persistent A/B packages verified |
 
-The latest resumable boundary is control Relation E18. The next authorized
-invocation is control Relation E19.
+The latest resumable boundary is control Relation E19. The next authorized
+invocation is control Relation E20.
 
 No control CALIB metric is published or inspected before the candidate arm also
 closes. The candidate arm has not started. INTERNAL_VAL, official TEST, and
