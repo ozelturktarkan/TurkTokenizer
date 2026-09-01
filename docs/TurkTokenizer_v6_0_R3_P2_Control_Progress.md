@@ -3,10 +3,13 @@
 R3-P2 remains a blinded paired TRAIN/CALIB ablation. The control arm uses the
 precommitted R1 balanced joint-focal direct-family loss.
 
-Control Relation E01 completed and its resumable epoch boundary is persisted.
-The primary state, verified local mirror, and two independent persistent
-checkpoint packages passed their integrity checks. The next authorized
-invocation is control Relation E02.
+| Control boundary | Integrity status |
+| --- | --- |
+| Relation E01 | Primary, local mirror, and persistent A/B packages verified |
+| Relation E02 | Primary, local mirror, and persistent A/B packages verified |
+
+The latest resumable boundary is control Relation E02. The next authorized
+invocation is control Relation E03.
 
 No control CALIB metric is published or inspected before the candidate arm also
 closes. The candidate arm has not started. INTERNAL_VAL, official TEST, and
