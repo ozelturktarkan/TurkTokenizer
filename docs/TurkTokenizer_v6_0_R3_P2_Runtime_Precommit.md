@@ -26,3 +26,8 @@ commit must be verified before the next epoch starts.
 
 The runtime smoke passed without unpickling TRAIN or CALIB. INTERNAL_VAL,
 official TEST, and external holdouts remain unopened.
+
+The frozen data audit is checked through its locked metadata, while payload
+hashing is restricted to the TRAIN/CALIB inputs actually required by this
+screen. Recorded-only INTERNAL_VAL and historical split-map entries are never
+resolved or opened by the runtime.
