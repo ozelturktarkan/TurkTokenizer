@@ -48,9 +48,11 @@ precommitted R1 balanced joint-focal direct-family loss.
 | Hard-Negative E17 | Primary, local mirror, and persistent A/B packages verified |
 | Hard-Negative E18 | Primary, local mirror, and persistent A/B packages verified |
 | Hard-Negative E19 | Primary, local mirror, persistent A/B packages, selected checkpoint, and completion marker verified |
+| Control arm complete | Blinded arm-complete marker and persistent A/B closure packages verified |
 
-The control Relation stage completed at E24 and the Hard-Negative stage completed at E19.
-The next authorized invocation is control arm completion.
+The control Relation stage completed at E24, the Hard-Negative stage completed at E19,
+and the blinded control arm completion marker is verified. The next authorized
+action is candidate arm initialization from the precommitted parent checkpoint.
 
 No control CALIB metric is published or inspected before the candidate arm also
 closes. The candidate arm has not started. INTERNAL_VAL, official TEST, and
