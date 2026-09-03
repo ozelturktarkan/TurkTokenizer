@@ -12,11 +12,11 @@ This repository is a research snapshot, not a production release. Reported score
 | v4 locked baseline | Rejected before `INTERNAL_VAL` | 0.7972 | 0.7025 | 0.8752 | 0.7552 |
 | v4.1 A1 contextual posterior | Keep for finalist screening; absolute gates failed | 0.8108 | 0.7174 | 0.8785 | 0.7599 |
 | v4.1 A2 ordered realizations | Drop after screen | 0.8061 | 0.6918 | 0.8769 | 0.7602 |
-| v4.1 A3 coverage repair | Coverage gate passed; training incomplete | — | — | — | — |
+| v4.1 A3 coverage repair | Drop after screen | 0.8041 | 0.7053 | 0.8778 | 0.7569 |
 | v6.0 R2-P9 repair | Drop after screen | 0.8020 | 0.7121 | 0.8843 | 0.7654 |
 | v6.0 R2-P10 decoupled decision | Drop after screen | 0.8018 | 0.7141 | 0.8843 | 0.7654 |
 | v6.0 R3-P1 R1 null-arc decision | Drop after screen | 0.8051 | 0.7118 | 0.8831 | 0.7643 |
-| v6.0 R3-P2 paired ranking-loss ablation | Drop after screen | — | — | — | — |
+| v6.0 R3-P2 paired ranking-loss ablation | Drop after screen | 0.8141 | 0.7247 | 0.8868 | 0.7678 |
 
 The v6.0 R2-P9 repair line restored the selected Syntax E20 boundary with a repaired morphology lattice, conflict-aware source supervision, a Syntax E70 ceiling, Relation/Hard-Negative E50 ceilings, and patience 9 for all three stages. Syntax closed at E42 with E38 selected, Relation closed at E37 with E28 selected, and Hard-Negative closed at H21 with H12 selected. The final TRAIN/CALIB screen yielded macro F1 `0.8020`, minimum-family F1 `0.7121`, `UAS=0.8843`, and `LAS=0.7654`; the precommitted decision is `DROP_AFTER_SCREEN`. Sealed evaluation remains unopened. See [the R2-P9 decision note](docs/TurkTokenizer_v6_0_R2_P9_Decision.md).
 
@@ -25,18 +25,20 @@ A CALIB-only A1–R1–H21 error decomposition found that H21 improves OBJECT so
 R3-P1 returned to the frozen R1 null-arc checkpoint and changed only the direct-relation activation score. Source-only activation reduced OBJECT and macro F1 versus R1, so every promotion gate except the unchanged CASE_GOVERNOR policy failed. The precommitted decision is `DROP_AFTER_SCREEN`; post-hoc decision rescue is closed. See [the R3-P1 decision](docs/TurkTokenizer_v6_0_R3_P1_Decision.md).
 
 R3-P2 is closed as a paired TRAIN/CALIB loss ablation. The ranking-loss
-candidate passed 10 of 12 precommitted gates, but missed the absolute
-`CASE_GOVERNOR` and `PARTICIPLE_HEAD` regression limits. The precommitted
-decision is therefore `DROP_AFTER_SCREEN`. Both arms, two independent paired-
-decision executions, and their persistent A/B packages are verified. Detailed
-metrics and private integrity hashes remain in the private closure packages;
-sealed evaluation remains unopened. See [the R3-P2 precommit](docs/TurkTokenizer_v6_0_R3_P2_Precommit.md),
+candidate yielded macro F1 `0.8141`, minimum-family F1 `0.7247`,
+`UAS=0.8868`, and `LAS=0.7678`. It passed 10 of 12 precommitted gates, but
+missed the absolute `CASE_GOVERNOR` and `PARTICIPLE_HEAD` regression limits,
+so the precommitted decision is `DROP_AFTER_SCREEN`. Both arms, two independent
+paired-decision executions, and their persistent A/B packages are verified.
+Detailed per-family diagnostics and private integrity hashes remain in the
+private closure packages; sealed evaluation remains unopened. See
+[the R3-P2 precommit](docs/TurkTokenizer_v6_0_R3_P2_Precommit.md),
 [the R3-P2 decision](docs/TurkTokenizer_v6_0_R3_P2_Decision.md), and
 [candidate progress](docs/TurkTokenizer_v6_0_R3_P2_Candidate_Progress.md).
 
-A3 reached syntax epoch 12 and relation epoch 3 before the active workspace was interrupted while relation epoch 4 was computing. The last complete relation snapshot was provisional (`macro=0.7860`, `minimum/OBJECT=0.7019`, `UAS=0.8705`, `LAS=0.7434`) and is not a final A3 result. It must not be compared as if the screen or hard-negative stage had completed.
+A3 was restarted cleanly under its fixed-seed, interruption-safe precommit and completed all syntax, relation, hard-negative, calibration, audit, and screen stages. The final CALIB screen yielded macro F1 `0.8041`, minimum-family F1 `0.7053` (`OBJECT`), `UAS=0.8778`, and `LAS=0.7569`. Its macro and minimum-family gains over the locked v4 baseline were below the precommitted survival thresholds, and `CASE_GOVERNOR` regressed by `-0.0078`; the decision is `DROP_AFTER_SCREEN`. The factorized audit identified source-token detection, rather than top-20 morphology coverage or conditional head attachment, as the dominant remaining OBJECT bottleneck. `INTERNAL_VAL` and sealed evaluation remain unopened.
 
-The authoritative current state is [STATUS.md](STATUS.md) and [TurkTokenizer_v5_11_Quality_Ledger_v4.json](project_state/TurkTokenizer_v5_11_Quality_Ledger_v3.json).
+The authoritative current state is [STATUS.md](STATUS.md) and [TurkTokenizer_v5_11_Quality_Ledger_v4.json](project_state/TurkTokenizer_v5_11_Quality_Ledger_v4.json).
 
 ## Scientific contract
 
