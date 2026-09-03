@@ -19,7 +19,7 @@ This repository is a research snapshot, not a production release. Reported score
 | v6.0 R3-P2 paired ranking-loss ablation | Drop after screen | 0.8141 | 0.7247 | 0.8868 | 0.7678 |
 | v6.0 R3-P3 family-isolated ranking transfer | Drop after screen; R3 closed | 0.7795 | 0.7139 | 0.8831 | 0.7643 |
 | v6.1 R4-P0 TRAIN-only gradient audit | Passed; routing fixed | — | — | — | — |
-| v6.1 R4-P1 fresh repaired-lattice parent | Precommitted; not run | — | — | — | — |
+| v6.1 R4-P1 fresh repaired-lattice parent | Smoke/start gate passed; syntax starting | — | — | — | — |
 
 The v6.0 R2-P9 repair line restored the selected Syntax E20 boundary with a repaired morphology lattice, conflict-aware source supervision, a Syntax E70 ceiling, Relation/Hard-Negative E50 ceilings, and patience 9 for all three stages. Syntax closed at E42 with E38 selected, Relation closed at E37 with E28 selected, and Hard-Negative closed at H21 with H12 selected. The final TRAIN/CALIB screen yielded macro F1 `0.8020`, minimum-family F1 `0.7121`, `UAS=0.8843`, and `LAS=0.7654`; the precommitted decision is `DROP_AFTER_SCREEN`. Sealed evaluation remains unopened. See [the R2-P9 decision note](docs/TurkTokenizer_v6_0_R2_P9_Decision.md).
 
