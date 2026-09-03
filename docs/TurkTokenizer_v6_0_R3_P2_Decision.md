@@ -12,6 +12,13 @@ The candidate passed 10 of 12 precommitted gates. It improved on the matched
 control for both required direct-family comparison gates and cleared the other
 absolute aggregate, source/head, syntax, and POSS_HEAD gates.
 
+| Aggregate CALIB metric | Matched control | Ranking-loss candidate | Delta |
+|---|---:|---:|---:|
+| Macro relation F1 | 0.8038 | 0.8141 | +0.0104 |
+| Minimum-family F1 | 0.7218 | 0.7247 | +0.0028 |
+| UAS | 0.8823 | 0.8868 | +0.0045 |
+| LAS | 0.7640 | 0.7678 | +0.0038 |
+
 The two failed precommitted gates were:
 
 - `CASE_GOVERNOR` regression limit
@@ -19,8 +26,8 @@ The two failed precommitted gates were:
 
 The precommitted decision is `DROP_AFTER_SCREEN`. Promotion required every gate
 to pass, so the two absolute family-regression failures prohibit post-hoc
-rescue. Detailed CALIB metrics and private integrity hashes remain in the
-private closure packages.
+rescue. Detailed per-family diagnostics and private integrity hashes remain in
+the private closure packages.
 
 Two independent paired-decision executions, one from each verified control
 closure package, produced byte-identical results. Candidate-arm and paired-
