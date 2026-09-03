@@ -16,7 +16,7 @@ This repository is a research snapshot, not a production release. Reported score
 | v6.0 R2-P9 repair | Drop after screen | 0.8020 | 0.7121 | 0.8843 | 0.7654 |
 | v6.0 R2-P10 decoupled decision | Drop after screen | 0.8018 | 0.7141 | 0.8843 | 0.7654 |
 | v6.0 R3-P1 R1 null-arc decision | Drop after screen | 0.8051 | 0.7118 | 0.8831 | 0.7643 |
-| v6.0 R3-P2 paired ranking-loss ablation | Running; candidate Relation complete, Hard-Negative E18 persisted | — | — | — | — |
+| v6.0 R3-P2 paired ranking-loss ablation | Running; candidate Relation and Hard-Negative complete, candidate screen pending | — | — | — | — |
 
 The v6.0 R2-P9 repair line restored the selected Syntax E20 boundary with a repaired morphology lattice, conflict-aware source supervision, a Syntax E70 ceiling, Relation/Hard-Negative E50 ceilings, and patience 9 for all three stages. Syntax closed at E42 with E38 selected, Relation closed at E37 with E28 selected, and Hard-Negative closed at H21 with H12 selected. The final TRAIN/CALIB screen yielded macro F1 `0.8020`, minimum-family F1 `0.7121`, `UAS=0.8843`, and `LAS=0.7654`; the precommitted decision is `DROP_AFTER_SCREEN`. Sealed evaluation remains unopened. See [the R2-P9 decision note](docs/TurkTokenizer_v6_0_R2_P9_Decision.md).
 
@@ -27,8 +27,9 @@ R3-P1 returned to the frozen R1 null-arc checkpoint and changed only the direct-
 R3-P2 is running as a paired TRAIN/CALIB loss ablation. The control arm is
 complete. Candidate Relation reached its precommitted E50 ceiling with the
 selected checkpoint, completion marker, local mirror, and two persistent
-packages verified. Candidate Hard-Negative E18 completed with its active and
-durable states plus two persistent packages verified. The R1 decoder and
+packages verified. Candidate Hard-Negative closed at E19 with its active and durable states,
+selected checkpoint, completion marker, and two persistent closure packages
+verified. The candidate TRAIN/CALIB screen is the next authorized invocation. The R1 decoder and
 inference rule stay fixed, and only the direct-family training loss changes
 from joint focal likelihood to zero-margin hardest-competitor ranking. Arm
 metrics remain blinded until the candidate arm also closes, and sealed
