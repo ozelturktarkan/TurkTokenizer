@@ -1,4 +1,4 @@
-# Project status — 2026-08-30
+# Project status — 2026-09-03
 
 
 ## Reliable state
@@ -8,8 +8,26 @@
 - v4.1 A1 remains the strongest surviving base, but failed the absolute CALIB gates.
 - v4.1 A2 and A3 are closed as `DROP_AFTER_SCREEN`.
 - v4.2 R1 is precommitted and its architecture smoke gate is `PASS`.
+- v6.0 R3-P2 control is complete; candidate Relation completed at E50 and
+  candidate Hard-Negative has not started.
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
+
+
+## Live v6.0 R3-P2 paired line
+
+
+The matched control arm is complete. Candidate Relation advanced through E50,
+its precommitted ceiling. The final Relation state, selected checkpoint,
+completion marker, local mirror, and two independent persistent closure
+packages were verified. Candidate Hard-Negative E01 is the next authorized
+invocation and has not started.
+
+
+Control and candidate CALIB metrics remain blinded until the candidate arm
+also closes. No checkpoint, private hash, serialized state, corpus-derived
+artifact, split inventory, or sealed-resource metadata is published here.
+`INTERNAL_VAL`, official TEST, and external holdouts remain unopened.
 
 
 ## Live v6.0 R2-P9 repair line
