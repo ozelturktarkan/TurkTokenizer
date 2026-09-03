@@ -19,15 +19,18 @@
 
 The matched control and candidate arms are complete. Candidate Relation closed
 at its precommitted E50 ceiling, Hard-Negative closed at E19, and the selected
-checkpoint was screened. The candidate passed 10 of 12 precommitted gates but
-missed the absolute `CASE_GOVERNOR` and `PARTICIPLE_HEAD` regression limits, so
-the paired decision is `DROP_AFTER_SCREEN`.
+checkpoint was screened. The ranking-loss candidate yielded macro F1 `0.8141`,
+minimum-family F1 `0.7247`, `UAS=0.8868`, and `LAS=0.7678`. It passed 10 of
+12 precommitted gates but missed the absolute `CASE_GOVERNOR` and
+`PARTICIPLE_HEAD` regression limits, so the paired decision is
+`DROP_AFTER_SCREEN`.
 
 Two independent paired-decision executions and persistent A/B decision packages
-were verified. Detailed metrics, checkpoints, private hashes, serialized state,
-corpus-derived artifacts, split inventories, and sealed-resource metadata are
-not published here. `INTERNAL_VAL`, official TEST, and external holdouts remain
-unopened. See [the decision note](docs/TurkTokenizer_v6_0_R3_P2_Decision.md).
+were verified. Detailed per-family diagnostics, checkpoints, private hashes,
+serialized state, corpus-derived artifacts, split inventories, and
+sealed-resource metadata are not published here. `INTERNAL_VAL`, official TEST,
+and external holdouts remain unopened. See
+[the decision note](docs/TurkTokenizer_v6_0_R3_P2_Decision.md).
 
 
 ## Live v6.0 R2-P9 repair line
