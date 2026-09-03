@@ -75,13 +75,16 @@ and restores the same precommitted R1 syntax parent checkpoint as the control ar
 | Hard-Negative E17 | Primary, local mirror, fixed cache, selected checkpoint, and persistent A/B packages verified |
 | Hard-Negative E18 | Primary, local mirror, fixed cache, selected checkpoint, and persistent A/B packages verified |
 | Hard-Negative E19 | Primary, local mirror, fixed cache, selected checkpoint, completion marker, and persistent A/B packages verified |
+| Candidate CALIB screen | Final model, calibration, audit, screen marker, active/durable mirror, and persistent A/B closure packages verified |
 
 The candidate Relation stage completed at E50. The selected checkpoint and
 blinded Relation completion marker are verified in both persistent packages.
 Candidate Hard-Negative completed at E19. Its fixed cache, selected checkpoint,
 completion marker, active/durable state pair, and independent A/B closure
-packages are verified. The candidate TRAIN/CALIB screen is the next authorized
-invocation.
+packages are verified. The candidate TRAIN/CALIB screen also completed; its
+final artifacts and arm marker are verified in two independent persistent
+closure packages. Both arms are now closed, and the precommitted paired CALIB
+decision is the next authorized invocation.
 
-No control or candidate CALIB metric is published or inspected before both arms
-close. INTERNAL_VAL, official TEST, and external holdouts remain unopened.
+No control or candidate CALIB metric was published or inspected before both arms
+closed. Metrics remain unpublished pending the paired decision. INTERNAL_VAL, official TEST, and external holdouts remain unopened.
