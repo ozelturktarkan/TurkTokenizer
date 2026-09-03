@@ -1,6 +1,6 @@
 # TurkTokenizer v6.1 R4 planning note
 
-> Status: DRAFT — not a precommit and not authorization to start training.
+> Status: ACTIVE — R4-P0 passed; R4-P1 awaits its own precommit.
 
 ## Objective
 
@@ -49,9 +49,11 @@ its loss may not update direct-family adapters; direct-family losses may not
 update the CASE adapter. Any shared-trunk gradient surgery must be one named,
 fixed algorithm with no tuned margin or temperature.
 
-Candidate widths, insertion points, routing ownership, parameter budget, and
-optimizer groups must be fixed in the eventual R4-P2 precommit. They are open
-planning decisions today.
+R4-P0 fixed the P2 adapter boundary at post-graph/pre-family scoring with
+bottleneck width 48, LayerNorm plus GELU, residual-gate initial logit `-2.0`,
+and at most 200,000 new parameters. PCGrad is fixed for the shared Transformer,
+relation bridge, and syntax bridge under the deterministic task order recorded
+in the P0 precommit. P1 may not use either mechanism.
 
 ## Proposed promotion gates
 
@@ -88,14 +90,10 @@ unchanged into a signed R4 precommit before execution.
 - The suffix/allomorph registry remains a separate R5 research line and is not
   folded into R4.
 
-## Decisions required before R4-P0 becomes a precommit
+## R4-P0 outcome
 
-1. Choose the exact gradient-conflict statistic and sample budget.
-2. Fix adapter insertion points and maximum parameter budget.
-3. Select one gradient-routing algorithm or a simpler stop-gradient ownership
-   map.
-4. Define the three seed values and the multi-seed pass rule.
-5. Set fresh-training ceilings, patience, and overfitting guards.
-6. Specify A/B persistence and independent-decision reproduction requirements.
-
-Until those decisions are locked, R4 remains planning-only.
+R4-P0 passed all integrity conditions on 12 deterministic TRAIN batches with
+zero optimizer steps, unchanged model state, and no CALIB access. It fixed the
+routing and adapter boundary described above. R4-P1 must now lock fresh-training
+ceilings, patience, overfitting guards, screen gates, and A/B persistence before
+its first optimizer step.
