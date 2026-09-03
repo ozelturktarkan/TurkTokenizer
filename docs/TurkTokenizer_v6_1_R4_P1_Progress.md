@@ -33,3 +33,20 @@ Syntax E01 completed at the first interruption-safe boundary:
 - syntax overfit streak: `0/3`
 
 The selected checkpoint and full resumable state matched their local durable mirrors. The state was split into seven ordered parts; both external E01 archives were independently re-materialized, every file checksum passed, and the reconstructed state hash matched the source. E02 is the next authorized boundary.
+
+
+## Syntax E02 and interrupted E03 attempt
+
+Syntax E02 completed from the verified E01 state:
+
+- TRAIN loss: `1.5350`
+- CALIB syntax loss: `1.5072`
+- UAS: `0.81588642`
+- LAS: `0.67939617`
+- UPOS: `0.88830982`
+- selection score: `0.74123461`
+- patience: `0/9`
+- learning rate: `0.0005`
+- syntax overfit streak: `0/3`
+
+An E03 invocation was interrupted before the epoch boundary. It emitted no E03 metric or state and is not accepted as a result. The active and durable state hashes remained identical at completed epoch 2, next epoch 3. Both E02 recovery archives were independently re-materialized; all file hashes and the reconstructed resumable-state hash passed. The next valid action is to rerun E03 from the unchanged E02 state.
