@@ -100,4 +100,21 @@ The precommitted fifth-epoch milestone completed from the verified E04 state:
 - learning rate: `0.0005`
 - syntax overfit streak: `0/3`
 
-CALIB loss rose slightly from E04 while the locked selection score improved, so the overfit signal remained false and E05 became the selected syntax checkpoint. Active and durable resume-state/checkpoint pairs matched byte-for-byte. Both milestone E05 archives were independently re-materialized; all file checksums passed and each reconstructed state matched the canonical source hash. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened. E06 is the next authorized boundary.
+CALIB loss rose slightly from E04 while the locked selection score improved, so the overfit signal remained false and E05 became the selected syntax checkpoint. Active and durable resume-state/checkpoint pairs matched byte-for-byte. Both milestone E05 archives were independently re-materialized; all file checksums passed and each reconstructed state matched the canonical source hash. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+
+## Syntax E06
+
+Syntax E06 completed from the verified E05 milestone state:
+
+- TRAIN loss: `0.8943`
+- CALIB syntax loss: `1.3497`
+- UAS: `0.85403001`
+- LAS: `0.72935574`
+- UPOS: `0.90762872`
+- selection score: `0.78458532`
+- patience: `0/9`
+- learning rate: `0.0005`
+- syntax overfit streak: `0/3`
+
+CALIB loss rose again while the locked selection score improved, so the overfit signal remained false and E06 became the selected syntax checkpoint. Active and durable resume-state/checkpoint pairs matched byte-for-byte. Both E06 archives were independently re-materialized; every file checksum passed and each reconstructed state matched the canonical source hash. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened. E07 is the next authorized boundary.
