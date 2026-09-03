@@ -52,7 +52,7 @@ Final outputs and the audit checkpoint are retained in two independently re-mate
 ## Draft v6.1 R4 planning boundary
 
 
-R4 is reserved for a true fresh-syntax mainline, not another checkpoint graft. R4-P0 is now precommitted as a zero-update, TRAIN-only gradient-conflict audit over 12 deterministic balanced batches and six primitive tasks. CALIB is absent from the P0 workspace. The audit fixes the PCGrad routing map and the bounded family-adapter placement before training. R4-P1 remains a fresh repaired-lattice reconstruction with no adapter or PCGrad; later phases stay conditional on their parents. No R2-P9 E28, R1, or R3 checkpoint is migrated. The suffix/allomorph registry remains outside R4. See [the R4 plan](docs/TurkTokenizer_v6_1_R4_Plan.md) and [R4-P0 precommit](docs/TurkTokenizer_v6_1_R4_P0_Precommit.md).
+R4 is reserved for a true fresh-syntax mainline, not another checkpoint graft. R4-P0 is precommitted as a zero-update, TRAIN-only gradient-conflict audit over 12 deterministic balanced batches and six primitive tasks. Its smoke and start gates passed, both start-gate archives were independently re-materialized and checksum-verified, and the fixed 12-batch audit is running. CALIB is absent from the P0 workspace. The audit fixes the PCGrad routing map and the bounded family-adapter placement before training. R4-P1 remains a fresh repaired-lattice reconstruction with no adapter or PCGrad; later phases stay conditional on their parents. No R2-P9 E28, R1, or R3 checkpoint is migrated. The suffix/allomorph registry remains outside R4. See [the R4 plan](docs/TurkTokenizer_v6_1_R4_Plan.md) and [R4-P0 precommit](docs/TurkTokenizer_v6_1_R4_P0_Precommit.md).
 
 
 ## Live v6.0 R2-P9 repair line
