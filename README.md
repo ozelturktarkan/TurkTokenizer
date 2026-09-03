@@ -17,6 +17,7 @@ This repository is a research snapshot, not a production release. Reported score
 | v6.0 R2-P10 decoupled decision | Drop after screen | 0.8018 | 0.7141 | 0.8843 | 0.7654 |
 | v6.0 R3-P1 R1 null-arc decision | Drop after screen | 0.8051 | 0.7118 | 0.8831 | 0.7643 |
 | v6.0 R3-P2 paired ranking-loss ablation | Drop after screen | 0.8141 | 0.7247 | 0.8868 | 0.7678 |
+| v6.0 R3-P3 family-isolated ranking adaptation | Precommitted; training not started | — | — | — | — |
 
 The v6.0 R2-P9 repair line restored the selected Syntax E20 boundary with a repaired morphology lattice, conflict-aware source supervision, a Syntax E70 ceiling, Relation/Hard-Negative E50 ceilings, and patience 9 for all three stages. Syntax closed at E42 with E38 selected, Relation closed at E37 with E28 selected, and Hard-Negative closed at H21 with H12 selected. The final TRAIN/CALIB screen yielded macro F1 `0.8020`, minimum-family F1 `0.7121`, `UAS=0.8843`, and `LAS=0.7654`; the precommitted decision is `DROP_AFTER_SCREEN`. Sealed evaluation remains unopened. See [the R2-P9 decision note](docs/TurkTokenizer_v6_0_R2_P9_Decision.md).
 
@@ -35,6 +36,8 @@ private closure packages; sealed evaluation remains unopened. See
 [the R3-P2 precommit](docs/TurkTokenizer_v6_0_R3_P2_Precommit.md),
 [the R3-P2 decision](docs/TurkTokenizer_v6_0_R3_P2_Decision.md), and
 [candidate progress](docs/TurkTokenizer_v6_0_R3_P2_Candidate_Progress.md).
+
+R3-P3 is precommitted as a controlled follow-up, not a new synthesis line. It keeps the R3-P2 candidate's parent, ranking loss, data, schedule, seed, optimizer, calibration policy, and twelve gates, and changes only the trainable-parameter mask. Exactly 2,222,643 of 29,306,087 existing parameters may update, restricted to the three direct relation families; the shared encoder, syntax path, graph-message layers, and complete `CASE_GOVERNOR` path remain frozen. The available CPU runtime reproduced the archived R3-P2 candidate Relation E01 checkpoint byte-for-byte, and the mask smoke preserved all audited syntax and CASE outputs bit-for-bit. Training has not started; see [the R3-P3 precommit](docs/TurkTokenizer_v6_0_R3_P3_Precommit.md) and [progress](docs/TurkTokenizer_v6_0_R3_P3_Progress.md).
 
 A3 was restarted cleanly under its fixed-seed, interruption-safe precommit and completed all syntax, relation, hard-negative, calibration, audit, and screen stages. The final CALIB screen yielded macro F1 `0.8041`, minimum-family F1 `0.7053` (`OBJECT`), `UAS=0.8778`, and `LAS=0.7569`. Its macro and minimum-family gains over the locked v4 baseline were below the precommitted survival thresholds, and `CASE_GOVERNOR` regressed by `-0.0078`; the decision is `DROP_AFTER_SCREEN`. The factorized audit identified source-token detection, rather than top-20 morphology coverage or conditional head attachment, as the dominant remaining OBJECT bottleneck. `INTERNAL_VAL` and sealed evaluation remain unopened.
 
