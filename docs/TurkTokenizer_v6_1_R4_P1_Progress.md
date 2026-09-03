@@ -49,4 +49,21 @@ Syntax E02 completed from the verified E01 state:
 - learning rate: `0.0005`
 - syntax overfit streak: `0/3`
 
-An E03 invocation was interrupted before the epoch boundary. It emitted no E03 metric or state and is not accepted as a result. The active and durable state hashes remained identical at completed epoch 2, next epoch 3. Both E02 recovery archives were independently re-materialized; all file hashes and the reconstructed resumable-state hash passed. The next valid action is to rerun E03 from the unchanged E02 state.
+An E03 invocation was interrupted before the epoch boundary. It emitted no E03 metric or state and is not accepted as a result. The active and durable state hashes remained identical at completed epoch 2, next epoch 3. Both E02 recovery archives were independently re-materialized; all file hashes and the reconstructed resumable-state hash passed. That interrupted invocation remained only a recovery event and did not alter the canonical E02 boundary.
+
+
+## Syntax E03
+
+Syntax E03 was rerun from the verified E02 state and completed successfully:
+
+- TRAIN loss: `1.2569`
+- CALIB syntax loss: `1.3776`
+- UAS: `0.83947345`
+- LAS: `0.70792524`
+- UPOS: `0.89527361`
+- selection score: `0.76612454`
+- patience: `0/9`
+- learning rate: `0.0005`
+- syntax overfit streak: `0/3`
+
+E03 improved the selection score and became the selected syntax checkpoint. The active and durable resume states and selected checkpoints matched byte-for-byte. Both external E03 archives were independently re-materialized; every file checksum passed, and each reconstructed state matched the canonical E03 source hash. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened. E04 is the next authorized boundary.
