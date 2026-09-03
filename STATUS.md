@@ -49,10 +49,10 @@ Only 3 of 12 gates passed: the protected CASE_GOVERNOR, UAS, and LAS regression 
 Final outputs and the audit checkpoint are retained in two independently re-materialized, checksum-verified private closure packages. The R3 line is closed. `INTERNAL_VAL`, official TEST, and external holdouts remain unopened. See [the R3-P3 decision](docs/TurkTokenizer_v6_0_R3_P3_Decision.md).
 
 
-## Draft v6.1 R4 planning boundary
+## Active v6.1 R4 line
 
 
-R4 is reserved for a true fresh-syntax mainline, not another checkpoint graft. R4-P0 is precommitted as a zero-update, TRAIN-only gradient-conflict audit over 12 deterministic balanced batches and six primitive tasks. Its smoke and start gates passed, both start-gate archives were independently re-materialized and checksum-verified, and the fixed 12-batch audit is running. CALIB is absent from the P0 workspace. The audit fixes the PCGrad routing map and the bounded family-adapter placement before training. R4-P1 remains a fresh repaired-lattice reconstruction with no adapter or PCGrad; later phases stay conditional on their parents. No R2-P9 E28, R1, or R3 checkpoint is migrated. The suffix/allomorph registry remains outside R4. See [the R4 plan](docs/TurkTokenizer_v6_1_R4_Plan.md) and [R4-P0 precommit](docs/TurkTokenizer_v6_1_R4_P0_Precommit.md).
+R4 is reserved for a true fresh-syntax mainline, not another checkpoint graft. R4-P0 passed. Its smoke, start gate, and all 12 deterministic TRAIN-only gradient-audit batches completed with finite losses and gradients, zero optimizer steps, an unchanged model-state digest, and no CALIB access. The audit fixed PCGrad routing on the shared Transformer (7 conflicted task pairs), relation bridge (3), and syntax bridge (5). The bounded family-adapter contract remains post-graph/pre-family scoring with bottleneck 48 and at most 200,000 new parameters. Both final P0 packages were independently re-materialized and checksum-verified. R4-P1 is next and remains a fresh repaired-lattice reconstruction with no adapter or PCGrad; later phases stay conditional on their parents. No R2-P9 E28, R1, or R3 checkpoint is migrated. The suffix/allomorph registry remains outside R4. See [the R4 plan](docs/TurkTokenizer_v6_1_R4_Plan.md), [R4-P0 precommit](docs/TurkTokenizer_v6_1_R4_P0_Precommit.md), and [R4-P0 decision](docs/TurkTokenizer_v6_1_R4_P0_Decision.md).
 
 
 ## Live v6.0 R2-P9 repair line
