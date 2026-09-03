@@ -42,9 +42,10 @@ and restores the same precommitted R1 syntax parent checkpoint as the control ar
 | Relation E34 | Primary, local mirror, and persistent A/B packages verified |
 | Relation E35 | Primary, local mirror, and persistent A/B packages verified |
 | Relation E36 | Primary, local mirror, and persistent A/B packages verified |
+| Relation E37 | Primary, local mirror, and persistent A/B packages verified |
 
-The latest resumable boundary is candidate Relation E36. The next authorized
-invocation is candidate Relation E37.
+The latest resumable boundary is candidate Relation E37. The next authorized
+invocation is candidate Relation E38.
 
 No control or candidate CALIB metric is published or inspected before both arms
 close. INTERNAL_VAL, official TEST, and external holdouts remain unopened.
