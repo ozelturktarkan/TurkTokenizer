@@ -55,9 +55,12 @@ and restores the same precommitted R1 syntax parent checkpoint as the control ar
 | Relation E47 | Primary, local mirror, and persistent A/B packages verified |
 | Relation E48 | Primary, local mirror, and persistent A/B packages verified |
 | Relation E49 | Primary, local mirror, and persistent A/B packages verified |
+| Relation E50 | Primary, local mirror, persistent A/B packages, selected checkpoint, and completion marker verified |
 
-The latest resumable boundary is candidate Relation E49. The next authorized
-invocation is candidate Relation E50.
+The candidate Relation stage completed at E50. The selected checkpoint and
+blinded Relation completion marker are verified in both persistent packages.
+The next authorized invocation is candidate Hard-Negative E01; it has not
+started.
 
 No control or candidate CALIB metric is published or inspected before both arms
 close. INTERNAL_VAL, official TEST, and external holdouts remain unopened.
