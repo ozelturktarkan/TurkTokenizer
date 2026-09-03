@@ -1,0 +1,110 @@
+{
+  "name": "TurkTokenizer v6.0 Quality Ledger v5",
+  "updated_at": "2026-09-03",
+  "status": "R3_CLOSED_R4_PLANNING",
+  "quality_target": {
+    "phase5_primary_minimum": 0.95,
+    "preferred": 1.0,
+    "no_quality_gate_relaxation": true
+  },
+  "lines": {
+    "v3S": {
+      "decision": "REJECTED_BEFORE_INTERNAL_VAL",
+      "calib_macro_f1": 0.7606056293257831,
+      "calib_min_family_f1": 0.6290672451193059
+    },
+    "v4_locked_baseline": {
+      "decision": "REJECTED_BEFORE_INTERNAL_VAL",
+      "calib_macro_f1": 0.7972293563941714,
+      "calib_min_family_f1": 0.7024824008892182,
+      "calib_uas": 0.8751909425824422,
+      "calib_las": 0.755189145475784
+    },
+    "v4_1_A1": {
+      "decision": "KEEP_FOR_FINALIST_ABSOLUTE_GATES_FAILED",
+      "calib_macro_f1": 0.8107563337851816,
+      "calib_min_family_f1": 0.7174066243833686,
+      "calib_uas": 0.8785155899002606,
+      "calib_las": 0.7599065504537694
+    },
+    "v4_1_A2": {
+      "decision": "DROP_AFTER_SCREEN",
+      "calib_macro_f1": 0.8061106681658993,
+      "calib_min_family_f1": 0.6917712691771268,
+      "calib_uas": 0.8769431215742655,
+      "calib_las": 0.7601761164525115
+    },
+    "v4_1_A3": {
+      "decision": "DROP_AFTER_SCREEN",
+      "calib_macro_f1": 0.8040686232856971,
+      "calib_min_family_f1": 0.7053413512557483,
+      "calib_uas": 0.8778416749034055,
+      "calib_las": 0.7568963968011502,
+      "dominant_diagnosis": "OBJECT source-token detection is weak while head top-1 given gold source is 0.9334."
+    },
+    "v6_0_R2_P9": {
+      "decision": "DROP_AFTER_SCREEN",
+      "calib_macro_f1": 0.80204292,
+      "calib_min_family_f1": 0.71206775,
+      "calib_uas": 0.88431126,
+      "calib_las": 0.76538773
+    },
+    "v6_0_R2_P10": {
+      "decision": "DROP_AFTER_SCREEN",
+      "calib_macro_f1": 0.8018,
+      "calib_min_family_f1": 0.7141,
+      "calib_uas": 0.8843,
+      "calib_las": 0.7654
+    },
+    "v6_0_R3_P1": {
+      "decision": "DROP_AFTER_SCREEN",
+      "calib_macro_f1": 0.805125,
+      "calib_min_family_f1": 0.711779,
+      "calib_uas": 0.883053,
+      "calib_las": 0.764309
+    },
+    "v6_0_R3_P2": {
+      "decision": "DROP_AFTER_SCREEN",
+      "passed_gates": 10,
+      "gate_count": 12,
+      "calib_macro_f1": 0.8141417991048879,
+      "calib_min_family_f1": 0.7246575342465753,
+      "calib_uas": 0.8868272081948063,
+      "calib_las": 0.7677688920837452,
+      "failed_gates": [
+        "CASE_GOVERNOR_regression_limit",
+        "PARTICIPLE_HEAD_regression_limit"
+      ]
+    },
+    "v6_0_R3_P3_v1": {
+      "status": "PROTOCOL_INVALID",
+      "stopped_after": "Relation E01",
+      "next_epoch_run": false,
+      "promotion_decision_allowed": false
+    },
+    "v6_0_R3_P3_v2": {
+      "decision": "DROP_AFTER_SCREEN",
+      "passed_gates": 3,
+      "gate_count": 12,
+      "optimizer_steps": 0,
+      "graft_tensor_count": 123,
+      "calib_macro_f1": 0.7795111127984378,
+      "calib_min_family_f1": 0.7138643067846608,
+      "calib_uas": 0.883053284212418,
+      "calib_las": 0.7643094617665559,
+      "family_f1": {
+        "POSS_HEAD": 0.7593818984547461,
+        "OBJECT": 0.7138643067846608,
+        "PARTICIPLE_HEAD": 0.7627695800227016,
+        "CASE_GOVERNOR": 0.8820286659316428
+      },
+      "scientific_conclusion": "R3-P2 ranking gains are representation- and calibration-entangled and do not transfer as standalone direct-family scorer tensors."
+    }
+  },
+  "state_conservation": {
+    "internal_val_consumed": false,
+    "external_holdouts_consumed": false,
+    "official_test_splits_consumed": false
+  },
+  "next_action": "Complete and approve the planning choices in docs/TurkTokenizer_v6_1_R4_Plan.md before writing the R4-P0 precommit."
+}
