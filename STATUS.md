@@ -10,6 +10,7 @@
 - v4.2 R1 is precommitted and its architecture smoke gate is `PASS`.
 - v6.0 R3-P2 is closed as `DROP_AFTER_SCREEN`; 10/12 paired CALIB gates
   passed, with two absolute family-regression gates missed.
+- v6.0 R3-P3 is precommitted; runtime bridge, parameter-mask smoke, and start gate are `PASS`; training has not started.
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
 
@@ -31,6 +32,14 @@ serialized state, corpus-derived artifacts, split inventories, and
 sealed-resource metadata are not published here. `INTERNAL_VAL`, official TEST,
 and external holdouts remain unopened. See
 [the decision note](docs/TurkTokenizer_v6_0_R3_P2_Decision.md).
+
+
+## Precommitted v6.0 R3-P3 family-isolated ranking adaptation
+
+
+R3-P3 tests one controlled change from the R3-P2 ranking candidate: only the existing `POSS_HEAD`, `OBJECT`, and `PARTICIPLE_HEAD` scoring modules may update. The shared encoder, morphology backbone, syntax and dependency modules, graph-message layers, and `CASE_GOVERNOR` path are frozen. The mask contains 2,222,643 trainable parameters in 123 tensors out of 29,306,087 total parameters.
+
+The current CPU runtime reproduced the archived R3-P2 candidate Relation E01 checkpoint byte-for-byte. The R3-P3 smoke changed only allowed tensors and preserved ten audited syntax and CASE output groups bit-for-bit. The start gate passed. Relation E01 is the next boundary; no R3-P3 training epoch has run yet. All original twelve R3-P2 promotion gates remain binding, and R3 closes after the resulting decision. See [the R3-P3 precommit](docs/TurkTokenizer_v6_0_R3_P3_Precommit.md) and [progress](docs/TurkTokenizer_v6_0_R3_P3_Progress.md).
 
 
 ## Live v6.0 R2-P9 repair line
