@@ -58,12 +58,13 @@ and restores the same precommitted R1 syntax parent checkpoint as the control ar
 | Relation E50 | Primary, local mirror, persistent A/B packages, selected checkpoint, and completion marker verified |
 | Hard-Negative E01 | Primary, local mirror, fixed cache, selected checkpoint, and persistent A/B packages verified |
 | Hard-Negative E02 | Primary, local mirror, fixed cache, selected checkpoint, and persistent A/B packages verified |
+| Hard-Negative E03 | Primary, local mirror, fixed cache, selected checkpoint, and persistent A/B packages verified |
 
 The candidate Relation stage completed at E50. The selected checkpoint and
 blinded Relation completion marker are verified in both persistent packages.
-Candidate Hard-Negative E02 is persisted with its fixed cache, selected
+Candidate Hard-Negative E03 is persisted with its fixed cache, selected
 checkpoint, active/durable state pair, and independent A/B packages verified.
-The next authorized invocation is candidate Hard-Negative E03.
+The next authorized invocation is candidate Hard-Negative E04.
 
 No control or candidate CALIB metric is published or inspected before both arms
 close. INTERNAL_VAL, official TEST, and external holdouts remain unopened.

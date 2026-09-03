@@ -9,7 +9,7 @@
 - v4.1 A2 and A3 are closed as `DROP_AFTER_SCREEN`.
 - v4.2 R1 is precommitted and its architecture smoke gate is `PASS`.
 - v6.0 R3-P2 control is complete; candidate Relation completed at E50 and
-  candidate Hard-Negative E02 is persisted and verified.
+  candidate Hard-Negative E03 is persisted and verified.
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
 
@@ -20,9 +20,9 @@
 The matched control arm is complete. Candidate Relation advanced through E50,
 its precommitted ceiling. The final Relation state, selected checkpoint,
 completion marker, local mirror, and two independent persistent closure
-packages were verified. Candidate Hard-Negative E02 then completed; its active
+packages were verified. Candidate Hard-Negative E03 then completed; its active
 and durable state, fixed cache, selected checkpoint, and two independent
-persistent packages were verified. E03 is the next authorized invocation.
+persistent packages were verified. E04 is the next authorized invocation.
 
 
 Control and candidate CALIB metrics remain blinded until the candidate arm
