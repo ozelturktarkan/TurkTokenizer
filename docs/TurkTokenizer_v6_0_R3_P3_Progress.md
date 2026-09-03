@@ -1,31 +1,37 @@
 # TurkTokenizer v6.0 R3-P3 progress
 
-## Current boundary
+## Final boundary
 
-R3-P3 v1 is protocol-invalid and archived. R3-P3 v2 is precommitted as a
-zero-optimization, family-isolated parameter-graft experiment. The one-shot
-CALIB evaluation has not started.
+R3-P3 is closed as `DROP_AFTER_SCREEN`. The R3 line is closed.
 
-| Item | State |
+| Item | Final state |
 |---|---|
-| Runtime bridge | PASS; archived R3-P2 candidate Relation E01 reproduced byte-for-byte |
-| v1 masked-training run | Invalidated after Relation E01; E02 did not run |
+| v1 masked-training run | Protocol-invalid after Relation E01; E02 did not run |
 | v1 result status | Diagnostic only; promotion decision forbidden |
-| v2 completed-R1 parent reproduction | PASS |
-| v2 graft smoke | PASS |
-| v2 start gate | PASS |
-| Donor tensors | 123 tensors / 2,222,643 parameters from R3-P2 candidate |
-| Protected R1 state | 216 tensors / 27,083,444 parameters |
+| v2 method | Completed R1 protected state plus 123 R3-P2 direct-family tensors |
 | Optimizer steps | 0 |
-| Protected output groups | 10 / 10 bit-identical in TRAIN smoke |
-| Duplicate precommit packages | A/B re-materialized and checksum-verified |
-| Next action | One CALIB screen under the unchanged 12 gates |
+| Parent reproduction / graft smoke / start gate | PASS / PASS / PASS |
+| Macro relation F1 | 0.7795 |
+| Minimum-family F1 | 0.7139 (OBJECT) |
+| POSS_HEAD / OBJECT | 0.7594 / 0.7139 |
+| PARTICIPLE_HEAD / CASE_GOVERNOR | 0.7628 / 0.8820 |
+| UAS / LAS | 0.8831 / 0.7643 |
+| Gates | 3 / 12 passed |
+| Decision | DROP_AFTER_SCREEN |
+| Final A/B closure packages | Re-materialized and checksum-verified |
 | Sealed evaluation | unopened |
 
-The v1 E01 boundary showed that freezing relation-untrained protected branches at
-Syntax E10 creates an invalid final-R1 comparator; it did not test the scientific
-R3-P3 question. The corrected v2 graft isolates that question directly by
-combining completed R1 protected state with only the R3-P2 direct-family tensors.
-No new feature, loss, parameter, threshold, or decoder rule is introduced.
+The three passing gates were the protected `CASE_GOVERNOR`, UAS, and LAS
+regression limits; all three metrics equal R1 exactly. The nine direct-family,
+aggregate, factorized OBJECT, and matched-control gates failed. Relative to
+R3-P2, macro F1 fell by `0.0346`, POSS_HEAD by `0.0675`,
+PARTICIPLE_HEAD by `0.0718`, OBJECT by `0.0108`, and micro direct head
+top-1 by `0.0099`.
 
-See [the corrected v2 precommit](TurkTokenizer_v6_0_R3_P3_v2_Precommit.md).
+The scientific conclusion is that R3-P2's ranking gain is jointly encoded in
+the shared representation and calibration. It is not transferable as a
+standalone direct-family scorer graft. Post-hoc rescue is closed.
+
+See [the corrected v2 precommit](TurkTokenizer_v6_0_R3_P3_v2_Precommit.md),
+[the final decision](TurkTokenizer_v6_0_R3_P3_Decision.md), and
+[the draft R4 plan](TurkTokenizer_v6_1_R4_Plan.md).
