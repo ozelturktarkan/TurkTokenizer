@@ -73,12 +73,13 @@ and restores the same precommitted R1 syntax parent checkpoint as the control ar
 | Hard-Negative E15 | Primary, local mirror, fixed cache, selected checkpoint, and persistent A/B packages verified |
 | Hard-Negative E16 | Primary, local mirror, fixed cache, selected checkpoint, and persistent A/B packages verified |
 | Hard-Negative E17 | Primary, local mirror, fixed cache, selected checkpoint, and persistent A/B packages verified |
+| Hard-Negative E18 | Primary, local mirror, fixed cache, selected checkpoint, and persistent A/B packages verified |
 
 The candidate Relation stage completed at E50. The selected checkpoint and
 blinded Relation completion marker are verified in both persistent packages.
-Candidate Hard-Negative E17 is persisted with its fixed cache, selected
+Candidate Hard-Negative E18 is persisted with its fixed cache, selected
 checkpoint, active/durable state pair, and independent A/B packages verified.
-The next authorized invocation is candidate Hard-Negative E18.
+The next authorized invocation is candidate Hard-Negative E19.
 
 No control or candidate CALIB metric is published or inspected before both arms
 close. INTERNAL_VAL, official TEST, and external holdouts remain unopened.
