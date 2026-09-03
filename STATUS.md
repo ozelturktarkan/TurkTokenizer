@@ -10,7 +10,7 @@
 - v4.2 R1 is precommitted and its architecture smoke gate is `PASS`.
 - v6.0 R3-P2 is closed as `DROP_AFTER_SCREEN`; 10/12 paired CALIB gates
   passed, with two absolute family-regression gates missed.
-- v6.0 R3-P3 v1 is protocol-invalid and stopped after Relation E01; corrected v2 graft is precommitted, its start gate is `PASS`, and the one-shot CALIB evaluation is pending.
+- v6.0 R3-P3 is closed as `DROP_AFTER_SCREEN`; v2 passed 3/12 gates and the R3 line is closed.
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
 
@@ -34,16 +34,25 @@ and external holdouts remain unopened. See
 [the decision note](docs/TurkTokenizer_v6_0_R3_P2_Decision.md).
 
 
-## Precommitted v6.0 R3-P3 family-isolated ranking transfer
+## Closed v6.0 R3-P3 family-isolated ranking transfer
 
 
-The first R3-P3 design correctly restricted updates to the existing direct-family modules but started from R1 Syntax E10, before the protected relation and hard-negative branches had reached the completed R1 state. Relation E01 exposed the invalid comparator boundary. The run was stopped before E02; its E01 values are protocol diagnostics, not an R3-P3 result, and promotion is forbidden.
+R3-P3 v1 was stopped after Relation E01 because the selected Syntax E10 start boundary preceded the completed R1 protected relation state. E02 did not run; v1 is protocol-invalid and its diagnostic values are not an R3-P3 result.
 
 
-The corrected v2 experiment uses the completed frozen R1 checkpoint as its base and the closed R3-P2 candidate as its donor. Exactly 123 direct-family tensors (2,222,643 parameters) are copied from the donor; all 216 protected tensors (27,083,444 parameters), including the complete syntax and `CASE_GOVERNOR` paths, stay bit-identical to R1. There are zero optimizer steps and no new parameters, features, losses, thresholds, or decoder rules.
+R3-P3 v2 used the completed R1 checkpoint as the protected base and copied exactly 123 direct-family tensors (2,222,643 parameters) from the R3-P2 ranking candidate. All 216 protected tensors (27,083,444 parameters) remained from R1, and no optimizer step was taken. The final CALIB screen yielded macro F1 `0.7795`, minimum-family/OBJECT F1 `0.7139`, `UAS=0.8831`, and `LAS=0.7643`. Family F1 was `POSS_HEAD=0.7594`, `OBJECT=0.7139`, `PARTICIPLE_HEAD=0.7628`, and `CASE_GOVERNOR=0.8820`.
 
 
-The R1 parent reproduction, graft smoke, and start gate are `PASS`. Ten protected TRAIN output groups stayed bit-identical, direct outputs changed, CALIB was not deserialized during the smoke, and two independent precommit packages were re-materialized and checksum-verified. One CALIB evaluation remains under the unchanged twelve R3-P2 gates. R3 closes after that decision; `INTERNAL_VAL`, official TEST, and external holdouts remain unopened. See [the corrected v2 precommit](docs/TurkTokenizer_v6_0_R3_P3_v2_Precommit.md) and [progress](docs/TurkTokenizer_v6_0_R3_P3_Progress.md).
+Only 3 of 12 gates passed: the protected CASE_GOVERNOR, UAS, and LAS regression limits, whose metrics equal R1 exactly. All direct-family, aggregate, factorized OBJECT, and matched-control gates failed. The decision is `DROP_AFTER_SCREEN`; post-hoc rescue is closed. The result shows that the R3-P2 ranking gain depends on the jointly learned shared representation and calibration and cannot be transferred as standalone scorer tensors.
+
+
+Final outputs and the audit checkpoint are retained in two independently re-materialized, checksum-verified private closure packages. The R3 line is closed. `INTERNAL_VAL`, official TEST, and external holdouts remain unopened. See [the R3-P3 decision](docs/TurkTokenizer_v6_0_R3_P3_Decision.md).
+
+
+## Draft v6.1 R4 planning boundary
+
+
+R4 is reserved for a true fresh-syntax mainline, not another checkpoint graft. The draft program begins with a TRAIN-only gradient-conflict audit, then a fresh repaired-lattice parent, a one-delta family-adapter isolation test, a paired ranking-loss test only after isolation succeeds, and three-seed confirmation before any sealed evaluation. No R2-P9 E28, R1, or R3 checkpoint is migrated. The suffix/allomorph registry remains outside R4. This is a planning note, not a training precommit; see [the R4 plan](docs/TurkTokenizer_v6_1_R4_Plan.md).
 
 
 ## Live v6.0 R2-P9 repair line
