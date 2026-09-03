@@ -8,30 +8,26 @@
 - v4.1 A1 remains the strongest surviving base, but failed the absolute CALIB gates.
 - v4.1 A2 and A3 are closed as `DROP_AFTER_SCREEN`.
 - v4.2 R1 is precommitted and its architecture smoke gate is `PASS`.
-- v6.0 R3-P2 control and candidate arms are complete; the paired CALIB
-  decision is pending.
+- v6.0 R3-P2 is closed as `DROP_AFTER_SCREEN`; 10/12 paired CALIB gates
+  passed, with two absolute family-regression gates missed.
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
 
 
-## Live v6.0 R3-P2 paired line
+## Closed v6.0 R3-P2 paired line
 
 
-The matched control arm is complete. Candidate Relation advanced through E50,
-its precommitted ceiling. The final Relation state, selected checkpoint,
-completion marker, local mirror, and two independent persistent closure
-packages were verified. Candidate Hard-Negative closed at E19; its active and durable state, fixed
-cache, selected checkpoint, completion marker, and two independent persistent
-closure packages were verified. The candidate TRAIN/CALIB screen then
-completed, and all final artifacts were verified in two independent persistent
-closure packages. Both arms are closed; the paired CALIB decision is the next
-authorized invocation.
+The matched control and candidate arms are complete. Candidate Relation closed
+at its precommitted E50 ceiling, Hard-Negative closed at E19, and the selected
+checkpoint was screened. The candidate passed 10 of 12 precommitted gates but
+missed the absolute `CASE_GOVERNOR` and `PARTICIPLE_HEAD` regression limits, so
+the paired decision is `DROP_AFTER_SCREEN`.
 
-
-Control and candidate CALIB metrics remained blinded until the candidate arm
-also closes. No checkpoint, private hash, serialized state, corpus-derived
-artifact, split inventory, or sealed-resource metadata is published here.
-`INTERNAL_VAL`, official TEST, and external holdouts remain unopened.
+Two independent paired-decision executions and persistent A/B decision packages
+were verified. Detailed metrics, checkpoints, private hashes, serialized state,
+corpus-derived artifacts, split inventories, and sealed-resource metadata are
+not published here. `INTERNAL_VAL`, official TEST, and external holdouts remain
+unopened. See [the decision note](docs/TurkTokenizer_v6_0_R3_P2_Decision.md).
 
 
 ## Live v6.0 R2-P9 repair line

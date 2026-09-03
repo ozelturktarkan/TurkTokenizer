@@ -16,7 +16,7 @@ This repository is a research snapshot, not a production release. Reported score
 | v6.0 R2-P9 repair | Drop after screen | 0.8020 | 0.7121 | 0.8843 | 0.7654 |
 | v6.0 R2-P10 decoupled decision | Drop after screen | 0.8018 | 0.7141 | 0.8843 | 0.7654 |
 | v6.0 R3-P1 R1 null-arc decision | Drop after screen | 0.8051 | 0.7118 | 0.8831 | 0.7643 |
-| v6.0 R3-P2 paired ranking-loss ablation | Running; both arms complete, paired decision pending | — | — | — | — |
+| v6.0 R3-P2 paired ranking-loss ablation | Drop after screen | — | — | — | — |
 
 The v6.0 R2-P9 repair line restored the selected Syntax E20 boundary with a repaired morphology lattice, conflict-aware source supervision, a Syntax E70 ceiling, Relation/Hard-Negative E50 ceilings, and patience 9 for all three stages. Syntax closed at E42 with E38 selected, Relation closed at E37 with E28 selected, and Hard-Negative closed at H21 with H12 selected. The final TRAIN/CALIB screen yielded macro F1 `0.8020`, minimum-family F1 `0.7121`, `UAS=0.8843`, and `LAS=0.7654`; the precommitted decision is `DROP_AFTER_SCREEN`. Sealed evaluation remains unopened. See [the R2-P9 decision note](docs/TurkTokenizer_v6_0_R2_P9_Decision.md).
 
@@ -24,19 +24,15 @@ A CALIB-only A1–R1–H21 error decomposition found that H21 improves OBJECT so
 
 R3-P1 returned to the frozen R1 null-arc checkpoint and changed only the direct-relation activation score. Source-only activation reduced OBJECT and macro F1 versus R1, so every promotion gate except the unchanged CASE_GOVERNOR policy failed. The precommitted decision is `DROP_AFTER_SCREEN`; post-hoc decision rescue is closed. See [the R3-P1 decision](docs/TurkTokenizer_v6_0_R3_P1_Decision.md).
 
-R3-P2 is running as a paired TRAIN/CALIB loss ablation. The control arm is
-complete. Candidate Relation reached its precommitted E50 ceiling with the
-selected checkpoint, completion marker, local mirror, and two persistent
-packages verified. Candidate Hard-Negative closed at E19 with its active and durable states,
-selected checkpoint, completion marker, and two persistent closure packages
-verified. The candidate TRAIN/CALIB screen then completed, and its final
-artifacts were verified in two independent persistent closure packages. Both
-arms are now closed; the precommitted paired CALIB decision is the next
-authorized invocation. The R1 decoder and inference rule stay fixed, and only
-the direct-family training loss changes from joint focal likelihood to
-zero-margin hardest-competitor ranking. Metrics remain unpublished pending the
-paired decision, and sealed evaluation stays unopened. See [the R3-P2 precommit](docs/TurkTokenizer_v6_0_R3_P2_Precommit.md)
-and [candidate progress](docs/TurkTokenizer_v6_0_R3_P2_Candidate_Progress.md).
+R3-P2 is closed as a paired TRAIN/CALIB loss ablation. The ranking-loss
+candidate passed 10 of 12 precommitted gates, but missed the absolute
+`CASE_GOVERNOR` and `PARTICIPLE_HEAD` regression limits. The precommitted
+decision is therefore `DROP_AFTER_SCREEN`. Both arms, two independent paired-
+decision executions, and their persistent A/B packages are verified. Detailed
+metrics and private integrity hashes remain in the private closure packages;
+sealed evaluation remains unopened. See [the R3-P2 precommit](docs/TurkTokenizer_v6_0_R3_P2_Precommit.md),
+[the R3-P2 decision](docs/TurkTokenizer_v6_0_R3_P2_Decision.md), and
+[candidate progress](docs/TurkTokenizer_v6_0_R3_P2_Candidate_Progress.md).
 
 A3 reached syntax epoch 12 and relation epoch 3 before the active workspace was interrupted while relation epoch 4 was computing. The last complete relation snapshot was provisional (`macro=0.7860`, `minimum/OBJECT=0.7019`, `UAS=0.8705`, `LAS=0.7434`) and is not a final A3 result. It must not be compared as if the screen or hard-negative stage had completed.
 
