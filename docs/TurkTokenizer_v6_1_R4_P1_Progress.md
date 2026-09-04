@@ -411,3 +411,19 @@ Syntax E24 completed from the verified E23 state under learning rate `0.000125`:
 - syntax overfit streak: `0/3`
 
 The isolated E07 TRAIN-loss anomaly did not recur. E24 improved the locked selection score, replaced E23 as the selected syntax checkpoint, and kept patience at `0/9`. TRAIN loss and CALIB syntax loss both rose from E23, so the precommitted overfit signal remained false at `0/3`; no safety stop fired. Active and durable E24 resume-state/checkpoint pairs matched byte-for-byte. Both E24 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E25 is authorized under learning rate `0.000125` and the unchanged one-epoch protocol with continued anomaly and overfit monitoring. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Syntax E25
+
+Syntax E25 completed from the verified E24 state under learning rate `0.000125`:
+
+- TRAIN loss: `0.2628`
+- CALIB syntax loss: `1.7332`
+- UAS: `0.88228951`
+- LAS: `0.76403990`
+- UPOS: `0.92308384`
+- selection score: `0.81541918`
+- patience: `1/9`
+- learning rate: `0.000125`
+- syntax overfit streak: `1/3`
+
+The isolated E07 TRAIN-loss anomaly did not recur. E25 did not improve the locked selection score, so E24 remains the selected syntax checkpoint and patience advanced from `0/9` to `1/9`. TRAIN loss fell while CALIB syntax loss rose beyond the precommitted relative threshold, producing the first consecutive overfit signal (`1/3`); no safety stop fired and the learning rate was not reduced. Active and durable E25 resume states matched byte-for-byte, while the selected E24 checkpoint remained unchanged and mirrored. Both E25 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E26 is authorized under learning rate `0.000125` and the unchanged one-epoch protocol with explicit overfit-streak monitoring. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
