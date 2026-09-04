@@ -117,4 +117,23 @@ Syntax E06 completed from the verified E05 milestone state:
 - learning rate: `0.0005`
 - syntax overfit streak: `0/3`
 
-CALIB loss rose again while the locked selection score improved, so the overfit signal remained false and E06 became the selected syntax checkpoint. Active and durable resume-state/checkpoint pairs matched byte-for-byte. Both E06 archives were independently re-materialized; every file checksum passed and each reconstructed state matched the canonical source hash. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened. E07 is the next authorized boundary.
+CALIB loss rose again while the locked selection score improved, so the overfit signal remained false and E06 became the selected syntax checkpoint. Active and durable resume-state/checkpoint pairs matched byte-for-byte. Both E06 archives were independently re-materialized; every file checksum passed and each reconstructed state matched the canonical source hash. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+
+## Syntax E07 and anomaly audit
+
+Syntax E07 completed from the verified E06 state:
+
+- TRAIN loss: `248.4047`
+- CALIB syntax loss: `1.3756`
+- UAS: `0.85730973`
+- LAS: `0.73043400`
+- UPOS: `0.90551712`
+- selection score: `0.78600503`
+- patience: `0/9`
+- learning rate: `0.0005`
+- syntax overfit streak: `0/3`
+
+The TRAIN-loss jump was reproduced exactly from E06 and isolated to one of 1,242 deterministic batches. That batch's syntax-head loss was `307453.72` with a pre-clip gradient norm of `7464916`; the next-highest batch loss was only `1.7191`. Targets and inputs were valid, attention outputs remained normal, and the activation amplification arose in the Transformer FFN residual path before quadratic amplification by the biaffine head scorer. Gradient clipping at `1.2` bounded the update; no model tensor became non-finite.
+
+The selected E07 checkpoint improved the locked CALIB score. On the affected short TRAIN sentence, evaluation-mode head loss was `0.0105`, and 4,096 fixed-seed dropout stress samples produced maximum head loss `1.4279` with zero samples above `10`. No precommitted stop condition fired. E07 remains the canonical boundary and E08 is authorized under the unchanged protocol with explicit recurrence monitoring. Both E07 state archives and both anomaly-decision archives were independently re-materialized and checksum-verified. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
