@@ -801,3 +801,23 @@ Relation E17 completed from the verified E16 boundary under the unchanged one-ep
 - learning rate: `0.000125`
 
 E17 did not improve the locked Relation selection score, so E15 remains the selected Relation checkpoint and patience advanced from `1/9` to `2/9`; no learning-rate reduction occurred. The runner completed only E17 and stopped at the external-backup boundary before E18. Both 21-file Relation E17 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E15 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. Relation E18 and Hard-Negative were not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Relation E18
+
+Relation E18 completed from the verified E17 boundary under the unchanged one-epoch protocol:
+
+- combined TRAIN loss: `0.1064`
+- macro relation F1: `0.80636026`
+- minimum-family F1: `0.71231957` (`OBJECT`)
+- `POSS_HEAD` F1: `0.79885057`
+- `OBJECT` F1: `0.71231957`
+- `PARTICIPLE_HEAD` F1: `0.83845391`
+- `CASE_GOVERNOR` F1: `0.87581699`
+- UAS: `0.88184024`
+- LAS: `0.76219786`
+- UPOS: `0.92169108`
+- selection score: `0.78391631`
+- patience: `3/9`
+- learning rate: `0.000125`
+
+E18 did not improve the locked Relation selection score, so E15 remains the selected Relation checkpoint and patience advanced from `2/9` to `3/9`; no learning-rate reduction occurred. The runner completed only E18 and stopped at the external-backup boundary before E19. Both 21-file Relation E18 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E15 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. Relation E19 and Hard-Negative were not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
