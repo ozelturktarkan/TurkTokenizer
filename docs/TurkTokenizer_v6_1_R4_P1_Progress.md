@@ -267,3 +267,19 @@ Syntax E15 completed from the verified E14 state:
 - syntax overfit streak: `0/3`
 
 The isolated E07 TRAIN-loss anomaly did not recur. E15 did not improve the locked selection score, so E13 remains the selected syntax checkpoint and patience advanced to `2/9`. TRAIN loss and CALIB syntax loss both fell from E14, so the precommitted overfit signal remained false. Active and durable E15 resume states matched byte-for-byte. Both E15 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E16 is authorized under the unchanged protocol. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Syntax E16
+
+Syntax E16 completed from the verified E15 state:
+
+- TRAIN loss: `0.5622`
+- CALIB syntax loss: `1.4020`
+- UAS: `0.86723875`
+- LAS: `0.74961811`
+- UPOS: `0.91742295`
+- selection score: `0.80168479`
+- patience: `3/9`
+- learning rate: `0.0005`
+- syntax overfit streak: `1/3`
+
+The isolated E07 TRAIN-loss anomaly did not recur. E16 did not improve the locked selection score, so E13 remains the selected syntax checkpoint and patience advanced to `3/9`. TRAIN loss fell while CALIB syntax loss rose beyond the precommitted relative threshold, producing the first consecutive overfit signal (`1/3`); no safety stop fired. Active and durable E16 resume states matched byte-for-byte. Both E16 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E17 is authorized under the unchanged protocol with explicit overfit-recurrence and plateau-LR transition monitoring. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
