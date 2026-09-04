@@ -741,3 +741,23 @@ Relation E14 completed from the verified E13 boundary under the unchanged one-ep
 - learning rate: `0.000125`
 
 E14 did not improve the locked Relation selection score, so E10 remains the selected Relation checkpoint and patience advanced from `3/9` to `4/9`. The precommitted four-bad-epoch plateau rule fired exactly once, reducing the learning rate from `0.00025` to `0.000125`. The runner completed only E14 and stopped at the external-backup boundary before E15. Both 21-file Relation E14 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E10 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. Relation E15 and Hard-Negative were not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Relation E15
+
+Relation E15 completed from the verified E14 boundary under the unchanged one-epoch protocol:
+
+- combined TRAIN loss: `0.1358`
+- macro relation F1: `0.80992595`
+- minimum-family F1: `0.71303126` (`OBJECT`)
+- `POSS_HEAD` F1: `0.80708661`
+- `OBJECT` F1: `0.71303126`
+- `PARTICIPLE_HEAD` F1: `0.83497053`
+- `CASE_GOVERNOR` F1: `0.88461538`
+- UAS: `0.88130111`
+- LAS: `0.76192830`
+- UPOS: `0.92007368`
+- selection score: `0.78611456`
+- patience: `0/9`
+- learning rate: `0.000125`
+
+E15 improved the locked Relation selection score and became the selected Relation checkpoint, resetting patience from `4/9` to `0/9`; no learning-rate reduction occurred. The runner completed only E15 and stopped at the external-backup boundary before E16. Both 21-file Relation E15 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E15 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. Relation E16 and Hard-Negative were not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
