@@ -347,3 +347,19 @@ Syntax E20 completed from the verified E19 state under the reduced learning rate
 - syntax overfit streak: `1/3`
 
 The isolated E07 TRAIN-loss anomaly did not recur. E20 did not improve the locked selection score, so E18 remains the selected syntax checkpoint and patience advanced to `2/9`. TRAIN loss fell while CALIB syntax loss rose beyond the precommitted relative threshold, producing the first consecutive overfit signal (`1/3`); no safety stop fired. Active and durable E20 resume states matched byte-for-byte, while the selected E18 checkpoint remained unchanged and mirrored. Both E20 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E21 is authorized under the reduced learning rate and unchanged one-epoch protocol with explicit overfit-recurrence monitoring. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Syntax E21
+
+Syntax E21 completed from the verified E20 state under the reduced learning rate:
+
+- TRAIN loss: `0.3291`
+- CALIB syntax loss: `1.5498`
+- UAS: `0.87941414`
+- LAS: `0.76296163`
+- UPOS: `0.92276934`
+- selection score: `0.81387816`
+- patience: `3/9`
+- learning rate: `0.00025`
+- syntax overfit streak: `0/3`
+
+The isolated E07 TRAIN-loss anomaly did not recur. E21 did not improve the locked selection score, so E18 remains the selected syntax checkpoint and patience advanced to `3/9`. TRAIN loss and CALIB syntax loss both fell from E20, so the consecutive overfit signal reset from `1/3` to `0/3`; no safety stop fired. Active and durable E21 resume states matched byte-for-byte, while the selected E18 checkpoint remained unchanged and mirrored. Both E21 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E22 is authorized under the reduced learning rate and unchanged one-epoch protocol with continued overfit-recurrence monitoring. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
