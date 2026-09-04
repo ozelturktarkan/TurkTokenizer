@@ -781,3 +781,23 @@ Relation E16 completed from the verified E15 boundary under the unchanged one-ep
 - learning rate: `0.000125`
 
 E16 improved the minimum-family/OBJECT F1 but did not improve the locked composite Relation selection score, so E15 remains the selected Relation checkpoint and patience advanced from `0/9` to `1/9`; no learning-rate reduction occurred. The runner completed only E16 and stopped at the external-backup boundary before E17. Both 21-file Relation E16 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E15 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. Relation E17 and Hard-Negative were not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Relation E17
+
+Relation E17 completed from the verified E16 boundary under the unchanged one-epoch protocol:
+
+- combined TRAIN loss: `0.1072`
+- macro relation F1: `0.80464551`
+- minimum-family F1: `0.71753137` (`OBJECT`)
+- `POSS_HEAD` F1: `0.80434783`
+- `OBJECT` F1: `0.71753137`
+- `PARTICIPLE_HEAD` F1: `0.82250242`
+- `CASE_GOVERNOR` F1: `0.87420043`
+- UAS: `0.88219966`
+- LAS: `0.76412975`
+- UPOS: `0.92245485`
+- selection score: `0.78449292`
+- patience: `2/9`
+- learning rate: `0.000125`
+
+E17 did not improve the locked Relation selection score, so E15 remains the selected Relation checkpoint and patience advanced from `1/9` to `2/9`; no learning-rate reduction occurred. The runner completed only E17 and stopped at the external-backup boundary before E18. Both 21-file Relation E17 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E15 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. Relation E18 and Hard-Negative were not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
