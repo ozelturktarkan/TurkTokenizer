@@ -427,3 +427,19 @@ Syntax E25 completed from the verified E24 state under learning rate `0.000125`:
 - syntax overfit streak: `1/3`
 
 The isolated E07 TRAIN-loss anomaly did not recur. E25 did not improve the locked selection score, so E24 remains the selected syntax checkpoint and patience advanced from `0/9` to `1/9`. TRAIN loss fell while CALIB syntax loss rose beyond the precommitted relative threshold, producing the first consecutive overfit signal (`1/3`); no safety stop fired and the learning rate was not reduced. Active and durable E25 resume states matched byte-for-byte, while the selected E24 checkpoint remained unchanged and mirrored. Both E25 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E26 is authorized under learning rate `0.000125` and the unchanged one-epoch protocol with explicit overfit-streak monitoring. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Syntax E26
+
+Syntax E26 completed from the verified E25 state under learning rate `0.000125`:
+
+- TRAIN loss: `0.2110`
+- CALIB syntax loss: `1.7778`
+- UAS: `0.88188516`
+- LAS: `0.76403990`
+- UPOS: `0.92357804`
+- selection score: `0.81534729`
+- patience: `2/9`
+- learning rate: `0.000125`
+- syntax overfit streak: `2/3`
+
+The isolated E07 TRAIN-loss anomaly did not recur. E26 did not improve the locked selection score, so E24 remains the selected syntax checkpoint and patience advanced from `1/9` to `2/9`. TRAIN loss fell while CALIB syntax loss again rose beyond the precommitted relative threshold, extending the consecutive overfit signal from `1/3` to `2/3`; no safety stop fired and the learning rate was not reduced. Active and durable E26 resume states matched byte-for-byte, while the selected E24 checkpoint remained unchanged and mirrored. Both E26 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E27 is authorized under learning rate `0.000125` and the unchanged one-epoch protocol; the precommitted safety stop will fire if the same overfit condition recurs for a third consecutive epoch. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
