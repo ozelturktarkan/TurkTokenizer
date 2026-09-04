@@ -641,3 +641,23 @@ Relation E09 completed from the verified E08 boundary under the unchanged one-ep
 Two concurrent E09 invocations were detected during recovery. One ended before emitting an E09 metric or state boundary and contributes no result. The sole accepted E09 boundary was independently re-evaluated and packaged.
 
 E09 improved the locked Relation selection score, replaced E06 as the selected Relation checkpoint, and reset patience from `2/9` to `0/9`; no learning-rate reduction occurred. The accepted runner completed only E09 and stopped at the external-backup boundary before E10. Both 21-file Relation E09 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E09 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. Relation E10 and Hard-Negative were not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Relation E10
+
+Relation E10 completed from the verified E09 boundary under the unchanged one-epoch protocol:
+
+- combined TRAIN loss: `0.2046`
+- macro relation F1: `0.80415652`
+- minimum-family F1: `0.71280992` (`OBJECT`)
+- `POSS_HEAD` F1: `0.81342547`
+- `OBJECT` F1: `0.71280992`
+- `PARTICIPLE_HEAD` F1: `0.82101167`
+- `CASE_GOVERNOR` F1: `0.86937901`
+- UAS: `0.88125618`
+- LAS: `0.76156887`
+- UPOS: `0.91796208`
+- selection score: `0.78267977`
+- patience: `0/9`
+- learning rate: `0.00025`
+
+E10 improved the locked Relation selection score and became the selected Relation checkpoint. Patience remained at `0/9`, and no learning-rate reduction occurred. The runner completed only E10 and stopped at the external-backup boundary. Both 21-file Relation E10 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E10 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. This requested E03–E10 execution window is closed at E10; Relation E11 and Hard-Negative were not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
