@@ -315,3 +315,19 @@ Syntax E18 completed from the verified E17 state under the reduced learning rate
 - syntax overfit streak: `0/3`
 
 The isolated E07 TRAIN-loss anomaly did not recur. E18 improved the locked selection score, replaced E13 as the selected syntax checkpoint, and reset patience from `4/9` to `0/9`. TRAIN loss fell and CALIB syntax loss rose, but the improved selection score kept the precommitted overfit signal false at `0/3`; no safety stop fired. Active and durable E18 resume-state/checkpoint pairs matched byte-for-byte. Both E18 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E19 is authorized under the reduced learning rate and unchanged one-epoch protocol. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Syntax E19
+
+Syntax E19 completed from the verified E18 state under the reduced learning rate:
+
+- TRAIN loss: `0.3990`
+- CALIB syntax loss: `1.4273`
+- UAS: `0.87977356`
+- LAS: `0.76242250`
+- UPOS: `0.92119687`
+- selection score: `0.81350526`
+- patience: `1/9`
+- learning rate: `0.00025`
+- syntax overfit streak: `0/3`
+
+The isolated E07 TRAIN-loss anomaly did not recur. E19 did not improve the locked selection score, so E18 remains the selected syntax checkpoint and patience advanced to `1/9`. TRAIN loss and CALIB syntax loss both fell from E18, so the precommitted overfit signal remained false at `0/3`; no safety stop fired. Active and durable E19 resume states matched byte-for-byte, while the selected E18 checkpoint remained unchanged and mirrored. Both E19 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E20 is authorized under the reduced learning rate and unchanged one-epoch protocol. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
