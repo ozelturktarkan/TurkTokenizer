@@ -511,7 +511,7 @@ Relation E03 completed from the verified E02 boundary under the unchanged one-ep
 - `OBJECT` F1: `0.69486194`
 - `PARTICIPLE_HEAD` F1: `0.82785300`
 - `CASE_GOVERNOR` F1: `0.85878301`
-- UAS: `0.87577500`
+- UAS: `0.87581993`
 - LAS: `0.75420074`
 - UPOS: `0.91787223`
 - selection score: `0.77086534`
@@ -625,14 +625,15 @@ E08 did not improve the locked Relation selection score, so E06 remained selecte
 Relation E09 completed from the verified E08 boundary:
 
 - combined TRAIN loss: `0.1948`
-- macro relation F1: `0.80113025`
-- minimum-family F1: `0.71529548` (`OBJECT`)
-- `POSS_HEAD` F1: `0.80000000`
+- macro relation F1: `0.80110980`
+- minimum-family F1: `0.71530249` (`OBJECT`)
+- `POSS_HEAD` F1: `0.79958463`
 - `OBJECT` F1: `0.71529548`
-- `PARTICIPLE_HEAD` F1: `0.81310700`
-- `CASE_GOVERNOR` F1: `0.87611801`
+- `PARTICIPLE_HEAD` F1: `0.81331988`
+- `CASE_GOVERNOR` F1: `0.87623220`
 - UAS: `0.87577500`
-- LAS: `0.75509929`
+- LAS: `0.75505436`
+- UPOS: `0.91917513`
 - selection score: `0.78069476`
 - patience: `0/9`
 - learning rate: `0.00025`
