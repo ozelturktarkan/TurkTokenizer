@@ -363,3 +363,19 @@ Syntax E21 completed from the verified E20 state under the reduced learning rate
 - syntax overfit streak: `0/3`
 
 The isolated E07 TRAIN-loss anomaly did not recur. E21 did not improve the locked selection score, so E18 remains the selected syntax checkpoint and patience advanced to `3/9`. TRAIN loss and CALIB syntax loss both fell from E20, so the consecutive overfit signal reset from `1/3` to `0/3`; no safety stop fired. Active and durable E21 resume states matched byte-for-byte, while the selected E18 checkpoint remained unchanged and mirrored. Both E21 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E22 is authorized under the reduced learning rate and unchanged one-epoch protocol with continued overfit-recurrence monitoring. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Syntax E22
+
+Syntax E22 completed from the verified E21 state:
+
+- TRAIN loss: `0.3116`
+- CALIB syntax loss: `1.5587`
+- UAS: `0.87905472`
+- LAS: `0.76138916`
+- UPOS: `0.92205050`
+- selection score: `0.81275496`
+- patience: `4/9`
+- learning rate: `0.000125`
+- syntax overfit streak: `1/3`
+
+The isolated E07 TRAIN-loss anomaly did not recur. E22 did not improve the locked selection score, so E18 remains the selected syntax checkpoint and patience advanced to `4/9`. The deterministic plateau rule reduced the learning rate from `0.00025` to `0.000125`. TRAIN loss fell while CALIB syntax loss rose beyond the precommitted relative threshold, producing the first consecutive overfit signal after E21's reset (`1/3`); no safety stop fired. Active and durable E22 resume states matched byte-for-byte, while the selected E18 checkpoint remained unchanged and mirrored. Both E22 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E23 is authorized under the newly reduced learning rate and unchanged one-epoch protocol with explicit overfit-recurrence monitoring. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
