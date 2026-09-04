@@ -203,3 +203,19 @@ Syntax E11 completed from the verified E10 state:
 - syntax overfit streak: `0/3`
 
 E11 improved the locked selection score and became the selected syntax checkpoint. The E07 TRAIN-loss anomaly did not recur, the precommitted overfit signal remained false, and patience reset to `0/9`. Active and durable resume-state/checkpoint pairs matched byte-for-byte. Both E11 archives were independently re-materialized; every file checksum passed and each reconstructed state matched the canonical source. E12 is authorized under the unchanged protocol. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Syntax E12
+
+Syntax E12 completed from the verified E11 state:
+
+- TRAIN loss: `0.7065`
+- CALIB syntax loss: `1.3787`
+- UAS: `0.86921556`
+- LAS: `0.74916884`
+- UPOS: `0.91499686`
+- selection score: `0.80176566`
+- patience: `0/9`
+- learning rate: `0.0005`
+- syntax overfit streak: `0/3`
+
+E12 improved the locked selection score and became the selected syntax checkpoint. The E07 TRAIN-loss anomaly did not recur. CALIB loss rose, but TRAIN loss did not fall, so the precommitted overfit signal remained false and patience stayed at `0/9`. Active and durable resume-state/checkpoint pairs matched byte-for-byte. Both E12 archives were independently re-materialized; every file checksum passed and each reconstructed state matched the canonical source. E13 is authorized under the unchanged protocol. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
