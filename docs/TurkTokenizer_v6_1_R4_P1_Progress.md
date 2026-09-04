@@ -443,3 +443,19 @@ Syntax E26 completed from the verified E25 state under learning rate `0.000125`:
 - syntax overfit streak: `2/3`
 
 The isolated E07 TRAIN-loss anomaly did not recur. E26 did not improve the locked selection score, so E24 remains the selected syntax checkpoint and patience advanced from `1/9` to `2/9`. TRAIN loss fell while CALIB syntax loss again rose beyond the precommitted relative threshold, extending the consecutive overfit signal from `1/3` to `2/3`; no safety stop fired and the learning rate was not reduced. Active and durable E26 resume states matched byte-for-byte, while the selected E24 checkpoint remained unchanged and mirrored. Both E26 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E27 is authorized under learning rate `0.000125` and the unchanged one-epoch protocol; the precommitted safety stop will fire if the same overfit condition recurs for a third consecutive epoch. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Syntax E27
+
+Syntax E27 completed from the verified E26 state under learning rate `0.000125`:
+
+- TRAIN loss: `0.2003`
+- CALIB syntax loss: `1.8357`
+- UAS: `0.88188516`
+- LAS: `0.76475874`
+- UPOS: `0.92196064`
+- selection score: `0.81561686`
+- patience: `3/9`
+- learning rate: `0.000125`
+- syntax overfit streak: `3/3`
+
+The isolated E07 TRAIN-loss anomaly did not recur. E27 did not improve the locked selection score, so E24 remains the selected syntax checkpoint and patience advanced from `2/9` to `3/9`. TRAIN loss fell while CALIB syntax loss rose beyond the precommitted relative threshold for a third consecutive epoch, so the overfit guard reached `3/3` and the precommitted safety stop fired. The selected E24 checkpoint was copied to the frozen Syntax checkpoint, and both the safety marker and Syntax completion marker were persisted. Active and durable E27 state, selected checkpoint, frozen checkpoint, and closure markers matched byte-for-byte. Both 21-file E27 closure archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and the selected and frozen checkpoints matched their source bytes. Syntax is closed safely at E27; Syntax E28 is not authorized, and any later stage requires a separate continuation decision. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
