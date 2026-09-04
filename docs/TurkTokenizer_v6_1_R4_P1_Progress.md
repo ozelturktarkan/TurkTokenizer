@@ -479,3 +479,23 @@ Relation E01 started cleanly from the frozen selected Syntax E24 parent after th
 - learning rate: `0.00025`
 
 The runner recognized the completed Syntax stage and restored the selected E24 checkpoint rather than the overfit E27 model state. E01 established the first Relation checkpoint and therefore reset/kept patience at `0/9`; no learning-rate reduction occurred. The active and durable Relation state/checkpoint mirrors matched byte-for-byte, and the frozen Syntax parent remained unchanged. Both 21-file Relation E01 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected Relation checkpoint and required Syntax parent checkpoint matched their source bytes. Relation E02 and Hard-Negative were not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Relation E02
+
+Relation E02 completed from the verified E01 boundary under the unchanged one-epoch protocol:
+
+- combined TRAIN loss: `0.4583`
+- macro relation F1: `0.78736897`
+- minimum-family F1: `0.68866962` (`OBJECT`)
+- `POSS_HEAD` F1: `0.79666319`
+- `OBJECT` F1: `0.68866962`
+- `PARTICIPLE_HEAD` F1: `0.81538462`
+- `CASE_GOVERNOR` F1: `0.84875847`
+- UAS: `0.87361847`
+- LAS: `0.75433552`
+- UPOS: `0.91895049`
+- selection score: `0.76530776`
+- patience: `0/9`
+- learning rate: `0.00025`
+
+E02 improved the locked Relation selection score and became the selected Relation checkpoint. Patience remained at `0/9`, and no learning-rate reduction occurred. The runner restored the selected Syntax E24 parent, completed only E02, persisted the active and durable Relation mirrors, and stopped at the external-backup boundary before E03. Both 21-file Relation E02 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E02 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. Relation E03 and Hard-Negative were not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
