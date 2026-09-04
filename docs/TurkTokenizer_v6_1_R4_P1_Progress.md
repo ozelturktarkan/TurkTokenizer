@@ -395,3 +395,19 @@ Syntax E23 completed from the verified E22 state under the reduced learning rate
 - syntax overfit streak: `0/3`
 
 The isolated E07 TRAIN-loss anomaly did not recur. E23 improved the locked selection score, replaced E18 as the selected syntax checkpoint, and reset patience from `4/9` to `0/9`. TRAIN loss fell and CALIB syntax loss rose, but the improved selection score kept the precommitted overfit signal false and reset its streak from `1/3` to `0/3`; no safety stop fired. Active and durable E23 resume-state/checkpoint pairs matched byte-for-byte. Both E23 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E24 is authorized under learning rate `0.000125` and the unchanged one-epoch protocol with continued overfit-recurrence monitoring. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Syntax E24
+
+Syntax E24 completed from the verified E23 state under learning rate `0.000125`:
+
+- TRAIN loss: `0.6463`
+- CALIB syntax loss: `1.7110`
+- UAS: `0.88193009`
+- LAS: `0.76462396`
+- UPOS: `0.92335340`
+- selection score: `0.81568874`
+- patience: `0/9`
+- learning rate: `0.000125`
+- syntax overfit streak: `0/3`
+
+The isolated E07 TRAIN-loss anomaly did not recur. E24 improved the locked selection score, replaced E23 as the selected syntax checkpoint, and kept patience at `0/9`. TRAIN loss and CALIB syntax loss both rose from E23, so the precommitted overfit signal remained false at `0/3`; no safety stop fired. Active and durable E24 resume-state/checkpoint pairs matched byte-for-byte. Both E24 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E25 is authorized under learning rate `0.000125` and the unchanged one-epoch protocol with continued anomaly and overfit monitoring. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
