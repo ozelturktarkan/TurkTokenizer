@@ -761,3 +761,23 @@ Relation E15 completed from the verified E14 boundary under the unchanged one-ep
 - learning rate: `0.000125`
 
 E15 improved the locked Relation selection score and became the selected Relation checkpoint, resetting patience from `4/9` to `0/9`; no learning-rate reduction occurred. The runner completed only E15 and stopped at the external-backup boundary before E16. Both 21-file Relation E15 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E15 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. Relation E16 and Hard-Negative were not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Relation E16
+
+Relation E16 completed from the verified E15 boundary under the unchanged one-epoch protocol:
+
+- combined TRAIN loss: `0.1132`
+- macro relation F1: `0.80404581`
+- minimum-family F1: `0.72271678` (`OBJECT`)
+- `POSS_HEAD` F1: `0.79277365`
+- `OBJECT` F1: `0.72271678`
+- `PARTICIPLE_HEAD` F1: `0.83187561`
+- `CASE_GOVERNOR` F1: `0.86881720`
+- UAS: `0.88152574`
+- LAS: `0.76246743`
+- UPOS: `0.92187079`
+- selection score: `0.78537488`
+- patience: `1/9`
+- learning rate: `0.000125`
+
+E16 improved the minimum-family/OBJECT F1 but did not improve the locked composite Relation selection score, so E15 remains the selected Relation checkpoint and patience advanced from `0/9` to `1/9`; no learning-rate reduction occurred. The runner completed only E16 and stopped at the external-backup boundary before E17. Both 21-file Relation E16 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E15 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. Relation E17 and Hard-Negative were not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
