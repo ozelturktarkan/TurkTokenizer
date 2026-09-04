@@ -331,3 +331,19 @@ Syntax E19 completed from the verified E18 state under the reduced learning rate
 - syntax overfit streak: `0/3`
 
 The isolated E07 TRAIN-loss anomaly did not recur. E19 did not improve the locked selection score, so E18 remains the selected syntax checkpoint and patience advanced to `1/9`. TRAIN loss and CALIB syntax loss both fell from E18, so the precommitted overfit signal remained false at `0/3`; no safety stop fired. Active and durable E19 resume states matched byte-for-byte, while the selected E18 checkpoint remained unchanged and mirrored. Both E19 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E20 is authorized under the reduced learning rate and unchanged one-epoch protocol. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Syntax E20
+
+Syntax E20 completed from the verified E19 state under the reduced learning rate:
+
+- TRAIN loss: `0.3469`
+- CALIB syntax loss: `1.5723`
+- UAS: `0.88008806`
+- LAS: `0.76264714`
+- UPOS: `0.92254470`
+- selection score: `0.81386917`
+- patience: `2/9`
+- learning rate: `0.00025`
+- syntax overfit streak: `1/3`
+
+The isolated E07 TRAIN-loss anomaly did not recur. E20 did not improve the locked selection score, so E18 remains the selected syntax checkpoint and patience advanced to `2/9`. TRAIN loss fell while CALIB syntax loss rose beyond the precommitted relative threshold, producing the first consecutive overfit signal (`1/3`); no safety stop fired. Active and durable E20 resume states matched byte-for-byte, while the selected E18 checkpoint remained unchanged and mirrored. Both E20 archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and all archived files matched their source bytes. E21 is authorized under the reduced learning rate and unchanged one-epoch protocol with explicit overfit-recurrence monitoring. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
