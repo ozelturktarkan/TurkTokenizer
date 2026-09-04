@@ -619,3 +619,24 @@ Relation E08 completed from the verified E07 boundary under the unchanged one-ep
 - learning rate: `0.00025`
 
 E08 did not improve the locked Relation selection score, so E06 remained selected and patience advanced to `2/9`; no learning-rate reduction occurred. The runner completed only E08 and stopped at the external-backup boundary before E09. Both 21-file Relation E08 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E06 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. Relation E09 and Hard-Negative were not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Relation E09 and redundant-invocation audit
+
+Relation E09 completed from the verified E08 boundary:
+
+- combined TRAIN loss: `0.1948`
+- macro relation F1: `0.80113025`
+- minimum-family F1: `0.71529548` (`OBJECT`)
+- `POSS_HEAD` F1: `0.80000000`
+- `OBJECT` F1: `0.71529548`
+- `PARTICIPLE_HEAD` F1: `0.81310700`
+- `CASE_GOVERNOR` F1: `0.87611801`
+- UAS: `0.87577500`
+- LAS: `0.75509929`
+- selection score: `0.78069476`
+- patience: `0/9`
+- learning rate: `0.00025`
+
+A redundant E09 invocation from another execution session was detected before either invocation wrote an epoch boundary. The locally controlled invocation was interrupted immediately; the active and durable Relation state and selected checkpoint still matched the verified E08 boundary at that point. The remaining invocation used the same locked command and inputs and produced the sole E09 metric, patience, state, and boundary-stop records. Independent re-evaluation reproduced its metrics, and active/durable state and checkpoint mirrors matched byte-for-byte.
+
+E09 improved the locked Relation score, became selected, and reset patience from `2/9` to `0/9`; no learning-rate reduction occurred. Both 21-file Relation E09 archives were independently re-materialized; every checksum passed, each reconstructed state matched the canonical source, and both the selected E09 Relation checkpoint and Syntax E24 parent matched their source bytes. Relation E10 and Hard-Negative were not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
