@@ -459,3 +459,23 @@ Syntax E27 completed from the verified E26 state under learning rate `0.000125`:
 - syntax overfit streak: `3/3`
 
 The isolated E07 TRAIN-loss anomaly did not recur. E27 did not improve the locked selection score, so E24 remains the selected syntax checkpoint and patience advanced from `2/9` to `3/9`. TRAIN loss fell while CALIB syntax loss rose beyond the precommitted relative threshold for a third consecutive epoch, so the overfit guard reached `3/3` and the precommitted safety stop fired. The selected E24 checkpoint was copied to the frozen Syntax checkpoint, and both the safety marker and Syntax completion marker were persisted. Active and durable E27 state, selected checkpoint, frozen checkpoint, and closure markers matched byte-for-byte. Both 21-file E27 closure archives were independently re-materialized; every file checksum passed, each reconstructed state matched the canonical source, and the selected and frozen checkpoints matched their source bytes. Syntax is closed safely at E27; Syntax E28 is not authorized, and any later stage requires a separate continuation decision. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Relation E01
+
+Relation E01 started cleanly from the frozen selected Syntax E24 parent after the verified E27 Syntax safety closure:
+
+- combined TRAIN loss: `0.5197`
+- macro relation F1: `0.78168849`
+- minimum-family F1: `0.67187500` (`OBJECT`)
+- `POSS_HEAD` F1: `0.76209279`
+- `OBJECT` F1: `0.67187500`
+- `PARTICIPLE_HEAD` F1: `0.82978723`
+- `CASE_GOVERNOR` F1: `0.86299892`
+- UAS: `0.87254021`
+- LAS: `0.75083116`
+- UPOS: `0.91661425`
+- selection score: `0.75714697`
+- patience: `0/9`
+- learning rate: `0.00025`
+
+The runner recognized the completed Syntax stage and restored the selected E24 checkpoint rather than the overfit E27 model state. E01 established the first Relation checkpoint and therefore reset/kept patience at `0/9`; no learning-rate reduction occurred. The active and durable Relation state/checkpoint mirrors matched byte-for-byte, and the frozen Syntax parent remained unchanged. Both 21-file Relation E01 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected Relation checkpoint and required Syntax parent checkpoint matched their source bytes. Relation E02 and Hard-Negative were not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
