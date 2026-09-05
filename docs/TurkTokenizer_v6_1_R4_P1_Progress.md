@@ -1141,3 +1141,23 @@ Hard-Negative H03 completed from the verified H02 boundary with the unchanged de
 - learning rate: `0.00012`
 
 H03 improved the previous H01 Hard-Negative best of `0.78850593`, so H03 became the selected checkpoint and patience reset from `1/9` to `0/9`. Active and durable state, cache, and checkpoint mirrors match byte-for-byte, while the locked Relation E22 and Syntax E24 parents remain unchanged. Both 24-file H03 archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. H04 has not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Hard-Negative H04
+
+Hard-Negative H04 completed from the verified H03 boundary with the unchanged deterministic TRAIN-only cache (82 CASE_GOVERNOR, 432 OBJECT, 290 PARTICIPLE_HEAD, and 426 POSS_HEAD examples). The full source hard-negative penalty was `0.250000`:
+
+- TRAIN loss: `0.1183`
+- CALIB macro F1: `0.80426369`
+- minimum-family/OBJECT F1: `0.71520488`
+- POSS_HEAD F1: `0.79375000`
+- OBJECT F1: `0.71520488`
+- PARTICIPLE_HEAD F1: `0.82600382`
+- CASE_GOVERNOR F1: `0.88209607`
+- UAS: `0.88206488`
+- LAS: `0.75936742`
+- UPOS: `0.92043310`
+- selection score: `0.78329917`
+- patience: `1/9`
+- learning rate: `0.00012`
+
+H04 did not improve the locked Hard-Negative score, so H03 remains selected at `0.78862166`. Patience advanced from `0/9` to `1/9`; the learning rate remained `0.00012`. Active and durable state, cache, and checkpoint mirrors match byte-for-byte, while the locked Relation E22 and Syntax E24 parents remain unchanged. Both 24-file H04 archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. The canonical boundary is H04 with H05 not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
