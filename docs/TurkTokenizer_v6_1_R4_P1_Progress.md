@@ -1101,3 +1101,23 @@ Hard-Negative H01 completed from the verified Relation E31 closure and its locke
 - learning rate: `0.00012`
 
 H01 established the initial selected Hard-Negative checkpoint. Active and durable state, cache, and checkpoint mirrors match byte-for-byte; the locked Relation E22 and Syntax E24 parents remain unchanged. Both 24-file H01 archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. H02 has not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Hard-Negative H02
+
+Hard-Negative H02 completed from the verified H01 boundary with the unchanged deterministic TRAIN-only cache (82 CASE_GOVERNOR, 432 OBJECT, 290 PARTICIPLE_HEAD, and 426 POSS_HEAD examples). The warm-up source hard-negative penalty was `0.150000`:
+
+- TRAIN loss: `0.1431`
+- CALIB macro F1: `0.80191028`
+- minimum-family/OBJECT F1: `0.70441080`
+- POSS_HEAD F1: `0.79330709`
+- OBJECT F1: `0.70441080`
+- PARTICIPLE_HEAD F1: `0.83760684`
+- CASE_GOVERNOR F1: `0.87231638`
+- UAS: `0.88422140`
+- LAS: `0.76067032`
+- UPOS: `0.91773744`
+- selection score: `0.77928351`
+- patience: `1/9`
+- learning rate: `0.00012`
+
+H02 did not improve the locked Hard-Negative score, so H01 remains selected at `0.78850593`. Patience advanced from `0/9` to `1/9`; the learning rate remained `0.00012`. Active and durable state, cache, and checkpoint mirrors match byte-for-byte, while the locked Relation E22 and Syntax E24 parents remain unchanged. Both 24-file H02 archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. H03 has not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
