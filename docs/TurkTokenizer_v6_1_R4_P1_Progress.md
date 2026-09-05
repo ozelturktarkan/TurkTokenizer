@@ -1335,3 +1335,26 @@ Hard-Negative H12 completed from the verified H11 boundary:
 H12 did not exceed the locked H03 score of `0.78862166`, so the original patience rule reached `9/9` and closed the Hard-Negative stage with H03 frozen as selected. The gold-CALIB objective loss rose from H11, but TRAIN loss also rose; therefore the divergence signal remained false and the new overfit counter stayed at `0/3`. The guard did not fire, and its absence of signals is itself evidence that this H10-H12 window does not meet the precommitted loss-divergence definition of overfitting.
 
 Active and durable state, cache, completion marker, amendment, and checkpoints matched byte-for-byte. Both 26-file H12 closure archives were independently re-materialized; all 25 checksums passed, every canonical file matched its source and peer archive, and each reconstructed state matched the canonical H12 state. H13-H14 were not run because doing so would override the authoritative patience stop. H15 was not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Final CALIB screen and R4-P1 closure
+
+After the authoritative H12 patience stop, the unchanged selected H03 checkpoint was screened twice in independent executions. The two CALIB audit, gate, screen-result, calibration, and frozen-checkpoint outputs matched exactly, and a separate CPU recomputation reproduced the full result:
+
+- macro relation F1: `0.81389095`
+- minimum-family/OBJECT F1: `0.71215207`
+- POSS_HEAD F1: `0.81325301`
+- OBJECT F1: `0.71215207`
+- PARTICIPLE_HEAD F1: `0.84126984`
+- CASE_GOVERNOR F1: `0.88888889`
+- UAS: `0.88520981`
+- LAS: `0.76381526`
+- UPOS: `0.92155629`
+- pooled relation F1: `0.77880342`
+
+Relative to A1, macro F1 improved by only `+0.00313462`, below the precommitted `+0.01` screen gate, while minimum-family F1 changed by `-0.00525455`. The deterministic decision is therefore `DROP_AFTER_SCREEN`; `INTERNAL_VAL` was not opened.
+
+The factorized audit recorded OBJECT source F1 `0.72699292` and OBJECT conditional head top-1 `0.92793411`. Source detection clears the R4 planning floor, while exact OBJECT and conditional head ranking remain the main deficits. PARTICIPLE_HEAD, CASE_GOVERNOR, UAS, and LAS clear their R4 planning floors.
+
+R4-P1 nevertheless completed its intended parent-reconstruction role: it produced a fresh, reproducible focal parent without adapter, PCGrad, ranking loss, or checkpoint migration. The final closure was stored in two independent 37-file private packages; all 36 manifest checksums, source-to-A-to-B byte equality, closure artifacts, and the reconstructed resumable state were independently verified. Sealed `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+R4-P2 has not started. It is ready for a separate precommit discussion using the fixed R4-P0 adapter placement and gradient-routing map.
