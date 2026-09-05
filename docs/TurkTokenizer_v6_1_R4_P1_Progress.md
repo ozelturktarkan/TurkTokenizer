@@ -1261,3 +1261,10 @@ Hard-Negative H09 completed from the verified H08 boundary under the reduced lea
 - learning rate: `0.00006`
 
 H09 remained approximately `0.00009038` below the locked H03 Hard-Negative score of `0.78862166`, so H03 remains selected. Patience advanced from `5/9` to `6/9`; the learning rate remained `0.00006`. Active and durable state, cache, and checkpoint mirrors match byte-for-byte, while the locked Relation E22 and Syntax E24 parents remain unchanged. Both 24-file H09 archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. The canonical boundary is H09 with H10 not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+
+## Hard-Negative overfit guard amendment before H10
+
+Before any H10 optimizer step, a non-retroactive Hard-Negative overfit guard was added in response to the H03-H09 selection plateau. Its counter starts at `0/3`; H04-H09 are not backfilled. H10 records the first comparable combined TRAIN loss and gold-CALIB objective loss and cannot increment the counter. From H11 onward, a signal requires all three conditions in the same epoch: the locked selection score does not improve, combined TRAIN loss falls, and the combined gold-CALIB objective loss rises by at least 0.1% relative to the preceding guarded epoch. The counter increments only on consecutive signals and otherwise resets to zero. At `3/3`, the selected best Hard-Negative checkpoint is frozen and the stage closes before any later epoch.
+
+The existing `9/9` patience and deterministic learning-rate rules remain authoritative and can close the stage earlier. CALIB is used only for the same gold objective and locked selection measurements; the deterministic TRAIN-only hard-negative cache is not applied to CALIB. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened. H09 remains the canonical boundary and H10 has not started at the time of this amendment.
