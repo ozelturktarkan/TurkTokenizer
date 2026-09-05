@@ -1241,3 +1241,23 @@ Hard-Negative H08 completed from the verified H07 boundary under the reduced lea
 - learning rate: `0.00006`
 
 H08 did not improve the locked Hard-Negative score, so H03 remains selected at `0.78862166`. Patience advanced from `4/9` to `5/9`; the learning rate remained `0.00006`. Active and durable state, cache, and checkpoint mirrors match byte-for-byte, while the locked Relation E22 and Syntax E24 parents remain unchanged. Both 24-file H08 archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. H09 has not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Hard-Negative H09
+
+Hard-Negative H09 completed from the verified H08 boundary under the reduced learning rate, with the unchanged deterministic TRAIN-only cache (82 CASE_GOVERNOR, 432 OBJECT, 290 PARTICIPLE_HEAD, and 426 POSS_HEAD examples) and full source hard-negative penalty `0.250000`:
+
+- TRAIN loss: `0.0814`
+- CALIB macro F1: `0.81167239`
+- minimum-family/OBJECT F1: `0.71643836`
+- POSS_HEAD F1: `0.80478088`
+- OBJECT F1: `0.71643836`
+- PARTICIPLE_HEAD F1: `0.84007707`
+- CASE_GOVERNOR F1: `0.88539326`
+- UAS: `0.88408662`
+- LAS: `0.76565729`
+- UPOS: `0.92160122`
+- selection score: `0.78853128`
+- patience: `6/9`
+- learning rate: `0.00006`
+
+H09 remained approximately `0.00009038` below the locked H03 Hard-Negative score of `0.78862166`, so H03 remains selected. Patience advanced from `5/9` to `6/9`; the learning rate remained `0.00006`. Active and durable state, cache, and checkpoint mirrors match byte-for-byte, while the locked Relation E22 and Syntax E24 parents remain unchanged. Both 24-file H09 archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. The canonical boundary is H09 with H10 not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
