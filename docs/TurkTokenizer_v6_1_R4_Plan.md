@@ -1,6 +1,6 @@
 # TurkTokenizer v6.1 R4 planning note
 
-> Status: ACTIVE — R4-P0 passed; R4-P1 awaits its own precommit.
+> Status: ACTIVE — R4-P0 passed; R4-P1 finalized as `DROP_AFTER_SCREEN` with a reproducible fresh focal parent; R4-P2 precommit pending.
 
 ## Objective
 
@@ -97,3 +97,25 @@ zero optimizer steps, unchanged model state, and no CALIB access. It fixed the
 routing and adapter boundary described above. R4-P1 must now lock fresh-training
 ceilings, patience, overfitting guards, screen gates, and A/B persistence before
 its first optimizer step.
+
+## R4-P1 outcome
+
+R4-P1 completed the fresh repaired-lattice reconstruction without adapter, PCGrad, ranking loss, or checkpoint migration. Syntax E24, Relation E22, and Hard-Negative H03 were the selected checkpoints at their respective completed stage boundaries. The unchanged H03 checkpoint was screened twice independently; all final screen outputs matched exactly, and a separate CPU recomputation reproduced the result.
+
+| Metric | R4-P1 | R4 planning gate | Result |
+|---|---:|---:|---|
+| Macro relation F1 | 0.813891 | >= 0.814142 | Miss |
+| Minimum-family F1 | 0.712152 | >= 0.724658 | Miss |
+| OBJECT F1 | 0.712152 | > 0.724658 | Miss |
+| POSS_HEAD F1 | 0.813253 | >= 0.816991 | Miss |
+| PARTICIPLE_HEAD F1 | 0.841270 | >= 0.835438 | Pass |
+| CASE_GOVERNOR F1 | 0.888889 | >= 0.880029 | Pass |
+| UAS | 0.885210 | >= 0.881053 | Pass |
+| LAS | 0.763815 | >= 0.762309 | Pass |
+| OBJECT source F1 | 0.726993 | >= 0.723857 | Pass |
+| OBJECT conditional head top-1 | 0.927934 | >= 0.934739 | Miss |
+| Micro direct head top-1 | 0.931490 | > 0.940570 | Miss |
+
+The precommitted P1 screen decision is `DROP_AFTER_SCREEN`: macro gain over A1 was only `+0.00313462`, below the required `+0.01`, and minimum-family F1 changed by `-0.00525455`. This does not invalidate P1's parent-reconstruction role. Its final closure is retained in two independently re-materialized 37-file private packages with all manifest checksums, byte equality, and reconstructed state verified.
+
+The result sharpens the P2 question. OBJECT source detection already clears its planning floor, whereas exact OBJECT and conditional/micro head ranking do not. PARTICIPLE_HEAD, CASE_GOVERNOR, UAS, and LAS are already above their protected floors. R4-P2 should therefore test only the fixed P0 adapter and PCGrad isolation design under the unchanged focal objective. Ranking loss remains reserved for P3. R4-P2 has not started; its paired-control rule, full overfitting guards, schedule, and persistence contract must be signed before any optimizer step. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
