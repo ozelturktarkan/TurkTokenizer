@@ -1081,3 +1081,23 @@ Relation E31 completed from the verified E30 state under the reduced learning ra
 - learning rate: `0.0000625`
 
 E31 did not improve the locked Relation score, so E22 remains the selected Relation checkpoint at `0.78921340`. Patience advanced from `8/9` to `9/9`, closing Relation under the precommitted early-stopping rule. The invocation entered automatic post-Relation cache mining after writing the completion marker; it was interrupted before any Hard-Negative cache, state, metric, checkpoint, or epoch was produced. E32–E34 did not run. Active and durable state/checkpoint/completion-marker mirrors match byte-for-byte, while the frozen Syntax E24 parent remains unchanged. Both 22-file E31 closure archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Hard-Negative H01
+
+Hard-Negative H01 completed from the verified Relation E31 closure and its locked E22 Relation checkpoint. The deterministic TRAIN-only mining cache contained 82 CASE_GOVERNOR, 432 OBJECT, 290 PARTICIPLE_HEAD, and 426 POSS_HEAD examples. The epoch used a source hard-negative penalty of `0.100000`:
+
+- TRAIN loss: `0.1655`
+- CALIB macro F1: `0.81173907`
+- minimum-family/OBJECT F1: `0.71757735`
+- POSS_HEAD F1: `0.81636727`
+- OBJECT F1: `0.71757735`
+- PARTICIPLE_HEAD F1: `0.83772819`
+- CASE_GOVERNOR F1: `0.87528345`
+- UAS: `0.88246922`
+- LAS: `0.76219786`
+- UPOS: `0.91975919`
+- selection score: `0.78850593`
+- patience: `0/9`
+- learning rate: `0.00012`
+
+H01 established the initial selected Hard-Negative checkpoint. Active and durable state, cache, and checkpoint mirrors match byte-for-byte; the locked Relation E22 and Syntax E24 parents remain unchanged. Both 24-file H01 archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. H02 has not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
