@@ -1,4 +1,4 @@
-# Project status — 2026-09-04
+# Project status — 2026-09-05
 
 
 ## Reliable state
@@ -11,6 +11,7 @@
 - v6.0 R3-P2 is closed as `DROP_AFTER_SCREEN`; 10/12 paired CALIB gates
   passed, with two absolute family-regression gates missed.
 - v6.0 R3-P3 is closed as `DROP_AFTER_SCREEN`; v2 passed 3/12 gates and the R3 line is closed.
+- v6.1 R4-P1 is finalized as a reproducible fresh focal parent; its final decision is `DROP_AFTER_SCREEN`, and R4-P2 is ready for precommit discussion.
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
 
@@ -52,10 +53,18 @@ Final outputs and the audit checkpoint are retained in two independently re-mate
 ## Active v6.1 R4 line
 
 
-R4 is reserved for a true fresh-syntax mainline, not another checkpoint graft. R4-P0 passed its smoke, start gate, and 12 deterministic TRAIN-only gradient-audit batches with finite losses and gradients, zero optimizer steps, unchanged model state, and no CALIB access; the audit fixed PCGrad routing on the shared Transformer, relation bridge, and syntax bridge. R4-P1 remains the precommitted fresh repaired-lattice reconstruction with no adapter, PCGrad, ranking loss, or checkpoint migration. Syntax closed safely at E27 after the overfit guard reached `3/3`, with E24 frozen as the selected Syntax parent at score `0.81568874`.
+R4 is reserved for a true fresh-syntax mainline, not another checkpoint graft. R4-P0 passed its smoke, start gate, and 12 deterministic TRAIN-only gradient-audit batches with finite losses and gradients, zero optimizer steps, unchanged model state, and no CALIB access; the audit fixed PCGrad routing on the shared Transformer, relation bridge, and syntax bridge. R4-P1 is the completed fresh repaired-lattice reconstruction with no adapter, PCGrad, ranking loss, or checkpoint migration. Syntax closed safely at E27 after the overfit guard reached `3/3`, with E24 frozen as the selected Syntax parent at score `0.81568874`.
 
 Relation closed at E31 under the precommitted patience rule with E22 retained as the selected Relation checkpoint at `0.78921340`. Hard-Negative closed at H12 under the original patience rule. H12 produced TRAIN loss `0.0832`, gold-CALIB combined objective loss `3.78820134`, macro F1 `0.80876193`, minimum-family/OBJECT F1 `0.70588235`, `POSS_HEAD=0.81539980`, `OBJECT=0.70588235`, `PARTICIPLE_HEAD=0.83349950`, `CASE_GOVERNOR=0.88026608`, `UAS=0.88377213`, `LAS=0.76395004`, `UPOS=0.92312876`, and selection score `0.78384843`. H12 did not improve the locked H03 score of `0.78862166`; patience reached `9/9`, learning rate remained `0.00006`, and H03 was frozen as selected. The H10-H12 overfit counter remained `0/3`: at H12 the gold-CALIB objective loss rose, but TRAIN loss also rose, so the precommitted divergence signal was false. Both 26-file H12 closure archives and all active/durable mirrors passed independent verification. H13-H14 were not run because the authoritative patience stop had already closed the stage; H15 was not started. Sealed evaluation remains unopened. No R2-P9 E28, R1, or R3 checkpoint is migrated. The suffix/allomorph registry remains outside R4. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened. See [the R4 plan](docs/TurkTokenizer_v6_1_R4_Plan.md), [R4-P0 precommit](docs/TurkTokenizer_v6_1_R4_P0_Precommit.md), [R4-P0 decision](docs/TurkTokenizer_v6_1_R4_P0_Decision.md), [R4-P1 precommit](docs/TurkTokenizer_v6_1_R4_P1_Precommit.md), and [R4-P1 progress](docs/TurkTokenizer_v6_1_R4_P1_Progress.md).
 
+
+### R4-P1 final CALIB decision
+
+The unchanged selected H03 checkpoint was screened twice independently, and the CALIB audit, gate, screen-result, calibration, and frozen-checkpoint outputs matched exactly. A separate CPU recomputation reproduced macro F1 `0.81389095`, minimum-family/OBJECT F1 `0.71215207`, `POSS_HEAD=0.81325301`, `PARTICIPLE_HEAD=0.84126984`, `CASE_GOVERNOR=0.88888889`, `UAS=0.88520981`, `LAS=0.76381526`, and `UPOS=0.92155629`.
+
+The precommitted decision is `DROP_AFTER_SCREEN`: macro gain over A1 was only `+0.00313462`, below the required `+0.01`, and minimum-family F1 changed by `-0.00525455`. The factorized audit shows the next bottleneck more precisely: OBJECT source F1 is `0.72699292`, while OBJECT conditional head top-1 is `0.92793411`. Thus source detection clears the R4 planning floor, but exact OBJECT and head ranking do not. Protected PARTICIPLE_HEAD, CASE_GOVERNOR, UAS, and LAS metrics clear their planning floors.
+
+R4-P1 fulfilled its reconstruction role without becoming a promoted model. Two independent 37-file private final-closure packages were re-materialized; all 36 manifest checksums, source/A/B byte equality, closure artifacts, and reconstructed state passed. R4-P2 has not started and requires its own precommit. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
 
 ## Live v6.0 R2-P9 repair line
 
