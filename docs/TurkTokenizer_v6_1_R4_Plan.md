@@ -1,6 +1,6 @@
 # TurkTokenizer v6.1 R4 planning note
 
-> Status: ACTIVE — R4-P0 passed; R4-P1 finalized as `DROP_AFTER_SCREEN` with a reproducible fresh focal parent; R4-P2 precommit pending.
+> Status: ACTIVE — R4-P0 passed; R4-P1 finalized as `DROP_AFTER_SCREEN` with a reproducible fresh focal parent; R4-P2 matched focal control precommitted; control Relation E01 pending.
 
 ## Objective
 
@@ -118,4 +118,8 @@ R4-P1 completed the fresh repaired-lattice reconstruction without adapter, PCGra
 
 The precommitted P1 screen decision is `DROP_AFTER_SCREEN`: macro gain over A1 was only `+0.00313462`, below the required `+0.01`, and minimum-family F1 changed by `-0.00525455`. This does not invalidate P1's parent-reconstruction role. Its final closure is retained in two independently re-materialized 37-file private packages with all manifest checksums, byte equality, and reconstructed state verified.
 
-The result sharpens the P2 question. OBJECT source detection already clears its planning floor, whereas exact OBJECT and conditional/micro head ranking do not. PARTICIPLE_HEAD, CASE_GOVERNOR, UAS, and LAS are already above their protected floors. R4-P2 should therefore test only the fixed P0 adapter and PCGrad isolation design under the unchanged focal objective. Ranking loss remains reserved for P3. R4-P2 has not started; its paired-control rule, full overfitting guards, schedule, and persistence contract must be signed before any optimizer step. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+The result sharpens the P2 question. OBJECT source detection already clears its planning floor, whereas exact OBJECT and conditional/micro head ranking do not. PARTICIPLE_HEAD, CASE_GOVERNOR, UAS, and LAS are already above their protected floors. R4-P2 should therefore test only the fixed P0 adapter and PCGrad isolation design under the unchanged focal objective. Ranking loss remains reserved for P3. R4-P2's matched focal control is now precommitted and has passed its zero-step start gate. Relation E01 has not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## R4-P2 matched focal control start
+
+The paired control starts Relation fresh from the verified R4-P1 Syntax E24 parent at sampler boundary 27, using seed `51104`, batch size `24`, and the unchanged R4-P1 focal trainer and objective. Adapters, PCGrad, and ranking loss are disabled. Relation and Hard-Negative retain ceilings of 50, patience 9, their locked learning-rate schedules, and symmetric `0/3` overfitting guards from E01/H01. Every completed epoch must be preserved in two independently re-read, checksum-verified private packages before the next begins. The 16-file start package passed this A/B verification. See [the control progress log](TurkTokenizer_v6_1_R4_P2_Control_Progress.md).
