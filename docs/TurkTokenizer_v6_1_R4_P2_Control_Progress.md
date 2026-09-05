@@ -1,6 +1,6 @@
 # TurkTokenizer v6.1 R4-P2 matched focal control progress
 
-> Status: ACTIVE — Relation E01 completed and independently archived; E02 pending.
+> Status: ACTIVE — Relation E02 completed and independently archived; E03 pending.
 
 ## Purpose
 
@@ -32,7 +32,10 @@ The precommit, architecture smoke test, and zero-step start gate passed. The ver
 | Epoch | TRAIN loss | Gold-CALIB objective loss | Macro F1 | Min/OBJECT F1 | UAS | LAS | Selection score | Patience | LR | Overfit |
 |---|---:|---:|---:|---:|---:|---:|---:|---:|---:|---:|
 | E01 | 0.5198 | 1.847522 | 0.791514 | 0.683742 | 0.874382 | 0.751460 | 0.766242 | 0/9 | 0.00025 | 0/3 baseline |
+| E02 | 0.4175 | 1.615396 | 0.795592 | 0.704782 | 0.873034 | 0.754920 | 0.774421 | 0/9 | 0.00025 | 0/3 |
 
 E01 was independently re-evaluated from its persisted state. Both 28-file private A/B packages were re-materialized; all 27 manifest checksums, source/A/B byte equality, the selected checkpoint, and reconstructed state passed. This freshly executed arm—not the historical P1 trajectory—is the locked paired control that the R4-P2 adapter-plus-PCGrad candidate must beat.
 
-Relation E02 has not started at this public boundary. `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST remain unopened.
+E02 improved the selected control checkpoint; TRAIN and gold-CALIB objective losses both fell, so the overfit signal remained false at `0/3`. Its two 28-file private packages passed all 27 manifest checksums, source/A/B byte equality, checkpoint, and reconstructed-state checks.
+
+Relation E03 has not started at this public boundary. `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST remain unopened.
