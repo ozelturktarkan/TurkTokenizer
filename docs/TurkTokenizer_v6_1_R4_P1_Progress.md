@@ -1311,3 +1311,27 @@ Hard-Negative H11 completed from the verified H10 boundary:
 - Hard-Negative overfit counter: `0/3`
 
 H11 did not improve the locked H03 score. TRAIN loss rose slightly and the gold-CALIB objective loss fell from the H10 baseline, so no divergence signal was recorded and the counter remained `0/3`. Active/durable mirrors and both 25-file A/B archives passed independent metrics, objective-loss recomputation, 24/24 checksums, byte comparison, and state reconstruction. If H12 does not improve, the original patience rule will close the stage at `9/9` before H13; the overfit guard does not override patience. Sealed evaluation remains unopened.
+
+
+## Hard-Negative H12 — stage complete
+
+Hard-Negative H12 completed from the verified H11 boundary:
+
+- TRAIN loss: `0.0832`
+- gold-CALIB combined objective loss: `3.78820134`
+- macro F1: `0.80876193`
+- minimum-family/OBJECT F1: `0.70588235`
+- POSS_HEAD F1: `0.81539980`
+- PARTICIPLE_HEAD F1: `0.83349950`
+- CASE_GOVERNOR F1: `0.88026608`
+- UAS: `0.88377213`
+- LAS: `0.76395004`
+- UPOS: `0.92312876`
+- selection score: `0.78384843`
+- patience: `9/9`
+- learning rate: `0.00006`
+- Hard-Negative overfit counter: `0/3`
+
+H12 did not exceed the locked H03 score of `0.78862166`, so the original patience rule reached `9/9` and closed the Hard-Negative stage with H03 frozen as selected. The gold-CALIB objective loss rose from H11, but TRAIN loss also rose; therefore the divergence signal remained false and the new overfit counter stayed at `0/3`. The guard did not fire, and its absence of signals is itself evidence that this H10-H12 window does not meet the precommitted loss-divergence definition of overfitting.
+
+Active and durable state, cache, completion marker, amendment, and checkpoints matched byte-for-byte. Both 26-file H12 closure archives were independently re-materialized; all 25 checksums passed, every canonical file matched its source and peer archive, and each reconstructed state matched the canonical H12 state. H13-H14 were not run because doing so would override the authoritative patience stop. H15 was not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
