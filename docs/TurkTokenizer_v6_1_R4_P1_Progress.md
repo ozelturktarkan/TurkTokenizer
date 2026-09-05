@@ -961,3 +961,23 @@ Relation E25 completed from the verified E24 boundary under the unchanged one-ep
 - learning rate: `0.000125`
 
 E25 did not improve the locked Relation selection score, so E22 remains selected and patience advanced from `2/9` to `3/9`; no learning-rate reduction occurred. The runner completed only E25 and stopped at the external-backup boundary before E26. Both 21-file Relation E25 archives were independently re-materialized; every checksum passed, each reconstructed Relation state matched the canonical source, and both the selected E22 Relation checkpoint and required Syntax E24 parent checkpoint matched their source bytes. Relation E26 and Hard-Negative were not started at this boundary. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Relation E26
+
+Relation E26 completed from the verified E25 state:
+
+- TRAIN loss: `0.0810`
+- CALIB macro F1: `0.80558520`
+- minimum-family/OBJECT F1: `0.71202749`
+- POSS_HEAD F1: `0.80800000`
+- OBJECT F1: `0.71202749`
+- PARTICIPLE_HEAD F1: `0.82125604`
+- CASE_GOVERNOR F1: `0.88105727`
+- UAS: `0.88296343`
+- LAS: `0.76457903`
+- UPOS: `0.92326355`
+- selection score: `0.78364444`
+- patience: `4/9`
+- learning rate: `0.0000625`
+
+E26 did not improve the locked Relation score, so E22 remains the selected Relation checkpoint. Patience advanced from `3/9` to `4/9`, and the deterministic plateau rule reduced the learning rate from `0.000125` to `0.0000625`. Active and durable state/checkpoint mirrors match byte-for-byte, while the frozen Syntax E24 parent remains unchanged. Both 21-file E26 archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. Relation E27 and Hard-Negative have not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
