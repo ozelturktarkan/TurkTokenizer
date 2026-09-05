@@ -981,3 +981,23 @@ Relation E26 completed from the verified E25 state:
 - learning rate: `0.0000625`
 
 E26 did not improve the locked Relation score, so E22 remains the selected Relation checkpoint. Patience advanced from `3/9` to `4/9`, and the deterministic plateau rule reduced the learning rate from `0.000125` to `0.0000625`. Active and durable state/checkpoint mirrors match byte-for-byte, while the frozen Syntax E24 parent remains unchanged. Both 21-file E26 archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. Relation E27 and Hard-Negative have not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Relation E27
+
+Relation E27 completed from the verified E26 state under the reduced learning rate:
+
+- TRAIN loss: `0.0728`
+- CALIB macro F1: `0.80953949`
+- minimum-family/OBJECT F1: `0.71280992`
+- POSS_HEAD F1: `0.80769231`
+- OBJECT F1: `0.71280992`
+- PARTICIPLE_HEAD F1: `0.83222749`
+- CASE_GOVERNOR F1: `0.88542825`
+- UAS: `0.88552431`
+- LAS: `0.76713990`
+- UPOS: `0.92218528`
+- selection score: `0.78653332`
+- patience: `5/9`
+- learning rate: `0.0000625`
+
+E27 did not improve the locked Relation score, so E22 remains the selected Relation checkpoint. Patience advanced from `4/9` to `5/9`, and the reduced learning rate remained `0.0000625`. Active and durable state/checkpoint mirrors match byte-for-byte, while the frozen Syntax E24 parent remains unchanged. Both 21-file E27 archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. Relation E28 and Hard-Negative have not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
