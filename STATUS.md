@@ -11,7 +11,7 @@
 - v6.0 R3-P2 is closed as `DROP_AFTER_SCREEN`; 10/12 paired CALIB gates
   passed, with two absolute family-regression gates missed.
 - v6.0 R3-P3 is closed as `DROP_AFTER_SCREEN`; v2 passed 3/12 gates and the R3 line is closed.
-- v6.1 R4-P1 is finalized as a reproducible fresh focal parent; its final decision is `DROP_AFTER_SCREEN`, and R4-P2 is ready for precommit discussion.
+- v6.1 R4-P1 is finalized as a reproducible fresh focal parent; its final decision is `DROP_AFTER_SCREEN`. The R4-P2 matched focal control is precommitted and has passed its zero-step start gate; Relation E01 is pending.
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
 
@@ -64,7 +64,11 @@ The unchanged selected H03 checkpoint was screened twice independently, and the 
 
 The precommitted decision is `DROP_AFTER_SCREEN`: macro gain over A1 was only `+0.00313462`, below the required `+0.01`, and minimum-family F1 changed by `-0.00525455`. The factorized audit shows the next bottleneck more precisely: OBJECT source F1 is `0.72699292`, while OBJECT conditional head top-1 is `0.92793411`. Thus source detection clears the R4 planning floor, but exact OBJECT and head ranking do not. Protected PARTICIPLE_HEAD, CASE_GOVERNOR, UAS, and LAS metrics clear their planning floors.
 
-R4-P1 fulfilled its reconstruction role without becoming a promoted model. Two independent 37-file private final-closure packages were re-materialized; all 36 manifest checksums, source/A/B byte equality, closure artifacts, and reconstructed state passed. R4-P2 has not started and requires its own precommit. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+R4-P1 fulfilled its reconstruction role without becoming a promoted model. Two independent 37-file private final-closure packages were re-materialized; all 36 manifest checksums, source/A/B byte equality, closure artifacts, and reconstructed state passed. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+### R4-P2 matched focal control start
+
+The paired focal control is precommitted before its first optimizer step. It restores only the verified R4-P1 Syntax E24 parent at relation sampler boundary 27; Relation and Hard-Negative start fresh with seed `51104`, batch size `24`, and the unchanged R4-P1 focal trainer/objective. Adapters, PCGrad, and ranking loss are disabled. Relation and Hard-Negative each retain ceiling 50, patience 9, deterministic learning-rate schedules, and a symmetric `0/3` loss-divergence guard from E01/H01. The 16-file start boundary was independently re-materialized twice with all 15 manifest checksums verified. Relation E01 has not started at this public boundary. See [the control progress log](docs/TurkTokenizer_v6_1_R4_P2_Control_Progress.md).
 
 ## Live v6.0 R2-P9 repair line
 
