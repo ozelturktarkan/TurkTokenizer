@@ -1268,3 +1268,24 @@ H09 remained approximately `0.00009038` below the locked H03 Hard-Negative score
 Before any H10 optimizer step, a non-retroactive Hard-Negative overfit guard was added in response to the H03-H09 selection plateau. Its counter starts at `0/3`; H04-H09 are not backfilled. H10 records the first comparable combined TRAIN loss and gold-CALIB objective loss and cannot increment the counter. From H11 onward, a signal requires all three conditions in the same epoch: the locked selection score does not improve, combined TRAIN loss falls, and the combined gold-CALIB objective loss rises by at least 0.1% relative to the preceding guarded epoch. The counter increments only on consecutive signals and otherwise resets to zero. At `3/3`, the selected best Hard-Negative checkpoint is frozen and the stage closes before any later epoch.
 
 The existing `9/9` patience and deterministic learning-rate rules remain authoritative and can close the stage earlier. CALIB is used only for the same gold objective and locked selection measurements; the deterministic TRAIN-only hard-negative cache is not applied to CALIB. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened. H09 remains the canonical boundary and H10 has not started at the time of this amendment.
+
+
+## Hard-Negative H10
+
+Hard-Negative H10 completed from the verified H09 boundary under learning rate `0.00006` and full source hard-negative penalty `0.250000`:
+
+- TRAIN loss: `0.0768`
+- gold-CALIB combined objective loss: `3.48576280`
+- macro F1: `0.80581576`
+- minimum-family/OBJECT F1: `0.71368715`
+- POSS_HEAD F1: `0.79838710`
+- PARTICIPLE_HEAD F1: `0.82454458`
+- CASE_GOVERNOR F1: `0.88664422`
+- UAS: `0.88372720`
+- LAS: `0.76633121`
+- UPOS: `0.92258963`
+- selection score: `0.78441003`
+- patience: `7/9`
+- Hard-Negative overfit counter: `0/3`
+
+H10 did not exceed the locked H03 score of `0.78862166`, so H03 remains selected. As precommitted, H10 established the first non-retroactive overfit baseline and could not increment the counter. Active and durable state, cache, amendment, and checkpoint mirrors matched byte-for-byte. Both 25-file H10 archives were independently re-materialized; all 24 checksums passed, every canonical file matched its source and peer archive, and each reconstructed state matched the canonical H10 state. H11 is the next authorized epoch under both the original patience rule and the new divergence guard. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
