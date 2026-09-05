@@ -1061,3 +1061,23 @@ Relation E30 completed from the verified E29 state under the reduced learning ra
 - learning rate: `0.0000625`
 
 E30 did not improve the locked Relation score, so E22 remains the selected Relation checkpoint. Patience advanced from `7/9` to `8/9`, and the learning rate remained `0.0000625`. Active and durable state/checkpoint mirrors match byte-for-byte, while the frozen Syntax E24 parent remains unchanged. Both 21-file E30 archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. Relation E31 and Hard-Negative have not started. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+## Relation E31 closure
+
+Relation E31 completed from the verified E30 state under the reduced learning rate:
+
+- TRAIN loss: `0.1432`
+- CALIB macro F1: `0.81202776`
+- minimum-family/OBJECT F1: `0.71755188`
+- POSS_HEAD F1: `0.81130172`
+- OBJECT F1: `0.71755188`
+- PARTICIPLE_HEAD F1: `0.83657588`
+- CASE_GOVERNOR F1: `0.88268156`
+- UAS: `0.88507503`
+- LAS: `0.76435439`
+- UPOS: `0.92065774`
+- selection score: `0.78902592`
+- patience: `9/9`
+- learning rate: `0.0000625`
+
+E31 did not improve the locked Relation score, so E22 remains the selected Relation checkpoint at `0.78921340`. Patience advanced from `8/9` to `9/9`, closing Relation under the precommitted early-stopping rule. The invocation entered automatic post-Relation cache mining after writing the completion marker; it was interrupted before any Hard-Negative cache, state, metric, checkpoint, or epoch was produced. E32–E34 did not run. Active and durable state/checkpoint/completion-marker mirrors match byte-for-byte, while the frozen Syntax E24 parent remains unchanged. Both 22-file E31 closure archives were independently re-materialized, checksum-verified, state-reconstructed, and byte-compared. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
