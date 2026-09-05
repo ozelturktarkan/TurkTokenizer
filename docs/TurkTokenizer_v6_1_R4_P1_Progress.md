@@ -1289,3 +1289,25 @@ Hard-Negative H10 completed from the verified H09 boundary under learning rate `
 - Hard-Negative overfit counter: `0/3`
 
 H10 did not exceed the locked H03 score of `0.78862166`, so H03 remains selected. As precommitted, H10 established the first non-retroactive overfit baseline and could not increment the counter. Active and durable state, cache, amendment, and checkpoint mirrors matched byte-for-byte. Both 25-file H10 archives were independently re-materialized; all 24 checksums passed, every canonical file matched its source and peer archive, and each reconstructed state matched the canonical H10 state. H11 is the next authorized epoch under both the original patience rule and the new divergence guard. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
+
+
+## Hard-Negative H11
+
+Hard-Negative H11 completed from the verified H10 boundary:
+
+- TRAIN loss: `0.0769`
+- gold-CALIB combined objective loss: `3.37048095`
+- macro F1: `0.80424054`
+- minimum-family/OBJECT F1: `0.71086808`
+- POSS_HEAD F1: `0.80238332`
+- PARTICIPLE_HEAD F1: `0.82898551`
+- CASE_GOVERNOR F1: `0.87472527`
+- UAS: `0.88426633`
+- LAS: `0.76673556`
+- UPOS: `0.92236499`
+- selection score: `0.78280669`
+- patience: `8/9`
+- learning rate: `0.00006`
+- Hard-Negative overfit counter: `0/3`
+
+H11 did not improve the locked H03 score. TRAIN loss rose slightly and the gold-CALIB objective loss fell from the H10 baseline, so no divergence signal was recorded and the counter remained `0/3`. Active/durable mirrors and both 25-file A/B archives passed independent metrics, objective-loss recomputation, 24/24 checksums, byte comparison, and state reconstruction. If H12 does not improve, the original patience rule will close the stage at `9/9` before H13; the overfit guard does not override patience. Sealed evaluation remains unopened.
