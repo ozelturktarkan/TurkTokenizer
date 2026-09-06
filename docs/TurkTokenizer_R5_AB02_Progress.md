@@ -147,3 +147,22 @@ The selected T1 threshold remained 2.5; its unchanged parent behavior was reprod
 Both arms and all seeds completed the word-regression, contextual-regression, prior diagnostic/transfer and newly frozen check runs. Native analyses and spans stayed identical; structural graph checks passed. Source, data, model checkpoints and the parent package passed integrity checks. Private evaluation outputs, examples, model weights and corpus material are excluded from this public log.
 
 The next AB02 hypothesis is learnable transitions between selected adjacent lemma/native-group analyses, with an appropriate decoder state and an independent oracle check. Sparse supervision and the model-selection/commitment objective also need separate study. These are proposed follow-up experiments, not implemented changes. **AB03 remains unopened.**
+
+
+## AB02 v0.4.0 — J3 learned adjacent lemma/native-group transitions
+
+AB03 remains unopened. J3 adds first-order learned transitions between adjacent selected analyses to the previous J2 partial-label structured learner. The causal control is frozen J2; v0.2 remains the preceding AB02 reference. Neither predecessor is newly promoted.
+
+- Six registered feature families: POS pair; last-to-first native group; full native group paths; lemma/POS pair; left lemma with right groups; left groups with right lemma. Native groups are not claimed identical to Zemberek IG.
+- TRAIN-only feature inventory from raw candidate cross-products, with each feature supported by at least two distinct adjacent positions (alternatives within a position are deduplicated). **81,068** new IDs follow **384,254** unchanged unary IDs.
+- The exact inner DP retains the previous native tag and current native tag+lemma+groups. Same-tag lexical alternatives remain separate. Candidate max-marginals use forward/backward inference. Existing token order, punctuation, BOS/EOS and hard blocks remain explicit; no skip edges or distant-context module.
+- Native morphology, original candidates, 3,278 TRAIN references, 22,878 target sets, fixed n-gram/relation scores, outer planner and budgets stay unchanged. Outer configuration pruning continues to use native unary/relation priority; learned edges rescore the retained configurations. Outer search is still approximate.
+- Fresh zero weights; seeds 17/29/43, primary17; learning rate0.1, one clock/update opportunity per reference, max50 epochs, patience5, earliest CALIB preferred-hit maximum including epoch0. Threshold2.5 unchanged.
+- A new128-sentence BOUN TRAIN check is frozen before selection; all prior AB02 material and full IMST TRAIN excluded by the existing duplicate policy. No document-level/project-wide unseen claim; official DEV/TEST unopened.
+- Implementation gates passed:160 brute-force best-path cases and1,680 candidate max-marginals; same-tag/different-lemma trap;128-sentence native J2 equivalence with zero edge weights;12 nonzero-score cached/live checks; counted edge updates; deterministic two-epoch serialization/resume.
+- Initial and per-epoch durable A/B checkpoints precede advancement. Public log contains aggregate TRAIN/CALIB and status only.
+
+### J3 training rounds
+
+| Round | Seed | Epoch | TRAIN document updates | CALIB preferred /1120 | CALIB correct selected | CALIB wrong selected | Best epoch | Stopped |
+|---:|---:|---:|---:|---:|---:|---:|---:|:---:|
