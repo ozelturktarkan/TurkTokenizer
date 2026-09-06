@@ -66,3 +66,17 @@ Only aggregate TRAIN/CALIB metrics follow. CALIB preferred-count controls epoch 
 | 12 | 17 | 12 | 484 | 732 | 675 | 213 | 232 | 9 | 3/5 | active |
 | 13 | 17 | 13 | 462 | 734 | 676 | 213 | 231 | 9 | 4/5 | active |
 | 14 | 17 | 14 | 443 | 735 | 676 | 214 | 230 | 9 | 5/5 | complete |
+
+## v0.2.0 closure
+
+Training and the registered comparisons are complete. The primary seed remains 17. The experiment is retained for analysis; promotion criteria were not all satisfied. No default-model promotion was made. No evaluation metrics or examples are published here.
+
+Selected checkpoint CALIB values:
+
+| Seed | Epochs run | Selected epoch | Preferred hits /1120 | Correct selected | Wrong selected | Abstained/missing |
+|---|---:|---:|---:|---:|---:|---:|
+| 17 | 14 | 9 | 735 | 670 | 209 | 241 |
+| 29 | 7 | 2 | 731 | 645 | 203 | 272 |
+| 43 | 10 | 5 | 738 | 673 | 208 | 239 |
+
+All 31 completed epoch states have durable A/B copies. Each completed training round was recorded in this log before advancing. The final report retains matched-parent comparisons, decision transitions, and limitations. The remaining research question is how to preserve lexical/relational distinctions while improving confidence and joint decisions; changing a global threshold alone cannot change an incorrect first-ranked candidate.
