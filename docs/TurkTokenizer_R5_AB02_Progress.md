@@ -29,7 +29,7 @@ The same 22,878 supervised words and exact target/feature IDs are retained. Rela
 
 ## v0.2.0 current training status
 
-Training in progress; round 8 has durable A/B checkpoints.
+Training in progress; round 9 has durable A/B checkpoints.
 
 Only aggregate TRAIN/CALIB metrics follow. CALIB preferred-count controls epoch selection; ties retain the earliest epoch. Patience is 5.
 
@@ -58,3 +58,5 @@ Only aggregate TRAIN/CALIB metrics follow. CALIB preferred-count controls epoch 
 | 7 | 43 | 7 | 769 | 731 | 671 | 213 | 236 | 5 | 2/5 | active |
 | 8 | 17 | 8 | 705 | 734 | 671 | 209 | 240 | 8 | 0/5 | active |
 | 8 | 43 | 8 | 693 | 735 | 673 | 213 | 234 | 5 | 3/5 | active |
+| 9 | 17 | 9 | 607 | 735 | 670 | 209 | 241 | 9 | 0/5 | active |
+| 9 | 43 | 9 | 595 | 736 | 674 | 214 | 232 | 5 | 4/5 | active |
