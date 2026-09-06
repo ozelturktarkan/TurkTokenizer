@@ -48,6 +48,8 @@ A3 was restarted cleanly under its fixed-seed, interruption-safe precommit and c
 
 The authoritative current state is [STATUS.md](STATUS.md) and [TurkTokenizer_v6_0_Quality_Ledger_v5.json](project_state/TurkTokenizer_v6_0_Quality_Ledger_v5.json).
 
+The independent R5 AB00/AB02 morphology-selection experiments are tracked in [the R5 AB02 progress log](docs/TurkTokenizer_R5_AB02_Progress.md). This line has its own TRAIN/CALIB protocol and is separate from the v6/R4 architecture table above.
+
 ## Scientific contract
 
 - Preserve raw surface text for lossless decoding; normalization is an analysis view, not a rewrite of user input.
