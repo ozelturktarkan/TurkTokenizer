@@ -126,3 +126,5 @@ AB03 remains unopened. This iteration studies two separate causes of AB02 errors
 | 9 | 17 | 9 | 489 | 737 | 665 | 210 | 4 | yes |
 | 9 | 29 | 9 | 469 | 739 | 669 | 208 | 5 | no |
 | 9 | 43 | 9 | 464 | 743 | 671 | 210 | 7 | no |
+| 10 | 29 | 10 | 446 | 739 | 673 | 208 | 5 | yes |
+| 10 | 43 | 10 | 471 | 742 | 669 | 210 | 7 | no |
