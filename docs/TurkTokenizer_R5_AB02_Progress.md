@@ -130,3 +130,20 @@ AB03 remains unopened. This iteration studies two separate causes of AB02 errors
 | 10 | 43 | 10 | 471 | 742 | 669 | 210 | 7 | no |
 | 11 | 43 | 11 | 413 | 741 | 671 | 209 | 7 | no |
 | 12 | 43 | 12 | 390 | 739 | 672 | 209 | 7 | yes |
+
+
+### v0.3.0 completion and decision
+
+All three J2 runs stopped by the registered patience rule: 31 seed-epochs in total, with 62 distinct A/B checkpoint records and 12 published round groups. Model selection was frozen before the new check was scored.
+
+| Seed | Epochs run | Selected epoch | Selected CALIB preferred / 1120 | Selected CALIB correct selected | Selected CALIB wrong selected |
+|---:|---:|---:|---:|---:|---:|
+| 17 | 9 | 4 | 740 | 659 | 207 |
+| 29 | 10 | 5 | 744 | 665 | 204 |
+| 43 | 12 | 7 | 743 | 670 | 208 |
+
+The selected T1 threshold remained 2.5; its unchanged parent behavior was reproduced. J2 did not meet the preregistered replacement criteria and is retained as a documented experiment. AB00 stays the locked baseline; v0.2 stays the preceding AB02 comparison reference. Neither is being declared a perfect contextual analyzer.
+
+Both arms and all seeds completed the word-regression, contextual-regression, prior diagnostic/transfer and newly frozen check runs. Native analyses and spans stayed identical; structural graph checks passed. Source, data, model checkpoints and the parent package passed integrity checks. Private evaluation outputs, examples, model weights and corpus material are excluded from this public log.
+
+The next AB02 hypothesis is learnable transitions between selected adjacent lemma/native-group analyses, with an appropriate decoder state and an independent oracle check. Sparse supervision and the model-selection/commitment objective also need separate study. These are proposed follow-up experiments, not implemented changes. **AB03 remains unopened.**
