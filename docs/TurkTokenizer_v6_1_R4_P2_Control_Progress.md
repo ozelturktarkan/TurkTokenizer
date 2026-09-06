@@ -1,6 +1,6 @@
 # TurkTokenizer v6.1 R4-P2 matched focal control progress
 
-> Status: ACTIVE — Relation E09 completed and independently archived; E10 pending.
+> Status: ACTIVE — Relation E10 completed and independently archived; E11 pending.
 
 ## Purpose
 
@@ -40,6 +40,7 @@ The precommit, architecture smoke test, and zero-step start gate passed. The ver
 | E07 | 0.2361 | 1.989568 | 0.797455 | 0.714586 | 0.877887 | 0.758020 | 0.778754 | 2/9 | 0.00025 | 0/3 |
 | E08 | 0.2028 | 2.304503 | 0.802046 | 0.702722 | 0.877123 | 0.756807 | 0.778068 | 3/9 | 0.00025 | 1/3 |
 | E09 | 0.2116 | 1.858740 | 0.791408 | 0.706729 | 0.873933 | 0.756807 | 0.772725 | 4/9 | 0.000125 | 0/3 |
+| E10 | 0.1613 | 2.321066 | 0.809643 | 0.726141 | 0.880807 | 0.764040 | 0.789598 | 0/9 | 0.000125 | 0/3 |
 
 E01 was independently re-evaluated from its persisted state. Both 28-file private A/B packages were re-materialized; all 27 manifest checksums, source/A/B byte equality, the selected checkpoint, and reconstructed state passed. This freshly executed arm—not the historical P1 trajectory—is the locked paired control that the R4-P2 adapter-plus-PCGrad candidate must beat.
 
@@ -59,4 +60,6 @@ E08 did not improve; TRAIN loss fell and gold-CALIB objective loss rose, startin
 
 E09 did not improve; patience reached `4/9` and the precommitted LR reduction changed `0.00025` to `0.000125`. TRAIN loss rose and CALIB objective loss fell, resetting divergence to `0/3`. E05 remains selected. Both 28-file E09 packages passed all 27 checksums, byte equality, checkpoint preservation, and reconstructed-state checks.
 
-Relation E10 has not started at this public boundary. `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST remain unopened.
+E10 established a new selected checkpoint after the LR reduction. Selection improved, resetting patience and holding divergence at `0/3`; minimum-family/OBJECT F1 crossed the R4 planning floor, but this remains a control-stage result. Both 28-file E10 packages passed all 27 checksums, byte equality, checkpoint, and reconstructed-state checks.
+
+Relation E11 has not started at this public boundary. `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST remain unopened.
