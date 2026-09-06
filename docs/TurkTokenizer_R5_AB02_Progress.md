@@ -166,3 +166,6 @@ AB03 remains unopened. J3 adds first-order learned transitions between adjacent 
 
 | Round | Seed | Epoch | TRAIN document updates | CALIB preferred /1120 | CALIB correct selected | CALIB wrong selected | Best epoch | Stopped |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
+| 1 | 17 | 1 | 1747 | 726 | 641 | 196 | 1 | no |
+| 1 | 29 | 1 | 1703 | 732 | 652 | 198 | 1 | no |
+| 1 | 43 | 1 | 1714 | 730 | 643 | 200 | 1 | no |
