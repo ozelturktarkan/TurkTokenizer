@@ -205,3 +205,5 @@ AB03 remains unopened. J3 adds first-order learned transitions between adjacent 
 | 13 | 17 | 13 | 239 | 755 | 687 | 202 | 12 | no |
 | 13 | 29 | 13 | 260 | 752 | 689 | 208 | 10 | no |
 | 13 | 43 | 13 | 240 | 754 | 679 | 205 | 8 | yes |
+| 14 | 17 | 14 | 223 | 755 | 690 | 202 | 12 | no |
+| 14 | 29 | 14 | 236 | 750 | 688 | 208 | 10 | no |
