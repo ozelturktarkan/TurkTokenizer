@@ -1,6 +1,6 @@
 # TurkTokenizer v6.1 R4-P2 matched focal control progress
 
-> Status: ACTIVE — Relation E16 completed and independently archived; E17 pending.
+> Status: ACTIVE — Relation E17 completed and independently archived; E18 pending.
 
 ## Purpose
 
@@ -47,6 +47,7 @@ The precommit, architecture smoke test, and zero-step start gate passed. The ver
 | E14 | 0.1050 | 2.717765 | 0.805319 | 0.706627 | 0.879863 | 0.762962 | 0.781671 | 4/9 | 0.0000625 | 1/3 |
 | E15 | 0.0993 | 2.567901 | 0.807714 | 0.707733 | 0.882155 | 0.761165 | 0.783416 | 5/9 | 0.0000625 | 0/3 |
 | E16 | 0.0964 | 2.532316 | 0.813825 | 0.720721 | 0.883098 | 0.764669 | 0.790788 | 0/9 | 0.0000625 | 0/3 |
+| E17 | 0.0926 | 2.457386 | 0.811019 | 0.714758 | 0.881571 | 0.763815 | 0.787368 | 1/9 | 0.0000625 | 0/3 |
 
 E01 was independently re-evaluated from its persisted state. Both 28-file private A/B packages were re-materialized; all 27 manifest checksums, source/A/B byte equality, the selected checkpoint, and reconstructed state passed. This freshly executed arm—not the historical P1 trajectory—is the locked paired control that the R4-P2 adapter-plus-PCGrad candidate must beat.
 
@@ -80,4 +81,6 @@ E15 did not improve. TRAIN loss fell, but gold-CALIB objective loss also fell, b
 
 E16 established a new selected checkpoint at score `0.79078781`, resetting patience from `5/9` to `0/9`. TRAIN and gold-CALIB objective losses both fell, while selection improved, so divergence remained `0/3`; LR remains `0.0000625`. Both 28-file E16 packages passed all 27 checksums, source/A/B byte equality, checkpoint, and reconstructed-state checks.
 
-Relation E17 has not started at this public boundary. `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST remain unopened.
+E17 did not improve; E16 remains selected. TRAIN and gold-CALIB objective losses both fell, so divergence remained `0/3`; patience is `1/9` and LR remains `0.0000625`. Both 28-file E17 packages passed all 27 checksums, source/A/B byte equality, checkpoint preservation, and reconstructed-state checks.
+
+Relation E18 has not started at this public boundary. `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST remain unopened.
