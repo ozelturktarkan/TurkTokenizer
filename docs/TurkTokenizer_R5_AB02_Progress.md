@@ -80,3 +80,22 @@ Selected checkpoint CALIB values:
 | 43 | 10 | 5 | 738 | 673 | 208 | 239 |
 
 All 31 completed epoch states have durable A/B copies. Each completed training round was recorded in this log before advancing. The final report retains matched-parent comparisons, decision transitions, and limitations. The remaining research question is how to preserve lexical/relational distinctions while improving confidence and joint decisions; changing a global threshold alone cannot change an incorrect first-ranked candidate.
+
+
+## AB02 v0.3.0 — independent T1 and J2 experiments
+
+AB03 remains unopened. This iteration studies two separate causes of AB02 errors.
+
+- **T1 threshold-only:** fixed v0.2 models, a common threshold selected on reused CALIB only. Maximize pooled correct selections while never increasing any seed's wrong selections relative to 2.5; deterministic ties. The registered grid retained **2.5**, so T1 makes no runtime change. CALIB is development data.
+- **J2 partial-label structured learning:** fresh averaged perceptrons using the same native feature vocabulary, candidates, targets and production decoder. Each update compares the current shared sentence path with the best partially labeled compatible path inside the same retained configurations. Relations and unlabeled tokens remain latent. Scope and plan inventories are cached; current-score configuration ranking is recomputed.
+- TRAIN: 3,278 references, 22,878 eligible token targets, 384,254 frozen feature IDs. One averaging clock and at most one counted feature update per reference. No gold candidate injection or new linguistic rules.
+- Seeds 17 / 29 / 43; primary 17 fixed; zero initialization, learning rate 0.1, 50-epoch ceiling, patience 5, earliest CALIB preferred-hit maximum including epoch 0. J2 margin remains 2.5.
+- A new 128-sentence BOUN TRAIN check is frozen before model selection, excluding prior AB02 material and full IMST TRAIN under the existing duplicate policy. It is not claimed to be project-wide unseen or document-independent.
+- Technical gates passed: independent tiny-lattice oracle, equivalence to native current-score sentence decoding, target-domain filtering before tag grouping, repeated-feature update counts, averaging and serialization checks.
+- Initial and per-epoch A/B durable checkpoints precede advancement; each completed round is recorded here. Public reporting remains aggregate TRAIN/CALIB and work status only.
+- No claim of complete syntactic search, exact Zemberek replication or perfect contextual accuracy. No automatic model promotion.
+
+### J2 training rounds
+
+| Round | Seed | Epoch | TRAIN document updates | CALIB preferred / 1120 | CALIB correct selected | CALIB wrong selected | Best epoch | Stopped |
+|---:|---:|---:|---:|---:|---:|---:|---:|:---:|
