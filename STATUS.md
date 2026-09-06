@@ -11,7 +11,7 @@
 - v6.0 R3-P2 is closed as `DROP_AFTER_SCREEN`; 10/12 paired CALIB gates
   passed, with two absolute family-regression gates missed.
 - v6.0 R3-P3 is closed as `DROP_AFTER_SCREEN`; v2 passed 3/12 gates and the R3 line is closed.
-- v6.1 R4-P1 is finalized as a reproducible fresh focal parent; its final decision is `DROP_AFTER_SCREEN`. The R4-P2 matched focal control is active; Relation E09 is complete and independently archived, and E10 is pending.
+- v6.1 R4-P1 is finalized as a reproducible fresh focal parent; its final decision is `DROP_AFTER_SCREEN`. The R4-P2 matched focal control is active; Relation E10 is complete and independently archived, and E11 is pending.
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
 
@@ -68,7 +68,7 @@ R4-P1 fulfilled its reconstruction role without becoming a promoted model. Two i
 
 ### R4-P2 matched focal control start
 
-The paired focal control is precommitted before its first optimizer step. It restores only the verified R4-P1 Syntax E24 parent at relation sampler boundary 27; Relation and Hard-Negative start fresh with seed `51104`, batch size `24`, and the unchanged R4-P1 focal trainer/objective. Adapters, PCGrad, and ranking loss are disabled. Relation and Hard-Negative each retain ceiling 50, patience 9, deterministic learning-rate schedules, and a symmetric `0/3` loss-divergence guard from E01/H01. The 16-file start boundary was independently re-materialized twice with all 15 manifest checksums verified. Relation E09 is the current boundary; E05 remains selected at `0.78409081`. E09 produced TRAIN loss `0.2116`, gold-CALIB objective loss `1.85873979`, macro F1 `0.79140819`, minimum-family/OBJECT F1 `0.70672904`, `UAS=0.87393297`, `LAS=0.75680654`, and selection score `0.77272469`. It did not improve; patience reached `4/9` and LR halved to `0.000125`. TRAIN loss rose and CALIB loss fell, resetting divergence to `0/3`. Both 28-file E09 packages passed all 27 checksums, byte equality, selected-checkpoint preservation, and reconstructed-state checks. E10 is pending. See [the control progress log](docs/TurkTokenizer_v6_1_R4_P2_Control_Progress.md).
+The paired focal control is precommitted before its first optimizer step. It restores only the verified R4-P1 Syntax E24 parent at relation sampler boundary 27; Relation and Hard-Negative start fresh with seed `51104`, batch size `24`, and the unchanged R4-P1 focal trainer/objective. Adapters, PCGrad, and ranking loss are disabled. Relation and Hard-Negative each retain ceiling 50, patience 9, deterministic learning-rate schedules, and a symmetric `0/3` loss-divergence guard from E01/H01. The 16-file start boundary was independently re-materialized twice with all 15 manifest checksums verified. Relation E10 is the current boundary and selected checkpoint: TRAIN loss `0.1613`, gold-CALIB objective loss `2.32106642`, macro F1 `0.80964318`, minimum-family/OBJECT F1 `0.72614108`, `UAS=0.88080690`, `LAS=0.76403990`, and selection score `0.78959848`. Selection improved after the LR reduction, resetting patience to `0/9` and holding divergence at `0/3`; LR is `0.000125`. Both 28-file E10 packages passed all 27 checksums, byte equality, checkpoint, and reconstructed-state checks. E11 is pending. See [the control progress log](docs/TurkTokenizer_v6_1_R4_P2_Control_Progress.md).
 
 ## Live v6.0 R2-P9 repair line
 
