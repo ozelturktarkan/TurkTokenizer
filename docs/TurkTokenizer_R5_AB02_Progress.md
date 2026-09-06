@@ -21,8 +21,20 @@ Initial artifacts and all 57 epoch checkpoints have two durable copies. Models, 
 
 ## AB02-J1 v0.2.0 — controlled improvement
 
-Status: registered; preparation complete; training not yet started.
+Registration snapshot: preparation complete; recorded before training.
 
 Only the training candidate bias changes: replace local M0 unary bias with fixed M0 sentence-conditional max-marginal scores, normalized per token. This introduces M0 ngram/partial-relation context into the local training comparison. It is not full structured training. Inference, feature vocabulary, candidate IDs, morphology, update rule, hyperparameters and 2.5 margin are unchanged. AB01 and CRF are absent.
 
 The same 22,878 supervised words and exact target/feature IDs are retained. Relative training bias changes in 14,432 words. Seeds 17/29/43 train from zero; CALIB and stopping rules remain fixed. An additional 128 BOUN TRAIN sentences unused in AB02-v0.1 are reserved for post-selection checking; no document-level or project-wide unseen claim is made.
+
+## v0.2.0 current training status
+
+Training in progress; round 1 has durable A/B checkpoints.
+
+Only aggregate TRAIN/CALIB metrics follow. CALIB preferred-count controls epoch selection; ties retain the earliest epoch. Patience is 5.
+
+| Round | Seed | Epoch | TRAIN updates | CALIB preferred | Correct selected | Wrong selected | Abstained/missing | Best epoch | Patience | State |
+|---|---|---:|---:|---:|---:|---:|---:|---:|---:|---|
+| 1 | 17 | 1 | 3364 | 726 | 642 | 197 | 281 | 1 | 0/5 | active |
+| 1 | 29 | 1 | 3400 | 725 | 638 | 198 | 284 | 1 | 0/5 | active |
+| 1 | 43 | 1 | 3355 | 729 | 639 | 199 | 282 | 1 | 0/5 | active |
