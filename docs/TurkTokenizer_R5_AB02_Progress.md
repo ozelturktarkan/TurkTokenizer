@@ -381,3 +381,14 @@ New balanced development results at threshold2.5 (128 sentences,1,302 non-punctu
 | L | 43 | 768 | 694 | 284 | 324 |
 
 None of the 30 registered arm/threshold settings preserved every seed's preferred/correct counts and wrong-selection cap while improving the objective. All candidate arms had fewer preferred hits than the v0.2 reference in each seed; threshold changes cannot change this ranking. The preregistered fallback therefore retains **v0.2 at2.5** as comparison reference. This is not a new default-model promotion. Model/threshold choices were locked before the new check was opened. Final evaluation is in progress; its metrics and examples remain private. AB03 remains unopened.
+
+
+### v0.5.0 final closure
+
+All registered regression, diagnostic, prior-transfer and newly frozen check evaluations are complete for both new arms and all three seeds. The full J3, J2, v0.2 and native M0 controls were retained as specified. No candidate satisfied all replacement conditions; the development-selected v0.2/2.5 fallback remains the comparison reference. AB00 remains the locked native baseline. No default-model promotion was made.
+
+The family ablations exposed both useful behavior and regressions, including seed-dependent effects. The final private retrospective covers AB00 through AB02 v0.5, the origins and exact adaptations, feature families, structured update and decoder, matched comparisons, decision transitions, remaining limitations and reuse criteria. It does not claim perfect morphological, semantic or contextual accuracy.
+
+Native word analyses and contextual token boundaries/candidate objects remained identical. Ambiguity and candidate-retention guards passed. All 101 epoch states,202 distinct A/B records,24 training-round publications,318 initial package inputs and500 parent package files passed integrity checks. Source/data/scoring freezes and selected-model hashes matched. The final package retains source, models, checkpoints, detailed results, diagnostics and AB02-v0.5.0-değerlendirmesi.md.
+
+This public log continues to contain only aggregate TRAIN/CALIB and status information; private evaluation metrics, examples, corpora and model weights are excluded. **AB02 v0.5.0 is closed for this iteration. AB03 remains unopened.**
