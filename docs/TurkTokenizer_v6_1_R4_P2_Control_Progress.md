@@ -1,6 +1,6 @@
 # TurkTokenizer v6.1 R4-P2 matched focal control progress
 
-> Status: ACTIVE — Relation E03 completed and independently archived; E04 pending.
+> Status: ACTIVE — Relation E04 completed and independently archived; E05 pending.
 
 ## Purpose
 
@@ -34,6 +34,7 @@ The precommit, architecture smoke test, and zero-step start gate passed. The ver
 | E01 | 0.5198 | 1.847522 | 0.791514 | 0.683742 | 0.874382 | 0.751460 | 0.766242 | 0/9 | 0.00025 | 0/3 baseline |
 | E02 | 0.4175 | 1.615396 | 0.795592 | 0.704782 | 0.873034 | 0.754920 | 0.774421 | 0/9 | 0.00025 | 0/3 |
 | E03 | 0.3943 | 1.664362 | 0.795990 | 0.706499 | 0.877527 | 0.759367 | 0.775787 | 0/9 | 0.00025 | 0/3 |
+| E04 | 0.3192 | 1.779728 | 0.791875 | 0.698649 | 0.876359 | 0.754021 | 0.770813 | 1/9 | 0.00025 | 1/3 |
 
 E01 was independently re-evaluated from its persisted state. Both 28-file private A/B packages were re-materialized; all 27 manifest checksums, source/A/B byte equality, the selected checkpoint, and reconstructed state passed. This freshly executed arm—not the historical P1 trajectory—is the locked paired control that the R4-P2 adapter-plus-PCGrad candidate must beat.
 
@@ -41,4 +42,6 @@ E02 improved the selected control checkpoint; TRAIN and gold-CALIB objective los
 
 E03 improved the selected score. TRAIN loss fell and gold-CALIB objective loss rose, but the improvement condition kept the divergence signal false at `0/3`. Its corrected 28-file A/B archives passed all 27 checksums, byte equality, checkpoint, and reconstructed-state checks; one transfer-helper temporary file was removed before acceptance.
 
-Relation E04 has not started at this public boundary. `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST remain unopened.
+E04 did not improve; TRAIN loss fell while gold-CALIB objective loss rose, producing the first divergence signal (`1/3`). Its two 28-file packages passed all 27 checksums, byte equality, selected-checkpoint preservation, and reconstructed-state checks.
+
+Relation E05 has not started at this public boundary. `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST remain unopened.
