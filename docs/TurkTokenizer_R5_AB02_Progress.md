@@ -230,3 +230,20 @@ A post-selection diagnostic also turned off only learned edges while retaining s
 Native analyses, boundaries and token positions passed equivalence checks. All source/data/evaluation freezes, initial package members, parent package members and epoch checkpoint state/metric hashes passed integrity verification. Code, selected models, detailed results and reusable diagnostics are retained in the experiment package. This public log continues to exclude evaluation examples/results, corpus material and model weights.
 
 **AB03 remains unopened.**
+
+
+## AB02 v0.5.0 — final controlled J4 study
+
+Registered before J4 training or new development scoring. AB03 remains unopened.
+
+- Retrain two disjoint feature-family ablations from zero: **M** uses POS/native-group transitions (34,073 IDs); **L** uses lemma-containing transitions (46,995 IDs). Full frozen J3 is the matched-protocol control. All 384,254 unary IDs, 3,278 TRAIN references and 22,878 supervised targets remain unchanged.
+- Same seeds17/29/43, primary17; learning rate0.1, per-reference structured averaging clock, ceiling50, patience5, earliest original CALIB preferred maximum including epoch0. Raw analyses, morphology, ngram/relation weights and planner are unchanged.
+- A separate balanced development set has128 BOUN TRAIN sentences (32 per bio/ess/news/pop),1,302 non-punctuation words. It is used only after epoch models are locked to select one common arm/threshold across all seeds. Each seed must preserve v0.2 preferred/correct counts and not increase wrong selections; otherwise retain v0.2 at2.5. Grid:1.5,2,2.5,3,3.5,4,4.5,5,6,8. Deterministic ties and conservative fallback are preregistered.
+- A separate new128-sentence check is frozen before training and will only be scored after arm/threshold locking. Prior AB02 material through v0.4 and full IMST TRAIN are excluded by the existing duplicate policy. No official DEV/TEST, original-document independence or perfect-accuracy claim.
+- Implementation checks passed: existing exact-inner-decoder oracle and zero-edge equivalence; complete disjoint family partition; all3,278 training records preserved per arm except filtered edge IDs;24 cached/live and counted-feature oracle cases; both arms serialize/resume deterministically and cannot update excluded edge IDs.
+- Initial and per-epoch durable A/B checkpoints precede advancement; each completed round is recorded here. Public reporting remains aggregate TRAIN/CALIB and work status only. No automatic promotion.
+
+### J4 training rounds
+
+| Round | Arm | Seed | Epoch | TRAIN document updates | CALIB preferred /1120 | Correct selected | Wrong selected | Best epoch | Stopped |
+|---:|:---:|---:|---:|---:|---:|---:|---:|---:|:---:|
