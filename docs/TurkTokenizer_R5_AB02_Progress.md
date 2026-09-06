@@ -348,3 +348,36 @@ Registered before J4 training or new development scoring. AB03 remains unopened.
 | 22 | L | 17 | 22 | 256 | 741 | 678 | 211 | 19 | no |
 | 23 | L | 17 | 23 | 272 | 739 | 676 | 211 | 19 | no |
 | 24 | L | 17 | 24 | 250 | 740 | 676 | 210 | 19 | yes |
+
+
+### v0.5.0 training and development selection complete
+
+All six runs stopped by the registered patience rule: **101 arm-seed-epochs**, **202 distinct durable A/B checkpoint records**, **24 published round groups**. Epoch choices were locked before the new balanced development set was scored.
+
+| Arm | Seed | Epochs run | Selected epoch | CALIB preferred /1120 | Correct selected | Wrong selected |
+|:---:|---:|---:|---:|---:|---:|---:|
+| M | 17 | 11 | 6 | 747 | 671 | 202 |
+| M | 29 | 20 | 15 | 753 | 681 | 210 |
+| M | 43 | 22 | 17 | 751 | 676 | 214 |
+| L | 17 | 24 | 19 | 744 | 678 | 209 |
+| L | 29 | 12 | 7 | 744 | 671 | 209 |
+| L | 43 | 12 | 7 | 740 | 672 | 213 |
+
+New balanced development results at threshold2.5 (128 sentences,1,302 non-punctuation words; canonical native-role/declared-feature metric):
+
+| Arm | Seed | Preferred /1302 | Correct selected | Wrong selected | Abstained/missing |
+|:---:|---:|---:|---:|---:|---:|
+| v020 | 17 | 774 | 701 | 288 | 313 |
+| v020 | 29 | 768 | 684 | 276 | 342 |
+| v020 | 43 | 775 | 695 | 289 | 318 |
+| J3 | 17 | 770 | 716 | 280 | 306 |
+| J3 | 29 | 765 | 704 | 285 | 313 |
+| J3 | 43 | 763 | 705 | 298 | 299 |
+| M | 17 | 770 | 696 | 284 | 322 |
+| M | 29 | 762 | 699 | 285 | 318 |
+| M | 43 | 762 | 706 | 297 | 299 |
+| L | 17 | 766 | 702 | 297 | 303 |
+| L | 29 | 760 | 682 | 286 | 334 |
+| L | 43 | 768 | 694 | 284 | 324 |
+
+None of the 30 registered arm/threshold settings preserved every seed's preferred/correct counts and wrong-selection cap while improving the objective. All candidate arms had fewer preferred hits than the v0.2 reference in each seed; threshold changes cannot change this ranking. The preregistered fallback therefore retains **v0.2 at2.5** as comparison reference. This is not a new default-model promotion. Model/threshold choices were locked before the new check was opened. Final evaluation is in progress; its metrics and examples remain private. AB03 remains unopened.
