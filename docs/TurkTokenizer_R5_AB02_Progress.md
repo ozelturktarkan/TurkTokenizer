@@ -247,3 +247,9 @@ Registered before J4 training or new development scoring. AB03 remains unopened.
 
 | Round | Arm | Seed | Epoch | TRAIN document updates | CALIB preferred /1120 | Correct selected | Wrong selected | Best epoch | Stopped |
 |---:|:---:|---:|---:|---:|---:|---:|---:|---:|:---:|
+| 1 | M | 17 | 1 | 1738 | 728 | 637 | 196 | 1 | no |
+| 1 | M | 29 | 1 | 1727 | 733 | 643 | 198 | 1 | no |
+| 1 | M | 43 | 1 | 1709 | 727 | 652 | 193 | 1 | no |
+| 1 | L | 17 | 1 | 1737 | 726 | 636 | 198 | 1 | no |
+| 1 | L | 29 | 1 | 1735 | 729 | 638 | 192 | 1 | no |
+| 1 | L | 43 | 1 | 1715 | 727 | 631 | 200 | 1 | no |
