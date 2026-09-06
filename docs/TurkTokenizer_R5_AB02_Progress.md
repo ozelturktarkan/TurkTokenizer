@@ -99,3 +99,6 @@ AB03 remains unopened. This iteration studies two separate causes of AB02 errors
 
 | Round | Seed | Epoch | TRAIN document updates | CALIB preferred / 1120 | CALIB correct selected | CALIB wrong selected | Best epoch | Stopped |
 |---:|---:|---:|---:|---:|---:|---:|---:|:---:|
+| 1 | 17 | 1 | 1731 | 729 | 628 | 193 | 1 | no |
+| 1 | 29 | 1 | 1765 | 729 | 630 | 195 | 1 | no |
+| 1 | 43 | 1 | 1749 | 726 | 635 | 198 | 1 | no |
