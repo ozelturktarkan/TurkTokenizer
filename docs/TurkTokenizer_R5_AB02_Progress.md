@@ -211,3 +211,22 @@ AB03 remains unopened. J3 adds first-order learned transitions between adjacent 
 | 15 | 29 | 15 | 228 | 751 | 688 | 209 | 10 | yes |
 | 16 | 17 | 16 | 194 | 754 | 689 | 204 | 12 | no |
 | 17 | 17 | 17 | 195 | 754 | 689 | 204 | 12 | yes |
+
+
+### v0.4.0 completion and decision
+
+All J3 runs stopped under the registered patience rule. The 45 completed seed-epochs have 90 distinct durable A/B checkpoint records and 17 published round groups. Selected models were locked before the new check was scored.
+
+| Seed | Epochs run | Selected epoch | Selected CALIB preferred /1120 | Selected CALIB correct selected | Selected CALIB wrong selected |
+|---:|---:|---:|---:|---:|---:|
+| 17 | 17 | 12 | 755 | 689 | 202 |
+| 29 | 15 | 10 | 753 | 684 | 206 |
+| 43 | 13 | 8 | 755 | 680 | 204 |
+
+J3 completed every registered word/context, prior diagnostic/transfer and fresh-check evaluation for all three seeds. It did **not** satisfy the registered replacement criteria and is not promoted. AB00 remains the locked baseline and v0.2 remains the prior AB02 comparison reference.
+
+A post-selection diagnostic also turned off only learned edges while retaining selected J3 unary weights on already observed probes. It demonstrated that the added transitions affect inference in both helpful and harmful ways; it was not used to choose or promote a model. Separate retrained feature-family ablations and a balanced development/calibration design are proposed next steps, not implemented follow-ups.
+
+Native analyses, boundaries and token positions passed equivalence checks. All source/data/evaluation freezes, initial package members, parent package members and epoch checkpoint state/metric hashes passed integrity verification. Code, selected models, detailed results and reusable diagnostics are retained in the experiment package. This public log continues to exclude evaluation examples/results, corpus material and model weights.
+
+**AB03 remains unopened.**
