@@ -1,6 +1,6 @@
 # TurkTokenizer v6.1 R4-P2 matched focal control progress
 
-> Status: ACTIVE — Relation E11 completed and independently archived; E12 pending.
+> Status: ACTIVE — Relation E12 completed and independently archived; E13 pending.
 
 ## Purpose
 
@@ -42,6 +42,7 @@ The precommit, architecture smoke test, and zero-step start gate passed. The ver
 | E09 | 0.2116 | 1.858740 | 0.791408 | 0.706729 | 0.873933 | 0.756807 | 0.772725 | 4/9 | 0.000125 | 0/3 |
 | E10 | 0.1613 | 2.321066 | 0.809643 | 0.726141 | 0.880807 | 0.764040 | 0.789598 | 0/9 | 0.000125 | 0/3 |
 | E11 | 0.1404 | 2.322751 | 0.809290 | 0.718559 | 0.880313 | 0.760086 | 0.787030 | 1/9 | 0.000125 | 0/3 |
+| E12 | 0.1215 | 2.577956 | 0.810655 | 0.720955 | 0.880852 | 0.764130 | 0.788795 | 2/9 | 0.000125 | 1/3 |
 
 E01 was independently re-evaluated from its persisted state. Both 28-file private A/B packages were re-materialized; all 27 manifest checksums, source/A/B byte equality, the selected checkpoint, and reconstructed state passed. This freshly executed arm—not the historical P1 trajectory—is the locked paired control that the R4-P2 adapter-plus-PCGrad candidate must beat.
 
@@ -65,4 +66,6 @@ E10 established a new selected checkpoint after the LR reduction. Selection impr
 
 E11 did not improve. Its CALIB objective rise was below the precommitted 0.1% relative threshold, so divergence remained `0/3`; E10 stays selected. Both 28-file E11 packages passed all 27 checksums, byte equality, checkpoint preservation, and reconstructed-state checks.
 
-Relation E12 has not started at this public boundary. `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST remain unopened.
+E12 did not improve; TRAIN loss fell and gold-CALIB objective loss rose, advancing divergence to `1/3`. E10 remains selected. Both 28-file E12 packages passed all 27 checksums, byte equality, checkpoint preservation, and reconstructed-state checks.
+
+Relation E13 has not started at this public boundary. `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST remain unopened.
