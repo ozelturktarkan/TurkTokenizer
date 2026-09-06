@@ -24,7 +24,7 @@ This narrow first arm adds TRAIN-estimated nonadjacent predicate–argument lemm
 | AB00 core and source identities | Verified |
 | Data partition and preregistration | Complete before fit |
 | Independent contracts | Passed: native contracts, count arithmetic, 24 exhaustive configuration/path combinations and all max-marginals, bound endpoints, scope guard, candidate-order decision invariance |
-| TRAIN fit | Pending |
+| TRAIN fit | Complete: one deterministic TRAIN count fit |
 | CALIB selection | Pending |
 | Locked diagnostic evaluation | Pending |
 | Promotion | No automatic promotion; AB00 remains default |
@@ -34,3 +34,7 @@ Only aggregate TRAIN/CALIB results and status are published here. Models, raw ex
 The added factor cannot recover native-pruned relation plans. Inner sequence decoding remains exact within each retained configuration; the outer relation search remains approximate. This arm does not add discourse resolution or a complete dependency parser.
 
 Sources: [Kiwi](https://github.com/bab2min/Kiwi#citation), [inspected SkipBigram implementation](https://github.com/bab2min/Kiwi/blob/f06a54db4748e4eb5b8ced127c281fc8fac73ea1/src/SkipBigramModel.hpp).
+
+## TRAIN fit summary
+
+The frozen 3,278-reference fit produced 2,548 eligible dependency events and 2,299 distinct lemma pairs. With minimum support 2, 175 pairs receive a score (170 positive, 5 negative). Unseen/low-support pairs remain neutral. Counts alone do not establish selection quality; CALIB is next after the fitted A/B artifact gate.
