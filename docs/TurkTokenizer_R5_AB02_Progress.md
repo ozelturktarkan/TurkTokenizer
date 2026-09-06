@@ -347,3 +347,4 @@ Registered before J4 training or new development scoring. AB03 remains unopened.
 | 22 | M | 43 | 22 | 215 | 749 | 678 | 214 | 17 | yes |
 | 22 | L | 17 | 22 | 256 | 741 | 678 | 211 | 19 | no |
 | 23 | L | 17 | 23 | 272 | 739 | 676 | 211 | 19 | no |
+| 24 | L | 17 | 24 | 250 | 740 | 676 | 210 | 19 | yes |
