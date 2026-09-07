@@ -118,7 +118,7 @@ The practical success criterion is at least +1 percentage point on both the fixe
 | Implementation, independent contracts, data split | Complete before fit |
 | Initial A/B gate | Complete before TRAIN fit |
 | TRAIN fit | Complete; one deterministic fit per estimator |
-| CALIB selection | Pending |
+| CALIB selection | Complete; E alpha=8 locked; C/D fail independent eligibility |
 | Locked diagnostic evaluation | Pending |
 | AB03/AB04 decision | Pending |
 
@@ -127,3 +127,16 @@ Public updates remain limited to protocol/status and aggregate TRAIN/CALIB. Priv
 ### v0.3.0 TRAIN fit
 
 E produced 8,576 direct distant-argument events and 607 supported root pairs, versus 175 in the prior small model. C produced 16,667 direct role/case events including adjacent training arguments. D produced 161,726 skip-root events, 131,187 distinct pairs and 15,878 supported pairs across 11,177 roots. Larger support counts are coverage measurements, not evidence of better decisions. The fitted A/B gate precedes CALIB inference.
+
+### v0.3.0 CALIB lock
+
+The eligible setting is E with alpha=8. The native repair-only adapter matched the prior R0 on all 256 CALIB sentences. No combination is admitted because D fails independent nonregression. Each isolated estimator's best CALIB-ranked setting is retained as the preregistered diagnostic: E8, C8 and D8. These diagnostics cannot replace the selected arm after CHECK.
+
+| CALIB setting | Preferred canonical+features | Committed correct | Committed wrong | Sentences with added evidence |
+|---|---:|---:|---:|---:|
+| R0 | 1386 | 1107 | 751 | 8 legacy relation-evidence sentences; coefficient zero |
+| E8 | 1387 | 1108 | 749 | 27 relation-evidence sentences |
+| C8 | 1386 | 1103 | 734 | 173 relation-evidence sentences |
+| D8 | 1389 | 1120 | 757 | 119 anchor-evidence sentences |
+
+The selected improvement is small. Broader evidence coverage does not establish useful discrimination. C8 trades away correct commitments; D8 increases wrong commitments. No parameter or threshold will be changed after the lock. Diagnostic evaluation follows the calibrated A/B gate.
