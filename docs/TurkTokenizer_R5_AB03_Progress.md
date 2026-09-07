@@ -116,10 +116,14 @@ The practical success criterion is at least +1 percentage point on both the fixe
 | v0.3.0 stage | Status |
 |---|---|
 | Implementation, independent contracts, data split | Complete before fit |
-| Initial A/B gate | Being finalized before fit |
-| TRAIN fit | Pending |
+| Initial A/B gate | Complete before TRAIN fit |
+| TRAIN fit | Complete; one deterministic fit per estimator |
 | CALIB selection | Pending |
 | Locked diagnostic evaluation | Pending |
 | AB03/AB04 decision | Pending |
 
 Public updates remain limited to protocol/status and aggregate TRAIN/CALIB. Private CHECK and regression measurements, examples and models are retained in the experiment artifacts.
+
+### v0.3.0 TRAIN fit
+
+E produced 8,576 direct distant-argument events and 607 supported root pairs, versus 175 in the prior small model. C produced 16,667 direct role/case events including adjacent training arguments. D produced 161,726 skip-root events, 131,187 distinct pairs and 15,878 supported pairs across 11,177 roots. Larger support counts are coverage measurements, not evidence of better decisions. The fitted A/B gate precedes CALIB inference.
