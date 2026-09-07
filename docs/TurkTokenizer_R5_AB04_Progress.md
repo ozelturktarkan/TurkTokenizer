@@ -202,3 +202,21 @@ The 21 AB00 acceptance checks remain reported. Repair evidence is assessed separ
 Independent contracts recover a supported morphological path that a native one-state role beam discards, while retaining its raw structural score. Score-origin invariance, candidate-order invariance, grammatical case licensing, fixed gate evidence, raw candidate preservation and independent reconstruction of the once-counted final objective passed. Initial dual durable artifacts precede CALIB.
 
 All evaluation pools remain previously observed development material. No gold relabeling, unseen final test or official dev/test opening occurs. Publication remains protocol/status and aggregate CALIB only.
+
+
+### v0.5.0 CALIB lock
+
+All six declared arms are complete. P8 improves aggregate preferred, wrong-commitment and partial-graph measurements over G8 but fails a protected committed-correct relation safeguard. Its affected protected preferences remain correct while their max-marginal gaps fall below the unchanged decision threshold. This is a real abstention regression under the declared gate, not a reason to rewrite that gate after the fact.
+
+I8 improves graph counts while reducing compatible preferences and increasing wrong commitments relative to G8. Neither new arm qualifies, so G8 is the locked fallback and new_repair_selected is false. All six arms remain diagnostic retests. No margin or priority retuning follows this lock.
+
+| CALIB arm | Compatible preferred | Committed correct | Committed wrong | Correct heads | Exact labeled edges | Eligible |
+|---|---:|---:|---:|---:|---:|---|
+| G8 | 1744 | 1634 | 647 | 437 | 254 | Yes |
+| I8 | 1735 | 1631 | 657 | 466 | 275 | No |
+| N0 | 1421 | 1137 | 747 | 431 | 233 | No |
+| P0 | 1418 | 1160 | 758 | 466 | 254 | No |
+| P8 | 1749 | 1645 | 644 | 544 | 319 | No |
+| Q0 | 1417 | 1148 | 756 | 447 | 243 | No |
+
+Morphology uses the same 2,972-word denominator and unchanged reference mapping. Graph counts are partial aligned structures, not full parser UAS/LAS. Calibrated A/B artifacts precede retest; observed development evidence is not final generalization proof.
