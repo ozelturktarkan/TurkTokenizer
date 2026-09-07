@@ -128,3 +128,16 @@ The uniform U0.5 diagnostic meets the predeclared retest criteria, but it is not
 Post-lock inspection separates newly committed reserve errors, legacy annotation/representation differences, and partial-graph coverage losses. No gold relabeling or inference retuning was performed to remove failed gates. Further work should validate annotation mappings and address phrase/possessive relation coverage before another weight search.
 
 Frozen-file identities, original native/J8 reproduction, row-level metric reconciliation, private evaluation and reproducibility artifacts are complete. All outcomes remain observed development evidence rather than unseen final-test claims.
+
+
+## v0.4.0 preregistration — matched upper weights and graph safeguards
+
+The frozen v0.3.0 parent and unchanged v0.2.0 count model have been verified. There is no additional fit or morphology change. Initial contracts and two durable initial artifacts are complete before CALIB.
+
+A 2x2 comparison at maximum weights 0.5/2/4/8 separates native versus Q final-plan pruning and uniform versus gated prior evidence. Tau stays fixed at 1. The gate reference is always Q0, including native-final-pruning arms; changing the reference pass itself is not part of this contrast. N0/N8/Q0 remain reproduction controls. There are 19 declared runs including controls; no extension after retest.
+
+CALIB eligibility retains the previous commitment and protected contextual guards and adds nonregression in correct heads, coarse labeled edges, exact labeled edges and exact labeled precision. The old selection rule is also recorded as a diagnostic. A single eligible setting is locked before retest; fixed old controls and the four factorial cells at its upper weight are the declared comparisons. Passing diagnostic settings cannot replace a failed locked choice afterward.
+
+The legacy morphological evaluator and all reference labels stay unchanged. A decision-blind review queue records schema/feature disagreements without declaring them annotation errors; independent adjudication is pending. The legacy graph metric compares relation bases, so exact subtype equality is now reported and guarded separately. Sentence-level all-compatible counts are supplementary, not claims of complete semantic correctness.
+
+All pools remain observed project development material with the prior AB03 exposure described above. No official dev/test or unseen final evaluation is opened. Publication remains protocol/status and aggregate CALIB only.
