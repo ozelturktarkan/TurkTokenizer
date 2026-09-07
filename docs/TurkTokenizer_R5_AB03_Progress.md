@@ -100,3 +100,26 @@ The locked diagnostic experiment is complete. The preregistered acceptance gates
 All preregistered controls and regression pools were executed. The final read-only audit reconciles stored token-level records with aggregate results, verifies the unchanged frozen code/model/data and preserves the canonical pre-CALIB R2 and calibrated A/B records. Detailed CHECK measurements, examples and models remain private.
 
 Remaining work separates admission of existing nonfinite candidates from ranking of already available joint plans. A bounded admission threshold can exclude plausible nonfinite readings; merely making a correct plan available does not ensure its selection. Individual regressions and scope/agreement limitations remain. Future changes require isolated controls and a new CALIB/held-out CHECK protocol; the CHECK opened in this experiment is now observed regression material.
+
+## v0.3.0 preregistration — distant lexical evidence
+
+This experiment isolates distant lexical improvements on frozen v0.2.0 repair-only R0. AB00 morphology, native n-gram, margin 2.5, structural repair and maximum 33 configurations remain fixed. No AB01/AB02 weights are imported.
+
+Three isolated arms: E re-estimates the original direct-argument root PMI on expanded TRAIN; C conditions lexical evidence on role/case with empirical-Bayes backoff; D uses punctuation-bounded skip-root cooccurrence as soft candidate scores from roots on which all original analyses agree. D does not use previous predictions as anchors or infer referents. Its unaries can affect pruning; E/C score retained bound-role configurations. Inner decoding remains exact per retained configuration; outer search remains approximate.
+
+Expanded FIT contains 3,278 IMST and 5,822 BOUN TRAIN sentences (92,105 nonpunctuation words). New CALIB contains 256 sentences (2,897 nonpunctuation words), 64 each bio/ess/news/pop. A separate CHECK remains unopened until the CALIB lock. Prior diagnostic pools and exact/near duplicates are excluded. Document independence is not proved; official dev/test remain unopened.
+
+Weights 0.25/0.5/1/2/4/8 are selected on CALIB only. Eligibility requires strictly more preferred-correct analyses, committed-correct not lower and committed-wrong not higher than R0. Best isolated arms are retained as preregistered diagnostics even if ineligible. Only independently eligible E-or-C and D may be combined using their already selected weights; otherwise no combination is run.
+
+The practical success criterion is at least +1 percentage point on both the fixed main word pool and the new CHECK, positive sentence-paired bootstrap 95% lower bound on CHECK, and the predeclared commitment/paired/ambiguity/mechanism/relation nonregression gates. This is an incremental research criterion, not sufficient final Turkish accuracy. Failure closes this bounded lexical line and moves planning to AB04, retaining useful structural findings separately.
+
+| v0.3.0 stage | Status |
+|---|---|
+| Implementation, independent contracts, data split | Complete before fit |
+| Initial A/B gate | Being finalized before fit |
+| TRAIN fit | Pending |
+| CALIB selection | Pending |
+| Locked diagnostic evaluation | Pending |
+| AB03/AB04 decision | Pending |
+
+Public updates remain limited to protocol/status and aggregate TRAIN/CALIB. Private CHECK and regression measurements, examples and models are retained in the experiment artifacts.
