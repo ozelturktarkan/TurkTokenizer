@@ -141,3 +141,34 @@ CALIB eligibility retains the previous commitment and protected contextual guard
 The legacy morphological evaluator and all reference labels stay unchanged. A decision-blind review queue records schema/feature disagreements without declaring them annotation errors; independent adjudication is pending. The legacy graph metric compares relation bases, so exact subtype equality is now reported and guarded separately. Sentence-level all-compatible counts are supplementary, not claims of complete semantic correctness.
 
 All pools remain observed project development material with the prior AB03 exposure described above. No official dev/test or unseen final evaluation is opened. Publication remains protocol/status and aggregate CALIB only.
+
+
+### v0.4.0 CALIB lock
+
+All 19 preregistered runs are complete. Q-G8 (maximum weight 8, tau 1, Q final pruning) is selected again; it is inference-equivalent to v0.3.0 G1. The additional graph eligibility checks do not change the selected setting. Lower-weight arms provide different tradeoffs but do not win the declared ranking. This is not an improved-model claim.
+
+| CALIB arm | Compatible preferred | Committed correct | Committed wrong | Correct heads | Exact labeled edges | Eligible |
+|---|---:|---:|---:|---:|---:|---|
+| N-G0.5 | 1587 | 1275 | 659 | 459 | 257 | No |
+| N-G2 | 1648 | 1417 | 655 | 489 | 272 | Yes |
+| N-G4 | 1694 | 1541 | 657 | 468 | 264 | Yes |
+| N-G8 | 1740 | 1630 | 653 | 437 | 255 | Yes |
+| N-U0.5 | 1616 | 1277 | 631 | 471 | 268 | Yes |
+| N-U2 | 1726 | 1470 | 581 | 472 | 269 | No |
+| N-U4 | 1816 | 1648 | 581 | 414 | 240 | No |
+| N-U8 | 1870 | 1779 | 622 | 370 | 219 | No |
+| N0 | 1421 | 1137 | 747 | 431 | 233 | No |
+| N8 | 1870 | 1779 | 622 | 370 | 219 | No |
+| Q-G0.5 | 1582 | 1281 | 663 | 473 | 264 | No |
+| Q-G2 | 1649 | 1428 | 648 | 488 | 272 | Yes |
+| Q-G4 | 1695 | 1544 | 652 | 472 | 270 | Yes |
+| Q-G8 | 1744 | 1634 | 647 | 437 | 254 | Yes |
+| Q-U0.5 | 1621 | 1292 | 638 | 479 | 275 | Yes |
+| Q-U2 | 1732 | 1470 | 578 | 464 | 267 | No |
+| Q-U4 | 1823 | 1657 | 575 | 415 | 243 | No |
+| Q-U8 | 1873 | 1782 | 619 | 373 | 220 | No |
+| Q0 | 1417 | 1148 | 756 | 447 | 243 | No |
+
+Morphological counts share a denominator of 2,972 words. Graph counts describe an aligned partial graph, not full UAS/LAS. Exact labels include subtypes; old coarse-label metrics remain recorded separately. All these data are observed selection material.
+
+The fixed diagnostics are N0/N8/Q0, Q-U0.5, and the four native/Q by uniform/gated cells at weight 8. The setting and model are locked in dual durable artifacts before retest. There is no retest-based substitution or new weight extension.
