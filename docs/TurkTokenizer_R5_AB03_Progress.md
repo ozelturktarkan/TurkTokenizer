@@ -55,7 +55,7 @@ CALIB evidence coverage was sparse: only 2 of 128 sentences had nonzero evidence
 
 ## v0.2.0 preregistration — internal nonfinite clauses
 
-Status: implementation/contracts complete; new CALIB inference pending. This remains an isolated AB00-based AB03 experiment. No AB01/AB02 weights are imported. The verified v0.1.0 175-pair TRAIN model is reused byte-for-byte; there is no new fit, epoch loop, or random seed.
+Preregistered starting status: implementation/contracts complete; new CALIB inference pending. The completed outcome is recorded below. This remains an isolated AB00-based AB03 experiment. No AB01/AB02 weights are imported. The verified v0.1.0 175-pair TRAIN model is reused byte-for-byte; there is no new fit, epoch loop, or random seed.
 
 The repair retains a Part/Vnoun candidate's original NOUN/ADJ output, morphology features and analysis ID while opening an internal verbal frame. Possessor-marked predicates can take a compatible overt genitive subject; native verb frames supply object/oblique cases and voice behavior. A small inherent-agreement lookup for personal pronoun lemmas supplements missing candidate Person metadata without rewriting candidates. No relative/control subject is invented.
 
@@ -72,8 +72,8 @@ Both 3,000-word pools and prior ambiguity/paired/relation diagnostics will run. 
 | Verified parent, code, technical contracts, data partition | Complete |
 | Initial code/data/copied-model A/B gate | Complete; corrected R2 is canonical |
 | New CALIB arm/alpha lock | Complete; repair-only R0 selected, alpha=0 |
-| Locked diagnostic evaluation | Pending |
-| Promotion | No automatic promotion |
+| Locked diagnostic evaluation | Complete; preregistered acceptance gates passed; full artifacts retained privately |
+| Promotion | R0 retained as an AB03 research reference; AB00 remains default; no automatic product promotion |
 
 Primary annotation references: [Turkish ccomp](https://universaldependencies.org/tr/dep/ccomp.html), [acl](https://universaldependencies.org/tr/dep/acl.html), [VerbForm](https://universaldependencies.org/tr/feat/VerbForm.html). Public updates remain limited to protocol/status and aggregate TRAIN/CALIB information.
 
@@ -92,3 +92,11 @@ The selected setting is repair-only R0 (alpha=0), under the preregistered canoni
 | R0 and R with alpha 0.25/0.5/1/2 | 661 | 805 | 530 | 368 | 510 |
 
 The canonical preference gain is small, and lemma+POS alone regresses by two. Equal-budget BUDGET has fewer wrong commitments but also fewer correct commitments; the repair does not dominate every metric. This is a locked candidate for further checking, not a promotion or proof of general improvement. CHECK evaluation starts only after the calibrated A/B gate.
+
+## v0.2.0 closure — 2026-09-07
+
+The locked diagnostic experiment is complete. The preregistered acceptance gates passed for the CALIB-selected repair-only R0 arm. The structural repair is retained as the next AB03 research reference. The reused lexical score supplied no eligible additional CALIB improvement and remains disabled. AB00 stays frozen and remains the default; this is not an automatic product promotion or proof of perfect/general language understanding.
+
+All preregistered controls and regression pools were executed. The final read-only audit reconciles stored token-level records with aggregate results, verifies the unchanged frozen code/model/data and preserves the canonical pre-CALIB R2 and calibrated A/B records. Detailed CHECK measurements, examples and models remain private.
+
+Remaining work separates admission of existing nonfinite candidates from ranking of already available joint plans. A bounded admission threshold can exclude plausible nonfinite readings; merely making a correct plan available does not ensure its selection. Individual regressions and scope/agreement limitations remain. Future changes require isolated controls and a new CALIB/held-out CHECK protocol; the CHECK opened in this experiment is now observed regression material.
