@@ -42,8 +42,8 @@ Practical acceptance requires at least +1 percentage point on main/CHECK preferr
 | Initial A/B gate | Complete before fit |
 | Single deterministic TRAIN count fit | Complete; model frozen before CALIB |
 | CALIB selection | Complete; J with weight 8 locked before CHECK |
-| Locked diagnostic evaluation | Pending |
-| Acceptance and view attribution | Pending |
+| Locked diagnostic evaluation | Complete; all five preregistered arms evaluated |
+| Acceptance and view attribution | Not accepted; protected controls failed; no promotion |
 
 Public updates remain protocol/status and aggregate TRAIN/CALIB only. Private diagnostic metrics, raw examples and models remain in experiment artifacts.
 
@@ -67,3 +67,12 @@ The 24 positive settings and exact zero control are complete. J at weight 8 is t
 | J8: word and path | 1,870 | 1,779 | 622 |
 
 All counts use the same 2,972-word CALIB denominator; candidate coverage is unchanged. These are selection measurements, not final accuracy evidence. The adapter's zero setting exactly matched native output for all 256 CALIB sentences. No weight search is extended after this lock.
+
+
+### v0.2.0 closure
+
+Frozen diagnostic evaluation and row-level reconciliation are complete. Original morphology and native candidate objects remain unchanged. The selected J8 setting fails the preregistered protected contextual-pair and relation guards; the separate multilevel-attribution criterion is also not met. No diagnostic arm is substituted for the locked selection, and no automatic promotion occurs.
+
+The private evaluation distinguishes aggregate selection gains from damage to contextual readings, commitment behavior and partial-graph coverage. A possible subsequent experiment would address conflict between learned priors and sentence relations, with contextual safeguards declared before selection. No such repair or post-CHECK retuning is part of v0.2.0.
+
+This CHECK is now observed development material. Its earlier AB03 TRAIN exposure remains disclosed above; it must not be reused as a globally unseen final test. Detailed private results, examples, model and reproducibility records are retained with the experiment.
