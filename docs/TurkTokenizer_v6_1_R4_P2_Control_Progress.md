@@ -1,6 +1,6 @@
 # TurkTokenizer v6.1 R4-P2 matched focal control progress
 
-> Status: ACTIVE — Relation E20 completed and independently archived; E21 pending.
+> Status: ACTIVE — Relation closed at E25 under the locked patience rule; E16 selected; Hard-Negative H01 pending.
 
 ## Purpose
 
@@ -51,6 +51,11 @@ The precommit, architecture smoke test, and zero-step start gate passed. The ver
 | E18 | 0.0937 | 2.714155 | 0.806851 | 0.712017 | 0.880987 | 0.762333 | 0.784060 | 2/9 | 0.0000625 | 0/3 |
 | E19 | 0.0786 | 3.024713 | 0.807794 | 0.712991 | 0.882334 | 0.763096 | 0.785032 | 3/9 | 0.0000625 | 1/3 |
 | E20 | 0.0795 | 2.910387 | 0.809789 | 0.709254 | 0.879998 | 0.760176 | 0.784789 | 4/9 | 0.00003125 | 0/3 |
+| E21 | 0.0744 | 3.364126 | 0.812077 | 0.716142 | 0.881930 | 0.762198 | 0.788271 | 5/9 | 0.00003125 | 1/3 |
+| E22 | 0.0685 | 3.477017 | 0.811746 | 0.719562 | 0.882469 | 0.763096 | 0.789109 | 6/9 | 0.00003125 | 2/3 |
+| E23 | 0.0713 | 3.276848 | 0.809534 | 0.717333 | 0.883233 | 0.763546 | 0.787317 | 7/9 | 0.00003125 | 0/3 |
+| E24 | 0.0703 | 3.279647 | 0.811029 | 0.715436 | 0.883862 | 0.765523 | 0.787860 | 8/9 | 0.00003125 | 0/3 |
+| E25 | 0.0683 | 3.238306 | 0.809395 | 0.715103 | 0.883952 | 0.764265 | 0.786742 | 9/9 | 0.00003125 | 0/3 |
 
 E01 was independently re-evaluated from its persisted state. Both 28-file private A/B packages were re-materialized; all 27 manifest checksums, source/A/B byte equality, the selected checkpoint, and reconstructed state passed. This freshly executed arm—not the historical P1 trajectory—is the locked paired control that the R4-P2 adapter-plus-PCGrad candidate must beat.
 
@@ -92,4 +97,14 @@ E19 did not improve; E16 remains selected. TRAIN loss fell while gold-CALIB obje
 
 E20 did not improve; E16 remains selected. The post-improvement plateau reached `4/9`, so the unchanged schedule halved LR from `0.0000625` to `0.00003125`. TRAIN rose and gold-CALIB objective loss fell, breaking the prior divergence sequence and resetting it to `0/3`. Both 28-file E20 packages passed all 27 checksums, source/A/B byte equality, checkpoint preservation, and reconstructed-state checks.
 
-Relation E21 has not started at this public boundary. `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST remain unopened.
+E21 did not improve; E16 remains selected. TRAIN loss fell while gold-CALIB objective loss rose, beginning a new divergence sequence at `1/3`; patience reached `5/9` and LR remained `0.00003125`. The completed retry is the sole canonical E21 boundary. Both 28-file E21 packages passed independent checksum, byte-equality, checkpoint-preservation, and reconstructed-state verification.
+
+E22 did not improve; E16 remains selected. TRAIN loss fell and gold-CALIB objective loss rose again, advancing divergence to `2/3`; patience reached `6/9`. Both 28-file E22 packages were independently built, re-materialized, and passed all 27 manifest checksums plus reconstructed-state verification.
+
+E23 did not improve. TRAIN loss rose while gold-CALIB objective loss fell, breaking the divergence sequence and resetting it from `2/3` to `0/3`; patience reached `7/9`. Both 28-file E23 packages passed all 27 checksums and reconstructed-state verification after independent re-materialization.
+
+E24 did not improve. TRAIN loss fell, but the gold-CALIB objective increase remained below the locked 0.1% relative threshold, so divergence stayed at `0/3`; patience reached `8/9`. Both 28-file E24 packages passed all 27 checksums and reconstructed-state verification after independent re-materialization.
+
+E25 did not improve and patience reached `9/9`, closing Relation under the precommitted rule. E16 remains the selected checkpoint at score `0.79078781`, with macro F1 `0.81382507`, minimum-family/OBJECT F1 `0.72072072`, `UAS=0.88309821`, and `LAS=0.76466888`. The independent boundary verifier was corrected to accept the precommitted terminal `STAGE_COMPLETE` and safety-stop log forms in addition to ordinary epoch-boundary stops; no training state, metric, model parameter, or checkpoint selection was changed. The corrected verifier independently reproduced E25 and accepted the terminal boundary. Both 29-file E25 closure packages passed all 28 manifest checksums, source/A/B byte equality, selected-checkpoint preservation, completion-marker checks, and reconstructed-state verification after independent re-materialization.
+
+Relation is complete. E26–E30 were not run because doing so would violate the locked patience stop. Hard-Negative H01 is the next valid optimizer boundary. `INTERNAL_VAL`, external BOUN/IMST/Penn holdouts, and official TEST remain unopened.

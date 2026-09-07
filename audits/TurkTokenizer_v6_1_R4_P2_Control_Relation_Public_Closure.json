@@ -1,0 +1,64 @@
+{
+  "name": "TurkTokenizer v6.1 R4-P2 matched focal control Relation public closure",
+  "date": "2026-09-07",
+  "status": "RELATION_COMPLETE_HARDNEGATIVE_PENDING",
+  "variant": "R4_P2_MATCHED_FOCAL_CONTROL",
+  "control": {
+    "adapters_enabled": false,
+    "pcgrad_enabled": false,
+    "ranking_loss_enabled": false,
+    "seed": 51104
+  },
+  "relation_closure": {
+    "completed_epoch": 25,
+    "stop_reason": "patience_limit",
+    "patience": "9/9",
+    "epochs_after_closure_run": false,
+    "next_valid_stage": "hardnegative",
+    "next_valid_epoch": 1
+  },
+  "selected_relation": {
+    "epoch": 16,
+    "selection_score": 0.7907878133734935,
+    "calib_macro_f1": 0.8138250689857138,
+    "calib_min_family_f1": 0.7207207207207207,
+    "calib_uas": 0.883098211878875,
+    "calib_las": 0.7646688830982119,
+    "calib_objective_loss": 2.532315741325758,
+    "family_f1": {
+      "POSS_HEAD": 0.8255933952528381,
+      "OBJECT": 0.7207207207207207,
+      "PARTICIPLE_HEAD": 0.8347996089931574,
+      "CASE_GOVERNOR": 0.8741865509761388
+    }
+  },
+  "last_processed_relation": {
+    "epoch": 25,
+    "train_loss": 0.06828004862864212,
+    "calib_objective_loss": 3.238306219126009,
+    "selection_score": 0.7867416604441527,
+    "calib_macro_f1": 0.8093953392416869,
+    "calib_min_family_f1": 0.7151025899764548,
+    "calib_uas": 0.883951837541558,
+    "calib_las": 0.7642645341000989,
+    "overfit_streak": "0/3"
+  },
+  "verification": {
+    "independent_metric_recomputation": true,
+    "active_and_durable_state_match": true,
+    "terminal_event_verified": "STAGE_COMPLETE",
+    "independent_closure_packages": 2,
+    "files_per_closure_package": 29,
+    "manifest_checksums_per_package": 28,
+    "packages_re_materialized_and_verified": true
+  },
+  "publication_boundary": {
+    "corpora_included": false,
+    "serialized_lattice_included": false,
+    "checkpoint_or_optimizer_state_included": false,
+    "private_or_sealed_hashes_included": false
+  },
+  "internal_val_consumed": false,
+  "external_holdouts_consumed": false,
+  "official_test_consumed": false
+}

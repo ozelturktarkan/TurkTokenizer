@@ -1,4 +1,4 @@
-# Project status — 2026-09-05
+# Project status — 2026-09-07
 
 
 ## Reliable state
@@ -11,7 +11,7 @@
 - v6.0 R3-P2 is closed as `DROP_AFTER_SCREEN`; 10/12 paired CALIB gates
   passed, with two absolute family-regression gates missed.
 - v6.0 R3-P3 is closed as `DROP_AFTER_SCREEN`; v2 passed 3/12 gates and the R3 line is closed.
-- v6.1 R4-P1 is finalized as a reproducible fresh focal parent; its final decision is `DROP_AFTER_SCREEN`. The R4-P2 matched focal control is active; Relation E20 is complete and independently archived, and E21 is pending.
+- v6.1 R4-P1 is finalized as a reproducible fresh focal parent; its final decision is `DROP_AFTER_SCREEN`. The R4-P2 matched focal control remains active: Relation closed at E25 under the locked patience rule with E16 selected, and Hard-Negative H01 is pending.
 - `INTERNAL_VAL_CONSUMED = false`.
 - External BOUN/IMST/Penn holdouts and official TEST splits remain unopened.
 
@@ -66,9 +66,11 @@ The precommitted decision is `DROP_AFTER_SCREEN`: macro gain over A1 was only `+
 
 R4-P1 fulfilled its reconstruction role without becoming a promoted model. Two independent 37-file private final-closure packages were re-materialized; all 36 manifest checksums, source/A/B byte equality, closure artifacts, and reconstructed state passed. `INTERNAL_VAL`, external holdouts, and official TEST remain unopened.
 
-### R4-P2 matched focal control start
+### R4-P2 matched focal control progress
 
-The paired focal control is precommitted before its first optimizer step. It restores only the verified R4-P1 Syntax E24 parent at relation sampler boundary 27; Relation and Hard-Negative start fresh with seed `51104`, batch size `24`, and the unchanged R4-P1 focal trainer/objective. Adapters, PCGrad, and ranking loss are disabled. Relation and Hard-Negative each retain ceiling 50, patience 9, deterministic learning-rate schedules, and a symmetric `0/3` loss-divergence guard from E01/H01. The 16-file start boundary was independently re-materialized twice with all 15 manifest checksums verified. Relation E20 is the current boundary; E16 remains selected at score `0.79078781`. E20 produced TRAIN loss `0.0795`, gold-CALIB objective loss `2.91038724`, macro F1 `0.80978928`, minimum-family/OBJECT F1 `0.70925414`, `UAS=0.87999820`, `LAS=0.76017612`, and selection score `0.78478858`. It did not improve; patience reached `4/9`, halving LR from `0.0000625` to `0.00003125`. TRAIN rose and CALIB objective fell, resetting divergence from `1/3` to `0/3`. Both 28-file E20 packages passed all 27 checksums, source/A/B byte equality, checkpoint preservation, and reconstructed-state checks. E21 is pending. See [the control progress log](docs/TurkTokenizer_v6_1_R4_P2_Control_Progress.md).
+The paired focal control is precommitted before its first optimizer step. It restores only the verified R4-P1 Syntax E24 parent at relation sampler boundary 27; Relation and Hard-Negative start fresh with seed `51104`, batch size `24`, and the unchanged R4-P1 focal trainer/objective. Adapters, PCGrad, and ranking loss are disabled. Relation and Hard-Negative each retain ceiling 50, patience 9, deterministic learning-rate schedules, and a symmetric `0/3` loss-divergence guard from E01/H01. The 16-file start boundary was independently re-materialized twice with all 15 manifest checksums verified.
+
+Relation closed at E25 when the post-E16 non-improvement counter reached the locked `9/9` patience limit. E16 remains selected at score `0.79078781`, with macro F1 `0.81382507`, minimum-family/OBJECT F1 `0.72072072`, `POSS_HEAD=0.82559340`, `PARTICIPLE_HEAD=0.83479961`, `CASE_GOVERNOR=0.87418655`, `UAS=0.88309821`, and `LAS=0.76466888`. E25 itself produced TRAIN loss `0.0683`, gold-CALIB objective loss `3.23830622`, macro F1 `0.80939534`, minimum-family/OBJECT F1 `0.71510259`, `UAS=0.88395184`, `LAS=0.76426453`, and selection score `0.78674166`; divergence remained `0/3`. E26–E30 were not run because the authoritative patience stop had closed Relation. Both 29-file E25 closure packages passed all 28 manifest checksums, source/A/B byte equality, completion-marker, checkpoint-preservation, and reconstructed-state checks after independent re-materialization. Hard-Negative H01 is pending. See [the control progress log](docs/TurkTokenizer_v6_1_R4_P2_Control_Progress.md) and [public Relation closure summary](audits/TurkTokenizer_v6_1_R4_P2_Control_Relation_Public_Closure.json).
 
 ## Live v6.0 R2-P9 repair line
 
