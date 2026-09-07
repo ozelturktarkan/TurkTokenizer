@@ -70,8 +70,8 @@ Both 3,000-word pools and prior ambiguity/paired/relation diagnostics will run. 
 | v0.2.0 stage | Status |
 |---|---|
 | Verified parent, code, technical contracts, data partition | Complete |
-| Initial code/data/copied-model A/B gate | Pending |
-| New CALIB arm/alpha lock | Pending |
+| Initial code/data/copied-model A/B gate | Complete; corrected R2 is canonical |
+| New CALIB arm/alpha lock | Complete; repair-only R0 selected, alpha=0 |
 | Locked diagnostic evaluation | Pending |
 | Promotion | No automatic promotion |
 
@@ -80,3 +80,15 @@ Primary annotation references: [Turkish ccomp](https://universaldependencies.org
 ### Pre-CALIB technical revision R2
 
 Before the first new CALIB inference, a combined-scope contract found that inserting an internal clause head could intercept a native automatic outer converb attachment. The graph adapter now orders only outer predicate plans for this connector; a parent role/link supplies the internal clause's external edge. Original R1 code/manifest and A/B start records are preserved. Corrected R2 contracts passed; R2 initial A/B is the canonical boundary before CALIB. No model, gold or measured CALIB result was changed.
+
+### v0.2.0 CALIB lock
+
+The selected setting is repair-only R0 (alpha=0), under the preregistered canonical-role/declared-feature objective. The reused lexical score did not add an eligible strict improvement over R0 at any positive alpha. Zero adapter outputs matched M0 on all 128 CALIB sentences.
+
+| CALIB arm | Preferred, canonical+features | Preferred lemma+POS | Committed correct | Committed wrong | Abstained/missing |
+|---|---:|---:|---:|---:|---:|
+| M0 / ZERO / OLD1 | 659 | 807 | 530 | 369 | 509 |
+| BUDGET | 656 | 802 | 526 | 357 | 525 |
+| R0 and R with alpha 0.25/0.5/1/2 | 661 | 805 | 530 | 368 | 510 |
+
+The canonical preference gain is small, and lemma+POS alone regresses by two. Equal-budget BUDGET has fewer wrong commitments but also fewer correct commitments; the repair does not dominate every metric. This is a locked candidate for further checking, not a promotion or proof of general improvement. CHECK evaluation starts only after the calibrated A/B gate.
