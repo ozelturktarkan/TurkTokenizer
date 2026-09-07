@@ -96,9 +96,24 @@ All CALIB, protected examples, main regression, CHECK and reserve pools are alre
 |---|---|
 | Parent source/model verification | Complete; identical count model |
 | Arithmetic and native-output contracts | Passed |
-| Initial A/B checkpoint | Prepared before CALIB |
-| CALIB and safeguard selection | Pending |
+| Initial A/B checkpoint | Complete before CALIB |
+| CALIB and safeguard selection | Complete; G1 locked before retest |
 | Locked regression and contextual retest | Pending |
 | Repair acceptance | Pending |
 
 Private metrics/examples and reproducibility artifacts remain with the experiment. Public updates contain protocol/status and aggregate CALIB only.
+
+
+### v0.3.0 CALIB lock
+
+G1 (maximum J weight 8, tau 1) is the eligible locked selection. U0.5 is the eligible uniform-weight comparison. N0/N8/Q0 remain the preregistered controls. Higher-count settings that fail protected development guards are ineligible.
+
+| CALIB setting | Compatible preferred | Committed correct | Committed wrong |
+|---|---:|---:|---:|
+| N0 | 1,421 | 1,137 | 747 |
+| N8 | 1,870 | 1,779 | 622 |
+| Q0 | 1,417 | 1,148 | 756 |
+| U0.5 | 1,621 | 1,292 | 638 |
+| G1 | 1,744 | 1,634 | 647 |
+
+The denominator is 2,972 words throughout. These are observed development-selection measurements, not independent final results. The model and settings are fixed for the next retest.
