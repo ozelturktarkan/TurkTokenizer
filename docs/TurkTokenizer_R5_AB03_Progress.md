@@ -26,8 +26,8 @@ This narrow first arm adds TRAIN-estimated nonadjacent predicate–argument lemm
 | Independent contracts | Passed: native contracts, count arithmetic, 24 exhaustive configuration/path combinations and all max-marginals, bound endpoints, scope guard, candidate-order decision invariance |
 | TRAIN fit | Complete: one deterministic TRAIN count fit |
 | CALIB selection | Complete; alpha=0 fallback, locked before CHECK |
-| Locked diagnostic evaluation | Pending |
-| Promotion | No automatic promotion; AB00 remains default |
+| Locked diagnostic evaluation | Complete; private M0/ZERO/fixed-alpha diagnostic artifacts retained |
+| Promotion | NOT PROMOTED; CALIB selected zero, AB00 remains default |
 
 Only aggregate TRAIN/CALIB results and status are published here. Models, raw examples, private diagnostic measurements and full evaluation artifacts remain outside the public repository.
 
@@ -37,10 +37,18 @@ Sources: [Kiwi](https://github.com/bab2min/Kiwi#citation), [inspected SkipBigram
 
 ## TRAIN fit summary
 
-The frozen 3,278-reference fit produced 2,548 eligible dependency events and 2,299 distinct lemma pairs. With minimum support 2, 175 pairs receive a score (170 positive, 5 negative). Unseen/low-support pairs remain neutral. Counts alone do not establish selection quality; CALIB is next after the fitted A/B artifact gate.
+The frozen 3,278-reference fit produced 2,548 eligible dependency events and 2,299 distinct lemma pairs. With minimum support 2, 175 pairs receive a score (170 positive, 5 negative). Unseen/low-support pairs remain neutral. Counts alone do not establish selection quality. CALIB ran after the fitted A/B artifact gate.
 
 ## CALIB selection
 
 All preregistered alpha values (0, 0.25, 0.5, 1, 2) returned the same aggregate counts on the 1,520-word CALIB pool: 718 preferred analyses compatible with canonical role plus declared features, 575 correct committed choices, 409 incorrect committed choices, 536 abstentions/missing spans. Exact spans: 1,439; compatible candidate coverage: 1,080. These are not full-path accuracy measurements.
 
-No nonzero setting met the required strict improvement, so alpha=0 is frozen. The zero adapter matched native M0 outputs exactly on all 128 CALIB sentences. The preregistered alpha=1 diagnostic will still run, with no post-CHECK arm or threshold rescue.
+No nonzero setting met the required strict improvement, so alpha=0 is frozen. The zero adapter matched native M0 outputs exactly on all 128 CALIB sentences. The preregistered alpha=1 diagnostic was run, with no post-CHECK arm or threshold rescue.
+
+## v0.1.0 closure — 2026-09-07
+
+The bounded first AB03 experiment is complete and is not promoted. The selected alpha remains zero. All frozen inference/model/data identities and the separate stage gates were checked. The two 3,000-word regression pools and the locked diagnostic protocol were executed; detailed measurements stay private.
+
+The initial evaluator stopped on a serialization-only equality assertion (integer dictionary keys in live output versus string keys in JSON-loaded output). Stored zero-control outputs agreed. The frozen original evaluator was preserved; a recorded measurement runner canonicalizes JSON only for that equality check and reuses hash-verified completed M0 outputs. The model, alpha lock, gold labels, scoring and metric definitions did not change.
+
+CALIB evidence coverage was sparse: only 2 of 128 sentences had nonzero evidence in a retained configuration. Descriptive CALIB inspection identified nonfinite predicate/argument admission as a concrete follow-up question. This does not establish a general failure of distant context, nor does it justify combining AB02 automatically. A future isolated arm should distinguish a participle's external nominal/adjectival role from its internal verbal valency and test representation/plan changes separately from the learned distant score.
