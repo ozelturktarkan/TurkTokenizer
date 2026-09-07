@@ -185,3 +185,20 @@ Decision-preserving replay localizes most lost direct heads to final joint ranki
 The next repair should investigate relation-compatible morphological paths within shared sentence scoring and the stage at which valid alternatives disappear. Broader weight sweeps or blanket possessive bonuses are not established solutions. The decision-blind annotation review queue remains unadjudicated; no reference relabeling occurred. Full-sentence compatibility is reported separately from word accuracy and does not establish semantic correctness.
 
 Frozen identities, unchanged candidates/spans, fixed-reference factorial evidence and legacy-result reproduction passed their checks. Public details remain protocol/status and aggregate CALIB; private retest tables, examples and the reusable v0.4.0 evaluation stay in the experiment artifacts.
+
+
+## v0.5.0 preregistration — shared evidence in relation-plan proposals
+
+The v0.4.0 final A/B artifacts and all 274 manifested files were restored and verified. This repair keeps the same morphology, count model, native relation licenses, numerical structural scores and final sentence objective. There is no new fit or AB02/AB03 transfer.
+
+The diagnosed mismatch is in bounded proposal search: modifier combinations, role beams and local plan inventories can discard analysis-bound variants before seeing the unary evidence used in the final decoder. I8 changes the 12-plan inventory ranking to relation_weight * raw_plan_score plus bound unaries relative to each token's best unary. P8 applies the same priority earlier, to modifier combinations, role beams and best-support ranking. The native grammatical tests and raw plan scores are unchanged; unaries are not added to them and remain counted once in the final shared objective. Ngram remains absent from approximate proposal priority.
+
+Six fixed arms: N0, Q0, parent G8, I8, P8, and P0 (full proposal repair without the AB04 prior). Weight 8 and tau 1 remain fixed. The Q0 gate reference is unchanged for I8/P8. Search budgets stay at modifier limit 4, modifier-combination limit 32, role beam 24, local inventory 12 and up to 17 final configurations.
+
+CALIB selection is restricted to I8/P8 that pass the existing AB00 commitment/contextual/graph safeguards and also preserve parent G8 preferred count, wrong commitment, correct heads and exact labeled edges, with a strict preferred or exact-label gain. The declared preferred/correct/wrong tie-break ranking stays fixed. Fallback is G8 with no new repair selected. All six arms are predeclared retest diagnostics; none can replace the locked choice afterward.
+
+The 21 AB00 acceptance checks remain reported. Repair evidence is assessed separately against G8 for main/CHECK preferred counts, main/CHECK/reserve wrong commitments, contextual pairs/relations, and correct heads/exact labeled edges, requiring a strict relation gain. No automatic promotion follows an observed-set pass.
+
+Independent contracts recover a supported morphological path that a native one-state role beam discards, while retaining its raw structural score. Score-origin invariance, candidate-order invariance, grammatical case licensing, fixed gate evidence, raw candidate preservation and independent reconstruction of the once-counted final objective passed. Initial dual durable artifacts precede CALIB.
+
+All evaluation pools remain previously observed development material. No gold relabeling, unseen final test or official dev/test opening occurs. Publication remains protocol/status and aggregate CALIB only.
