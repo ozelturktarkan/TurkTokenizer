@@ -50,6 +50,13 @@ The authoritative current state is [STATUS.md](STATUS.md) and [TurkTokenizer_v6_
 
 The independent R5 morphology-selection experiments are tracked in [the AB02 progress log](docs/TurkTokenizer_R5_AB02_Progress.md), [the AB03 distant-context progress log](docs/TurkTokenizer_R5_AB03_Progress.md), [the AB04 multilevel-representation progress log](docs/TurkTokenizer_R5_AB04_Progress.md), and [the AB00-R1 base-candidate progress log](docs/TurkTokenizer_R5_AB00_R1_Progress.md). Each isolated arm starts from AB00/M0 and has its own TRAIN/CALIB protocol, separate from the v6/R4 architecture table above.
 
+The [R5 S02 development snapshot](docs/TurkTokenizer_R5_AB00_R1_S02_Decision.md)
+adds lossless span repairs, possessive-participle adjective candidates and
+contiguous phrase planning. Main diagnostic preference correctness rises from
+2,509 to 2,528 of 3,000; 31 of 32 CP1 comparisons pass. It remains experimental,
+with 222 of the prior existing-candidate selection failures unresolved. The
+[S02 source overlay](src/r5_s02/) accompanies the aggregate decision note.
+
 ## Scientific contract
 
 - Preserve raw surface text for lossless decoding; normalization is an analysis view, not a rewrite of user input.
