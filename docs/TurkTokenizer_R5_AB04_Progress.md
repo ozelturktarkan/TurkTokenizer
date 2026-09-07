@@ -172,3 +172,16 @@ All 19 preregistered runs are complete. Q-G8 (maximum weight 8, tau 1, Q final p
 Morphological counts share a denominator of 2,972 words. Graph counts describe an aligned partial graph, not full UAS/LAS. Exact labels include subtypes; old coarse-label metrics remain recorded separately. All these data are observed selection material.
 
 The fixed diagnostics are N0/N8/Q0, Q-U0.5, and the four native/Q by uniform/gated cells at weight 8. The setting and model are locked in dual durable artifacts before retest. There is no retest-based substitution or new weight extension.
+
+
+### v0.4.0 closure
+
+The eight locked retest diagnostics and row-level reconciliation are complete. Q-G8 exactly reproduces v0.3.0 G1 on the original morphology, contextual, commitment and graph measurements. It still fails the reserve wrong-commitment and correct-head guards; adding exact-label safeguards does not turn it into an accepted repair. There is no automatic promotion or post-retest setting substitution.
+
+At matched maximum weight, native versus Q final pruning has only a small observed difference and does not remove the remaining failure pattern. This contrast holds the Q0 gate reference fixed; it does not test changing that reference.
+
+Decision-preserving replay localizes most lost direct heads to final joint ranking, with another group lost in outer configuration pruning. Exact previously correct relations are distinguished from correct-head/wrong-label cases. Some lost paths involve different analyses within the same lemma/POS group; identical output features can also coexist with different lexeme/root identities. These are diagnostic associations, not evidence that all such analyses can safely be merged or that Q0 decisions should be copied.
+
+The next repair should investigate relation-compatible morphological paths within shared sentence scoring and the stage at which valid alternatives disappear. Broader weight sweeps or blanket possessive bonuses are not established solutions. The decision-blind annotation review queue remains unadjudicated; no reference relabeling occurred. Full-sentence compatibility is reported separately from word accuracy and does not establish semantic correctness.
+
+Frozen identities, unchanged candidates/spans, fixed-reference factorial evidence and legacy-result reproduction passed their checks. Public details remain protocol/status and aggregate CALIB; private retest tables, examples and the reusable v0.4.0 evaluation stay in the experiment artifacts.
