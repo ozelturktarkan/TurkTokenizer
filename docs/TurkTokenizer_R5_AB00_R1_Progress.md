@@ -1,6 +1,6 @@
 # R5 AB00-R1 base candidate progress
 
-Status: PRECOMMITTED — R1-F1 nonfinite feature propagation, v0.1.0.
+Status: COMPLETE — R1-F1 base candidate passes its observed paired guards; frozen-G8 integration retains regressions. No default promotion.
 
 AB00-R1 is an isolated R5 base candidate. The original AB00 and AB04 G8 remain the references; this experiment does not change the independent v6/R4 training line.
 
@@ -33,5 +33,28 @@ Mechanism checks are assistant-authored implementation checks, not an independen
 
 - Source A/B package equality and frozen parent inputs verified.
 - R1-F1 implemented; targeted feature and unchanged-path contracts passed.
-- Four-arm wide regression pending.
+- Four-arm wide regression completed; both original controls reproduced exactly.
 - Detailed data, models, local hashes and per-example diagnostics remain in the private reproducible package.
+
+## v0.1.0 result
+
+| CALIB arm | Compatible candidate | Correct preference | Correct committed | Wrong committed | Correct heads | Exact labeled edges |
+|---|---:|---:|---:|---:|---:|---:|
+| AB00 | 2055 | 1421 | 1137 | 747 | 431 | 233 |
+| R1 | 2072 | 1429 | 1144 | 739 | 431 | 233 |
+| AB00_G8 | 2055 | 1744 | 1634 | 647 | 437 | 254 |
+| R1_G8 | 2072 | 1753 | 1639 | 636 | 437 | 254 |
+
+R1-F1 repairs actual feature loss while retaining the licensed surface/path inventory. The base-only candidate passed all 32 precommitted paired development guards. In the main contextual regression, lemma/POS preference did not change; declared-feature candidate coverage and committed decisions improved. This is primarily a representation repair, not evidence of general semantic disambiguation.
+
+The frozen-G8 combination passed 30 of 32 paired guards. It improved compatible-candidate coverage and reduced wrong committed decisions in the observed CHECK and reserve diagnostics. However, some previously correct main-pool commitments became abstentions, and exact labeled-relation precision decreased. The original AB00 and G8 remain the defaults.
+
+The component audit found a concrete representation/model interaction: newly retained Voice values change path keys. Some competing analyses lose an old negative prior because the frozen count model has insufficient support for the corrected key; correct preferences remain, but margins shrink. The experiment neither lowered the threshold nor refitted the model after observing these cases.
+
+Final checks reconciled row counts, reproduced original controls, and verified lossless surfaces, candidate-bound graph endpoints, and the restricted feature changes. Mechanism contracts and observed regressions do not establish independent generalization.
+
+## Next isolated work
+
+Continue the base candidate with reviewed candidate-generation gaps and inflection-group representation. Missing lemma candidates must be separated from lemma-convention and alignment mismatches. After stabilizing the representation, rebuilding AB04 counts on authorized TRAIN only is a separate adaptation experiment; preserve this frozen-model comparison.
+
+The reproducible private closure contains the source, frozen protocol, outputs, error-review ledgers and A/B packages. Sealed evaluation remains unopened.
