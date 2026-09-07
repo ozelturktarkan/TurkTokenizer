@@ -76,3 +76,29 @@ Frozen diagnostic evaluation and row-level reconciliation are complete. Original
 The private evaluation distinguishes aggregate selection gains from damage to contextual readings, commitment behavior and partial-graph coverage. A possible subsequent experiment would address conflict between learned priors and sentence relations, with contextual safeguards declared before selection. No such repair or post-CHECK retuning is part of v0.2.0.
 
 This CHECK is now observed development material. Its earlier AB03 TRAIN exposure remains disclosed above; it must not be reused as a globally unseen final test. Detailed private results, examples, model and reproducibility records are retained with the experiment.
+
+
+## v0.3.0 preregistration — pruning and contextual-prior conflict
+
+This is an isolated repair on the identical v0.2.0 whole-word/path count model. No additional model fit, AB02/AB03 parameter transfer, morphology change or new compound inventory is introduced.
+
+Two changes are separated. Q ranks partial plans using bound unary scores relative to each token's best unary, equivalent to completing all unbound tokens with their best unary and dropping one common sentence constant. This removes a score-origin dependence from native partial-plan pruning; it does not make the bounded search exact.
+
+G obtains a Q0 reference sentence solution. If the strongest whole-word/path prior groups disagree with the reference preferred lemma/POS, the prior is scaled by tau/(tau+d), where d is the reference max-marginal gap against the prior-best groups. Every finite gap retains positive evidence. The final sentence is jointly decoded again; reference choices and relations are not hard-bound or spliced into the result.
+
+Controls are native AB00 (N0), exact old J8 (N8), pruning-only Q0, uniform repaired-pruning J weights (U), and contextual gating (G). U weights and G tau values are 0.5/1/2/4/8; G has maximum prior weight 8. The uniform controls test whether simply weakening priors explains the effect.
+
+CALIB selection now requires the predeclared observed paired/relation/ambiguity/retention safeguards as well as aggregate preferred and committed-decision criteria. The main 22 pairs remain outside this setting selection. The repair cannot be rescued by switching to a diagnostic arm after retest.
+
+All CALIB, protected examples, main regression, CHECK and reserve pools are already observed project development material. The old count model still excludes its CALIB/CHECK, whose prior AB03 TRAIN exposure remains disclosed. This is a controlled repair/retest, not a new unseen final evaluation. Official dev/test remain unopened.
+
+| v0.3.0 stage | Status |
+|---|---|
+| Parent source/model verification | Complete; identical count model |
+| Arithmetic and native-output contracts | Passed |
+| Initial A/B checkpoint | Prepared before CALIB |
+| CALIB and safeguard selection | Pending |
+| Locked regression and contextual retest | Pending |
+| Repair acceptance | Pending |
+
+Private metrics/examples and reproducibility artifacts remain with the experiment. Public updates contain protocol/status and aggregate CALIB only.
