@@ -76,3 +76,7 @@ Both 3,000-word pools and prior ambiguity/paired/relation diagnostics will run. 
 | Promotion | No automatic promotion |
 
 Primary annotation references: [Turkish ccomp](https://universaldependencies.org/tr/dep/ccomp.html), [acl](https://universaldependencies.org/tr/dep/acl.html), [VerbForm](https://universaldependencies.org/tr/feat/VerbForm.html). Public updates remain limited to protocol/status and aggregate TRAIN/CALIB information.
+
+### Pre-CALIB technical revision R2
+
+Before the first new CALIB inference, a combined-scope contract found that inserting an internal clause head could intercept a native automatic outer converb attachment. The graph adapter now orders only outer predicate plans for this connector; a parent role/link supplies the internal clause's external edge. Original R1 code/manifest and A/B start records are preserved. Corrected R2 contracts passed; R2 initial A/B is the canonical boundary before CALIB. No model, gold or measured CALIB result was changed.
