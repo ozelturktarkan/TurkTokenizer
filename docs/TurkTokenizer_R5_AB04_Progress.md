@@ -220,3 +220,18 @@ I8 improves graph counts while reducing compatible preferences and increasing wr
 | Q0 | 1417 | 1148 | 756 | 447 | 243 | No |
 
 Morphology uses the same 2,972-word denominator and unchanged reference mapping. Graph counts are partial aligned structures, not full parser UAS/LAS. Calibrated A/B artifacts precede retest; observed development evidence is not final generalization proof.
+
+
+### v0.5.0 closure
+
+All six locked diagnostic retests and the final reconciliation are complete. N0/Q0/G8 reproduce their prior results. The selected fallback remains G8; neither repair is promoted after retest.
+
+P8 shows a useful observed improvement in word preferences, main/CHECK wrong commitments, contextual-pair coverage and partial relation graphs. Previously lost exact possessive links are recovered. It still fails the protected committed-correct relation safeguard and reserve wrong-commitment safeguard. The auxiliary main-pool all-declared-features committed count also regresses, despite the lemma/POS and relation gains. That auxiliary metric was recorded throughout but was not one of the preregistered acceptance gates; a future morphological-path repair should protect it explicitly.
+
+The protected regression includes correct preferences becoming abstentions under the unchanged margin. The feature-count change includes both abstentions and feature mismatches with correct lemma/POS; these outcomes are kept distinct. No threshold was lowered, no gold label changed, and no reference decision was copied to make the repair pass.
+
+I8 alone provides a smaller graph benefit with adverse commitment tradeoffs; the early proposal stages therefore matter to the observed P8 behavior. P0 is retained as the without-prior control. These are controlled observed-development results, not proof of a flawless or complete analyzer.
+
+The native grammatical method bodies were verified identical outside the three intended sort calls. The saved CHECK final objectives were independently reconstructed with one unary contribution per token, and raw candidates/spans, fixed Q0 gate evidence and all stated search budgets were preserved. Detailed recovery/loss cases and feature transitions are in the reproducibility artifacts.
+
+The next research question is how to retain P8's relation gains while protecting fine morphological features and calibrating commitments under the changed search. It must be a separately preregistered comparison with coverage and wrong-commitment safeguards, not an adjustment chosen only to pass known examples. Official dev/test remain unopened; public content remains protocol/status and aggregate CALIB only.
