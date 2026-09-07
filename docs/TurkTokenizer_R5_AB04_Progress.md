@@ -14,8 +14,12 @@ The design is inspired by the multigranular surface/dictionary-form examples in 
 |---|---|
 | Independent AB00 source and implementation | Complete |
 | Technical raw/path contracts | Passed |
-| Initial A/B gate | Being finalized before full regression |
-| Two 3,000-word regression controls | Pending |
+| Initial A/B gate | Complete before full regression |
+| Two 3,000-word regression controls | Complete; original morphology and native contextual outputs unchanged |
 | Accuracy claim | None; initial view has no selection or coverage gain |
 
 A subsequent isolated experiment must show which existing coverage/selection errors receive new usable information from independently verified whole-word/derivation features. That requires TRAIN/CALIB selection and a new CHECK. Simply exporting richer JSON does not count as a successful accuracy improvement. Private regression examples and measurements remain in experiment artifacts; this page publishes protocol/status only.
+
+## v0.1.0 foundation closure
+
+The raw-text/candidate-path representation checks and frozen regression protocol are complete. Candidate IDs and complete native decisions were preserved; realization-process consistency was checked without treating it as linguistic gold. The component inventory remains empty. This foundation is retained for the next independently preregistered coverage/selection experiment. It supplies no accuracy gain by itself. Source identities and verified A/B artifacts are retained privately.
