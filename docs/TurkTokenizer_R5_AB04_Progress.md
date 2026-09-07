@@ -39,10 +39,16 @@ Practical acceptance requires at least +1 percentage point on main/CHECK preferr
 | v0.2.0 stage | Status |
 |---|---|
 | Implementation, independent contracts, partition | Complete before fit |
-| Initial A/B gate | Being finalized before fit |
-| Single deterministic TRAIN count fit | Pending |
+| Initial A/B gate | Complete before fit |
+| Single deterministic TRAIN count fit | Complete; model frozen before CALIB |
 | CALIB selection | Pending |
 | Locked diagnostic evaluation | Pending |
 | Acceptance and view attribution | Pending |
 
 Public updates remain protocol/status and aggregate TRAIN/CALIB only. Private diagnostic metrics, raw examples and models remain in experiment artifacts.
+
+### v0.2.0 TRAIN fit
+
+The deterministic count fit processed 86,422 nonpunctuation words. It used 62,919 aligned words with at least one original candidate compatible with canonical role and declared features; 17,263 had no compatible candidate and 6,240 lacked an exact span. These exclusions are supervision limits, not solved errors.
+
+The model contains 21,074 whole-word types. Flat/coarse/fine patterns total 1,507/4,290/8,259; with the minimum five-opportunity gate, supported patterns are 736/1,437/1,900. Counts alone do not establish accuracy. The fitted A/B record precedes CALIB inference.
