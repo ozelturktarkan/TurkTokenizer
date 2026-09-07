@@ -58,3 +58,15 @@ Final checks reconciled row counts, reproduced original controls, and verified l
 Continue the base candidate with reviewed candidate-generation gaps and inflection-group representation. Missing lemma candidates must be separated from lemma-convention and alignment mismatches. After stabilizing the representation, rebuilding AB04 counts on authorized TRAIN only is a separate adaptation experiment; preserve this frozen-model comparison.
 
 The reproducible private closure contains the source, frozen protocol, outputs, error-review ledgers and A/B packages. Sealed evaluation remains unopened.
+
+## v0.2.0 coverage repair preregistration
+
+Status: IMPLEMENTED — fixed comparison pending. No default promotion.
+
+The next candidate extends R1-F1 with six explicit repairs: voiced imperative stems after zero TAM; possibility/ability scope after negation; restricted copular paths for questions, negative copula and postpositions; explicit abbreviation metadata and pronunciation-conditioned suffixes; a bound possessive root licensed by dictionary metadata; and one reviewed lexical vowel-drop attribute.
+
+The four fixed arms are P1 (v0.1.0 N0), C2 (combined v0.2.0 N0), P1_G8 and C2_G8. G8 code, count model, weight 8, tau 1 and Q0 gate remain fixed. Both P1 controls must reproduce their saved v0.1.0 results. All six isolated repairs are additionally screened on CALIB with N0 only; this is diagnostic and does not authorize selecting a new combined candidate after retest.
+
+Gold labels, primary matchers, corpus sizes and annotation bridges stay fixed. Surface/path coverage may change in this experiment and is audited explicitly. Correct preference, compatible-candidate coverage, correct/wrong committed decisions, relations, opposing-use pairs and sentence consistency remain distinct. Root/lexical-lemma convention conflicts are recorded without injecting aliases or changing labels to count them as new successes.
+
+No training, threshold tuning, sealed evaluation or automatic promotion is part of this comparison. Local mechanism cases are implementation contracts, not independent linguistic adjudication. Full source, protocol and per-example evidence remain in the private reproducible package.
