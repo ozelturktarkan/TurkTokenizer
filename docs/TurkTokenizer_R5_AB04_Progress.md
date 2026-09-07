@@ -98,8 +98,8 @@ All CALIB, protected examples, main regression, CHECK and reserve pools are alre
 | Arithmetic and native-output contracts | Passed |
 | Initial A/B checkpoint | Complete before CALIB |
 | CALIB and safeguard selection | Complete; G1 locked before retest |
-| Locked regression and contextual retest | Pending |
-| Repair acceptance | Pending |
+| Locked regression and contextual retest | Complete; original native and J8 outputs reproduced |
+| Repair acceptance | G1 not accepted; reserve-decision and correct-head guards remain unmet |
 
 Private metrics/examples and reproducibility artifacts remain with the experiment. Public updates contain protocol/status and aggregate CALIB only.
 
@@ -117,3 +117,14 @@ G1 (maximum J weight 8, tau 1) is the eligible locked selection. U0.5 is the eli
 | G1 | 1,744 | 1,634 | 647 |
 
 The denominator is 2,972 words throughout. These are observed development-selection measurements, not independent final results. The model and settings are fixed for the next retest.
+
+
+### v0.3.0 closure
+
+The locked G1 repair improves the previously damaged contextual-pair and protected-relation behavior and passes those guards. Full acceptance is still not met: the reserve wrong-commitment and correct-head-count guards fail. The selected setting and count model remain unchanged; no automatic promotion occurs.
+
+The uniform U0.5 diagnostic meets the predeclared retest criteria, but it is not substituted for G1 after viewing results. It is retained as a separate research candidate. The pruning-only control fixes score-origin dependence without establishing a broad accuracy gain; its interaction with the gate is not fully isolated by this experiment.
+
+Post-lock inspection separates newly committed reserve errors, legacy annotation/representation differences, and partial-graph coverage losses. No gold relabeling or inference retuning was performed to remove failed gates. Further work should validate annotation mappings and address phrase/possessive relation coverage before another weight search.
+
+Frozen-file identities, original native/J8 reproduction, row-level metric reconciliation, private evaluation and reproducibility artifacts are complete. All outcomes remain observed development evidence rather than unseen final-test claims.
