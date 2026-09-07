@@ -52,3 +52,27 @@ The bounded first AB03 experiment is complete and is not promoted. The selected 
 The initial evaluator stopped on a serialization-only equality assertion (integer dictionary keys in live output versus string keys in JSON-loaded output). Stored zero-control outputs agreed. The frozen original evaluator was preserved; a recorded measurement runner canonicalizes JSON only for that equality check and reuses hash-verified completed M0 outputs. The model, alpha lock, gold labels, scoring and metric definitions did not change.
 
 CALIB evidence coverage was sparse: only 2 of 128 sentences had nonzero evidence in a retained configuration. Descriptive CALIB inspection identified nonfinite predicate/argument admission as a concrete follow-up question. This does not establish a general failure of distant context, nor does it justify combining AB02 automatically. A future isolated arm should distinguish a participle's external nominal/adjectival role from its internal verbal valency and test representation/plan changes separately from the learned distant score.
+
+## v0.2.0 preregistration — internal nonfinite clauses
+
+Status: implementation/contracts complete; new CALIB inference pending. This remains an isolated AB00-based AB03 experiment. No AB01/AB02 weights are imported. The verified v0.1.0 175-pair TRAIN model is reused byte-for-byte; there is no new fit, epoch loop, or random seed.
+
+The repair retains a Part/Vnoun candidate's original NOUN/ADJ output, morphology features and analysis ID while opening an internal verbal frame. Possessor-marked predicates can take a compatible overt genitive subject; native verb frames supply object/oblique cases and voice behavior. A small inherent-agreement lookup for personal pronoun lemmas supplements missing candidate Person metadata without rewriting candidates. No relative/control subject is invented.
+
+One internal clause is permitted per extra configuration. Its interior is removed from the outer argument scope; the clause head remains shared by the same analysis ID. Only that introduced clause receives clausal external labels. Prefix scope hypotheses are bounded and heuristic: maximum gap 12, maximum 8 hypotheses per block. All original M0 configurations survive, with at most 16 additional configurations (total maximum 33).
+
+Controls: M0, disabled ZERO adapter, native equal-budget BUDGET (33 configurations), previous OLD1, repair-only R0, and repair+lexical R1. Alpha grid 0/0.25/0.5/1/2 is calibrated on new BOUN TRAIN sentences. Repair eligibility requires nonregressing preferred/correct/wrong counts and a strict improvement over M0. Positive alpha additionally must improve without regression over R0. Otherwise fall back to M0. Margin stays 2.5.
+
+New CALIB has 128 sentences and 1,408 nonpunctuation words, balanced across bio/ess/news/pop. A separately partitioned CHECK remains unopened until the arm/alpha lock is durable. Prior AB02/AB03 pools, IMST TRAIN, original diagnostics and new synthetic probes are excluded by exact/near-duplicate checks. Document independence is not proved; official dev/test and sealed evaluation remain unopened.
+
+Both 3,000-word pools and prior ambiguity/paired/relation diagnostics will run. A predeclared 40-case synthetic mechanism suite measures target-edge selection versus complete expected-edge availability in retained configurations. It is not human-adjudicated full-tree gold and is not used to select alpha.
+
+| v0.2.0 stage | Status |
+|---|---|
+| Verified parent, code, technical contracts, data partition | Complete |
+| Initial code/data/copied-model A/B gate | Pending |
+| New CALIB arm/alpha lock | Pending |
+| Locked diagnostic evaluation | Pending |
+| Promotion | No automatic promotion |
+
+Primary annotation references: [Turkish ccomp](https://universaldependencies.org/tr/dep/ccomp.html), [acl](https://universaldependencies.org/tr/dep/acl.html), [VerbForm](https://universaldependencies.org/tr/feat/VerbForm.html). Public updates remain limited to protocol/status and aggregate TRAIN/CALIB information.
