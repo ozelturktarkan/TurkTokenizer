@@ -119,8 +119,8 @@ The practical success criterion is at least +1 percentage point on both the fixe
 | Initial A/B gate | Complete before TRAIN fit |
 | TRAIN fit | Complete; one deterministic fit per estimator |
 | CALIB selection | Complete; E alpha=8 locked; C/D fail independent eligibility |
-| Locked diagnostic evaluation | Pending |
-| AB03/AB04 decision | Pending |
+| Locked diagnostic evaluation | Complete; practical improvement criterion failed |
+| AB03/AB04 decision | Close this bounded AB03 lexical line; start independent AB04 |
 
 Public updates remain limited to protocol/status and aggregate TRAIN/CALIB. Private CHECK and regression measurements, examples and models are retained in the experiment artifacts.
 
@@ -140,3 +140,11 @@ The eligible setting is E with alpha=8. The native repair-only adapter matched t
 | D8 | 1389 | 1120 | 757 | 119 anchor-evidence sentences |
 
 The selected improvement is small. Broader evidence coverage does not establish useful discrimination. C8 trades away correct commitments; D8 increases wrong commitments. No parameter or threshold will be changed after the lock. Diagnostic evaluation follows the calibrated A/B gate.
+
+## v0.3.0 closure — 2026-09-07
+
+The selected E8 arm did not meet the preregistered practical improvement and nonregression gates. The locked diagnostic controls also supplied no basis for a CHECK-driven rescue. Expanded data, role/case conditional evidence and candidate-unanimous distant roots increased evidence reach, but this did not establish the required generalizing accuracy gain. The new lexical additions are not promoted.
+
+The useful v0.2.0 structural repair remains archived separately. AB00 stays unchanged. This result closes the bounded lexical approaches tested here; it does not establish that all distant-context models are ineffective. Frozen sources, model/selection locks and stored row-level aggregates were reconciled. Private evaluation measurements and examples remain in the final A/B artifacts.
+
+The next independent arm is [AB04 multilevel representation](TurkTokenizer_R5_AB04_Progress.md). It begins with lossless surface/candidate-path contracts and explicit component provenance, then requires a separately controlled coverage/selection experiment. A representation view alone is not an accuracy gain.
