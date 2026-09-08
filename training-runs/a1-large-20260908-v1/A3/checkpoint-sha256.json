@@ -3,7 +3,7 @@
   "artifacts": {
     "weights": {
       "file": "weights.checkpoint",
-      "sha256": "0f6a9b11e5354825650bb66eb9f5f633e67dccbc510fa26ea43a3d8c9ca2808a",
+      "sha256": "0902de774ee99867ae71f07b1afa21404ade5077893b30f246bae5886d57a2f7",
       "bytes": 542
     },
     "a1_ranker": {
@@ -13,13 +13,13 @@
     },
     "trainer_state": {
       "file": "trainer_state.checkpoint",
-      "sha256": "6830f3cbf590f15e432b7ff87e5222dc11e03f17116e806a89eda0e25d83b097",
-      "bytes": 1379
+      "sha256": "cad1cc898cd6426e2b3470a851b367f95b875633810fa8bd56ccf0a80ef6c698",
+      "bytes": 1371
     },
     "audit": {
       "file": "audit.checkpoint",
-      "sha256": "bf0c514563a10c27644d3fcfbe7e1f027d6252a3b53e06c3d92bf14e7c7eb8b7",
-      "bytes": 1225
+      "sha256": "6400bb4ff408f081df9bc0468e23ea2e10157c0726cdeff69fb2a558f649b7ee",
+      "bytes": 1224
     },
     "fixed_probes": {
       "file": "fixed_probes.checkpoint",
@@ -27,5 +27,5 @@
       "bytes": 36418
     }
   },
-  "state_sha256": "6b1d906c820d7ee756844705f0d602cb361f92496883e1a836e35849e0b8ecf3"
+  "state_sha256": "54cdead03aecfb385ef320dca36ad57adeb8de82a3bc00db54f82f2da98e82f7"
 }
