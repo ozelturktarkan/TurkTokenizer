@@ -1,0 +1,69 @@
+{
+  "E00": {
+    "counts": {
+      "aligned": 4056,
+      "gold_projectable": 3973,
+      "candidate_lemma_pos": 3420,
+      "candidate_declared_features": 3376,
+      "preferred_lemma_pos": 3169,
+      "preferred_declared_features": 3037,
+      "legacy_selected": 3646,
+      "legacy_selected_lemma_correct": 3041,
+      "legacy_selected_feature_correct": 2917,
+      "A2_eligible": 3536,
+      "words": 4070,
+      "legacy_selected_lemma_wrong": 605,
+      "legacy_selected_feature_wrong": 729,
+      "preferred_lemma_pos_pct_all_words": 77.86240786240786,
+      "preferred_declared_features_pct_all_words": 74.61916461916462,
+      "unresolved_projection_words": 97,
+      "unaligned_words": 14
+    },
+    "verified_objective_blocks": 368,
+    "train_loss": 0.12068688221106541,
+    "dev_loss": 0.3682383756621852
+  },
+  "E01": {
+    "counts": {
+      "aligned": 4056,
+      "gold_projectable": 3973,
+      "candidate_lemma_pos": 3420,
+      "candidate_declared_features": 3376,
+      "preferred_lemma_pos": 3172,
+      "preferred_declared_features": 3039,
+      "legacy_selected": 3638,
+      "legacy_selected_lemma_correct": 3037,
+      "legacy_selected_feature_correct": 2913,
+      "A2_eligible": 3532,
+      "words": 4070,
+      "legacy_selected_lemma_wrong": 601,
+      "legacy_selected_feature_wrong": 725,
+      "preferred_lemma_pos_pct_all_words": 77.93611793611794,
+      "preferred_declared_features_pct_all_words": 74.66830466830467,
+      "unresolved_projection_words": 97,
+      "unaligned_words": 14
+    },
+    "verified_objective_blocks": 368,
+    "epoch": 1,
+    "train_examples_seen": 55129,
+    "train_loss": 0.1398032102851554,
+    "dev_loss": 0.36452500112912617,
+    "safety_passed": true,
+    "safety_reference_epoch": 0
+  },
+  "checkpoint_verification": {
+    "copy-a-E00": true,
+    "copy-b-E00": true,
+    "copy-a-E01": true,
+    "copy-b-E01": true
+  },
+  "selection": {
+    "status": "PAUSED_AT_REQUESTED_EPOCH",
+    "selected_epoch": 1,
+    "selected_model_sha256": "7148382ebf7ca7fc8b805de48752ce0e17d0222ef9b6e967614ca13815af3a25",
+    "latest_epoch": 1,
+    "A3_started": false,
+    "A2_started": false,
+    "default_promoted": false
+  }
+}
