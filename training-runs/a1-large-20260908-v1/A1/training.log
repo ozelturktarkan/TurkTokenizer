@@ -5,3 +5,4 @@ A1 E04/70 train_loss=0.13218937 dev_loss=0.36440889 DEV=3170/4070 patience=3/9 o
 A1 E05/70 train_loss=0.13071325 dev_loss=0.36500361 DEV=3173/4070 patience=0/9 overfit=0/3 best=E5 stop=None
 A1 E06/70 train_loss=0.129229 dev_loss=0.36288658 DEV=3170/4070 patience=1/9 overfit=0/3 best=E5 stop=None
 A1 E07/70 train_loss=0.12810715 dev_loss=0.36395321 DEV=3169/4070 patience=2/9 overfit=0/3 best=E5 stop=None
+A1 E08/70 train_loss=0.12722369 dev_loss=0.36632813 DEV=3170/4070 patience=3/9 overfit=0/3 best=E5 stop=None
