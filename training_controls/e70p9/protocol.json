@@ -1,0 +1,46 @@
+{
+  "version": "A123-E70-P9-OF3-v1",
+  "status": "PREPARED_FOR_NEXT_EPOCH_TRAINER",
+  "stages": ["A1", "A3", "A2"],
+  "epoch_stages": ["A1", "A3"],
+  "epoch_definition": "One complete pass over the fixed training examples; for A3, remine with the full decoder before the next pass. An L-BFGS iteration is not an epoch.",
+  "max_epochs_per_stage": 70,
+  "patience": 9,
+  "best_metric": "Fixed DEV full-decoder lemma+POS correct count; denominator must remain fixed",
+  "best_rule": "Strict increase in DEV correct count and trainer safety checks pass; ties do not reset patience",
+  "overfitting": {
+    "first_monitored_epoch": 21,
+    "consecutive_signals": 3,
+    "signal": "TRAIN mean loss decreases AND DEV mean loss increases versus previous epoch AND DEV correct count is below best safe count",
+    "loss_epsilon": 1e-8,
+    "reset_on_absent_signal": true
+  },
+  "on_stop": "Freeze and return the best safe checkpoint, including at E70 or patience exhaustion",
+  "A2": "One calibration stage after the chosen A1/A3 checkpoint is frozen; CALIB only, no artificial epochs",
+  "TEST": "Never used for early stopping, best-checkpoint choice or threshold tuning. The observed A123-v1 TEST is not a new unseen test for the next study.",
+  "backup": {
+    "root": "V:\\TurkTokenizer\\Yedekler\\A123-E70-P9-OF3",
+    "copies": ["copy-a", "copy-b"],
+    "keep_latest_epochs_per_copy": 2,
+    "keep_best_checkpoint_per_copy": true,
+    "verify": "SHA-256 for every artifact in both copies before committing state",
+    "minimum_free_bytes_after_write": 5368709120,
+    "failure_policy": "Stop safely on missing V drive, insufficient space or backup verification failure; never silently fall back to C",
+    "same_drive_copies_are_independent_hardware_backups": false
+  },
+  "github": {
+    "remote": "https://github.com/ozelturktarkan/TurkTokenizer.git",
+    "branch_prefix": "codex/e70-p9-logs/",
+    "publish_every_completed_epoch": true,
+    "contents": ["state.json", "metrics.jsonl", "training.log", "checkpoint-sha256.json"],
+    "weights_uploaded": false,
+    "git_objects_and_pending_commits_on": "V",
+    "push_failure_policy": "Keep the commit locally and retry on the next epoch or explicit sync; report unsynced state"
+  },
+  "integration": {
+    "old_fit_a1_or_fit_a3_changed": false,
+    "running_A123_v1_modified": false,
+    "hook_required": "Call EpochRun.complete_epoch with real full-pass metrics and complete weight/state artifacts; load the returned best checkpoint when stop is true",
+    "new_training_started": false
+  }
+}
