@@ -3,19 +3,19 @@
   "artifacts": {
     "weights": {
       "file": "weights.checkpoint",
-      "sha256": "849615512f76b306b6c828970640e31c89bebe68d4cee98c3ede89956b44f968",
-      "bytes": 22721600
+      "sha256": "a111f0f4789492aff1e6885b149eef8260772c84047080d9bcf1d2b8b189ce92",
+      "bytes": 22720277
     },
     "trainer_state": {
       "file": "trainer_state.checkpoint",
-      "sha256": "0f67d4cd3049cba119b71320e2d5fa466bf385550a778fa7aa82192c3d9e8247",
-      "bytes": 5326142
+      "sha256": "836f1ed3fad10a81bca645f5a0f9a8bf9bc05bd05f672bf196271ac0cf622c29",
+      "bytes": 5325759
     },
     "audit": {
       "file": "audit.checkpoint",
-      "sha256": "d785e14720826f2bd168680c5747d5cf99daf1a8bf132a075c8c268e14f5032b",
-      "bytes": 867
+      "sha256": "2b4ec16558bb54a6846a3f4f7ee95ebe7be0d7cad4dd905aa29705b10568841b",
+      "bytes": 865
     }
   },
-  "state_sha256": "3ecadf4bbcc9c70279a445e7d54240170daf5258d55c5d392cc9601ad7dd7a04"
+  "state_sha256": "82cf77d9d7bb80c5960e5e1f2215f87f54cc5d48fb48facdf004c16529e605d3"
 }
