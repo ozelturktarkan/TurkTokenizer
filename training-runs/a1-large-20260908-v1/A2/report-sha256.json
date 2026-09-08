@@ -1,0 +1,12 @@
+{
+  "backup-receipt.json": "dfd42e87cb1ad762571619b0b2ab2d1e82b22c2100ee5cdb3b570f6f86033b0d",
+  "calibration.log": "edccb3b9e7b086c12f9abd8c9c42b0fdd20064ecf97b7aa46540e2ad5e3123f0",
+  "diagnosis.json": "374657b55c544e22ae5ce2863742419ec3455799d5e0d48c4ca5af18b8d69b10",
+  "final-report.md": "2042755d1e78d9fb2888f3acd5945fff393bed158da57711efea227aa9066bc4",
+  "final-summary.json": "d66c6b056b3b7067c9be09ac90b537f55da9e2e8d3bede6cc0cd4ea4dbad45cb",
+  "freeze.json": "6a9614336081efb9217a8ca330d879830338db5c539465261a56b44a9257ce73",
+  "progress.json": "70ee287735f451cc56082421491ecb9548831a8319cde97b565f9a34269f8c53",
+  "selection.json": "273dac502457a77e566bdd1050c10fa6f1e5e46deff02e2d8ce88ee584f0948d",
+  "summary.json": "0e462e9930ec37c52f83ac349d60c689a3dbe62ce932abd37476b3129f435d47",
+  "threshold-grid.json": "b77f3f416ea7a9dfd57c74af82e64577dd0626973c3fd7f1da6097ef7a371dc1"
+}

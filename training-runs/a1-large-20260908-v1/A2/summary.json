@@ -1,0 +1,88 @@
+{
+  "run_id": "a1-large-20260908-v1",
+  "stage": "A2",
+  "selection": {
+    "status": "TARGET_INFEASIBLE_ON_PREDECLARED_GRID",
+    "config": null,
+    "A1_model_sha256": "eed03755d0026c36b055f68ba18daf7188037cbac85265b24add5c2c7a182ff2",
+    "A3_model_sha256": "d0537300fa21b9e94e70bb0bf3e96a8d3386cab2f57d6e863c53fa5d5446f336",
+    "freeze_sha256": "6a9614336081efb9217a8ca330d879830338db5c539465261a56b44a9257ce73",
+    "TEST_opened": false,
+    "default_promoted": false,
+    "ranking_changed": false
+  },
+  "sentences": 382,
+  "baseline_counts": {
+    "aligned": 2261,
+    "gold_projectable": 2228,
+    "candidate_lemma_pos": 1953,
+    "candidate_declared_features": 1934,
+    "preferred_lemma_pos": 1738,
+    "preferred_declared_features": 1669,
+    "legacy_selected": 1999,
+    "legacy_selected_lemma_correct": 1623,
+    "legacy_selected_feature_correct": 1554,
+    "A2_eligible": 1933,
+    "words": 2266,
+    "legacy_selected_lemma_wrong": 376,
+    "legacy_selected_feature_wrong": 445,
+    "preferred_lemma_pos_pct_all_words": 76.69902912621359,
+    "preferred_declared_features_pct_all_words": 73.6540158870256,
+    "unresolved_projection_words": 38,
+    "unaligned_words": 5
+  },
+  "zero_threshold": {
+    "thresholds": {
+      "lemma_threshold": 0,
+      "feature_threshold": 0
+    },
+    "words": 2266,
+    "aligned": 2261,
+    "accepted": 1933,
+    "lemma_correct": 1587,
+    "feature_correct": 1525,
+    "lemma_wrong": 346,
+    "feature_wrong": 408,
+    "accepted_aligned_coverage_pct": 85.49314462627156,
+    "accepted_all_word_coverage_pct": 85.3045013239188,
+    "lemma_precision_pct": 82.10036213140197,
+    "feature_precision_pct": 78.89291257113295,
+    "lemma_precision_wilson95": [
+      80.32826429240714,
+      83.74512665801278
+    ],
+    "feature_precision_wilson95": [
+      77.01737247834744,
+      80.65384242223199
+    ],
+    "full_morpheme_path_accuracy_measured": false
+  },
+  "selected": null,
+  "grid_pairs": 121,
+  "feasible_pairs": 0,
+  "checks": {
+    "objective_blocks": 539,
+    "candidate_records": 6528,
+    "online_offline_configs": [
+      {
+        "lemma_threshold": 0,
+        "feature_threshold": 0
+      }
+    ],
+    "online_accepted": [
+      1933
+    ],
+    "all_preferred_candidates_unchanged": true,
+    "reconstruction_passed": true,
+    "input_source_and_model_hashes_passed": true
+  },
+  "private_outputs_sha256": "97e5d6d975f5e8d1107861e36eb4369a823af22ec27a66826bea3b008d8a0881",
+  "private_word_metrics_sha256": "9771d3ce6d7b80652975dd1c56f1e5c380a8480da149c995a8f626a3779eeeb4",
+  "limitations": [
+    "CALIB is selected on and is not an independent test",
+    "92% conditional precision is not 92% all-word accuracy or coverage",
+    "Full morpheme-path accuracy and actual BPE routing are not measured",
+    "Two V copies share the same physical drive"
+  ],
+  "seconds": 52.44
+}

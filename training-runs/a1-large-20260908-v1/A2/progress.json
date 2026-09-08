@@ -1,0 +1,8 @@
+{
+  "stage": "A2",
+  "status": "COMPLETE",
+  "time_unix": 1788888545.53225,
+  "seconds": 54.03,
+  "status_result": "TARGET_INFEASIBLE_ON_PREDECLARED_GRID",
+  "files_per_copy": 106
+}

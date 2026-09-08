@@ -1,0 +1,10 @@
+{
+  "status": "TARGET_INFEASIBLE_ON_PREDECLARED_GRID",
+  "config": null,
+  "A1_model_sha256": "eed03755d0026c36b055f68ba18daf7188037cbac85265b24add5c2c7a182ff2",
+  "A3_model_sha256": "d0537300fa21b9e94e70bb0bf3e96a8d3386cab2f57d6e863c53fa5d5446f336",
+  "freeze_sha256": "6a9614336081efb9217a8ca330d879830338db5c539465261a56b44a9257ce73",
+  "TEST_opened": false,
+  "default_promoted": false,
+  "ranking_changed": false
+}

@@ -1,0 +1,20 @@
+{"stage": "A2", "status": "FREEZING_INPUTS", "time_unix": 1788888491.5049045, "seconds": 0.0}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888512.5763028, "seconds": 21.06, "sentences": 25, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888513.4978695, "seconds": 21.98, "sentences": 50, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888514.35903, "seconds": 22.86, "sentences": 75, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888515.4044862, "seconds": 23.89, "sentences": 100, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888516.267821, "seconds": 24.77, "sentences": 125, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888517.4048097, "seconds": 25.89, "sentences": 150, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888518.8253224, "seconds": 27.31, "sentences": 175, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888519.8147697, "seconds": 28.31, "sentences": 200, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888520.8447518, "seconds": 29.34, "sentences": 225, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888521.624754, "seconds": 30.12, "sentences": 250, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888522.3849401, "seconds": 30.88, "sentences": 275, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888523.3289182, "seconds": 31.83, "sentences": 300, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888524.2535129, "seconds": 32.75, "sentences": 325, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888525.6442149, "seconds": 34.14, "sentences": 350, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888537.3847048, "seconds": 45.88, "sentences": 375, "total_sentences": 382}
+{"stage": "A2", "status": "CALIB_FULL_DECODER", "time_unix": 1788888541.3332949, "seconds": 49.83, "sentences": 382, "total_sentences": 382}
+{"stage": "A2", "status": "VERIFYING_ONLINE_A2", "time_unix": 1788888541.7833898, "seconds": 50.28, "threshold_pairs": 1}
+{"stage": "A2", "status": "CALIBRATION_VERIFIED", "time_unix": 1788888543.964678, "seconds": 52.45, "status_result": "TARGET_INFEASIBLE_ON_PREDECLARED_GRID"}
+{"stage": "A2", "status": "COMPLETE", "time_unix": 1788888545.53225, "seconds": 54.03, "status_result": "TARGET_INFEASIBLE_ON_PREDECLARED_GRID", "files_per_copy": 106}

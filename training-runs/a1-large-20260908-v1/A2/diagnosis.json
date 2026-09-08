@@ -1,0 +1,70 @@
+{
+  "categories_all_words": {
+    "correct_lemma": 1738,
+    "missing_lemma_candidate": 270,
+    "accepted_at_every_grid_pair": 702,
+    "always_accepted_lemma_wrong": 81,
+    "always_accepted_feature_wrong": 96,
+    "wrong_ranking": 215,
+    "unaligned": 5,
+    "unprojectable": 38
+  },
+  "best_precision_grid_pair_diagnostic_only": {
+    "thresholds": {
+      "lemma_threshold": 0,
+      "feature_threshold": 20
+    },
+    "words": 2266,
+    "aligned": 2261,
+    "accepted": 958,
+    "lemma_correct": 840,
+    "feature_correct": 824,
+    "lemma_wrong": 118,
+    "feature_wrong": 134,
+    "accepted_aligned_coverage_pct": 42.37063246351172,
+    "accepted_all_word_coverage_pct": 42.277140335392765,
+    "lemma_precision_pct": 87.68267223382045,
+    "feature_precision_pct": 86.0125260960334,
+    "lemma_precision_wilson95": [
+      85.44984683716335,
+      89.6144990983132
+    ],
+    "feature_precision_wilson95": [
+      83.67195184624762,
+      88.06544246882
+    ],
+    "full_morpheme_path_accuracy_measured": false
+  },
+  "strictest_predeclared_pair_diagnostic_only": {
+    "thresholds": {
+      "lemma_threshold": 20,
+      "feature_threshold": 20
+    },
+    "words": 2266,
+    "aligned": 2261,
+    "accepted": 958,
+    "lemma_correct": 840,
+    "feature_correct": 824,
+    "lemma_wrong": 118,
+    "feature_wrong": 134,
+    "accepted_aligned_coverage_pct": 42.37063246351172,
+    "accepted_all_word_coverage_pct": 42.277140335392765,
+    "lemma_precision_pct": 87.68267223382045,
+    "feature_precision_pct": 86.0125260960334,
+    "lemma_precision_wilson95": [
+      85.44984683716335,
+      89.6144990983132
+    ],
+    "feature_precision_wilson95": [
+      83.67195184624762,
+      88.06544246882
+    ],
+    "full_morpheme_path_accuracy_measured": false
+  },
+  "strictest_online_offline_verified_sentences": 382,
+  "candidate_lemma_pos_ceiling_pct_all_words": 86.18711385701677,
+  "minimum_correct_words_for_92pct": 2085,
+  "minimum_new_correct_candidates_needed_for_92pct": 132,
+  "not_a_selected_configuration": true,
+  "TEST_opened": false
+}
