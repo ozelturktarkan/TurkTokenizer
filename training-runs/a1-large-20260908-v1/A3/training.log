@@ -5,3 +5,4 @@ A3 E04/70 train_loss=38.157768 dev_loss=8.3296102 DEV=3172/4070 patience=4/9 ove
 A3 E05/70 train_loss=37.534854 dev_loss=8.210956 DEV=3172/4070 patience=5/9 overfit=0/3 best=E0 stop=None
 A3 E06/70 train_loss=36.936054 dev_loss=8.0990648 DEV=3171/4070 patience=6/9 overfit=0/3 best=E0 stop=None
 A3 E07/70 train_loss=36.305469 dev_loss=7.9799091 DEV=3171/4070 patience=7/9 overfit=0/3 best=E0 stop=None
+A3 E08/70 train_loss=35.667003 dev_loss=7.8659488 DEV=3170/4070 patience=8/9 overfit=0/3 best=E0 stop=None
