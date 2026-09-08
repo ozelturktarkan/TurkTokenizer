@@ -1,0 +1,13 @@
+{
+  "status": "PASS",
+  "unittest_tests": 7,
+  "focused_pairs": 25,
+  "command": "python -X utf8 -m unittest training_controls.phonology_p1.test_phonology -v",
+  "verified_exit_code": 0,
+  "source_sha256": {
+    "training_controls/phonology_p1/test_phonology.py": "2f2997c4fc92d36a5ae50a9834e5d1f55237c98b511b41194c28cb89bec00bf5",
+    "analyzer_s06e_p1.py": "1ae0e20279257d9bd7baf5708a4a00e2b7fed9adc82685579b005224601fbcc6",
+    "data/s06e-p1/pronunciations.json": "67bf3284bec177a01fe34160b5096559221a7903ab66fccfbe937f2c4cad9336"
+  },
+  "known_unrepaired_control": "historical duplicate ağız reading still permits ağızı; recorded explicitly rather than counted correct"
+}

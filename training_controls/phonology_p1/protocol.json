@@ -1,0 +1,21 @@
+{
+  "id": "S06E-E05-P1-v0.1.0",
+  "parent_run": "a1-large-20260908-v1",
+  "arms": ["baseline", "circumflex", "pronunciation", "combined"],
+  "scorer": "A1 E05, A3 E00 identity coefficients; no retraining or A2 retuning",
+  "A1_model_sha256": "eed03755d0026c36b055f68ba18daf7188037cbac85265b24add5c2c7a182ff2",
+  "A3_model_sha256": "d0537300fa21b9e94e70bb0bf3e96a8d3386cab2f57d6e863c53fa5d5446f336",
+  "splits": {"dev": {"sentences": 293, "words": 4070}, "calib": {"sentences": 382, "words": 2266}},
+  "baseline_counts": {
+    "dev": {"candidate_lemma_pos": 3420, "preferred_lemma_pos": 3173, "preferred_declared_features": 3040, "legacy_selected_lemma_wrong": 602},
+    "calib": {"candidate_lemma_pos": 1953, "preferred_lemma_pos": 1738, "preferred_declared_features": 1669, "legacy_selected_lemma_wrong": 376}
+  },
+  "candidate_audit": "Retain old lemma/POS measurement. Record additions, removals, unchanged IDs and changes to retained candidate content. Label-mismatching additions are not automatically grammatical errors.",
+  "selection": "Opt-in experimental combined repair only if focused positive/negative contracts pass, historical inputs remain unchanged, baseline is reproduced, both splits have no net lemma/POS or feature loss and no increase in wrong committed lemma decisions. Do not promote the historical default.",
+  "TEST_opened": false,
+  "CALIB_is_now_development_exposed": true,
+  "source_gold_changed": false,
+  "cost_and_search_limits_changed": false,
+  "BPE_vocabulary_changed": false,
+  "public_outputs": "New implementation, tests, protocol, aggregate report, hashes and backup receipts. Full source corpus rows and model weights remain local/on V."
+}

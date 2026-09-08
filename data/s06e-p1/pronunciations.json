@@ -1,0 +1,29 @@
+{
+  "format": "S06E_P1_PRONUNCIATION_METADATA_1",
+  "scope": "Pronunciation metadata for existing lexemes; no new root, POS, gold label or surface rewrite",
+  "sources": {
+    "tdk_abbreviations": "https://tdk.gov.tr/icerik/yazim-kurallari/kisaltmalar/",
+    "tdk_circumflex": "https://tdk.gov.tr/icerik/yazim-kurallari/duzeltme-isareti/",
+    "meb_taylor": "https://ogmmateryal.eba.gov.tr/kitap/guzel-sanatlar-lisesi/gorsel-sanatlar/cdst-12/files/basic-html/page124.html"
+  },
+  "entries": [
+    {
+      "lexeme_id": "ZL:57798",
+      "lemma": "taylor",
+      "pos": "PROPN",
+      "expected_pronunciation": "taylor",
+      "pronunciation": "teylır",
+      "source": "meb_taylor",
+      "evidence": "MEB art-history textbook prints Taylor with the Turkish reading Teylır. Only this documented reading is registered."
+    },
+    {
+      "lexeme_id": "R1V2:ZL:62181",
+      "lemma": "imkb",
+      "pos": "PROPN",
+      "expected_pronunciation": "imkb",
+      "reading_mode": "TURKISH_LETTER_NAMES",
+      "source": "tdk_abbreviations",
+      "evidence": "The pinned source already marks İmkb as Abbrv. Register its letter-by-letter reading explicitly; the presence of i must not suppress that mode. Do not infer this mode for word-like acronyms."
+    }
+  ]
+}

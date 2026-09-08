@@ -1,0 +1,1460 @@
+{
+  "id": "S06E-E05-P1-v0.1.0",
+  "status": "EXPERIMENT_COMPLETE",
+  "arms": {
+    "baseline": {
+      "dev": {
+        "counts": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3173,
+          "preferred_declared_features": 3040,
+          "legacy_selected": 3644,
+          "legacy_selected_lemma_correct": 3042,
+          "legacy_selected_feature_correct": 2918,
+          "A2_eligible": 3535,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 602,
+          "legacy_selected_feature_wrong": 726,
+          "preferred_lemma_pos_pct_all_words": 77.96068796068796,
+          "preferred_declared_features_pct_all_words": 74.6928746928747,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "paired": {
+          "candidate_lemma_pos": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "candidate_declared_features": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "preferred_lemma_pos": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "preferred_declared_features": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "legacy_selected_lemma_correct": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          }
+        },
+        "candidate_delta": {},
+        "objective_blocks_verified": 368,
+        "BPE_roundtrips": 293,
+        "BPE_token_routes_including_punctuation": {
+          "MORPH": 3453,
+          "BPE": 1299
+        },
+        "A2_feasible_grid_pairs_diagnostic_only": null,
+        "artifact_sha256": {
+          "candidate-changes.jsonl.gz": "da6cc4f25045d689fabbbc8708e7847248cb988f107ad28360fa8d57c0f79b90",
+          "outputs.jsonl.gz": "194e4dc8cec2f1baedc589445d735c13dd907e362a80c6efa7c2967d9b49404f",
+          "selection-changes.jsonl.gz": "a3c65d5b1b597c22cc607d788084cc950bc53565e3fb2dc36095b0f2bf1891e3",
+          "word-metrics.jsonl.gz": "d98bc5d9ee380c68e516c434e3f327367aa9b34ab37cc09a62b666c11f260661"
+        }
+      },
+      "calib": {
+        "counts": {
+          "aligned": 2261,
+          "gold_projectable": 2228,
+          "candidate_lemma_pos": 1953,
+          "candidate_declared_features": 1934,
+          "preferred_lemma_pos": 1738,
+          "preferred_declared_features": 1669,
+          "legacy_selected": 1999,
+          "legacy_selected_lemma_correct": 1623,
+          "legacy_selected_feature_correct": 1554,
+          "A2_eligible": 1933,
+          "words": 2266,
+          "legacy_selected_lemma_wrong": 376,
+          "legacy_selected_feature_wrong": 445,
+          "preferred_lemma_pos_pct_all_words": 76.69902912621359,
+          "preferred_declared_features_pct_all_words": 73.6540158870256,
+          "unresolved_projection_words": 38,
+          "unaligned_words": 5
+        },
+        "paired": {
+          "candidate_lemma_pos": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "candidate_declared_features": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "preferred_lemma_pos": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "preferred_declared_features": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "legacy_selected_lemma_correct": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          }
+        },
+        "candidate_delta": {},
+        "objective_blocks_verified": 539,
+        "BPE_roundtrips": 382,
+        "BPE_token_routes_including_punctuation": {
+          "MORPH": 1896,
+          "BPE": 1171
+        },
+        "A2_feasible_grid_pairs_diagnostic_only": 0,
+        "artifact_sha256": {
+          "candidate-changes.jsonl.gz": "4acedc7053cc691a6ceb9506ff0d863d26a9eabbdf29fc0b0e4a867253f5daab",
+          "outputs.jsonl.gz": "96283159a51aa3a881178f2068c162fea335376c808cf4eda966b103cb53da0a",
+          "selection-changes.jsonl.gz": "e392bbcb2dfb6015bc766517466672e4d258e93c43ac391f555e1e8ae300597a",
+          "word-metrics.jsonl.gz": "779b4749fe198457000f4c7156b811fea4acb140142f6de11829d637969c4be3"
+        }
+      }
+    },
+    "circumflex": {
+      "dev": {
+        "counts": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3173,
+          "preferred_declared_features": 3040,
+          "legacy_selected": 3644,
+          "legacy_selected_lemma_correct": 3042,
+          "legacy_selected_feature_correct": 2918,
+          "A2_eligible": 3535,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 602,
+          "legacy_selected_feature_wrong": 726,
+          "preferred_lemma_pos_pct_all_words": 77.96068796068796,
+          "preferred_declared_features_pct_all_words": 74.6928746928747,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "paired": {
+          "candidate_lemma_pos": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "candidate_declared_features": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "preferred_lemma_pos": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "preferred_declared_features": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "legacy_selected_lemma_correct": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          }
+        },
+        "candidate_delta": {
+          "retained_candidate_ids": 11799,
+          "added_candidates": 0,
+          "removed_candidates": 0
+        },
+        "objective_blocks_verified": 368,
+        "BPE_roundtrips": 293,
+        "BPE_token_routes_including_punctuation": {
+          "MORPH": 3453,
+          "BPE": 1299
+        },
+        "A2_feasible_grid_pairs_diagnostic_only": null,
+        "artifact_sha256": {
+          "candidate-changes.jsonl.gz": "60cb8a977d67577609c5d2244ef6d0c37034afb545e849f910f24d62e0d47bee",
+          "outputs.jsonl.gz": "05bb0a124a4b9c6acea12af5333df500d5f7310d8d250bc3fceac405fddbd7de",
+          "selection-changes.jsonl.gz": "8a2f386f8b66a5b0c95cc6edc2989e6323469d34d0a1150cbe273ed9b22de642",
+          "word-metrics.jsonl.gz": "47e64d7d62a004bae74c22faad2a70f52dac313f728d4240fe36fc16099895db"
+        }
+      },
+      "calib": {
+        "counts": {
+          "aligned": 2261,
+          "gold_projectable": 2228,
+          "candidate_lemma_pos": 1953,
+          "candidate_declared_features": 1934,
+          "preferred_lemma_pos": 1738,
+          "preferred_declared_features": 1669,
+          "legacy_selected": 1999,
+          "legacy_selected_lemma_correct": 1623,
+          "legacy_selected_feature_correct": 1554,
+          "A2_eligible": 1933,
+          "words": 2266,
+          "legacy_selected_lemma_wrong": 376,
+          "legacy_selected_feature_wrong": 445,
+          "preferred_lemma_pos_pct_all_words": 76.69902912621359,
+          "preferred_declared_features_pct_all_words": 73.6540158870256,
+          "unresolved_projection_words": 38,
+          "unaligned_words": 5
+        },
+        "paired": {
+          "candidate_lemma_pos": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "candidate_declared_features": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "preferred_lemma_pos": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "preferred_declared_features": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "legacy_selected_lemma_correct": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          }
+        },
+        "candidate_delta": {
+          "retained_candidate_ids": 6528,
+          "added_candidates": 0,
+          "removed_candidates": 0
+        },
+        "objective_blocks_verified": 539,
+        "BPE_roundtrips": 382,
+        "BPE_token_routes_including_punctuation": {
+          "MORPH": 1896,
+          "BPE": 1171
+        },
+        "A2_feasible_grid_pairs_diagnostic_only": 0,
+        "artifact_sha256": {
+          "candidate-changes.jsonl.gz": "4df65ef7f431ddd2ce7a82511bb2c57153f450983210cfd3eb728b69c310a1f5",
+          "outputs.jsonl.gz": "65537920a71b86b91ceea3f04939b60aceadac3a0d00d692623846348e31718d",
+          "selection-changes.jsonl.gz": "d639bc311f5c998a0ea44f3fa6e5b340688778e6b7553dd633b70f8e24d54950",
+          "word-metrics.jsonl.gz": "28f8b165d64432fe6f873e669d4b7de5e6ad0878a26dd939bc39f43ded3db026"
+        }
+      }
+    },
+    "pronunciation": {
+      "dev": {
+        "counts": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3172,
+          "preferred_declared_features": 3039,
+          "legacy_selected": 3643,
+          "legacy_selected_lemma_correct": 3041,
+          "legacy_selected_feature_correct": 2917,
+          "A2_eligible": 3533,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 602,
+          "legacy_selected_feature_wrong": 726,
+          "preferred_lemma_pos_pct_all_words": 77.93611793611794,
+          "preferred_declared_features_pct_all_words": 74.66830466830467,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "paired": {
+          "candidate_lemma_pos": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "candidate_declared_features": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "preferred_lemma_pos": {
+            "fixed": 0,
+            "regressed": 1,
+            "net": -1
+          },
+          "preferred_declared_features": {
+            "fixed": 0,
+            "regressed": 1,
+            "net": -1
+          },
+          "legacy_selected_lemma_correct": {
+            "fixed": 0,
+            "regressed": 1,
+            "net": -1
+          }
+        },
+        "candidate_delta": {
+          "retained_candidate_ids": 11799,
+          "added_candidates": 5,
+          "removed_candidates": 0,
+          "changed_tokens": 5,
+          "added_reference_matching_candidates": 0,
+          "added_reference_mismatching_candidates": 5,
+          "removed_reference_matching_candidates": 0
+        },
+        "objective_blocks_verified": 368,
+        "BPE_roundtrips": 293,
+        "BPE_token_routes_including_punctuation": {
+          "MORPH": 3452,
+          "BPE": 1300
+        },
+        "A2_feasible_grid_pairs_diagnostic_only": null,
+        "artifact_sha256": {
+          "candidate-changes.jsonl.gz": "26801cf6c7ac40904e93a5fa034fddc1a0d2174d68aa190b8ae2a51039240508",
+          "outputs.jsonl.gz": "da1eea98d7a9956a3cebd7c5029e3b462f04a15517610420570eecda28ad2f0b",
+          "selection-changes.jsonl.gz": "03e8c7eb6173c058391d7957b6e206537881e722e8391507a3b3ddb54658e85f",
+          "word-metrics.jsonl.gz": "bd7113eda12d2b3308b21608a9d93a0a44d443443e738587f047f7c2ac24bf78"
+        }
+      },
+      "calib": {
+        "counts": {
+          "aligned": 2261,
+          "gold_projectable": 2228,
+          "candidate_lemma_pos": 1954,
+          "candidate_declared_features": 1935,
+          "preferred_lemma_pos": 1739,
+          "preferred_declared_features": 1671,
+          "legacy_selected": 2001,
+          "legacy_selected_lemma_correct": 1624,
+          "legacy_selected_feature_correct": 1556,
+          "A2_eligible": 1935,
+          "words": 2266,
+          "legacy_selected_lemma_wrong": 377,
+          "legacy_selected_feature_wrong": 445,
+          "preferred_lemma_pos_pct_all_words": 76.7431597528685,
+          "preferred_declared_features_pct_all_words": 73.74227714033539,
+          "unresolved_projection_words": 38,
+          "unaligned_words": 5
+        },
+        "paired": {
+          "candidate_lemma_pos": {
+            "fixed": 1,
+            "regressed": 0,
+            "net": 1
+          },
+          "candidate_declared_features": {
+            "fixed": 1,
+            "regressed": 0,
+            "net": 1
+          },
+          "preferred_lemma_pos": {
+            "fixed": 1,
+            "regressed": 0,
+            "net": 1
+          },
+          "preferred_declared_features": {
+            "fixed": 2,
+            "regressed": 0,
+            "net": 2
+          },
+          "legacy_selected_lemma_correct": {
+            "fixed": 1,
+            "regressed": 0,
+            "net": 1
+          }
+        },
+        "candidate_delta": {
+          "retained_candidate_ids": 6528,
+          "added_candidates": 5,
+          "removed_candidates": 0,
+          "changed_tokens": 3,
+          "added_reference_matching_candidates": 2,
+          "added_reference_mismatching_candidates": 3,
+          "removed_reference_matching_candidates": 0
+        },
+        "objective_blocks_verified": 539,
+        "BPE_roundtrips": 382,
+        "BPE_token_routes_including_punctuation": {
+          "MORPH": 1898,
+          "BPE": 1169
+        },
+        "A2_feasible_grid_pairs_diagnostic_only": 0,
+        "artifact_sha256": {
+          "candidate-changes.jsonl.gz": "050d1c60179c7992988d81cc42c7fc40ec28b4bf321ab3f8d66ab6b92b8cd8d6",
+          "outputs.jsonl.gz": "4fe403e82263681f69f733c5c92ac443d5b362eb87e6ccc3cf4333d81b03f6d7",
+          "selection-changes.jsonl.gz": "88ec26cf94e69323426e8a6b577dec766399d5be673e565ec4c7bd23efbcb14c",
+          "word-metrics.jsonl.gz": "4deb427ae460e338ab1172641a43ba52db3f78ce759e918896b5c767cfb7b857"
+        }
+      }
+    },
+    "combined": {
+      "dev": {
+        "counts": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3172,
+          "preferred_declared_features": 3039,
+          "legacy_selected": 3643,
+          "legacy_selected_lemma_correct": 3041,
+          "legacy_selected_feature_correct": 2917,
+          "A2_eligible": 3533,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 602,
+          "legacy_selected_feature_wrong": 726,
+          "preferred_lemma_pos_pct_all_words": 77.93611793611794,
+          "preferred_declared_features_pct_all_words": 74.66830466830467,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "paired": {
+          "candidate_lemma_pos": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "candidate_declared_features": {
+            "fixed": 0,
+            "regressed": 0,
+            "net": 0
+          },
+          "preferred_lemma_pos": {
+            "fixed": 0,
+            "regressed": 1,
+            "net": -1
+          },
+          "preferred_declared_features": {
+            "fixed": 0,
+            "regressed": 1,
+            "net": -1
+          },
+          "legacy_selected_lemma_correct": {
+            "fixed": 0,
+            "regressed": 1,
+            "net": -1
+          }
+        },
+        "candidate_delta": {
+          "retained_candidate_ids": 11799,
+          "added_candidates": 5,
+          "removed_candidates": 0,
+          "changed_tokens": 5,
+          "added_reference_matching_candidates": 0,
+          "added_reference_mismatching_candidates": 5,
+          "removed_reference_matching_candidates": 0
+        },
+        "objective_blocks_verified": 368,
+        "BPE_roundtrips": 293,
+        "BPE_token_routes_including_punctuation": {
+          "MORPH": 3452,
+          "BPE": 1300
+        },
+        "A2_feasible_grid_pairs_diagnostic_only": null,
+        "artifact_sha256": {
+          "candidate-changes.jsonl.gz": "949d5dc19e3464c3396e90c188cceaaebcb9b52324dee6f2c9898e703ccc65bb",
+          "outputs.jsonl.gz": "47ed880a4e1bee2c8f6452346941937bd01c553417dc4097839fb7d3fecbdc97",
+          "selection-changes.jsonl.gz": "c603b70cbb53e9242e2996ce4c7eae8e1ee51e0b7435e565d726ef9cd192a904",
+          "word-metrics.jsonl.gz": "cddbe02d7d7cc318aa2b5bde3b425090692f93c8b0db5bd7e42679f9d2c63491"
+        }
+      },
+      "calib": {
+        "counts": {
+          "aligned": 2261,
+          "gold_projectable": 2228,
+          "candidate_lemma_pos": 1954,
+          "candidate_declared_features": 1935,
+          "preferred_lemma_pos": 1739,
+          "preferred_declared_features": 1671,
+          "legacy_selected": 2001,
+          "legacy_selected_lemma_correct": 1624,
+          "legacy_selected_feature_correct": 1556,
+          "A2_eligible": 1935,
+          "words": 2266,
+          "legacy_selected_lemma_wrong": 377,
+          "legacy_selected_feature_wrong": 445,
+          "preferred_lemma_pos_pct_all_words": 76.7431597528685,
+          "preferred_declared_features_pct_all_words": 73.74227714033539,
+          "unresolved_projection_words": 38,
+          "unaligned_words": 5
+        },
+        "paired": {
+          "candidate_lemma_pos": {
+            "fixed": 1,
+            "regressed": 0,
+            "net": 1
+          },
+          "candidate_declared_features": {
+            "fixed": 1,
+            "regressed": 0,
+            "net": 1
+          },
+          "preferred_lemma_pos": {
+            "fixed": 1,
+            "regressed": 0,
+            "net": 1
+          },
+          "preferred_declared_features": {
+            "fixed": 2,
+            "regressed": 0,
+            "net": 2
+          },
+          "legacy_selected_lemma_correct": {
+            "fixed": 1,
+            "regressed": 0,
+            "net": 1
+          }
+        },
+        "candidate_delta": {
+          "retained_candidate_ids": 6528,
+          "added_candidates": 5,
+          "removed_candidates": 0,
+          "changed_tokens": 3,
+          "added_reference_matching_candidates": 2,
+          "added_reference_mismatching_candidates": 3,
+          "removed_reference_matching_candidates": 0
+        },
+        "objective_blocks_verified": 539,
+        "BPE_roundtrips": 382,
+        "BPE_token_routes_including_punctuation": {
+          "MORPH": 1898,
+          "BPE": 1169
+        },
+        "A2_feasible_grid_pairs_diagnostic_only": 0,
+        "artifact_sha256": {
+          "candidate-changes.jsonl.gz": "e7412165c10bad458c1467e6bed3333c8fb6a091724b9849673b06ed9862295f",
+          "outputs.jsonl.gz": "4629760812098896e51122962239b3e0d9380161fdca01bd472d5519580be0b8",
+          "selection-changes.jsonl.gz": "66aac8e708b76ec6370d083a296dcbaae83433b2d2ebb15019a29bb17f2499c9",
+          "word-metrics.jsonl.gz": "43dadd1e2d49cd01c270156dc5cc1191bed217bf87f0d0e86c266ae71fd74bbb"
+        }
+      }
+    }
+  },
+  "selection": "REVIEW_REQUIRED_KEEP_E05",
+  "default_promoted": false,
+  "TEST_opened": false,
+  "new_training": false,
+  "historical_freeze_verified": true,
+  "focused_contrasts": [
+    {
+      "arm": "baseline",
+      "good": "vicahîye",
+      "bad": "vicahîe",
+      "lemma": "vicahî",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "baseline",
+      "good": "zekâya",
+      "bad": "zekâa",
+      "lemma": "zekâ",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "baseline",
+      "good": "rükûya",
+      "bad": "rükûa",
+      "lemma": "rükû",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "baseline",
+      "good": "millîyim",
+      "bad": "millîim",
+      "lemma": "millî",
+      "mid": "AGR_1_SING",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "baseline",
+      "good": "millîydi",
+      "bad": "millîdi",
+      "lemma": "millî",
+      "mid": "COP_PAST",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "baseline",
+      "good": "Taylor'ın",
+      "bad": "Taylor'un",
+      "lemma": "taylor",
+      "mid": "CASE_GEN",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "baseline",
+      "good": "Taylor'a",
+      "bad": "Taylor'e",
+      "lemma": "taylor",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "baseline",
+      "good": "Taylor'ım",
+      "bad": "Taylor'um",
+      "lemma": "taylor",
+      "mid": "AGR_1_SING",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "baseline",
+      "good": "Taylor'ımız",
+      "bad": "Taylor'umuz",
+      "lemma": "taylor",
+      "mid": "POSS_1_PLUR",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "baseline",
+      "good": "Taylor'ıma",
+      "bad": "Taylor'ıme",
+      "lemma": "taylor",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "baseline",
+      "good": "İMKB'nin",
+      "bad": "İMKB'in",
+      "lemma": "imkb",
+      "mid": "CASE_GEN",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "baseline",
+      "good": "İMKB'ye",
+      "bad": "İMKB'e",
+      "lemma": "imkb",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "baseline",
+      "good": "İMKB'de",
+      "bad": "İMKB'te",
+      "lemma": "imkb",
+      "mid": "CASE_LOC",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "baseline",
+      "good": "İMKB'yim",
+      "bad": "İMKB'im",
+      "lemma": "imkb",
+      "mid": "AGR_1_SING",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "baseline",
+      "good": "TBMM'yim",
+      "bad": "TBMM'yım",
+      "lemma": "tbmm",
+      "mid": "AGR_1_SING",
+      "good_path_present": false,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "baseline",
+      "good": "TDK'den",
+      "bad": "TDK'tan",
+      "lemma": "tdk",
+      "mid": "CASE_ABL",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "baseline",
+      "good": "Abby'ye",
+      "bad": "Abby'ya",
+      "lemma": "abby",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "baseline",
+      "good": "Vodafone'a",
+      "bad": "Vodafone'ya",
+      "lemma": "vodafone",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "baseline",
+      "good": "Vodafone'um",
+      "bad": "Vodafone'yim",
+      "lemma": "vodafone",
+      "mid": "AGR_1_SING",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "baseline",
+      "good": "NATO'dan",
+      "bad": "NATO'den",
+      "lemma": "nato",
+      "mid": "CASE_ABL",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "baseline",
+      "good": "UNESCO'ya",
+      "bad": "UNESCO'ye",
+      "lemma": "unesco",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "baseline",
+      "good": "BOTAŞ'ın",
+      "bad": "BOTAŞ'in",
+      "lemma": "botaş",
+      "mid": "CASE_GEN",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "baseline",
+      "good": "hâli",
+      "bad": "hâlı",
+      "lemma": "hâl",
+      "mid": "CASE_ACC",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "baseline",
+      "good": "kitaba",
+      "bad": "kitapa",
+      "lemma": "kitap",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "baseline",
+      "good": "ağzı",
+      "bad": "ağzi",
+      "lemma": "ağız",
+      "mid": "CASE_ACC",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "vicahîye",
+      "bad": "vicahîe",
+      "lemma": "vicahî",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "zekâya",
+      "bad": "zekâa",
+      "lemma": "zekâ",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "rükûya",
+      "bad": "rükûa",
+      "lemma": "rükû",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "millîyim",
+      "bad": "millîim",
+      "lemma": "millî",
+      "mid": "AGR_1_SING",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "millîydi",
+      "bad": "millîdi",
+      "lemma": "millî",
+      "mid": "COP_PAST",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "Taylor'ın",
+      "bad": "Taylor'un",
+      "lemma": "taylor",
+      "mid": "CASE_GEN",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "circumflex",
+      "good": "Taylor'a",
+      "bad": "Taylor'e",
+      "lemma": "taylor",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "Taylor'ım",
+      "bad": "Taylor'um",
+      "lemma": "taylor",
+      "mid": "AGR_1_SING",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "circumflex",
+      "good": "Taylor'ımız",
+      "bad": "Taylor'umuz",
+      "lemma": "taylor",
+      "mid": "POSS_1_PLUR",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "circumflex",
+      "good": "Taylor'ıma",
+      "bad": "Taylor'ıme",
+      "lemma": "taylor",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "İMKB'nin",
+      "bad": "İMKB'in",
+      "lemma": "imkb",
+      "mid": "CASE_GEN",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "circumflex",
+      "good": "İMKB'ye",
+      "bad": "İMKB'e",
+      "lemma": "imkb",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "circumflex",
+      "good": "İMKB'de",
+      "bad": "İMKB'te",
+      "lemma": "imkb",
+      "mid": "CASE_LOC",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "İMKB'yim",
+      "bad": "İMKB'im",
+      "lemma": "imkb",
+      "mid": "AGR_1_SING",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "circumflex",
+      "good": "TBMM'yim",
+      "bad": "TBMM'yım",
+      "lemma": "tbmm",
+      "mid": "AGR_1_SING",
+      "good_path_present": false,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "TDK'den",
+      "bad": "TDK'tan",
+      "lemma": "tdk",
+      "mid": "CASE_ABL",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "Abby'ye",
+      "bad": "Abby'ya",
+      "lemma": "abby",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "Vodafone'a",
+      "bad": "Vodafone'ya",
+      "lemma": "vodafone",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "Vodafone'um",
+      "bad": "Vodafone'yim",
+      "lemma": "vodafone",
+      "mid": "AGR_1_SING",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "circumflex",
+      "good": "NATO'dan",
+      "bad": "NATO'den",
+      "lemma": "nato",
+      "mid": "CASE_ABL",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "UNESCO'ya",
+      "bad": "UNESCO'ye",
+      "lemma": "unesco",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "BOTAŞ'ın",
+      "bad": "BOTAŞ'in",
+      "lemma": "botaş",
+      "mid": "CASE_GEN",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "hâli",
+      "bad": "hâlı",
+      "lemma": "hâl",
+      "mid": "CASE_ACC",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "kitaba",
+      "bad": "kitapa",
+      "lemma": "kitap",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "circumflex",
+      "good": "ağzı",
+      "bad": "ağzi",
+      "lemma": "ağız",
+      "mid": "CASE_ACC",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "vicahîye",
+      "bad": "vicahîe",
+      "lemma": "vicahî",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "pronunciation",
+      "good": "zekâya",
+      "bad": "zekâa",
+      "lemma": "zekâ",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "pronunciation",
+      "good": "rükûya",
+      "bad": "rükûa",
+      "lemma": "rükû",
+      "mid": "CASE_DAT",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "pronunciation",
+      "good": "millîyim",
+      "bad": "millîim",
+      "lemma": "millî",
+      "mid": "AGR_1_SING",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "pronunciation",
+      "good": "millîydi",
+      "bad": "millîdi",
+      "lemma": "millî",
+      "mid": "COP_PAST",
+      "good_path_present": false,
+      "bad_path_absent": false
+    },
+    {
+      "arm": "pronunciation",
+      "good": "Taylor'ın",
+      "bad": "Taylor'un",
+      "lemma": "taylor",
+      "mid": "CASE_GEN",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "Taylor'a",
+      "bad": "Taylor'e",
+      "lemma": "taylor",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "Taylor'ım",
+      "bad": "Taylor'um",
+      "lemma": "taylor",
+      "mid": "AGR_1_SING",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "Taylor'ımız",
+      "bad": "Taylor'umuz",
+      "lemma": "taylor",
+      "mid": "POSS_1_PLUR",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "Taylor'ıma",
+      "bad": "Taylor'ıme",
+      "lemma": "taylor",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "İMKB'nin",
+      "bad": "İMKB'in",
+      "lemma": "imkb",
+      "mid": "CASE_GEN",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "İMKB'ye",
+      "bad": "İMKB'e",
+      "lemma": "imkb",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "İMKB'de",
+      "bad": "İMKB'te",
+      "lemma": "imkb",
+      "mid": "CASE_LOC",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "İMKB'yim",
+      "bad": "İMKB'im",
+      "lemma": "imkb",
+      "mid": "AGR_1_SING",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "TBMM'yim",
+      "bad": "TBMM'yım",
+      "lemma": "tbmm",
+      "mid": "AGR_1_SING",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "TDK'den",
+      "bad": "TDK'tan",
+      "lemma": "tdk",
+      "mid": "CASE_ABL",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "Abby'ye",
+      "bad": "Abby'ya",
+      "lemma": "abby",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "Vodafone'a",
+      "bad": "Vodafone'ya",
+      "lemma": "vodafone",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "Vodafone'um",
+      "bad": "Vodafone'yim",
+      "lemma": "vodafone",
+      "mid": "AGR_1_SING",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "NATO'dan",
+      "bad": "NATO'den",
+      "lemma": "nato",
+      "mid": "CASE_ABL",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "UNESCO'ya",
+      "bad": "UNESCO'ye",
+      "lemma": "unesco",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "BOTAŞ'ın",
+      "bad": "BOTAŞ'in",
+      "lemma": "botaş",
+      "mid": "CASE_GEN",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "hâli",
+      "bad": "hâlı",
+      "lemma": "hâl",
+      "mid": "CASE_ACC",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "kitaba",
+      "bad": "kitapa",
+      "lemma": "kitap",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "pronunciation",
+      "good": "ağzı",
+      "bad": "ağzi",
+      "lemma": "ağız",
+      "mid": "CASE_ACC",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "vicahîye",
+      "bad": "vicahîe",
+      "lemma": "vicahî",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "zekâya",
+      "bad": "zekâa",
+      "lemma": "zekâ",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "rükûya",
+      "bad": "rükûa",
+      "lemma": "rükû",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "millîyim",
+      "bad": "millîim",
+      "lemma": "millî",
+      "mid": "AGR_1_SING",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "millîydi",
+      "bad": "millîdi",
+      "lemma": "millî",
+      "mid": "COP_PAST",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "Taylor'ın",
+      "bad": "Taylor'un",
+      "lemma": "taylor",
+      "mid": "CASE_GEN",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "Taylor'a",
+      "bad": "Taylor'e",
+      "lemma": "taylor",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "Taylor'ım",
+      "bad": "Taylor'um",
+      "lemma": "taylor",
+      "mid": "AGR_1_SING",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "Taylor'ımız",
+      "bad": "Taylor'umuz",
+      "lemma": "taylor",
+      "mid": "POSS_1_PLUR",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "Taylor'ıma",
+      "bad": "Taylor'ıme",
+      "lemma": "taylor",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "İMKB'nin",
+      "bad": "İMKB'in",
+      "lemma": "imkb",
+      "mid": "CASE_GEN",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "İMKB'ye",
+      "bad": "İMKB'e",
+      "lemma": "imkb",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "İMKB'de",
+      "bad": "İMKB'te",
+      "lemma": "imkb",
+      "mid": "CASE_LOC",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "İMKB'yim",
+      "bad": "İMKB'im",
+      "lemma": "imkb",
+      "mid": "AGR_1_SING",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "TBMM'yim",
+      "bad": "TBMM'yım",
+      "lemma": "tbmm",
+      "mid": "AGR_1_SING",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "TDK'den",
+      "bad": "TDK'tan",
+      "lemma": "tdk",
+      "mid": "CASE_ABL",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "Abby'ye",
+      "bad": "Abby'ya",
+      "lemma": "abby",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "Vodafone'a",
+      "bad": "Vodafone'ya",
+      "lemma": "vodafone",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "Vodafone'um",
+      "bad": "Vodafone'yim",
+      "lemma": "vodafone",
+      "mid": "AGR_1_SING",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "NATO'dan",
+      "bad": "NATO'den",
+      "lemma": "nato",
+      "mid": "CASE_ABL",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "UNESCO'ya",
+      "bad": "UNESCO'ye",
+      "lemma": "unesco",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "BOTAŞ'ın",
+      "bad": "BOTAŞ'in",
+      "lemma": "botaş",
+      "mid": "CASE_GEN",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "hâli",
+      "bad": "hâlı",
+      "lemma": "hâl",
+      "mid": "CASE_ACC",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "kitaba",
+      "bad": "kitapa",
+      "lemma": "kitap",
+      "mid": "CASE_DAT",
+      "good_path_present": true,
+      "bad_path_absent": true
+    },
+    {
+      "arm": "combined",
+      "good": "ağzı",
+      "bad": "ağzi",
+      "lemma": "ağız",
+      "mid": "CASE_ACC",
+      "good_path_present": true,
+      "bad_path_absent": true
+    }
+  ],
+  "combined_contrasts_passed": 25,
+  "combined_contrasts_total": 25,
+  "seconds": 1261.69
+}

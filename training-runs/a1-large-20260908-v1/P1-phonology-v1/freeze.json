@@ -1,0 +1,21 @@
+{
+  "new_sources": {
+    "analyzer_s06e_p1.py": "1ae0e20279257d9bd7baf5708a4a00e2b7fed9adc82685579b005224601fbcc6",
+    "s06e_p1.py": "47983b44142734bfe390111c4e6419191c8ae436ffaf1f920027b9551deef89c",
+    "s06e_p1bpe.py": "6922c87121c1e4393f0e10f91cee9489f728846d853d0f65a9b67268ab08242d",
+    "data/s06e-p1/pronunciations.json": "67bf3284bec177a01fe34160b5096559221a7903ab66fccfbe937f2c4cad9336",
+    "training_controls/phonology_p1/__init__.py": "d8653842f781c563d03f3c64772157ec8e2e0e2f5d048815453730f676fe843f",
+    "training_controls/phonology_p1/evaluate.py": "5502e3b3d87087759ed767f1a75df485f64d1233dcbf6b19b502837b521b7f6c",
+    "training_controls/phonology_p1/protocol.json": "dbfcc298602b1b3d7cbd6e28d75417cc7d04332428120d77601ec1bd86a7c2eb",
+    "training_controls/phonology_p1/test_phonology.py": "2f2997c4fc92d36a5ae50a9834e5d1f55237c98b511b41194c28cb89bec00bf5"
+  },
+  "historical_source_count": 84,
+  "parent_freeze_sha256": "6a9614336081efb9217a8ca330d879830338db5c539465261a56b44a9257ce73",
+  "A1_model_sha256": "eed03755d0026c36b055f68ba18daf7188037cbac85265b24add5c2c7a182ff2",
+  "A3_model_sha256": "d0537300fa21b9e94e70bb0bf3e96a8d3386cab2f57d6e863c53fa5d5446f336",
+  "references": {
+    "dev": "3e3267dddaee1c613020b007358f04078f5736bba4aca4b332d097f9605e537c",
+    "calib": "80aa825b484829ec493d5f70f80457545812ea1ae04affa4956e67b123cd54a5"
+  },
+  "TEST_opened": false
+}

@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "native_texts": 12,
+  "roundtrips": 37,
+  "independent_objective_blocks": 16,
+  "vocabulary_ids_preserved": 224309,
+  "byte_values_roundtrip": 256,
+  "protected_code_bypasses_morphology": true,
+  "pronounced_devoicing_and_post_derivation_harmony_pairs": 2,
+  "gold_free_replay_and_cache_checks": true,
+  "A1_model_sha256": "eed03755d0026c36b055f68ba18daf7188037cbac85265b24add5c2c7a182ff2",
+  "implementation_sha256": {
+    "s06e_p1.py": "47983b44142734bfe390111c4e6419191c8ae436ffaf1f920027b9551deef89c",
+    "s06e_p1bpe.py": "6922c87121c1e4393f0e10f91cee9489f728846d853d0f65a9b67268ab08242d",
+    "analyzer_s06e_p1.py": "1ae0e20279257d9bd7baf5708a4a00e2b7fed9adc82685579b005224601fbcc6",
+    "training_controls/phonology_p1/validate_runtime.py": "cb5b2dd559be60fc0974fef0f437423729e127806860f96b3e2b46ef5a72a58f"
+  }
+}
