@@ -1,0 +1,22 @@
+{
+  "id": "A2-E05-calibration-v1",
+  "parent_run": "a1-large-20260908-v1",
+  "A1_selected_epoch": 5,
+  "A1_model_sha256": "eed03755d0026c36b055f68ba18daf7188037cbac85265b24add5c2c7a182ff2",
+  "A3_selected_epoch": 0,
+  "A3_model_sha256": "d0537300fa21b9e94e70bb0bf3e96a8d3386cab2f57d6e863c53fa5d5446f336",
+  "calib_reference_sha256": "80aa825b484829ec493d5f70f80457545812ea1ae04affa4956e67b123cd54a5",
+  "calib_raw_sha256": "a47ccd75accf543c89bd5f15f202317fdd1e0093464d7674218e76ef3a4bff7d",
+  "sentences": 382,
+  "all_words": 2266,
+  "threshold_grid": [0, 0.25, 0.5, 1, 2, 3, 4, 6, 8, 12, 20],
+  "target_precision_pct": 92,
+  "selection": "Among 121 predeclared pairs with nonzero acceptance and both empirical CALIB lemma+POS and declared-feature precision >=92%, maximize accepted words; then feature precision, lemma precision, lower threshold sum, lower lemma threshold",
+  "infeasible": "Keep config null; report failure without enlarging the grid or changing the target",
+  "scope": "Abstention only; freeze A1 E05 and identity A3 E00; retain legacy full-path separation gate",
+  "denominator": "All nonpunctuation orthographic units, including unaligned and unresolved projections",
+  "limitations": ["CALIB is selected on and is not an independent test", "92% conditional precision is not 92% all-word accuracy or coverage", "Full morpheme-path accuracy and actual BPE routing are not measured", "Two V copies share the same physical drive"],
+  "TEST_opened": false,
+  "default_promoted": false,
+  "minimum_free_bytes": 5368709120
+}
