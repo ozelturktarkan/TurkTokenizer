@@ -1,0 +1,31 @@
+{
+  "format": "E70_SNAPSHOT_1",
+  "artifacts": {
+    "weights": {
+      "file": "weights.checkpoint",
+      "sha256": "57ace6b976de0eb779bd9b943506ca18ce53dd0fbffeef6cacc9cffa6731efe1",
+      "bytes": 542
+    },
+    "a1_ranker": {
+      "file": "a1_ranker.checkpoint",
+      "sha256": "eed03755d0026c36b055f68ba18daf7188037cbac85265b24add5c2c7a182ff2",
+      "bytes": 22728622
+    },
+    "trainer_state": {
+      "file": "trainer_state.checkpoint",
+      "sha256": "40bdef0b3a9e56c44c9c752429c8784b7765e3ac59d36536108d54821689daf1",
+      "bytes": 1376
+    },
+    "audit": {
+      "file": "audit.checkpoint",
+      "sha256": "055712a399793c0124da5d82823c6153a3252637f37f620b350dc6cbae7dee37",
+      "bytes": 1223
+    },
+    "fixed_probes": {
+      "file": "fixed_probes.checkpoint",
+      "sha256": "cc29bf1f68c106886536b4b5f104db7c4877c338d7ff3f8b01e302e980787f61",
+      "bytes": 36418
+    }
+  },
+  "state_sha256": "62348ddc61a8d95de6c0dcb0a7b310108aac689a61b7f77bb4f001a200345ef9"
+}
