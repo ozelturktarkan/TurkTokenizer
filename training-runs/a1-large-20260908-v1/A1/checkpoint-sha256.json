@@ -3,19 +3,19 @@
   "artifacts": {
     "weights": {
       "file": "weights.checkpoint",
-      "sha256": "8f180c8a1c8dc3cf62acafd76c59936931d1babd3a575c0d4bad62168d2a4673",
-      "bytes": 22736021
+      "sha256": "ad3e984ecefe8c4ed2ca5b4f3c756769bdcad5d06f1cb3c3792114ae4abc6d07",
+      "bytes": 22729681
     },
     "trainer_state": {
       "file": "trainer_state.checkpoint",
-      "sha256": "c1792726a16159b540329da10c631b92c52ab38807b29d35eaf3d1e809ba0c31",
-      "bytes": 5328782
+      "sha256": "5bfd36cb83d830a21e4b55cdce6c4b3666d99ee1dcfdc1e1b8ddc475be90e5b5",
+      "bytes": 5327563
     },
     "audit": {
       "file": "audit.checkpoint",
-      "sha256": "4fbdfa22ea35c27c7a87df820e2e19087bb89f1e9e34e77ef1e332e2f7c3397a",
-      "bytes": 867
+      "sha256": "77a3d159fc0ea2e1145a1a9b8c4bf52b99830fa5e42957ecac13cec1c11d2eaf",
+      "bytes": 865
     }
   },
-  "state_sha256": "8565202e96b24054d78f3ba987330d369c2456a52aa5fc28344c5bfe80a777a0"
+  "state_sha256": "96f924c1d8da5f221fe5a9ab92875821aac98e82c003d7a7c576b66ce9ab12dd"
 }
