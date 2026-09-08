@@ -1,0 +1,20 @@
+{
+  "status": "DOUBLE_V_BACKUP_SHA256_VERIFIED",
+  "files_per_copy": 12,
+  "same_physical_drive": true,
+  "sha256": {
+    "results/270-vaka-inceleme.md": "052437120dcb8393c766fd82c78ef85b561e3fa65780ab541215ddc9e2dcfcd7",
+    "results/blocker-probes.json": "062d5e4e679e394b85acb48443ef114ef4cf397a88f6060b33eea9b52d4cc4e6",
+    "results/cases.jsonl": "99138e6f242a31f6652368d3dae4464d083b77e55e684b40796bf01bbd665d76",
+    "results/final-report.md": "3da8868fae4fe4c75477a4a85ac2e407a5bf2b3e3b327a29dafdba5ee9558a05",
+    "results/final-summary.json": "885a8188bf061dd3235593ebb08378d117cb971b20ade129cb3b1d768d95b68e",
+    "results/reviewed-cases.jsonl": "d3438ea632ead566e1037c6a313cd3023dd46a9ee2fff221c2a09e9afb3122be",
+    "results/summary.json": "53b50bdd866aabe0fa1c164edea4500b061af9c0b444c3a111b29573f5b8dab0",
+    "results/verification.json": "aa1dddc213378e187cbdd1911e9c97cde8b6b84ad4a1a5b1893bad45d36006e4",
+    "source/audit.py": "1fac197d0659ce8df6fc20d6c73324db8f5980c38b216cdefe1af53da889e8c7",
+    "source/README.md": "73e9e073200ab1ec761e6e399b378eb8cac4366569a328272391bd0b82295dc1",
+    "source/review.py": "f67dd8435ebcb6fd46b18bc9f4c870f280d6f82eaf935e96df36f90cdd465784",
+    "source/__init__.py": "abb630ea9d41dca24497b0168dc6502265a120b0b408f5baba9b8b31bf75bf7f"
+  },
+  "backup_directory": "V:\\TurkTokenizer\\Yedekler\\A123-E70-P9-OF3\\runs\\a1-large-20260908-v1\\candidate-audit270-v1"
+}

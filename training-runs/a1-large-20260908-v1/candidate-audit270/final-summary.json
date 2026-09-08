@@ -1,0 +1,79 @@
+{
+  "status": "270_CASES_REVIEWED_AND_NARROW_BLOCKERS_REPRODUCED",
+  "cases": 270,
+  "categories": {
+    "QUESTION_POS_SCHEMA": {
+      "label": "Soru parçacığında PART/AUX şema farkı",
+      "count": 26
+    },
+    "NOMINAL_POS_SCHEMA": {
+      "label": "Adlaşmış sıfat/sayı ile referans POS farkı",
+      "count": 89
+    },
+    "OTHER_POS_REVIEW": {
+      "label": "Diğer tür okuması / referans etiketi incelemesi",
+      "count": 36
+    },
+    "DERIVED_LEMMA_SCHEMA": {
+      "label": "Türetim yolu var; kök ile türemiş lemma farkı",
+      "count": 66
+    },
+    "LEMMA_AND_POS_REVIEW": {
+      "label": "Lemma sınırı ve tür birlikte incelenmeli",
+      "count": 6
+    },
+    "CIRCUMFLEX_ORTHOGRAPHY": {
+      "label": "Düzeltme işareti / yazım karşılığı",
+      "count": 15
+    },
+    "SOURCE_FORM_REVIEW": {
+      "label": "Kaynak yazımı / konuşma biçimi incelemesi",
+      "count": 8
+    },
+    "MULTIWORD_OR_NUMERAL": {
+      "label": "Bitişik çok sözcüklü ifade veya sayı",
+      "count": 7
+    },
+    "LEXICAL_READING_GAP": {
+      "label": "Eksik sözlük kökü veya sözlük tür okuması",
+      "count": 10
+    },
+    "MORPHOTACTIC_OR_METADATA": {
+      "label": "Kök var; ek yolu, kök değişimi veya metadata engeli",
+      "count": 7
+    }
+  },
+  "with_any_surface_analysis": 231,
+  "without_any_surface_analysis": 39,
+  "overlap_with_81_always_accepted_errors": 77,
+  "all_source_searches_complete": true,
+  "frozen_model_grammar_and_references_unchanged": true,
+  "new_candidates_generated_for_original_inputs": false,
+  "labels_changed": false,
+  "TEST_opened": false,
+  "training_started": false,
+  "private_cases_sha256": "99138e6f242a31f6652368d3dae4464d083b77e55e684b40796bf01bbd665d76",
+  "code_sha256": "1fac197d0659ce8df6fc20d6c73324db8f5980c38b216cdefe1af53da889e8c7",
+  "parent_freeze_sha256": "6a9614336081efb9217a8ca330d879830338db5c539465261a56b44a9257ce73",
+  "measurement_ceiling_scope": "86.1871% applies to the frozen lemma+POS contract and CALIB; not a pure morphological surface-path ceiling",
+  "nominal_same_root_pos_witnesses": 77,
+  "specific_review_notes": 59,
+  "reviewed_cases_sha256": "d3438ea632ead566e1037c6a313cd3023dd46a9ee2fff221c2a09e9afb3122be",
+  "review_code_sha256": "f67dd8435ebcb6fd46b18bc9f4c870f280d6f82eaf935e96df36f90cdd465784",
+  "blocker_probes_sha256": "062d5e4e679e394b85acb48443ef114ef4cf397a88f6060b33eea9b52d4cc4e6",
+  "independent_linguist_adjudication_complete": false,
+  "source_references": [
+    {
+      "url": "https://universaldependencies.org/tr/",
+      "supports": "mI AUX; treebank tag policies differ"
+    },
+    {
+      "url": "https://universaldependencies.org/treebanks/tr_imst/index.html",
+      "supports": "IMST uses no PART; nominal features can occur on ADJ/NUM"
+    },
+    {
+      "url": "https://github.com/UniversalDependencies/UD_Turkish-IMST/blob/master/README.md",
+      "supports": "semi-automatic conversion; source provenance"
+    }
+  ]
+}
