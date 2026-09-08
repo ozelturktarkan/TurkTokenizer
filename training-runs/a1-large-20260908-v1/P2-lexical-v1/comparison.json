@@ -1,0 +1,265 @@
+{
+  "status": "EXPERIMENT_COMPLETE",
+  "arms": {
+    "0.00": {
+      "dev": {
+        "legacy": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3172,
+          "preferred_declared_features": 3039,
+          "legacy_selected": 3643,
+          "legacy_selected_lemma_correct": 3041,
+          "legacy_selected_feature_correct": 2917,
+          "A2_eligible": 3533,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 602,
+          "legacy_selected_feature_wrong": 726,
+          "preferred_lemma_pos_pct_all_words": 77.93611793611794,
+          "preferred_declared_features_pct_all_words": 74.66830466830467,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "views": {
+          "oracle_view_lemma_pos": 3676,
+          "oracle_view_features": 3597,
+          "predicted_view_lemma_pos": 3239,
+          "predicted_view_features": 3093,
+          "words": 4070
+        },
+        "objective_blocks_verified": 368,
+        "BPE_roundtrips": 293,
+        "strength": 0.0,
+        "artifact_sha256": {
+          "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+        }
+      },
+      "calib": {
+        "legacy": {
+          "aligned": 2261,
+          "gold_projectable": 2228,
+          "candidate_lemma_pos": 1954,
+          "candidate_declared_features": 1935,
+          "preferred_lemma_pos": 1739,
+          "preferred_declared_features": 1671,
+          "legacy_selected": 2001,
+          "legacy_selected_lemma_correct": 1624,
+          "legacy_selected_feature_correct": 1556,
+          "A2_eligible": 1935,
+          "words": 2266,
+          "legacy_selected_lemma_wrong": 377,
+          "legacy_selected_feature_wrong": 445,
+          "preferred_lemma_pos_pct_all_words": 76.7431597528685,
+          "preferred_declared_features_pct_all_words": 73.74227714033539,
+          "unresolved_projection_words": 38,
+          "unaligned_words": 5
+        },
+        "views": {
+          "oracle_view_lemma_pos": 2123,
+          "oracle_view_features": 2059,
+          "predicted_view_lemma_pos": 1809,
+          "predicted_view_features": 1698,
+          "words": 2266
+        },
+        "objective_blocks_verified": 539,
+        "BPE_roundtrips": 382,
+        "strength": 0.0,
+        "artifact_sha256": {
+          "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+        }
+      }
+    },
+    "0.25": {
+      "dev": {
+        "legacy": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3170,
+          "preferred_declared_features": 3037,
+          "legacy_selected": 3644,
+          "legacy_selected_lemma_correct": 3039,
+          "legacy_selected_feature_correct": 2915,
+          "A2_eligible": 3511,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 605,
+          "legacy_selected_feature_wrong": 729,
+          "preferred_lemma_pos_pct_all_words": 77.88697788697789,
+          "preferred_declared_features_pct_all_words": 74.61916461916462,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "views": {
+          "oracle_view_lemma_pos": 3676,
+          "oracle_view_features": 3597,
+          "predicted_view_lemma_pos": 3237,
+          "predicted_view_features": 3092,
+          "words": 4070
+        },
+        "objective_blocks_verified": 368,
+        "BPE_roundtrips": 293,
+        "strength": 0.25,
+        "artifact_sha256": {
+          "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+        },
+        "paired": {
+          "legacy_lemma_pos": {
+            "fixed": 0,
+            "regressed": 2
+          },
+          "legacy_features": {
+            "fixed": 0,
+            "regressed": 2
+          },
+          "projected_lemma_pos": {
+            "fixed": 0,
+            "regressed": 2
+          },
+          "projected_features": {
+            "fixed": 0,
+            "regressed": 1
+          }
+        },
+        "changed_native_analysis_ids": 5
+      }
+    },
+    "0.50": {
+      "dev": {
+        "legacy": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3166,
+          "preferred_declared_features": 3035,
+          "legacy_selected": 3644,
+          "legacy_selected_lemma_correct": 3038,
+          "legacy_selected_feature_correct": 2914,
+          "A2_eligible": 3485,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 606,
+          "legacy_selected_feature_wrong": 730,
+          "preferred_lemma_pos_pct_all_words": 77.78869778869779,
+          "preferred_declared_features_pct_all_words": 74.57002457002457,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "views": {
+          "oracle_view_lemma_pos": 3676,
+          "oracle_view_features": 3597,
+          "predicted_view_lemma_pos": 3238,
+          "predicted_view_features": 3096,
+          "words": 4070
+        },
+        "objective_blocks_verified": 368,
+        "BPE_roundtrips": 293,
+        "strength": 0.5,
+        "artifact_sha256": {
+          "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+        },
+        "paired": {
+          "legacy_lemma_pos": {
+            "fixed": 0,
+            "regressed": 6
+          },
+          "legacy_features": {
+            "fixed": 0,
+            "regressed": 4
+          },
+          "projected_lemma_pos": {
+            "fixed": 5,
+            "regressed": 6
+          },
+          "projected_features": {
+            "fixed": 5,
+            "regressed": 2
+          }
+        },
+        "changed_native_analysis_ids": 20
+      }
+    },
+    "1.00": {
+      "dev": {
+        "legacy": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3171,
+          "preferred_declared_features": 3041,
+          "legacy_selected": 3639,
+          "legacy_selected_lemma_correct": 3032,
+          "legacy_selected_feature_correct": 2909,
+          "A2_eligible": 3449,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 607,
+          "legacy_selected_feature_wrong": 730,
+          "preferred_lemma_pos_pct_all_words": 77.91154791154791,
+          "preferred_declared_features_pct_all_words": 74.71744471744472,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "views": {
+          "oracle_view_lemma_pos": 3676,
+          "oracle_view_features": 3597,
+          "predicted_view_lemma_pos": 3246,
+          "predicted_view_features": 3106,
+          "words": 4070
+        },
+        "objective_blocks_verified": 368,
+        "BPE_roundtrips": 293,
+        "strength": 1.0,
+        "artifact_sha256": {
+          "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+        },
+        "paired": {
+          "legacy_lemma_pos": {
+            "fixed": 5,
+            "regressed": 6
+          },
+          "legacy_features": {
+            "fixed": 6,
+            "regressed": 4
+          },
+          "projected_lemma_pos": {
+            "fixed": 14,
+            "regressed": 7
+          },
+          "projected_features": {
+            "fixed": 15,
+            "regressed": 2
+          }
+        },
+        "changed_native_analysis_ids": 40
+      }
+    }
+  },
+  "selected_strength": 0.0,
+  "historical_E05_nonregression": false,
+  "default_promoted": false,
+  "selected_on": "DEV_ONLY",
+  "TEST_opened": false,
+  "new_morphological_paths": false,
+  "BPE_IDs_preserved": 224309,
+  "historical_freeze_verified": true,
+  "seconds": 981.0,
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

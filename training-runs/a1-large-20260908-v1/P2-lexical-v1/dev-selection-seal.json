@@ -1,0 +1,24 @@
+{
+  "strength": 0.0,
+  "selected_on": "DEV_ONLY",
+  "DEV_complete": true,
+  "CALIB_started": false,
+  "head_sha256": "c54c05ba2686992a42b84abc85aaa4c981b4551dbdb78ca74cc02d4a0ae11afd",
+  "source_sha256": {
+    "s06e_p2.py": "da19abfefdc1486c321e5bac6b4cdc66f5a558f9a42e2736fcd36334312015d5",
+    "s06e_p2bpe.py": "81ceb8c0bc198bf0a222f33bcffd2693a2e1e196bcb441558a8174a3ce51c395",
+    "analysis_schema_p2.py": "c1fe68c9560d3f176b33841d93db7fd9af91a134e88ac779534855a29d4c2571",
+    "training_controls/lexical_p2/evaluate.py": "a92e9ac2ba6a3ceb8046830c3eeaef9188fa92d8b4bba260c1639699bfe611d2",
+    "training_controls/lexical_p2/fit.py": "5160265c1877818bda25b6f11fd413abfb1fb17157362e630974367a8616b34e",
+    "training_controls/lexical_p2/protocol.json": "[PRIVATE_HASH_OMITTED]",
+    "training_controls/lexical_p2/test_schema.py": "b5a710b0c2a7d4dd7475f8e8f89bfb66e185d3d207b1459ba0a45907262847f9",
+    "training_controls/lexical_p2/validate_runtime.py": "633dbeae0994bf67f663f37394aecb28b30c1265e43d591cfa3da2f4a97356e7",
+    "training_controls/lexical_p2/__init__.py": "146dbc8f9fac7c970a33825f84c9903746478e02e73aa1cc00d5c0fe5ce89c37"
+  },
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

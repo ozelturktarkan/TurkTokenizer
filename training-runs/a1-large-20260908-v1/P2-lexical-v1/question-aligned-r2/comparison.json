@@ -1,0 +1,89 @@
+{
+  "status": "EXPERIMENT_COMPLETE",
+  "results": {
+    "dev": {
+      "legacy": {
+        "aligned": 4056,
+        "gold_projectable": 3973,
+        "candidate_lemma_pos": 3420,
+        "candidate_declared_features": 3376,
+        "preferred_lemma_pos": 3174,
+        "preferred_declared_features": 3045,
+        "legacy_selected": 3637,
+        "legacy_selected_lemma_correct": 3042,
+        "legacy_selected_feature_correct": 2918,
+        "A2_eligible": 3466,
+        "words": 4070,
+        "legacy_selected_lemma_wrong": 595,
+        "legacy_selected_feature_wrong": 719,
+        "preferred_lemma_pos_pct_all_words": 77.98525798525799,
+        "preferred_declared_features_pct_all_words": 74.81572481572482,
+        "unresolved_projection_words": 97,
+        "unaligned_words": 14
+      },
+      "views": {
+        "oracle_view_lemma_pos": 3676,
+        "oracle_view_features": 3597,
+        "predicted_view_lemma_pos": 3350,
+        "predicted_view_features": 3210,
+        "words": 4070
+      },
+      "objective_blocks_verified": 368,
+      "BPE_roundtrips": 293,
+      "artifact_sha256": {
+        "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+        "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+        "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+      }
+    },
+    "calib": {
+      "legacy": {
+        "aligned": 2261,
+        "gold_projectable": 2228,
+        "candidate_lemma_pos": 1954,
+        "candidate_declared_features": 1935,
+        "preferred_lemma_pos": 1751,
+        "preferred_declared_features": 1680,
+        "legacy_selected": 2000,
+        "legacy_selected_lemma_correct": 1633,
+        "legacy_selected_feature_correct": 1563,
+        "A2_eligible": 1887,
+        "words": 2266,
+        "legacy_selected_lemma_wrong": 367,
+        "legacy_selected_feature_wrong": 437,
+        "preferred_lemma_pos_pct_all_words": 77.27272727272727,
+        "preferred_declared_features_pct_all_words": 74.13945278022948,
+        "unresolved_projection_words": 38,
+        "unaligned_words": 5
+      },
+      "views": {
+        "oracle_view_lemma_pos": 2123,
+        "oracle_view_features": 2059,
+        "predicted_view_lemma_pos": 1876,
+        "predicted_view_features": 1756,
+        "words": 2266
+      },
+      "objective_blocks_verified": 539,
+      "BPE_roundtrips": 382,
+      "artifact_sha256": {
+        "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+        "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+        "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+      }
+    }
+  },
+  "nonregression_against_policy": true,
+  "recommended_entry": "s06e_p2_question",
+  "new_training": false,
+  "new_candidates": false,
+  "TEST_opened": false,
+  "default_promoted": false,
+  "seconds": 274.7,
+  "authored_probes_matched": 7,
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

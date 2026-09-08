@@ -1,0 +1,42 @@
+{
+  "status": "LOCAL_FIT_COMPLETE",
+  "arms": {
+    "government": {
+      "examples": 4856,
+      "features": 16,
+      "initial_loss": 0.12995094927808185,
+      "final_loss": 0.1283771916982307,
+      "iterations": 7,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+    },
+    "agreement": {
+      "examples": 4856,
+      "features": 32,
+      "initial_loss": 0.12995094927808185,
+      "final_loss": 0.12958639223193255,
+      "iterations": 4,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+    },
+    "combined": {
+      "examples": 4856,
+      "features": 48,
+      "initial_loss": 0.12995094927808185,
+      "final_loss": 0.12801866916299917,
+      "iterations": 7,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+    }
+  },
+  "seconds": 0.6,
+  "model_sha256": "[PRIVATE_HASH_OMITTED]",
+  "fit_source_sha256": "1cb7fda3ec5455418f52bb92b66f117166a7915a499a7b6bc893861fd55ba9dd",
+  "TEST_opened": false,
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

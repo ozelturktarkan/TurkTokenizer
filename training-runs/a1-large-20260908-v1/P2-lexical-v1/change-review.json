@@ -1,0 +1,56 @@
+{
+  "dev": {
+    "native_lemma_pos": {
+      "fixed": 18,
+      "regressed": 16,
+      "net": 2
+    },
+    "native_features": {
+      "fixed": 21,
+      "regressed": 15,
+      "net": 6
+    },
+    "view_lemma_pos": {
+      "fixed": 114,
+      "regressed": 27,
+      "net": 87
+    },
+    "view_features": {
+      "fixed": 115,
+      "regressed": 24,
+      "net": 91
+    },
+    "changed_native_analysis_ids": 166,
+    "representation_only": {
+      "fixed": 101,
+      "regressed": 10
+    }
+  },
+  "calib": {
+    "native_lemma_pos": {
+      "fixed": 19,
+      "regressed": 7,
+      "net": 12
+    },
+    "native_features": {
+      "fixed": 20,
+      "regressed": 11,
+      "net": 9
+    },
+    "view_lemma_pos": {
+      "fixed": 72,
+      "regressed": 15,
+      "net": 57
+    },
+    "view_features": {
+      "fixed": 68,
+      "regressed": 17,
+      "net": 51
+    },
+    "changed_native_analysis_ids": 105,
+    "representation_only": {
+      "fixed": 80,
+      "regressed": 0
+    }
+  }
+}

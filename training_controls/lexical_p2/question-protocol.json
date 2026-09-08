@@ -1,0 +1,12 @@
+{
+  "id": "S06E-P2-QALIGN-1",
+  "trigger": "Authored diagnostic Sen geldin mi? still selected the musical-note noun. Pinned source has exactly four PART lexemes, all licensed mI question readings; n-gram TRAIN represents questions as AUX.",
+  "change": "Map only PART sequence signatures to AUX inside the existing n-gram model, in all main/reference passes. Check the exact four lexical IDs before enabling the adapter. Native candidate labels, costs, IDs and morphemes stay unchanged.",
+  "head": "Frozen IMST TRAIN-only P2 head, strength 1.0",
+  "new_training": false,
+  "grid_search": false,
+  "evaluation": "One fixed aligned arm on DEV and CALIB; compare both to the existing unaligned IMST-strength-1 arm and original E05. No label edits, new candidates or TEST access.",
+  "promotion_gate": "No legacy lemma+POS or feature loss and no wrong-commit increase on either split against E05 and unaligned P2 policy. If any fails, retain the previous recommended P2 policy arm.",
+  "scope": "Exploratory follow-up, not an independent final test. Report projection gains separately from unchanged native labels.",
+  "source": "https://universaldependencies.org/tr/"
+}

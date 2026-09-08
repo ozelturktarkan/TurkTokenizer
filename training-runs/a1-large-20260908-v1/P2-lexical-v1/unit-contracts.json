@@ -1,0 +1,10 @@
+{
+  "status": "PASS",
+  "tests": 5,
+  "command": "python -X utf8 -m unittest training_controls.lexical_p2.test_schema -v",
+  "exit_code": 0,
+  "sources": {
+    "analysis_schema_p2.py": "c1fe68c9560d3f176b33841d93db7fd9af91a134e88ac779534855a29d4c2571",
+    "training_controls/lexical_p2/test_schema.py": "b5a710b0c2a7d4dd7475f8e8f89bfb66e185d3d207b1459ba0a45907262847f9"
+  }
+}

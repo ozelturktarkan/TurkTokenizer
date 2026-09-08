@@ -1,0 +1,33 @@
+{
+  "status": "PREPARED",
+  "TRAIN_sentences": 3260,
+  "counts": {
+    "words_with_analyses": 27419,
+    "analyses": 79454,
+    "labelled_words": 26852,
+    "strict_positive_available": 25056,
+    "no_local_grammar_evidence": 11745,
+    "noncompetitive": 8455,
+    "local_examples": 4856,
+    "candidate_rows": 19923,
+    "no_strict_positive": 1796
+  },
+  "observed_verb_voice_keys": 642,
+  "observed_verb_lemmas": 473,
+  "artifacts": {
+    "base-model.json": "[PRIVATE_HASH_OMITTED]",
+    "feature-frequencies.json": "[PRIVATE_HASH_OMITTED]",
+    "local-features.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+    "prepare-freeze.json": "[PRIVATE_HASH_OMITTED]",
+    "train-raw.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+  },
+  "seconds": 472.0,
+  "candidate_source": "FRESH_FROZEN_P1_COMBINED",
+  "TEST_opened": false,
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

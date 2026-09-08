@@ -1,0 +1,71 @@
+{
+  "status": "A2_VERIFIED",
+  "arms": {
+    "C0_P2": {
+      "selected": null,
+      "status": "TARGET_INFEASIBLE_ON_PREDECLARED_GRID",
+      "zero_threshold": {
+        "thresholds": {
+          "lemma_threshold": 0.0,
+          "feature_threshold": 0.0
+        },
+        "words": 2266,
+        "aligned": 2261,
+        "accepted": 1887,
+        "lemma_correct": 1575,
+        "feature_correct": 1517,
+        "lemma_wrong": 312,
+        "feature_wrong": 370,
+        "accepted_aligned_coverage_pct": 83.45864661654136,
+        "accepted_all_word_coverage_pct": 83.27449249779347,
+        "lemma_precision_pct": 83.46581875993641,
+        "feature_precision_pct": 80.3921568627451,
+        "lemma_precision_wilson95": [
+          81.7220224108205,
+          85.07363589824394
+        ],
+        "feature_precision_wilson95": [
+          78.53980325714033,
+          82.12102024285723
+        ],
+        "full_morpheme_path_accuracy_measured": false
+      },
+      "grid_pairs": 121,
+      "feasible_pairs": 0,
+      "DEV_at_CALIB_thresholds": null,
+      "checks": {
+        "online_offline_configs": [
+          {
+            "lemma_threshold": 0.0,
+            "feature_threshold": 0.0
+          }
+        ],
+        "accepted": [
+          1887
+        ],
+        "runtime_calibrated_BPE_roundtrips": 0
+      },
+      "native_output_sha256": "[PRIVATE_HASH_OMITTED]"
+    }
+  },
+  "selection": {
+    "status": "TARGET_INFEASIBLE_ON_PREDECLARED_GRID",
+    "configuration": "C0_P2",
+    "A2_config": null,
+    "model_sha256": "04931cb083551a46e0991dce2fe50b3741f7f20a9cc5d80081649d682d8a580d",
+    "DEV_selection_sha256": "[PRIVATE_HASH_OMITTED]",
+    "comparison_sha256": "[PRIVATE_HASH_OMITTED]",
+    "calibration_scope": "NATIVE_LEMMA_POS_AND_DECLARED_FEATURES",
+    "lexical_view_confidence_calibrated": false,
+    "full_morpheme_path_accuracy_measured": false,
+    "TEST_opened": false,
+    "default_promoted": false
+  },
+  "source_sha256": "7f8ec8df22722bbecdc7006d6d8b6da4a578b3402d59e9d81b9b15f251f646c9",
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

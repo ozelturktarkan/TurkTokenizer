@@ -1,0 +1,223 @@
+{
+  "probes": [
+    {
+      "text": "Sen geldin mi?",
+      "word": "mi",
+      "expected": [
+        "mi",
+        "AUX"
+      ],
+      "predicted": [
+        "mi",
+        "NOUN"
+      ],
+      "matches": false,
+      "native_analysis_id": "bcb49802af46b8b677a50057"
+    },
+    {
+      "text": "Sen geliyor musun?",
+      "word": "musun",
+      "expected": [
+        "mi",
+        "AUX"
+      ],
+      "predicted": [
+        "mi",
+        "AUX"
+      ],
+      "matches": true,
+      "native_analysis_id": "91d3456c2cb288eacbed7a9a"
+    },
+    {
+      "text": "Mi notasını çaldım.",
+      "word": "Mi",
+      "expected": [
+        "mi",
+        "NOUN"
+      ],
+      "predicted": [
+        "mi",
+        "NOUN"
+      ],
+      "matches": true,
+      "native_analysis_id": "bcb49802af46b8b677a50057"
+    },
+    {
+      "text": "Senin evin büyük.",
+      "word": "evin",
+      "expected": [
+        "ev",
+        "NOUN"
+      ],
+      "predicted": [
+        "ev",
+        "NOUN"
+      ],
+      "matches": true,
+      "native_analysis_id": "c7577ae746380e55fe62cf27"
+    },
+    {
+      "text": "Evin kapısı açık.",
+      "word": "Evin",
+      "expected": [
+        "ev",
+        "NOUN"
+      ],
+      "predicted": [
+        "ev",
+        "NOUN"
+      ],
+      "matches": true,
+      "native_analysis_id": "c7577ae746380e55fe62cf27"
+    },
+    {
+      "text": "Ali ve ben geldik.",
+      "word": "geldik",
+      "expected": [
+        "gel",
+        "VERB"
+      ],
+      "predicted": [
+        "gel",
+        "VERB"
+      ],
+      "matches": true,
+      "native_analysis_id": "5f509c589df8f732e2350c25"
+    },
+    {
+      "text": "Ali benimle geldi.",
+      "word": "geldi",
+      "expected": [
+        "gel",
+        "VERB"
+      ],
+      "predicted": [
+        "gel",
+        "VERB"
+      ],
+      "matches": true,
+      "native_analysis_id": "c271bab6ec8205b782926cf7"
+    },
+    {
+      "text": "Senin geldiğini biliyorum.",
+      "word": "biliyorum",
+      "expected": [
+        "bil",
+        "VERB"
+      ],
+      "predicted": [
+        "bil",
+        "VERB"
+      ],
+      "matches": true,
+      "native_analysis_id": "4d01aed3457e701a9ce463eb"
+    },
+    {
+      "text": "Okula doğru yürüdü.",
+      "word": "doğru",
+      "expected": [
+        "doğru",
+        "ADP"
+      ],
+      "predicted": [
+        "doğru",
+        "ADP"
+      ],
+      "matches": true,
+      "native_analysis_id": "dec3f2ae81ea220f9ca74afc"
+    },
+    {
+      "text": "Doğru cevap bu.",
+      "word": "Doğru",
+      "expected": [
+        "doğru",
+        "ADJ"
+      ],
+      "predicted": [
+        "doğru",
+        "ADJ"
+      ],
+      "matches": true,
+      "native_analysis_id": "54002818d1487fc83e089948"
+    },
+    {
+      "text": "Onlar geldi.",
+      "word": "geldi",
+      "expected": [
+        "gel",
+        "VERB"
+      ],
+      "predicted": [
+        "gel",
+        "VERB"
+      ],
+      "matches": true,
+      "native_analysis_id": "c271bab6ec8205b782926cf7"
+    },
+    {
+      "text": "Onlar geldiler.",
+      "word": "geldiler",
+      "expected": [
+        "gel",
+        "VERB"
+      ],
+      "predicted": [
+        "gel",
+        "VERB"
+      ],
+      "matches": true,
+      "native_analysis_id": "338cdee73760925dd76ac6cc"
+    },
+    {
+      "text": "Güzel mi güzel bir ev.",
+      "word": "mi",
+      "expected": [
+        "mi",
+        "AUX"
+      ],
+      "predicted": [
+        "mi",
+        "NOUN"
+      ],
+      "matches": false,
+      "native_analysis_id": "bcb49802af46b8b677a50057"
+    },
+    {
+      "text": "Kitabı okudu Ali.",
+      "word": "Kitabı",
+      "expected": [
+        "kitap",
+        "NOUN"
+      ],
+      "predicted": [
+        "kitap",
+        "NOUN"
+      ],
+      "matches": true,
+      "native_analysis_id": "cbe4276e387661a049aacae6"
+    },
+    {
+      "text": "Güzelliğinden söz ettim.",
+      "word": "Güzelliğinden",
+      "expected": [
+        "güzellik",
+        "NOUN"
+      ],
+      "predicted": [
+        "güzellik",
+        "NOUN"
+      ],
+      "matches": true,
+      "native_analysis_id": "cc5005d78bfd32e68a8ddd95"
+    }
+  ],
+  "matched": 13,
+  "objective_blocks": 15,
+  "roundtrips": 15,
+  "status": "INTEGRATION_CONTRACTS_PASS",
+  "model_scope": "HAND_SET_INTEGRATION_WEIGHTS_NOT_A_TRAINED_RESULT",
+  "zero_contribution_sentences": 15,
+  "candidate_order_invariance": true,
+  "calibrated_direct_equals_replay": true,
+  "TEST_opened": false
+}

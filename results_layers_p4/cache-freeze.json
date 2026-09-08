@@ -1,0 +1,20 @@
+{
+  "parents": {
+    "historical_A2_freeze_sha256": "[PRIVATE_HASH_OMITTED]",
+    "P2_outbox_sha256": "[PRIVATE_HASH_OMITTED]",
+    "P3_receipt_sha256": "[PRIVATE_HASH_OMITTED]"
+  },
+  "TRAIN_cache_sha256": "[PRIVATE_HASH_OMITTED]",
+  "source_sha256": {
+    "training_controls/layers_p4/common.py": "0784ee615e9cc1f4bf1fba80ed3f8974dd5b559b9b4b0754d8ddd5d99ca8551f",
+    "training_controls/layers_p4/cache_scores.py": "[PRIVATE_HASH_OMITTED]",
+    "training_controls/layers_p4/protocol.json": "[PRIVATE_HASH_OMITTED]"
+  },
+  "TEST_opened": false,
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

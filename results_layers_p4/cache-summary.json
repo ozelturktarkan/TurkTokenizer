@@ -1,0 +1,16 @@
+{
+  "status": "CACHE_COMPLETE",
+  "TRAIN_sentences": 3260,
+  "candidate_marginals": 79454,
+  "objective_blocks": 3861,
+  "path": "V:\\TurkTokenizer\\Yedekler\\A123-E70-P9-OF3\\runs\\a1-large-20260908-v1\\P4-two-layer-v1\\cache-r1\\train-marginals.jsonl.gz",
+  "sha256": "[PRIVATE_HASH_OMITTED]",
+  "seconds": 494.3,
+  "TEST_opened": false,
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

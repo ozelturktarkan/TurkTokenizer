@@ -1,0 +1,122 @@
+{
+  "status": "A2_VERIFIED",
+  "arms": {
+    "P2": {
+      "selected": null,
+      "status": "TARGET_INFEASIBLE_ON_PREDECLARED_GRID",
+      "zero_threshold": {
+        "thresholds": {
+          "lemma_threshold": 0.0,
+          "feature_threshold": 0.0
+        },
+        "words": 2266,
+        "aligned": 2261,
+        "accepted": 1887,
+        "lemma_correct": 1575,
+        "feature_correct": 1517,
+        "lemma_wrong": 312,
+        "feature_wrong": 370,
+        "accepted_aligned_coverage_pct": 83.45864661654136,
+        "accepted_all_word_coverage_pct": 83.27449249779347,
+        "lemma_precision_pct": 83.46581875993641,
+        "feature_precision_pct": 80.3921568627451,
+        "lemma_precision_wilson95": [
+          81.7220224108205,
+          85.07363589824394
+        ],
+        "feature_precision_wilson95": [
+          78.53980325714033,
+          82.12102024285723
+        ],
+        "full_morpheme_path_accuracy_measured": false
+      },
+      "grid_pairs": 121,
+      "feasible_pairs": 0,
+      "DEV_at_CALIB_thresholds": null,
+      "checks": {
+        "online_offline_configs": [
+          {
+            "lemma_threshold": 0.0,
+            "feature_threshold": 0.0
+          }
+        ],
+        "accepted": [
+          1887
+        ],
+        "runtime_calibrated_BPE_roundtrips": 0
+      },
+      "native_output_sha256": "[PRIVATE_HASH_OMITTED]"
+    },
+    "HR_0.25": {
+      "selected": null,
+      "status": "TARGET_INFEASIBLE_ON_PREDECLARED_GRID",
+      "zero_threshold": {
+        "thresholds": {
+          "lemma_threshold": 0.0,
+          "feature_threshold": 0.0
+        },
+        "words": 2266,
+        "aligned": 2261,
+        "accepted": 1893,
+        "lemma_correct": 1583,
+        "feature_correct": 1528,
+        "lemma_wrong": 310,
+        "feature_wrong": 365,
+        "accepted_aligned_coverage_pct": 83.72401592215834,
+        "accepted_all_word_coverage_pct": 83.53927625772286,
+        "lemma_precision_pct": 83.62387744321184,
+        "feature_precision_pct": 80.71843634442683,
+        "lemma_precision_wilson95": [
+          81.88904986457668,
+          85.22251573729766
+        ],
+        "feature_precision_wilson95": [
+          78.87976126758947,
+          82.43269026028157
+        ],
+        "full_morpheme_path_accuracy_measured": false
+      },
+      "grid_pairs": 121,
+      "feasible_pairs": 0,
+      "DEV_at_CALIB_thresholds": null,
+      "checks": {
+        "online_offline_configs": [
+          {
+            "lemma_threshold": 0.0,
+            "feature_threshold": 0.0
+          }
+        ],
+        "accepted": [
+          1893
+        ],
+        "runtime_calibrated_BPE_roundtrips": 0
+      },
+      "native_output_sha256": "[PRIVATE_HASH_OMITTED]"
+    }
+  },
+  "selection": {
+    "status": "TARGET_INFEASIBLE_ON_PREDECLARED_GRID",
+    "name": "HR_0.25",
+    "configuration": {
+      "head_strength": 1,
+      "rank_strength": 0.25,
+      "rank_variant": "selected_head"
+    },
+    "A2_config": null,
+    "model_sha256": "85d183c8050fbee89c321269b17a79375731dc8d2e1e085902d0de69f9a3cc07",
+    "DEV_selection_sha256": "[PRIVATE_HASH_OMITTED]",
+    "comparison_sha256": "[PRIVATE_HASH_OMITTED]",
+    "calibration_scope": "NATIVE_LEMMA_POS_AND_DECLARED_FEATURES",
+    "lexical_view_confidence_calibrated": false,
+    "full_morpheme_path_accuracy_measured": false,
+    "TEST_opened": false,
+    "default_promoted": false
+  },
+  "source_sha256": "727c20a923925261169e7c8cef0a99cf65ba39ce144be42912ae75a0155a21ac",
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

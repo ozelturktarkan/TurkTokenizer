@@ -1,0 +1,182 @@
+{
+  "status": "API_CONTRACTS_PASS",
+  "objective_blocks": 8,
+  "roundtrips": 8,
+  "authored_probes": 8,
+  "authored_probes_matched": 7,
+  "probe_scope": "AUTHORED_DIAGNOSTIC_NOT_INDEPENDENT_TEST",
+  "probes": [
+    {
+      "text": "Bu duygusal bir konuşmaydı.",
+      "word": "duygusal",
+      "expected_lemma": "duygusal",
+      "expected_pos": "ADJ",
+      "predicted_view": {
+        "lemma": "duygusal",
+        "output_pos": "ADJ",
+        "features": {},
+        "kind": "DERIVED_NATIVE_POS",
+        "boundary": 0,
+        "analysis_id": "85debc1e1741d18b6c8b5f4d",
+        "root_lemma": "duygu",
+        "root_pos": "NOUN",
+        "view_id": "13fc6acbaa8fc0776724dd0c"
+      },
+      "matches": true
+    },
+    {
+      "text": "Bu fiziksel bir engel.",
+      "word": "fiziksel",
+      "expected_lemma": "fiziksel",
+      "expected_pos": "ADJ",
+      "predicted_view": {
+        "lemma": "fiziksel",
+        "output_pos": "ADJ",
+        "features": {},
+        "kind": "DERIVED_NATIVE_POS",
+        "boundary": 0,
+        "analysis_id": "d116cc9669b977224ea478e7",
+        "root_lemma": "fizik",
+        "root_pos": "NOUN",
+        "view_id": "67dfa775e3cbde653a49deb5"
+      },
+      "matches": true
+    },
+    {
+      "text": "Güzelliğinden söz ettim.",
+      "word": "Güzelliğinden",
+      "expected_lemma": "güzellik",
+      "expected_pos": "NOUN",
+      "predicted_view": {
+        "lemma": "güzellik",
+        "output_pos": "NOUN",
+        "features": {
+          "Case": "Abl",
+          "Number[psor]": "Sing",
+          "Person[psor]": "3",
+          "Number": "Sing"
+        },
+        "kind": "DERIVED_NATIVE_POS",
+        "boundary": 0,
+        "analysis_id": "cc5005d78bfd32e68a8ddd95",
+        "root_lemma": "güzel",
+        "root_pos": "NOUN",
+        "view_id": "504f2630177f8fcd69c375d8"
+      },
+      "matches": true
+    },
+    {
+      "text": "İşletmecilerinden biri geldi.",
+      "word": "İşletmecilerinden",
+      "expected_lemma": "işletmeci",
+      "expected_pos": "NOUN",
+      "predicted_view": {
+        "lemma": "işletmeci",
+        "output_pos": "NOUN",
+        "features": {
+          "Case": "Abl",
+          "Number": "Plur",
+          "Number[psor]": "Sing",
+          "Person[psor]": "3"
+        },
+        "kind": "DERIVED_NATIVE_POS",
+        "boundary": 0,
+        "analysis_id": "a331c8bbe90140ad18eceaba",
+        "root_lemma": "işletme",
+        "root_pos": "NOUN",
+        "view_id": "d641da74f92e79627a35d965"
+      },
+      "matches": true
+    },
+    {
+      "text": "Sen geldin mi?",
+      "word": "mi",
+      "expected_lemma": "mi",
+      "expected_pos": "AUX",
+      "predicted_view": {
+        "lemma": "mi",
+        "output_pos": "NOUN",
+        "features": {
+          "Case": "Nom",
+          "Number": "Sing"
+        },
+        "kind": "ROOT_NATIVE",
+        "boundary": -1,
+        "analysis_id": "bcb49802af46b8b677a50057",
+        "root_lemma": "mi",
+        "root_pos": "NOUN",
+        "view_id": "e6dfc0b88abbab66cc0dac3c"
+      },
+      "matches": false
+    },
+    {
+      "text": "Mi notasını çaldım.",
+      "word": "Mi",
+      "expected_lemma": "mi",
+      "expected_pos": "NOUN",
+      "predicted_view": {
+        "lemma": "mi",
+        "output_pos": "NOUN",
+        "features": {
+          "Case": "Nom",
+          "Number": "Sing"
+        },
+        "kind": "ROOT_NATIVE",
+        "boundary": -1,
+        "analysis_id": "bcb49802af46b8b677a50057",
+        "root_lemma": "mi",
+        "root_pos": "NOUN",
+        "view_id": "e6dfc0b88abbab66cc0dac3c"
+      },
+      "matches": true
+    },
+    {
+      "text": "Evlerimizden biri yandı.",
+      "word": "Evlerimizden",
+      "expected_lemma": "ev",
+      "expected_pos": "NOUN",
+      "predicted_view": {
+        "lemma": "ev",
+        "output_pos": "NOUN",
+        "features": {
+          "Case": "Abl",
+          "Number": "Plur",
+          "Number[psor]": "Plur",
+          "Person[psor]": "1"
+        },
+        "kind": "ROOT_NATIVE",
+        "boundary": -1,
+        "analysis_id": "ebe0904ff75b9d34b12fa1dd",
+        "root_lemma": "ev",
+        "root_pos": "NOUN",
+        "view_id": "849b4ac1a4fcf23ce1a20e95"
+      },
+      "matches": true
+    },
+    {
+      "text": "Senin evin güzel.",
+      "word": "evin",
+      "expected_lemma": "ev",
+      "expected_pos": "NOUN",
+      "predicted_view": {
+        "lemma": "ev",
+        "output_pos": "NOUN",
+        "features": {
+          "Case": "Gen",
+          "Number": "Sing"
+        },
+        "kind": "ROOT_NATIVE",
+        "boundary": -1,
+        "analysis_id": "c7577ae746380e55fe62cf27",
+        "root_lemma": "ev",
+        "root_pos": "NOUN",
+        "view_id": "2dfb3ebe96a398d309a718cc"
+      },
+      "matches": true
+    }
+  ],
+  "source_sha256": {
+    "s06e_p2_policy.py": "fdd7932ae225c08ddb4aa6e32dff8a019cbb1012c35010c1b023a0c5e07c93b4",
+    "training_controls/lexical_p2/validate_policy.py": "427bb736b302995c1e3307b8e99b25d9c07183a9bf3c92dc8a85aa6a634e4f55"
+  }
+}

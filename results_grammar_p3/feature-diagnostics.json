@@ -1,0 +1,61 @@
+{
+  "scope": "TRAIN_ROUND_1_RETAINED_CONTRASTS_BEFORE_LAST_FIT_NOT_TEST_ACCURACY",
+  "arms": {
+    "GOV": {
+      "contrasts": 338,
+      "wrong_at_round_1_mining": 36,
+      "indistinguishable_by_active_features": 149,
+      "wrong_and_indistinguishable": 15,
+      "nonzero_learned_weights": {
+        "local_government": 0.8548549697066449,
+        "gov.adp_match": -0.3700118029679273,
+        "gov.adp_mismatch": -0.10341270635839821,
+        "gov.verb_case_left": 0.4046956749151761,
+        "gov.verb_case_right": 0.12445288195633634,
+        "plan.gov.adp_match": -0.9537444253676287,
+        "plan.gov.adp_mismatch": -0.10341270635839821,
+        "plan.gov.verb_case": 0.27901832741238997
+      }
+    },
+    "AGR": {
+      "contrasts": 338,
+      "wrong_at_round_1_mining": 33,
+      "indistinguishable_by_active_features": 260,
+      "wrong_and_indistinguishable": 28,
+      "nonzero_learned_weights": {
+        "local_agreement": 1.240766313800626,
+        "agr.poss_match": -0.21957531152461499,
+        "agr.subject_match": 0.14187534168980825,
+        "agr.number12_match": 0.14187534168980825,
+        "agr.finite_question": 1.7833618040115875,
+        "agr.note_after_finite": -1.7833618040115875,
+        "plan.agr.poss_match": -0.2748616180633629
+      }
+    },
+    "JOINT_FULL": {
+      "contrasts": 338,
+      "wrong_at_round_1_mining": 33,
+      "indistinguishable_by_active_features": 90,
+      "wrong_and_indistinguishable": 12,
+      "nonzero_learned_weights": {
+        "local_government": 0.4901339594726859,
+        "local_agreement": 1.2299697904185047,
+        "gov.adp_match": -0.9362462027366082,
+        "gov.adp_mismatch": -0.06888795130738559,
+        "gov.verb_case_left": -0.2390910400993717,
+        "gov.verb_case_right": 0.1321646766572276,
+        "agr.poss_match": -0.24262488859432937,
+        "agr.subject_match": 0.13311256058836354,
+        "agr.number12_match": 0.13311256058836354,
+        "agr.finite_question": 1.783362587031193,
+        "agr.note_after_finite": -1.783362587031193,
+        "plan.gov.adp_match": -0.091969283055508,
+        "plan.gov.adp_mismatch": -0.038829119901760474,
+        "plan.gov.verb_case": 0.4610307924923563,
+        "plan.agr.poss_match": -0.3005003729505335
+      }
+    }
+  },
+  "model_sha256": "04931cb083551a46e0991dce2fe50b3741f7f20a9cc5d80081649d682d8a580d",
+  "weights_changed": false
+}

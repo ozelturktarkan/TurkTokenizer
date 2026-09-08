@@ -1,0 +1,26 @@
+{
+  "status": "HEAD_FIT_COMPLETE",
+  "counts": {
+    "conditional_native_examples": 15240,
+    "competitive_words": 7424
+  },
+  "fit": {
+    "examples": 15240,
+    "candidate_rows": 38224,
+    "features": 15055,
+    "initial_loss": 0.9604955671748139,
+    "final_loss": 0.2611759023770337,
+    "iterations": 93,
+    "optimizer_success": true,
+    "optimizer_message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+  },
+  "model_sha256": "[PRIVATE_HASH_OMITTED]",
+  "seconds": 45.0,
+  "TEST_opened": false,
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

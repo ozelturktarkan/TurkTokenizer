@@ -1,0 +1,171 @@
+{
+  "head_strength": 1,
+  "selected_on": "DEV_ONLY",
+  "rank_fitting_started": false,
+  "CALIB_started": false,
+  "head_model_sha256": "[PRIVATE_HASH_OMITTED]",
+  "arms": {
+    "0.00": {
+      "legacy": {
+        "aligned": 4056,
+        "gold_projectable": 3973,
+        "candidate_lemma_pos": 3420,
+        "candidate_declared_features": 3376,
+        "preferred_lemma_pos": 3174,
+        "preferred_declared_features": 3045,
+        "legacy_selected": 3637,
+        "legacy_selected_lemma_correct": 3042,
+        "legacy_selected_feature_correct": 2918,
+        "A2_eligible": 3466,
+        "words": 4070,
+        "legacy_selected_lemma_wrong": 595,
+        "legacy_selected_feature_wrong": 719,
+        "preferred_lemma_pos_pct_all_words": 77.98525798525799,
+        "preferred_declared_features_pct_all_words": 74.81572481572482,
+        "unresolved_projection_words": 97,
+        "unaligned_words": 14
+      },
+      "views": {
+        "oracle_view_lemma_pos": 3676,
+        "oracle_view_features": 3597,
+        "predicted_view_lemma_pos": 3350,
+        "predicted_view_features": 3210,
+        "words": 4070
+      },
+      "verified_P2_control_reused": true
+    },
+    "0.25": {
+      "head_strength": 0.25,
+      "legacy": {
+        "aligned": 4056,
+        "gold_projectable": 3973,
+        "candidate_lemma_pos": 3420,
+        "candidate_declared_features": 3376,
+        "preferred_lemma_pos": 3174,
+        "preferred_declared_features": 3045,
+        "legacy_selected": 3637,
+        "legacy_selected_lemma_correct": 3042,
+        "legacy_selected_feature_correct": 2918,
+        "A2_eligible": 3466,
+        "words": 4070,
+        "legacy_selected_lemma_wrong": 595,
+        "legacy_selected_feature_wrong": 719,
+        "preferred_lemma_pos_pct_all_words": 77.98525798525799,
+        "preferred_declared_features_pct_all_words": 74.81572481572482,
+        "unresolved_projection_words": 97,
+        "unaligned_words": 14
+      },
+      "views": {
+        "oracle_view_lemma_pos": 3676,
+        "oracle_view_features": 3597,
+        "predicted_view_lemma_pos": 3352,
+        "predicted_view_features": 3209,
+        "words": 4070
+      },
+      "paired": {
+        "predicted_view_lemma_pos": {
+          "fixed": 5,
+          "regressed": 3
+        },
+        "predicted_view_features": {
+          "fixed": 2,
+          "regressed": 3
+        }
+      },
+      "native_choices_scores_and_confidence_unchanged": true,
+      "BPE_roundtrips": 293,
+      "output_sha256": "[PRIVATE_HASH_OMITTED]"
+    },
+    "0.50": {
+      "head_strength": 0.5,
+      "legacy": {
+        "aligned": 4056,
+        "gold_projectable": 3973,
+        "candidate_lemma_pos": 3420,
+        "candidate_declared_features": 3376,
+        "preferred_lemma_pos": 3174,
+        "preferred_declared_features": 3045,
+        "legacy_selected": 3637,
+        "legacy_selected_lemma_correct": 3042,
+        "legacy_selected_feature_correct": 2918,
+        "A2_eligible": 3466,
+        "words": 4070,
+        "legacy_selected_lemma_wrong": 595,
+        "legacy_selected_feature_wrong": 719,
+        "preferred_lemma_pos_pct_all_words": 77.98525798525799,
+        "preferred_declared_features_pct_all_words": 74.81572481572482,
+        "unresolved_projection_words": 97,
+        "unaligned_words": 14
+      },
+      "views": {
+        "oracle_view_lemma_pos": 3676,
+        "oracle_view_features": 3597,
+        "predicted_view_lemma_pos": 3356,
+        "predicted_view_features": 3211,
+        "words": 4070
+      },
+      "paired": {
+        "predicted_view_lemma_pos": {
+          "fixed": 9,
+          "regressed": 3
+        },
+        "predicted_view_features": {
+          "fixed": 4,
+          "regressed": 3
+        }
+      },
+      "native_choices_scores_and_confidence_unchanged": true,
+      "BPE_roundtrips": 293,
+      "output_sha256": "[PRIVATE_HASH_OMITTED]"
+    },
+    "1.00": {
+      "head_strength": 1,
+      "legacy": {
+        "aligned": 4056,
+        "gold_projectable": 3973,
+        "candidate_lemma_pos": 3420,
+        "candidate_declared_features": 3376,
+        "preferred_lemma_pos": 3174,
+        "preferred_declared_features": 3045,
+        "legacy_selected": 3637,
+        "legacy_selected_lemma_correct": 3042,
+        "legacy_selected_feature_correct": 2918,
+        "A2_eligible": 3466,
+        "words": 4070,
+        "legacy_selected_lemma_wrong": 595,
+        "legacy_selected_feature_wrong": 719,
+        "preferred_lemma_pos_pct_all_words": 77.98525798525799,
+        "preferred_declared_features_pct_all_words": 74.81572481572482,
+        "unresolved_projection_words": 97,
+        "unaligned_words": 14
+      },
+      "views": {
+        "oracle_view_lemma_pos": 3676,
+        "oracle_view_features": 3597,
+        "predicted_view_lemma_pos": 3359,
+        "predicted_view_features": 3212,
+        "words": 4070
+      },
+      "paired": {
+        "predicted_view_lemma_pos": {
+          "fixed": 23,
+          "regressed": 14
+        },
+        "predicted_view_features": {
+          "fixed": 16,
+          "regressed": 14
+        }
+      },
+      "native_choices_scores_and_confidence_unchanged": true,
+      "BPE_roundtrips": 293,
+      "output_sha256": "[PRIVATE_HASH_OMITTED]"
+    }
+  },
+  "TEST_opened": false,
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "PRETRAINING_CONTRACTS_PASS",
+  "zero_control_sentences": 18,
+  "head_only_native_invariance": true,
+  "ranked_objective_blocks": 18,
+  "BPE_roundtrips": 19,
+  "no_gold_or_selected_neighbour_features": true,
+  "emitted_positive_label_contract": true,
+  "single_A2_pass": true,
+  "candidate_order_invariance": true,
+  "scope": "HAND_SET_WEIGHTS_ENGINEERING_TEST_NOT_TRAINED_ACCURACY",
+  "TEST_opened": false
+}

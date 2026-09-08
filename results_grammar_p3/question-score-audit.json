@@ -1,0 +1,106 @@
+{
+  "text": "Sen geldin mi?",
+  "scope": "AUTHORED_DIAGNOSTIC_RETAINED_SEARCH_MAX_MARGINALS",
+  "arms": {
+    "C0_P2": {
+      "candidates": [
+        {
+          "analysis_id": "bcb49802af46b8b677a50057",
+          "native_pos": "NOUN",
+          "question_lexeme": false,
+          "view_pos": "NOUN",
+          "max_marginal": -15.764704619211315
+        },
+        {
+          "analysis_id": "d84ee24a46001f65bb9da4f8",
+          "native_pos": "PART",
+          "question_lexeme": true,
+          "view_pos": "AUX",
+          "max_marginal": -44.11779745350019
+        }
+      ],
+      "best_question_gap_below_winner": 28.353092834288873,
+      "selected_view": {
+        "lemma": "mi",
+        "output_pos": "NOUN",
+        "features": {
+          "Case": "Nom",
+          "Number": "Sing"
+        },
+        "kind": "ROOT_NATIVE",
+        "boundary": -1,
+        "analysis_id": "bcb49802af46b8b677a50057",
+        "root_lemma": "mi",
+        "root_pos": "NOUN",
+        "view_id": "e6dfc0b88abbab66cc0dac3c"
+      }
+    },
+    "JOINT_HALF": {
+      "candidates": [
+        {
+          "analysis_id": "bcb49802af46b8b677a50057",
+          "native_pos": "NOUN",
+          "question_lexeme": false,
+          "view_pos": "NOUN",
+          "max_marginal": -16.57163225350137
+        },
+        {
+          "analysis_id": "d84ee24a46001f65bb9da4f8",
+          "native_pos": "PART",
+          "question_lexeme": true,
+          "view_pos": "AUX",
+          "max_marginal": -43.2261161599846
+        }
+      ],
+      "best_question_gap_below_winner": 26.65448390648323,
+      "selected_view": {
+        "lemma": "mi",
+        "output_pos": "NOUN",
+        "features": {
+          "Case": "Nom",
+          "Number": "Sing"
+        },
+        "kind": "ROOT_NATIVE",
+        "boundary": -1,
+        "analysis_id": "bcb49802af46b8b677a50057",
+        "root_lemma": "mi",
+        "root_pos": "NOUN",
+        "view_id": "e6dfc0b88abbab66cc0dac3c"
+      }
+    },
+    "JOINT_FULL": {
+      "candidates": [
+        {
+          "analysis_id": "bcb49802af46b8b677a50057",
+          "native_pos": "NOUN",
+          "question_lexeme": false,
+          "view_pos": "NOUN",
+          "max_marginal": -17.378559887791422
+        },
+        {
+          "analysis_id": "d84ee24a46001f65bb9da4f8",
+          "native_pos": "PART",
+          "question_lexeme": true,
+          "view_pos": "AUX",
+          "max_marginal": -42.334434866468996
+        }
+      ],
+      "best_question_gap_below_winner": 24.955874978677574,
+      "selected_view": {
+        "lemma": "mi",
+        "output_pos": "NOUN",
+        "features": {
+          "Case": "Nom",
+          "Number": "Sing"
+        },
+        "kind": "ROOT_NATIVE",
+        "boundary": -1,
+        "analysis_id": "bcb49802af46b8b677a50057",
+        "root_lemma": "mi",
+        "root_pos": "NOUN",
+        "view_id": "e6dfc0b88abbab66cc0dac3c"
+      }
+    }
+  },
+  "weights_changed": false
+}

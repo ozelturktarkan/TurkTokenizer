@@ -1,0 +1,16 @@
+{
+  "id": "S06E-E05-P2-v0.1.0",
+  "base": "Frozen E05 + P1 combined morphology",
+  "training": "Only the existing 10490 TRAIN sentences; no DEV, CALIB, MAIN hard negatives or TEST labels in fitting. Freeze E05 weights; fit a separate partial-label lexical-view residual head.",
+  "optimizer": {"maxiter": 100, "regularization": 0.0001, "min_feature_frequency": 3},
+  "dev_arms": [0.0, 0.25, 0.5, 1.0],
+  "selection": "Select on DEV only: among residual arms with no loss in legacy lemma+POS and declared features against P1, maximize legacy lemma+POS, then projected strict features. If none qualifies retain strength 0. CALIB is run after sealing DEV selection; do not retune on CALIB. Never promote historical default unless both DEV and CALIB satisfy nonregression.",
+  "measurements": ["Frozen legacy candidate/choice metrics", "Single predicted lexical view vs unchanged reference, same measure for all arms", "Oracle view coverage separately, never called selected accuracy", "Representation-only gain separated from changed native analysis IDs"],
+  "features_checked": ["VerbForm", "Polarity", "Voice", "Person[psor]", "Number[psor]", "Case", "Number", "Person"],
+  "new_morphological_paths": false,
+  "gold_changed": false,
+  "TEST_opened": false,
+  "BPE_IDs_changed": false,
+  "public_scope": "Source code, aggregate reports, protocol and hash receipts only. Raw corpora and weights remain local/on V.",
+  "sources": ["https://universaldependencies.org/tr/", "https://universaldependencies.org/treebanks/tr_imst/index.html", "https://aclanthology.org/2021.law-1.12/", "https://aclanthology.org/C00-1042/"]
+}

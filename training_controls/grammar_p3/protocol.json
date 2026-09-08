@@ -1,0 +1,17 @@
+{
+  "id": "S06E-P3-YONT-1",
+  "scope": "First narrow implementation: case government, postposition case, possessor/person/question scope. Word-order/focus experiment deferred as proposed.",
+  "baseline": "s06e_p2_policy.Tokenizer(strength=1.0)",
+  "candidate_inventory": "Fresh P1 combined candidates; identical inventory across every arm. TRAIN cache is regenerated from the same analyzer.",
+  "training_source": "3260 IMST TRAIN sentences only. No MAIN, DEV, CALIB or TEST labels in fitting.",
+  "frames": "TRAIN dependency-observed verb lemma+voice case distributions; not exhaustive sense-specific valency and never hard constraints.",
+  "A1": {"method": "Separate partial-label local grammar residual for government, agreement and combined", "regularization": 0.001, "maxiter": 100, "minimum_feature_frequency": 3},
+  "A3": {"method": "Two fixed mining/fitting rounds of structured squared-hinge grammar residual ranking", "train_contexts": 192, "targets_per_context": 2, "context_selection": "SHA256 of TRAIN context id; eligible strict view-positive contrast and observable grammar evidence", "margin": 1.0, "regularization": 0.05, "local_scale_bounds": [0,2], "grammar_weight_bounds": [-5,5], "old_five_channel_weights": "frozen at 1", "scope": "Mine with current full decoder; reference gates and retained configurations frozen only within each mining round, then recomputed"},
+  "DEV_arms": ["C0_P2", "GOV", "AGR", "LOCAL_COMBINED", "JOINT_HALF", "JOINT_FULL"],
+  "selection": "Native lemma+POS and native declared features must not decrease; wrong committed lemma decisions must not increase versus P2, and projected lemma+POS must not decrease. Among safe arms maximize projected lemma+POS, then projected features, native lemma+POS, then prefer simpler/zero contribution.",
+  "A2": {"after_DEV_selection": true, "threshold_grid": [0,0.25,0.5,1,2,3,4,6,8,12,20], "target_empirical_precision_pct": 92, "scope": "Inherited native lemma+POS and declared feature abstention; lexical-view confidence is not calibrated by this gate"},
+  "CALIB": "Baseline plus one DEV-sealed arm; no retuning based on CALIB. If historical nonregression fails, retain P2 and report the exploratory arm.",
+  "guards": ["No candidate deletion or label rewriting", "Zero contribution equals P2", "All bound factors depend on actual chosen candidates", "No gold/selected-neighbour features", "Raw reconstruction and 224309 BPE IDs", "Independent objective reconstruction including grammar", "Counterexample probes are diagnostic, not an independent test", "Candidate coverage and retained-plan coverage separately", "Double SHA256-verified V backup"],
+  "TEST_opened": false,
+  "automatic_default_promotion": false
+}

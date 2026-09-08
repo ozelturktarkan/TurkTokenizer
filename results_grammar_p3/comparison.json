@@ -1,0 +1,400 @@
+{
+  "status": "EXPERIMENT_COMPLETE",
+  "arms": {
+    "C0_P2": {
+      "dev": {
+        "strength": 1.0,
+        "legacy": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3174,
+          "preferred_declared_features": 3045,
+          "legacy_selected": 3637,
+          "legacy_selected_lemma_correct": 3042,
+          "legacy_selected_feature_correct": 2918,
+          "A2_eligible": 3466,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 595,
+          "legacy_selected_feature_wrong": 719,
+          "preferred_lemma_pos_pct_all_words": 77.98525798525799,
+          "preferred_declared_features_pct_all_words": 74.81572481572482,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "views": {
+          "oracle_view_lemma_pos": 3676,
+          "oracle_view_features": 3597,
+          "predicted_view_lemma_pos": 3350,
+          "predicted_view_features": 3210,
+          "words": 4070
+        },
+        "objective_blocks_verified": 368,
+        "control_reused_verified_P1_decisions": false,
+        "BPE_roundtrips": 293,
+        "artifact_sha256": {
+          "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+        },
+        "configuration": "C0_P2",
+        "control_reused_verified_P2": true,
+        "objective_blocks_verified_this_run": 0,
+        "output_path": "V:\\TurkTokenizer\\Yedekler\\A123-E70-P9-OF3\\runs\\a1-large-20260908-v1\\P2-lexical-v1\\policy-imst\\evaluation\\1.00\\dev\\outputs.jsonl.gz"
+      },
+      "calib": {
+        "strength": 1.0,
+        "legacy": {
+          "aligned": 2261,
+          "gold_projectable": 2228,
+          "candidate_lemma_pos": 1954,
+          "candidate_declared_features": 1935,
+          "preferred_lemma_pos": 1751,
+          "preferred_declared_features": 1680,
+          "legacy_selected": 2000,
+          "legacy_selected_lemma_correct": 1633,
+          "legacy_selected_feature_correct": 1563,
+          "A2_eligible": 1887,
+          "words": 2266,
+          "legacy_selected_lemma_wrong": 367,
+          "legacy_selected_feature_wrong": 437,
+          "preferred_lemma_pos_pct_all_words": 77.27272727272727,
+          "preferred_declared_features_pct_all_words": 74.13945278022948,
+          "unresolved_projection_words": 38,
+          "unaligned_words": 5
+        },
+        "views": {
+          "oracle_view_lemma_pos": 2123,
+          "oracle_view_features": 2059,
+          "predicted_view_lemma_pos": 1876,
+          "predicted_view_features": 1756,
+          "words": 2266
+        },
+        "objective_blocks_verified": 539,
+        "control_reused_verified_P1_decisions": false,
+        "BPE_roundtrips": 382,
+        "artifact_sha256": {
+          "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+        },
+        "configuration": "C0_P2",
+        "control_reused_verified_P2": true,
+        "objective_blocks_verified_this_run": 0,
+        "output_path": "V:\\TurkTokenizer\\Yedekler\\A123-E70-P9-OF3\\runs\\a1-large-20260908-v1\\P2-lexical-v1\\policy-imst\\evaluation\\1.00\\calib\\outputs.jsonl.gz"
+      }
+    },
+    "GOV": {
+      "dev": {
+        "configuration": "GOV",
+        "legacy": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3174,
+          "preferred_declared_features": 3046,
+          "legacy_selected": 3643,
+          "legacy_selected_lemma_correct": 3046,
+          "legacy_selected_feature_correct": 2923,
+          "A2_eligible": 3477,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 597,
+          "legacy_selected_feature_wrong": 720,
+          "preferred_lemma_pos_pct_all_words": 77.98525798525799,
+          "preferred_declared_features_pct_all_words": 74.84029484029485,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "views": {
+          "oracle_view_lemma_pos": 3676,
+          "oracle_view_features": 3597,
+          "predicted_view_lemma_pos": 3349,
+          "predicted_view_features": 3211,
+          "words": 4070
+        },
+        "paired": {
+          "preferred_lemma_pos": {
+            "fixed": 2,
+            "regressed": 2
+          },
+          "preferred_declared_features": {
+            "fixed": 3,
+            "regressed": 2
+          },
+          "predicted_view_lemma_pos": {
+            "fixed": 2,
+            "regressed": 3
+          },
+          "predicted_view_features": {
+            "fixed": 3,
+            "regressed": 2
+          }
+        },
+        "changed_native_analysis_ids": 9,
+        "objective_blocks_verified_this_run": 368,
+        "BPE_roundtrips": 293,
+        "output_path": "V:\\TurkTokenizer\\Yedekler\\A123-E70-P9-OF3\\runs\\a1-large-20260908-v1\\P3-yont-v1\\evaluation\\GOV\\dev\\outputs.jsonl.gz",
+        "artifact_sha256": {
+          "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+        },
+        "P2_nonregression": false
+      }
+    },
+    "AGR": {
+      "dev": {
+        "configuration": "AGR",
+        "legacy": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3174,
+          "preferred_declared_features": 3045,
+          "legacy_selected": 3638,
+          "legacy_selected_lemma_correct": 3042,
+          "legacy_selected_feature_correct": 2918,
+          "A2_eligible": 3465,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 596,
+          "legacy_selected_feature_wrong": 720,
+          "preferred_lemma_pos_pct_all_words": 77.98525798525799,
+          "preferred_declared_features_pct_all_words": 74.81572481572482,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "views": {
+          "oracle_view_lemma_pos": 3676,
+          "oracle_view_features": 3597,
+          "predicted_view_lemma_pos": 3349,
+          "predicted_view_features": 3209,
+          "words": 4070
+        },
+        "paired": {
+          "preferred_lemma_pos": {
+            "fixed": 1,
+            "regressed": 1
+          },
+          "preferred_declared_features": {
+            "fixed": 1,
+            "regressed": 1
+          },
+          "predicted_view_lemma_pos": {
+            "fixed": 1,
+            "regressed": 2
+          },
+          "predicted_view_features": {
+            "fixed": 1,
+            "regressed": 2
+          }
+        },
+        "changed_native_analysis_ids": 3,
+        "objective_blocks_verified_this_run": 368,
+        "BPE_roundtrips": 293,
+        "output_path": "V:\\TurkTokenizer\\Yedekler\\A123-E70-P9-OF3\\runs\\a1-large-20260908-v1\\P3-yont-v1\\evaluation\\AGR\\dev\\outputs.jsonl.gz",
+        "artifact_sha256": {
+          "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+        },
+        "P2_nonregression": false
+      }
+    },
+    "LOCAL_COMBINED": {
+      "dev": {
+        "configuration": "LOCAL_COMBINED",
+        "legacy": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3173,
+          "preferred_declared_features": 3044,
+          "legacy_selected": 3641,
+          "legacy_selected_lemma_correct": 3045,
+          "legacy_selected_feature_correct": 2921,
+          "A2_eligible": 3471,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 596,
+          "legacy_selected_feature_wrong": 720,
+          "preferred_lemma_pos_pct_all_words": 77.96068796068796,
+          "preferred_declared_features_pct_all_words": 74.7911547911548,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "views": {
+          "oracle_view_lemma_pos": 3676,
+          "oracle_view_features": 3597,
+          "predicted_view_lemma_pos": 3349,
+          "predicted_view_features": 3209,
+          "words": 4070
+        },
+        "paired": {
+          "preferred_lemma_pos": {
+            "fixed": 0,
+            "regressed": 1
+          },
+          "preferred_declared_features": {
+            "fixed": 0,
+            "regressed": 1
+          },
+          "predicted_view_lemma_pos": {
+            "fixed": 0,
+            "regressed": 1
+          },
+          "predicted_view_features": {
+            "fixed": 0,
+            "regressed": 1
+          }
+        },
+        "changed_native_analysis_ids": 1,
+        "objective_blocks_verified_this_run": 368,
+        "BPE_roundtrips": 293,
+        "output_path": "V:\\TurkTokenizer\\Yedekler\\A123-E70-P9-OF3\\runs\\a1-large-20260908-v1\\P3-yont-v1\\evaluation\\LOCAL_COMBINED\\dev\\outputs.jsonl.gz",
+        "artifact_sha256": {
+          "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+        },
+        "P2_nonregression": false
+      }
+    },
+    "JOINT_HALF": {
+      "dev": {
+        "configuration": "JOINT_HALF",
+        "legacy": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3176,
+          "preferred_declared_features": 3048,
+          "legacy_selected": 3642,
+          "legacy_selected_lemma_correct": 3046,
+          "legacy_selected_feature_correct": 2923,
+          "A2_eligible": 3469,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 596,
+          "legacy_selected_feature_wrong": 719,
+          "preferred_lemma_pos_pct_all_words": 78.03439803439804,
+          "preferred_declared_features_pct_all_words": 74.8894348894349,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "views": {
+          "oracle_view_lemma_pos": 3676,
+          "oracle_view_features": 3597,
+          "predicted_view_lemma_pos": 3351,
+          "predicted_view_features": 3213,
+          "words": 4070
+        },
+        "paired": {
+          "preferred_lemma_pos": {
+            "fixed": 4,
+            "regressed": 2
+          },
+          "preferred_declared_features": {
+            "fixed": 5,
+            "regressed": 2
+          },
+          "predicted_view_lemma_pos": {
+            "fixed": 4,
+            "regressed": 3
+          },
+          "predicted_view_features": {
+            "fixed": 5,
+            "regressed": 2
+          }
+        },
+        "changed_native_analysis_ids": 10,
+        "objective_blocks_verified_this_run": 368,
+        "BPE_roundtrips": 293,
+        "output_path": "V:\\TurkTokenizer\\Yedekler\\A123-E70-P9-OF3\\runs\\a1-large-20260908-v1\\P3-yont-v1\\evaluation\\JOINT_HALF\\dev\\outputs.jsonl.gz",
+        "artifact_sha256": {
+          "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+        },
+        "P2_nonregression": false
+      }
+    },
+    "JOINT_FULL": {
+      "dev": {
+        "configuration": "JOINT_FULL",
+        "legacy": {
+          "aligned": 4056,
+          "gold_projectable": 3973,
+          "candidate_lemma_pos": 3420,
+          "candidate_declared_features": 3376,
+          "preferred_lemma_pos": 3175,
+          "preferred_declared_features": 3047,
+          "legacy_selected": 3643,
+          "legacy_selected_lemma_correct": 3045,
+          "legacy_selected_feature_correct": 2922,
+          "A2_eligible": 3475,
+          "words": 4070,
+          "legacy_selected_lemma_wrong": 598,
+          "legacy_selected_feature_wrong": 721,
+          "preferred_lemma_pos_pct_all_words": 78.00982800982801,
+          "preferred_declared_features_pct_all_words": 74.86486486486487,
+          "unresolved_projection_words": 97,
+          "unaligned_words": 14
+        },
+        "views": {
+          "oracle_view_lemma_pos": 3676,
+          "oracle_view_features": 3597,
+          "predicted_view_lemma_pos": 3348,
+          "predicted_view_features": 3211,
+          "words": 4070
+        },
+        "paired": {
+          "preferred_lemma_pos": {
+            "fixed": 4,
+            "regressed": 3
+          },
+          "preferred_declared_features": {
+            "fixed": 5,
+            "regressed": 3
+          },
+          "predicted_view_lemma_pos": {
+            "fixed": 4,
+            "regressed": 6
+          },
+          "predicted_view_features": {
+            "fixed": 5,
+            "regressed": 4
+          }
+        },
+        "changed_native_analysis_ids": 13,
+        "objective_blocks_verified_this_run": 368,
+        "BPE_roundtrips": 293,
+        "output_path": "V:\\TurkTokenizer\\Yedekler\\A123-E70-P9-OF3\\runs\\a1-large-20260908-v1\\P3-yont-v1\\evaluation\\JOINT_FULL\\dev\\outputs.jsonl.gz",
+        "artifact_sha256": {
+          "native-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "outputs.jsonl.gz": "[PRIVATE_HASH_OMITTED]",
+          "view-words.jsonl.gz": "[PRIVATE_HASH_OMITTED]"
+        },
+        "P2_nonregression": false
+      }
+    }
+  },
+  "DEV_selected": "C0_P2",
+  "CALIB_nonregression": true,
+  "retained_configuration": "C0_P2",
+  "default_promoted": false,
+  "TEST_opened": false,
+  "model_sha256": "04931cb083551a46e0991dce2fe50b3741f7f20a9cc5d80081649d682d8a580d",
+  "new_morphological_paths": false,
+  "BPE_IDs_preserved": 224309,
+  "candidate_inventory_identical": true,
+  "seconds": 1167.2,
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

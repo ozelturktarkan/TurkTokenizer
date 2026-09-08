@@ -1,0 +1,14 @@
+{
+  "id": "S06E-P2-IMST-POLICY-1",
+  "purpose": "Separate source annotation policy from morphology: an explicit UD_IMST export head, not an all-Turkish correctness claim.",
+  "trigger": "TRAIN-only audit found different distributions of retained adjective/number POS across BOUN and IMST; initial mixed-head DEV low-strength result was non-improving.",
+  "training_subset": "Only IMST rows inside the same frozen 10490-sentence TRAIN partition; never evaluation IDs.",
+  "reuse": "Reuse exactly the original frozen P2 feature rows and E05 offsets, verifying each row's partial-label mask against its source token before selecting IMST.",
+  "optimizer": {"maxiter": 100, "regularization": 0.0001, "min_feature_frequency": 3},
+  "dev_arms": [0.0, 1.0],
+  "selection": "Strength 1 only if DEV legacy lemma+POS and legacy declared features do not regress against strength 0; otherwise keep 0. Seal before running this variant on CALIB. Never choose a new strength on CALIB.",
+  "original_mixed_experiment_unchanged": true,
+  "TEST_opened": false,
+  "gold_or_morphological_inventory_changed": false,
+  "public_scope": "Code, protocol, aggregate results and hash receipts. No source corpus or model weights."
+}

@@ -1,0 +1,15 @@
+{
+  "sources": {
+    "training_controls/lexical_p2/fit_policy.py": "d0091b519d80b87214d39057b62294ec8b32c25be5fb7c403a4c33996a2b549e",
+    "training_controls/lexical_p2/policy-protocol.json": "[PRIVATE_HASH_OMITTED]"
+  },
+  "mixed_freeze_sha256": "[PRIVATE_HASH_OMITTED]",
+  "mixed_features_sha256": "[PRIVATE_HASH_OMITTED]",
+  "E05_sha256": "[PRIVATE_HASH_OMITTED]",
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

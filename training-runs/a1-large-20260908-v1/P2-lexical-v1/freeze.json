@@ -1,0 +1,20 @@
+{
+  "sources": {
+    "analysis_schema_p2.py": "c1fe68c9560d3f176b33841d93db7fd9af91a134e88ac779534855a29d4c2571",
+    "training_controls/lexical_p2/fit.py": "5160265c1877818bda25b6f11fd413abfb1fb17157362e630974367a8616b34e",
+    "training_controls/lexical_p2/protocol.json": "[PRIVATE_HASH_OMITTED]",
+    "training_controls/lexical_p2/test_schema.py": "b5a710b0c2a7d4dd7475f8e8f89bfb66e185d3d207b1459ba0a45907262847f9"
+  },
+  "TRAIN_sha256": "[PRIVATE_HASH_OMITTED]",
+  "TRAIN_cache_sha256": "[PRIVATE_HASH_OMITTED]",
+  "E05_sha256": "[PRIVATE_HASH_OMITTED]",
+  "parent_freeze_sha256": "[PRIVATE_HASH_OMITTED]",
+  "TRAIN_sentences": 10490,
+  "fit_reads_DEV_CALIB_TEST": false,
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

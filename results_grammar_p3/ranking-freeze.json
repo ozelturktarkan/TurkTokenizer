@@ -1,0 +1,18 @@
+{
+  "grammar_p3.py": "4c6dbe38ffc6af1fc04349740f82ca6d163234f949e82ffe6e001036f9e6a6d5",
+  "s06e_p3.py": "c4d43611980656dab943158fa73f1be00a403a91c9b4ceb776bdf2c4bdaec48a",
+  "decoder_p3.py": "52f27358e4150e513059646e121aadc171265cd0b97137e331d1f8cdab0b29cf",
+  "training_controls/grammar_p3/prepare.py": "635e04303d23050ba875aca705f1fdf1c70de889ae6fb13ec35352f94fcf6161",
+  "training_controls/grammar_p3/common.py": "3a5577530d89a54980a630529eb3edc92033c314344bf59865f5eed107101a9d",
+  "training_controls/grammar_p3/protocol.json": "[PRIVATE_HASH_OMITTED]",
+  "training_controls/grammar_p3/test_grammar.py": "5f01bd4a44cfd7891b9493994867993b3caba536bdf7e793eceaf3723ad32e28",
+  "training_controls/grammar_p3/fit_local.py": "1cb7fda3ec5455418f52bb92b66f117166a7915a499a7b6bc893861fd55ba9dd",
+  "training_controls/grammar_p3/fit_ranking.py": "cf17d380ba16d284f4bfb7307cd094dab5c1951343a65a4ad4ff55ac159e206a",
+  "training_controls/grammar_p3/validate.py": "b3ecdf7da18f0d8c3dcf5d9dd721d2ae4c5033ed9f11a0bb61576c22aef06cbe",
+  "_publication": {
+    "private_hashes_omitted": true,
+    "aggregate_metrics_unchanged": true,
+    "full_original_retained_locally": true,
+    "not_a_runtime_freeze_manifest": true
+  }
+}

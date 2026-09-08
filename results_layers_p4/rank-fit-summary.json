@@ -1,0 +1,36 @@
+{
+  "status": "RANK_FIT_COMPLETE",
+  "head_strength": 1,
+  "counts": {
+    "labelled_native_words": 26852,
+    "base_head_no_emitted_strict_positive": 1888,
+    "selected_head_no_emitted_strict_positive": 1948,
+    "common_competitive_words": 16516
+  },
+  "arms": {
+    "base_head": {
+      "examples": 16516,
+      "candidate_rows": 62403,
+      "features": 32358,
+      "initial_loss": 0.7321958002557057,
+      "final_loss": 0.2778180869689207,
+      "iterations": 100,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+    },
+    "selected_head": {
+      "examples": 16516,
+      "candidate_rows": 62403,
+      "features": 32330,
+      "initial_loss": 0.7318737371700672,
+      "final_loss": 0.2690047847866782,
+      "iterations": 93,
+      "optimizer_success": true,
+      "optimizer_message": "CONVERGENCE: NORM_OF_PROJECTED_GRADIENT_<=_PGTOL"
+    }
+  },
+  "model_sha256": "85d183c8050fbee89c321269b17a79375731dc8d2e1e085902d0de69f9a3cc07",
+  "TRAIN_sentences": 3260,
+  "DEV_CALIB_TEST_used_in_loss": false,
+  "seconds": 169.1
+}

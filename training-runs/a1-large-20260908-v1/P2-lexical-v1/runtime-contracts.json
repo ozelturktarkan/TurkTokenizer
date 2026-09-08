@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "texts": 9,
+  "roundtrips": 28,
+  "objective_blocks": 10,
+  "BPE_IDs_preserved": 224309,
+  "all_256_bytes": true,
+  "cache_and_order_invariance": true,
+  "no_output_mutation": true,
+  "wrong_head_rejected": true,
+  "protected_code_bypass": true,
+  "sources": {
+    "analysis_schema_p2.py": "c1fe68c9560d3f176b33841d93db7fd9af91a134e88ac779534855a29d4c2571",
+    "s06e_p2.py": "da19abfefdc1486c321e5bac6b4cdc66f5a558f9a42e2736fcd36334312015d5",
+    "s06e_p2bpe.py": "81ceb8c0bc198bf0a222f33bcffd2693a2e1e196bcb441558a8174a3ce51c395",
+    "training_controls/lexical_p2/validate_runtime.py": "633dbeae0994bf67f663f37394aecb28b30c1265e43d591cfa3da2f4a97356e7"
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "status": "ABORTED_NOT_AN_EVALUATION_RESULT",
+  "completed_dev_sentences": 2,
+  "first_failing_reference": "imst:00043123_1",
+  "error": "P2_Q_NATIVE_CANDIDATES_CHANGED",
+  "verified_cause": "Order-invariance probe reversed shared cached candidate lists. The later Sen inventory retained identical candidate objects by ID but changed list order. A fresh runtime exactly matched the prior P2 inventory.",
+  "production_candidate_changes": false,
+  "repair": "Deep-copy the order-invariance probe before reversing candidates. Keep strict ordered inventory equality in full evaluation. Restart in question-aligned-r2 without overwriting the failed attempt.",
+  "model_or_hyperparameter_change": false
+}

@@ -1,0 +1,38 @@
+{
+  "configuration": "HR_0.25",
+  "scope": "FROZEN_IMST_HEAD_AND_FIXED_CANDIDATES_NOT_PHYSICAL_GRAMMAR_CAPACITY",
+  "splits": {
+    "dev": {
+      "words": 4070,
+      "inventory_view_oracle": 3676,
+      "fixed_head_reachable_oracle": 3607,
+      "correct_selected_view": 3373,
+      "no_matching_view_or_unresolved": 394,
+      "wrong_but_reachable_by_native_reranking": 234,
+      "wrong_with_correct_view_on_same_selected_native": 61,
+      "view_exists_but_fixed_head_blocks_every_native_choice": 69
+    },
+    "calib": {
+      "words": 2266,
+      "inventory_view_oracle": 2123,
+      "fixed_head_reachable_oracle": 2098,
+      "correct_selected_view": 1897,
+      "no_matching_view_or_unresolved": 143,
+      "wrong_but_reachable_by_native_reranking": 201,
+      "view_exists_but_fixed_head_blocks_every_native_choice": 25,
+      "wrong_with_correct_view_on_same_selected_native": 28
+    }
+  },
+  "combined": {
+    "words": 6336,
+    "inventory_view_oracle": 5799,
+    "fixed_head_reachable_oracle": 5705,
+    "correct_selected_view": 5270,
+    "no_matching_view_or_unresolved": 537,
+    "wrong_but_reachable_by_native_reranking": 435,
+    "wrong_with_correct_view_on_same_selected_native": 89,
+    "view_exists_but_fixed_head_blocks_every_native_choice": 94
+  },
+  "weights_changed": false,
+  "TEST_opened": false
+}

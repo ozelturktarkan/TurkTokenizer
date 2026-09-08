@@ -1,0 +1,666 @@
+{
+  "scope": "AUTHORED_DIAGNOSTIC_NOT_INDEPENDENT_TEST",
+  "selection_changed": false,
+  "arms": {
+    "P2": {
+      "probes": [
+        {
+          "text": "Sen geldin mi?",
+          "word": "mi",
+          "expected": [
+            "mi",
+            "AUX"
+          ],
+          "predicted": [
+            "mi",
+            "NOUN"
+          ],
+          "matches": false
+        },
+        {
+          "text": "Sen geliyor musun?",
+          "word": "musun",
+          "expected": [
+            "mi",
+            "AUX"
+          ],
+          "predicted": [
+            "mi",
+            "AUX"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Mi notasını çaldım.",
+          "word": "Mi",
+          "expected": [
+            "mi",
+            "NOUN"
+          ],
+          "predicted": [
+            "mi",
+            "NOUN"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Senin evin büyük.",
+          "word": "evin",
+          "expected": [
+            "ev",
+            "NOUN"
+          ],
+          "predicted": [
+            "ev",
+            "NOUN"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Evin kapısı açık.",
+          "word": "Evin",
+          "expected": [
+            "ev",
+            "NOUN"
+          ],
+          "predicted": [
+            "ev",
+            "NOUN"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Ali ve ben geldik.",
+          "word": "geldik",
+          "expected": [
+            "gel",
+            "VERB"
+          ],
+          "predicted": [
+            "gel",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Ali benimle geldi.",
+          "word": "geldi",
+          "expected": [
+            "gel",
+            "VERB"
+          ],
+          "predicted": [
+            "gel",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Senin geldiğini biliyorum.",
+          "word": "biliyorum",
+          "expected": [
+            "bil",
+            "VERB"
+          ],
+          "predicted": [
+            "bil",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Okula doğru yürüdü.",
+          "word": "doğru",
+          "expected": [
+            "doğru",
+            "ADP"
+          ],
+          "predicted": [
+            "doğru",
+            "ADP"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Doğru cevap bu.",
+          "word": "Doğru",
+          "expected": [
+            "doğru",
+            "ADJ"
+          ],
+          "predicted": [
+            "doğru",
+            "ADJ"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Onlar geldi.",
+          "word": "geldi",
+          "expected": [
+            "gel",
+            "VERB"
+          ],
+          "predicted": [
+            "gel",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Onlar geldiler.",
+          "word": "geldiler",
+          "expected": [
+            "gel",
+            "VERB"
+          ],
+          "predicted": [
+            "gel",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Güzel mi güzel bir ev.",
+          "word": "mi",
+          "expected": [
+            "mi",
+            "AUX"
+          ],
+          "predicted": [
+            "mi",
+            "NOUN"
+          ],
+          "matches": false
+        },
+        {
+          "text": "Kitabı okudu Ali.",
+          "word": "Kitabı",
+          "expected": [
+            "kitap",
+            "NOUN"
+          ],
+          "predicted": [
+            "kitap",
+            "NOUN"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Güzelliğinden söz ettim.",
+          "word": "Güzelliğinden",
+          "expected": [
+            "güzellik",
+            "NOUN"
+          ],
+          "predicted": [
+            "güzellik",
+            "NOUN"
+          ],
+          "matches": true
+        }
+      ],
+      "matched": 13,
+      "roundtrips": 15,
+      "objective_blocks": 15,
+      "question_scores": {
+        "gap_below_winner": 28.353092834288873,
+        "view": {
+          "lemma": "mi",
+          "output_pos": "NOUN",
+          "features": {
+            "Case": "Nom",
+            "Number": "Sing"
+          },
+          "kind": "ROOT_NATIVE",
+          "boundary": -1,
+          "analysis_id": "bcb49802af46b8b677a50057",
+          "root_lemma": "mi",
+          "root_pos": "NOUN",
+          "view_id": "e6dfc0b88abbab66cc0dac3c"
+        },
+        "question_candidate_present": true
+      }
+    },
+    "H": {
+      "probes": [
+        {
+          "text": "Sen geldin mi?",
+          "word": "mi",
+          "expected": [
+            "mi",
+            "AUX"
+          ],
+          "predicted": [
+            "mi",
+            "NOUN"
+          ],
+          "matches": false
+        },
+        {
+          "text": "Sen geliyor musun?",
+          "word": "musun",
+          "expected": [
+            "mi",
+            "AUX"
+          ],
+          "predicted": [
+            "mi",
+            "AUX"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Mi notasını çaldım.",
+          "word": "Mi",
+          "expected": [
+            "mi",
+            "NOUN"
+          ],
+          "predicted": [
+            "mi",
+            "NOUN"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Senin evin büyük.",
+          "word": "evin",
+          "expected": [
+            "ev",
+            "NOUN"
+          ],
+          "predicted": [
+            "ev",
+            "NOUN"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Evin kapısı açık.",
+          "word": "Evin",
+          "expected": [
+            "ev",
+            "NOUN"
+          ],
+          "predicted": [
+            "ev",
+            "NOUN"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Ali ve ben geldik.",
+          "word": "geldik",
+          "expected": [
+            "gel",
+            "VERB"
+          ],
+          "predicted": [
+            "gel",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Ali benimle geldi.",
+          "word": "geldi",
+          "expected": [
+            "gel",
+            "VERB"
+          ],
+          "predicted": [
+            "gel",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Senin geldiğini biliyorum.",
+          "word": "biliyorum",
+          "expected": [
+            "bil",
+            "VERB"
+          ],
+          "predicted": [
+            "bil",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Okula doğru yürüdü.",
+          "word": "doğru",
+          "expected": [
+            "doğru",
+            "ADP"
+          ],
+          "predicted": [
+            "doğru",
+            "ADP"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Doğru cevap bu.",
+          "word": "Doğru",
+          "expected": [
+            "doğru",
+            "ADJ"
+          ],
+          "predicted": [
+            "doğru",
+            "ADJ"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Onlar geldi.",
+          "word": "geldi",
+          "expected": [
+            "gel",
+            "VERB"
+          ],
+          "predicted": [
+            "gel",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Onlar geldiler.",
+          "word": "geldiler",
+          "expected": [
+            "gel",
+            "VERB"
+          ],
+          "predicted": [
+            "gel",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Güzel mi güzel bir ev.",
+          "word": "mi",
+          "expected": [
+            "mi",
+            "AUX"
+          ],
+          "predicted": [
+            "mi",
+            "NOUN"
+          ],
+          "matches": false
+        },
+        {
+          "text": "Kitabı okudu Ali.",
+          "word": "Kitabı",
+          "expected": [
+            "kitap",
+            "NOUN"
+          ],
+          "predicted": [
+            "kitap",
+            "NOUN"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Güzelliğinden söz ettim.",
+          "word": "Güzelliğinden",
+          "expected": [
+            "güzellik",
+            "NOUN"
+          ],
+          "predicted": [
+            "güzellik",
+            "NOUN"
+          ],
+          "matches": true
+        }
+      ],
+      "matched": 13,
+      "roundtrips": 15,
+      "objective_blocks": 15,
+      "question_scores": {
+        "gap_below_winner": 28.353092834288873,
+        "view": {
+          "lemma": "mi",
+          "output_pos": "NOUN",
+          "features": {
+            "Case": "Nom",
+            "Number": "Sing"
+          },
+          "kind": "ROOT_NATIVE",
+          "boundary": -1,
+          "analysis_id": "bcb49802af46b8b677a50057",
+          "root_lemma": "mi",
+          "root_pos": "NOUN",
+          "view_id": "e6dfc0b88abbab66cc0dac3c"
+        },
+        "question_candidate_present": true
+      }
+    },
+    "HR_0.25": {
+      "probes": [
+        {
+          "text": "Sen geldin mi?",
+          "word": "mi",
+          "expected": [
+            "mi",
+            "AUX"
+          ],
+          "predicted": [
+            "mi",
+            "NOUN"
+          ],
+          "matches": false
+        },
+        {
+          "text": "Sen geliyor musun?",
+          "word": "musun",
+          "expected": [
+            "mi",
+            "AUX"
+          ],
+          "predicted": [
+            "mi",
+            "AUX"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Mi notasını çaldım.",
+          "word": "Mi",
+          "expected": [
+            "mi",
+            "NOUN"
+          ],
+          "predicted": [
+            "mi",
+            "NOUN"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Senin evin büyük.",
+          "word": "evin",
+          "expected": [
+            "ev",
+            "NOUN"
+          ],
+          "predicted": [
+            "ev",
+            "NOUN"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Evin kapısı açık.",
+          "word": "Evin",
+          "expected": [
+            "ev",
+            "NOUN"
+          ],
+          "predicted": [
+            "ev",
+            "NOUN"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Ali ve ben geldik.",
+          "word": "geldik",
+          "expected": [
+            "gel",
+            "VERB"
+          ],
+          "predicted": [
+            "gel",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Ali benimle geldi.",
+          "word": "geldi",
+          "expected": [
+            "gel",
+            "VERB"
+          ],
+          "predicted": [
+            "gel",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Senin geldiğini biliyorum.",
+          "word": "biliyorum",
+          "expected": [
+            "bil",
+            "VERB"
+          ],
+          "predicted": [
+            "bil",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Okula doğru yürüdü.",
+          "word": "doğru",
+          "expected": [
+            "doğru",
+            "ADP"
+          ],
+          "predicted": [
+            "doğru",
+            "ADP"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Doğru cevap bu.",
+          "word": "Doğru",
+          "expected": [
+            "doğru",
+            "ADJ"
+          ],
+          "predicted": [
+            "doğru",
+            "ADJ"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Onlar geldi.",
+          "word": "geldi",
+          "expected": [
+            "gel",
+            "VERB"
+          ],
+          "predicted": [
+            "gel",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Onlar geldiler.",
+          "word": "geldiler",
+          "expected": [
+            "gel",
+            "VERB"
+          ],
+          "predicted": [
+            "gel",
+            "VERB"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Güzel mi güzel bir ev.",
+          "word": "mi",
+          "expected": [
+            "mi",
+            "AUX"
+          ],
+          "predicted": [
+            "mi",
+            "NOUN"
+          ],
+          "matches": false
+        },
+        {
+          "text": "Kitabı okudu Ali.",
+          "word": "Kitabı",
+          "expected": [
+            "kitap",
+            "NOUN"
+          ],
+          "predicted": [
+            "kitap",
+            "NOUN"
+          ],
+          "matches": true
+        },
+        {
+          "text": "Güzelliğinden söz ettim.",
+          "word": "Güzelliğinden",
+          "expected": [
+            "güzellik",
+            "NOUN"
+          ],
+          "predicted": [
+            "güzellik",
+            "NOUN"
+          ],
+          "matches": true
+        }
+      ],
+      "matched": 13,
+      "roundtrips": 15,
+      "objective_blocks": 15,
+      "question_scores": {
+        "gap_below_winner": 18.718579023792753,
+        "view": {
+          "lemma": "mi",
+          "output_pos": "NOUN",
+          "features": {
+            "Case": "Nom",
+            "Number": "Sing"
+          },
+          "kind": "ROOT_NATIVE",
+          "boundary": -1,
+          "analysis_id": "bcb49802af46b8b677a50057",
+          "root_lemma": "mi",
+          "root_pos": "NOUN",
+          "view_id": "e6dfc0b88abbab66cc0dac3c"
+        },
+        "question_candidate_present": true
+      }
+    }
+  }
+}

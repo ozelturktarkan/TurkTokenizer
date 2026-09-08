@@ -1,0 +1,13 @@
+{
+  "id": "S06E-P4-TWO-LAYERS-1",
+  "baseline": "P2 UD_IMST strength 1.0; P3 did not qualify for promotion",
+  "training": "All 3260 IMST TRAIN sentences, identical verified P3 fresh P1-combined candidate cache. DEV/CALIB error examples never used for fitting. TEST not opened.",
+  "head": {"target": "Conditional correct lexical view within each native analysis; old head scores are frozen offsets", "minimum_frequency": 3, "regularization": 0.0005, "maxiter": 120, "strengths": [0,0.25,0.5,1], "selection": "DEV-only: lexical lemma+POS and lexical declared features nondecrease; maximize lemma+POS then features then simpler strength. Native choices, scores and confidence remain exactly P2."},
+  "rank": {"target": "Per-token partial-label likelihood with frozen P2 full-sentence max-marginal offsets; positives must match the view actually emitted by the fixed head, not any latent view", "minimum_frequency": 3, "regularization": 0.0001, "maxiter": 120, "strengths": [0.25,0.5,1], "models": ["base_head", "selected_head"], "training_population": "Common competitive TRAIN words with a strict emitted-output positive for both heads; same rows and budget for both fits", "scope": "One fit against fixed baseline max-marginals, followed by full fresh decoding. This is a local surrogate, not joint CRF maximum likelihood. Only final main UA residual changes; legacy Q0, UA reference passes, P2 head contribution, AB04 and n-gram weights remain fixed."},
+  "final_selection": "DEV-only native lemma+POS and declared features nondecrease, wrong native committed lemma decisions nonincrease, lexical lemma+POS and declared features nondecrease against P2. Among safe configurations maximize lexical lemma+POS then lexical features then native lemma+POS then simpler contribution. Include control and selected head-only arm.",
+  "CALIB": "Only P2 control and one DEV-sealed final configuration. No adjustment after CALIB. If protection fails keep P2; retain exploratory results.",
+  "A2": {"grid": [0,0.25,0.5,1,2,3,4,6,8,12,20], "target": 92, "scope": "Native lemma+POS and declared features. No lexical-view confidence or full morpheme-path calibration claim."},
+  "guards": ["Fixed ordered native candidates and lexical views", "Zero residual equals P2", "Head-only leaves native outputs and scores unchanged", "No gold or selected-neighbour leakage into runtime features", "Positive training labels follow emitted views", "Independent score reconstruction", "Lossless BPE roundtrip and identical 224309 IDs", "Original P2/P3 sources, models and reports unchanged", "Two SHA256-verified incremental V backups"],
+  "default_promotion": false,
+  "TEST_opened": false
+}
