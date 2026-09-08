@@ -80,6 +80,24 @@ class EpochRun:
             raise ValueError('UNSAFE_SNAPSHOT_PATH')
         return path
 
+    def seed_baseline(self, *, train_loss, dev_loss, dev_correct, dev_total, artifacts):
+        """Verified E00 fallback for a warm start; consumes no training epoch."""
+        if self.state is not None or self.state_path.exists():
+            raise ValueError('BASELINE_ALREADY_PRESENT')
+        if not {'weights', 'trainer_state'} <= set(artifacts):
+            raise ValueError('WEIGHTS_AND_TRAINER_STATE_REQUIRED')
+        state = advance(None, 1, train_loss, dev_loss, dev_correct, dev_total, True, self.policy)
+        state.update(epoch=0, best_epoch=0, stage=self.stage, policy_sha256=self.policy_hash)
+        size = sum(Path(p).stat().st_size for p in artifacts.values())
+        if shutil.disk_usage(self.root).free < 2 * size + self.policy['backup']['minimum_free_bytes_after_write'] + 1048576:
+            raise OSError('INSUFFICIENT_BACKUP_SPACE')
+        folders = [self._snapshot(name, state, artifacts) for name in self.policy['backup']['copies']]
+        if read(folders[0] / 'manifest.json') != read(folders[1] / 'manifest.json'):
+            raise IOError('BACKUP_COPIES_DIFFER')
+        atomic_json(self.root / 'baseline.json', state)
+        atomic_json(self.state_path, state); self.state = state
+        return state
+
     def _snapshot(self, copy_name, state, artifacts):
         folder = self._inside(self.root / copy_name / f"epoch-{state['epoch']:06d}")
         folder.mkdir(parents=True, exist_ok=False)
@@ -99,6 +117,7 @@ class EpochRun:
 
     def _prune(self, state):
         keep = {state['epoch'], max(1, state['epoch'] - 1), state['best_epoch']}
+        if (self.root / 'baseline.json').exists(): keep.add(0)
         for copy_name in self.policy['backup']['copies']:
             for folder in (self.root / copy_name).glob('epoch-*'):
                 if not re.fullmatch(r'epoch-\d{6}', folder.name) or int(folder.name[6:]) in keep: continue
