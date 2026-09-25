@@ -1,0 +1,18 @@
+pub const FILES:&[(&str,&str)]=&[
+("codec/lookup.bin","a7300f60bfdf024d6fa74b7bcfedee1f2cf45d88abb68257d8bc23e373941d9b"),
+("codec/surfaces.bin","9782544162206ee6053ab2f1ae0be94083ee848c89d2e98cf18454c22db776cd"),
+("freq/paths.bin","491e5c876ccba30956be6bce1161ce06fc5bed2835455e9aaa4fab9facf2a73c"),
+("freq/words.bin","19f0880515463c628c4f26c5ee0e6aa809af0ee6b7c0fa1575ee64000d286374"),
+("lex/bound_seeds.bin","dc0df2e984c8877401cc16ed26600d20a449306ff8edbf0432c4ff5585cb8888"),
+("lex/lex_by_stem.bin","2a60110580663429e84ca26f2f22eda57e97ec2ed9bb9ef2f27acb98fd0c5a2d"),
+("lex/lex_entries.bin","07c3d7006d963862b3a8c7effabc53af3e7c84b94f2c27a2aa26e72b923fba89"),
+("lex/lex_seed_index.bin","2e13fbb1d63688903c483cb1f545e05a4304ee6f33dc8204be0f45fdd59fd2d8"),
+("lex/lexemes.bin","aade8470f36ea013200a1d0ee45b8abe7d12457479dd4f28eaceb7fc096a5001"),
+("lex/name_readings.bin","8147ec02cefc02422df3f747fb846f524fbc7586d8bbb9571d1c6506d85bfebc"),
+("lex/replay_lexemes.bin","dd2bdb55269f48d25db95c0469dbe720a794cc215dfd8e7a160944b8149b93f6"),
+("projection.bin","68e1bfdf1d2e566e82e14f8c27d98eaf316e3ecf7b7f9e8e341022cf7fa7bf48"),
+("surface/compound-ids.bin","abe326a5ba40fd2a94dc7724c58271579e91c0a6a82e4b4acbab64fa1ac996b2"),
+("surface/surface-flags.bin","687aa1cd4cfb35a0810a049fa49c31a32b11612cabe7cacee31162c1e885639f"),
+("surface/surface-licenses.bin","609c987258ee1bfb357699bd1a9ccfe2c5682a8f30dab224e54e347145134cab"),
+("weights-f32.bin","f8a433ac25c766b86690d36a244e44518cb71cb2cefed9ad70726be88ece8a5e"),
+];

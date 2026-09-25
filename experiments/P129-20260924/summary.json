@@ -1,0 +1,132 @@
+{
+  "status": "COMPLETE",
+  "engineering": "PASS",
+  "stage": "P129",
+  "at": "2026-09-24T23:36:10.305673+00:00",
+  "accuracy": {
+    "plain": {
+      "iid": 0.9994444444444445,
+      "lexical": 0.9933333333333333,
+      "order": 0.9994444444444445,
+      "composition": 0.995,
+      "ood": 0.9959259259259259,
+      "roles": {
+        "subject": 0.998125,
+        "object": 1.0,
+        "owner": 0.9922916666666667
+      }
+    },
+    "morph": {
+      "iid": 0.9997222222222222,
+      "lexical": 0.9733333333333334,
+      "order": 0.9983333333333333,
+      "composition": 0.98,
+      "ood": 0.9838888888888889,
+      "roles": {
+        "subject": 0.988125,
+        "object": 0.990625,
+        "owner": 0.9847916666666666
+      }
+    },
+    "graph": {
+      "iid": 0.9994444444444445,
+      "lexical": 0.98,
+      "order": 0.9969444444444444,
+      "composition": 0.9902777777777778,
+      "ood": 0.9890740740740741,
+      "roles": {
+        "subject": 0.9952083333333334,
+        "object": 0.9922916666666667,
+        "owner": 0.9875
+      }
+    },
+    "shuffled": {
+      "iid": 0.9988888888888889,
+      "lexical": 0.9811111111111112,
+      "order": 0.9955555555555555,
+      "composition": 0.9786111111111111,
+      "ood": 0.9850925925925926,
+      "roles": {
+        "subject": 0.9920833333333333,
+        "object": 0.99125,
+        "owner": 0.9822916666666667
+      }
+    },
+    "base": {
+      "iid": 0.6966666666666667,
+      "lexical": 0.5783333333333334,
+      "order": 0.6775,
+      "composition": 0.6891666666666667,
+      "ood": 0.6483333333333333
+    }
+  },
+  "comparisons": {
+    "plain": {
+      "delta": -0.006851851851851776,
+      "confidence_level": 0.9833333333333333,
+      "ci": [
+        -0.010092592592592592,
+        -0.003796296296296296
+      ],
+      "per_seed": [
+        -0.008333333333333333,
+        -0.006666666666666667,
+        -0.005555555555555556
+      ],
+      "minimum_effect": 0.1,
+      "passes": false
+    },
+    "morph": {
+      "delta": 0.005185185185185182,
+      "confidence_level": 0.9833333333333333,
+      "ci": [
+        0.0016666666666666663,
+        0.008796296296296297
+      ],
+      "per_seed": [
+        0.008611111111111111,
+        0.008333333333333333,
+        -0.001388888888888889
+      ],
+      "minimum_effect": 0.05,
+      "passes": false
+    },
+    "shuffled": {
+      "delta": 0.003981481481481475,
+      "confidence_level": 0.9833333333333333,
+      "ci": [
+        0.0006481481481481482,
+        0.0073773148148149155
+      ],
+      "per_seed": [
+        0.006388888888888889,
+        -0.002777777777777778,
+        0.008333333333333333
+      ],
+      "minimum_effect": 0.05,
+      "passes": false
+    }
+  },
+  "primary_metric": "Equal-weight lexical/order/composition synthetic episode OOD four-choice accuracy",
+  "paired_cluster_bootstrap": "Resample episode groups within each OOD split, average fixed three seeds; Bonferroni 3 comparisons. Does not estimate full random-seed population uncertainty.",
+  "edge_coverage": 1.0,
+  "iid_nonregression": true,
+  "synthetic_mechanism_gate_passed": false,
+  "general_turkish_understanding_demonstrated": false,
+  "general_bpe_superiority_demonstrated": false,
+  "standalone_model_gain_without_native_teacher_demonstrated": false,
+  "closed_test_accessed": false,
+  "structured_query_rule_upper_bound": {
+    "coverage": 0.9175,
+    "accuracy_when_answered": 1.0,
+    "limitation": "Generator supplies query-to-clause and requested role. Not an autonomous natural-language QA baseline."
+  },
+  "training_seconds": 60916.64353540004,
+  "data": {
+    "train": 7200,
+    "iid": 1200,
+    "lexical": 1200,
+    "order": 1200,
+    "composition": 1200
+  }
+}

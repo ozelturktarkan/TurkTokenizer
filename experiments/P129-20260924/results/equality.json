@@ -1,0 +1,7 @@
+{
+  "status": "PASS",
+  "same_initialization_order_steps_examples_allocated_parameters": true,
+  "active_feature_parameters_differ_by_ablation": true,
+  "same_bpe_prompt_ids_all_arms": true,
+  "no_eval_based_selection": true
+}

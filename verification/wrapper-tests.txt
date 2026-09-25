@@ -1,0 +1,9 @@
+test_budget_and_invalid_input (test_wrapper.Integration.test_budget_and_invalid_input) ... ok
+test_closed (test_wrapper.Integration.test_closed) ... ok
+test_roundtrip_and_yont (test_wrapper.Integration.test_roundtrip_and_yont) ... ok
+test_serialized_threads (test_wrapper.Integration.test_serialized_threads) ... ok
+
+----------------------------------------------------------------------
+Ran 4 tests in 1.841s
+
+OK

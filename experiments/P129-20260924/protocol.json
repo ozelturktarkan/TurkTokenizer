@@ -1,0 +1,74 @@
+{
+  "stage": "P129",
+  "version": 1,
+  "date": "2026-09-24",
+  "mode": "USER_LAUNCHED_OFFLINE_RESUMABLE",
+  "model": "Qwen3-0.6B-Base",
+  "arms": [
+    "plain",
+    "morph",
+    "graph",
+    "shuffled"
+  ],
+  "seeds": [
+    12911,
+    12923,
+    12937
+  ],
+  "contexts": {
+    "train": 2400,
+    "iid": 400,
+    "lexical": 400,
+    "order": 400,
+    "composition": 400
+  },
+  "questions_per_context": 3,
+  "epochs": 3,
+  "batch_size": 16,
+  "microbatch": 2,
+  "max_tokens": 384,
+  "adapter_rank": 32,
+  "lr": 0.0002,
+  "checkpoint_every": 50,
+  "bootstrap_samples": 10000,
+  "bootstrap_seed": 12920260924,
+  "controls": {
+    "same_prompt_bpe_ids": true,
+    "same_examples_steps_initialization_per_seed": true,
+    "same_allocated_trainable_parameters": true,
+    "active_capacity_and_compute_may_differ": true,
+    "auxiliary_loss": false,
+    "native_teacher": "Frozen P128 over supplied context sentences only; no question/options/answers",
+    "features": "Union of candidate POS and morphemes, train-only feature vocabulary",
+    "graph": "Only G0 conditional consensus edges, both directions; no default modification",
+    "shuffled": "Nonzero cyclic permutation of all edge endpoints per episode; preserves type counts and degree multiset",
+    "future_context": "Full context is supplied before answering. This is conditional QA; annotations must NOT be used for causal LM perplexity on the same context."
+  },
+  "primary": "Equal-weight lexical/order/composition held-out synthetic episode accuracy averaged over 3 fixed seeds",
+  "gate": {
+    "graph_vs_plain_min_pp": 10,
+    "graph_vs_morph_min_pp": 5,
+    "graph_vs_shuffled_min_pp": 5,
+    "all_three_seeds_positive": true,
+    "bonferroni_ci_lower_above_zero": true,
+    "min_edge_coverage": 0.4,
+    "iid_drop_limit_pp": 2
+  },
+  "limitations": [
+    "Agent-authored procedural examples, not independent human gold or general Turkish understanding evaluation",
+    "Relational native input exposes information close to task answers; system-level mechanism gain, not standalone model understanding",
+    "BPE baseline is identical Qwen byte-level BPE, not the smaller historical P56 tokenizer",
+    "Native scope: affirmative active past, explicit subject/Acc object and optional Gen possessor; no negation/passive/general subordinate sentence coverage",
+    "Structured-query native upper bound is given generator query routing; not natural-language QA system",
+    "CI conditions on three fixed training seeds; not a full estimate of seed-population variance"
+  ],
+  "network_or_api_calls": false,
+  "automatic_codex_continuation": false,
+  "closed_test_access": false,
+  "train_eval_exact_episode_overlap_allowed": 0,
+  "source_protocol_edits_after_start": "Refuse resume; create a new version instead",
+  "oom_policy": "Fail with checkpoint retained; do not silently alter batch/precision/protocol",
+  "stop": "Ctrl+C checkpoint at next completed optimizer step; emergency kill replays since latest completed checkpoint",
+  "base_frozen": true,
+  "stable_P21_or_P119_changes": false
+}

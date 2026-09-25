@@ -1,0 +1,20 @@
+{
+  "status": "PASS",
+  "wrapper_tests": 4,
+  "unicode_and_empty_roundtrip": true,
+  "persistent_process_and_threads": true,
+  "invalid_ids_recover": true,
+  "budget_exhaustion_abstains": true,
+  "frozen_engine_source_identical": true,
+  "baseline_trace_binding_exact": true,
+  "suffix_records": 876,
+  "suffix_classes": 43,
+  "enabled_records": 752,
+  "all_12_checkpoint_hashes_equal": true,
+  "qwen_snapshot_hashes_equal": true,
+  "native_binary_sha256": "a223647d3d36b68c993e4232befb9177b3dfafce845050d805e75243829b12bc",
+  "wheel_sha256": "7979be1e7a687235daf70f23e6bf90614ea3ff56490c2a496a06e9a3cbdd437a",
+  "founder_architect": "Tarkan Özel",
+  "new_quality_experiment": false,
+  "published": false
+}
